@@ -1,0 +1,112 @@
+[
+  {
+    "id": "sh-01",
+    "part": "shoulder",
+    "target": "overall",
+    "name": "ショルダープレス",
+    "equipment": "バーベル/ダンベル",
+    "level": "中級",
+    "desc": "三角筋全体（特に前部・中部）を鍛えるビッグムーブ。",
+    "practice": "6–10回×3–4セット。体幹と肩甲骨の安定を重視。",
+    "image": ""
+  },
+  {
+    "id": "sh-02",
+    "part": "shoulder",
+    "target": "side",
+    "name": "サイドレイズ",
+    "equipment": "ダンベル",
+    "level": "初級",
+    "desc": "三角筋中部をターゲット。肩幅を作る。",
+    "practice": "12–15回×3セット。反動を使わない。",
+    "image": ""
+  },
+  {
+    "id": "sh-10",
+    "part": "shoulder",
+    "target": "side",
+    "name": "ケーブルサイドレイズ",
+    "equipment": "ケーブル",
+    "level": "初級",
+    "desc": "サイドレイズに近いが、ケーブルを使用することにより負荷が抜けづらく、三角筋中部に持続的な刺激を与える。",
+    "practice": "10–15回×3セット。片手ずつ行い、僧帽筋に負荷を逃がさない。",
+    "image": ""
+  },
+  {
+    "id": "sh-03",
+    "part": "shoulder",
+    "target": "front",
+    "name": "フロントレイズ",
+    "equipment": "ダンベル/プレート",
+    "level": "初級",
+    "desc": "三角筋前部を刺激。プレスの補助にも。",
+    "practice": "10–15回×3セット。肩甲骨の位置を固定して動作。",
+    "image": ""
+  },
+  {
+    "id": "sh-04",
+    "part": "shoulder",
+    "target": "rear",
+    "name": "リアレイズ（ベントオーバー）",
+    "equipment": "ダンベル",
+    "level": "中級",
+    "desc": "肩後部（後部三角筋）を鍛える。姿勢保持が重要。",
+    "practice": "12–15回×3セット。上背部の収縮を感じる。",
+    "image": ""
+  },
+  {
+    "id": "sh-05",
+    "part": "shoulder",
+    "target": "overall",
+    "name": "アーノルドプレス",
+    "equipment": "ダンベル",
+    "level": "中級",
+    "desc": "回旋動作を含むため可動域が広く、前部・中部に効く。",
+    "practice": "8–12回×3セット。コントロールを優先。",
+    "image": ""
+  },
+  {
+    "id": "sh-06",
+    "part": "shoulder",
+    "target": "rear",
+    "name": "フェイスプル",
+    "equipment": "ケーブル",
+    "level": "中級",
+    "desc": "肩後部と肩甲骨周りの安定に有効。姿勢改善にも貢献。",
+    "practice": "12–20回×3セット。肘を高めに引く。",
+    "image": ""
+  },
+  {
+    "id": "sh-07",
+    "part": "shoulder",
+    "target": "overall",
+    "name": "シュラッグ",
+    "equipment": "バーベル/ダンベル",
+    "level": "初中級",
+    "desc": "僧帽筋上部を強化。首周りの厚みを作る。",
+    "practice": "8–15回×3セット。肩を引き上げる。",
+    "image": ""
+  },
+  {
+    "id": "sh-08",
+    "part": "shoulder",
+    "target": "rear",
+    "name": "ケーブルリアデルトフライ",
+    "equipment": "ケーブル",
+    "level": "中級",
+    "desc": "後部三角筋を狙った安定した刺激。",
+    "practice": "12–18回×3セット。上半身のブレを抑える。",
+    "image": ""
+  },
+  {
+    "id": "sh-09",
+    "part": "shoulder",
+    "target": "side",
+    "name": "アップライトロー",
+    "equipment": "バーベル/ケーブル",
+    "level": "中級",
+    "desc": "三角筋中部と僧帽筋上部を強化。肩への負担軽減のため肘を上げすぎない。",
+    "practice": "10–15回×3セット。バーを顎の高さまで引く。",
+    "image": ""
+  }
+]

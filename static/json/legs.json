@@ -1,0 +1,134 @@
+[
+  {
+    "id": "le-01",
+    "part": "legs",
+    "target": "overall",
+    "name": "バックスクワット",
+    "equipment": "バーベル",
+    "level": "中級",
+    "desc": "下半身全体の王様種目。",
+    "practice": "5–8回×3–5セット（強度高め）／フォーム第一。",
+    "image": ""
+  },
+  {
+    "id": "le-02",
+    "part": "legs",
+    "target": "quads",
+    "name": "フロントスクワット",
+    "equipment": "バーベル",
+    "level": "中級",
+    "desc": "大腿四頭筋（前もも）によりフォーカス。",
+    "practice": "6–10回×3セット。体幹の保持が鍵。",
+    "image": ""
+  },
+  {
+    "id": "le-03",
+    "part": "legs",
+    "target": "overall",
+    "name": "レッグプレス",
+    "equipment": "マシン",
+    "level": "初中級",
+    "desc": "高重量を安全に扱える下半身種目。",
+    "practice": "8–15回×3セット。膝の位置に注意。",
+    "image": ""
+  },
+  {
+    "id": "le-04",
+    "part": "legs",
+    "target": "quads",
+    "name": "ブルガリアンスクワット",
+    "equipment": "ダンベル",
+    "level": "中級",
+    "desc": "片脚種目の決定版。四頭筋と臀部に効く。",
+    "practice": "8–12回×3セット（片側）。バランス重視。",
+    "image": ""
+  },
+  {
+    "id": "le-05",
+    "part": "legs",
+    "target": "hams",
+    "name": "ルーマニアンデッドリフト",
+    "equipment": "バーベル",
+    "level": "中級",
+    "desc": "ハムストリングとヒップアップに効果的。",
+    "practice": "6–12回×3セット。膝は軽く曲げる程度で。",
+    "image": ""
+  },
+  {
+    "id": "le-06",
+    "part": "legs",
+    "target": "quads",
+    "name": "レッグエクステンション",
+    "equipment": "マシン",
+    "level": "初級",
+    "desc": "前ももの仕上げに最適。",
+    "practice": "12–15回×3セット。膝の負担に注意。",
+    "image": ""
+  },
+  {
+    "id": "le-07",
+    "part": "legs",
+    "target": "hams",
+    "name": "レッグカール",
+    "equipment": "マシン",
+    "level": "初級",
+    "desc": "ハムストリングを集中して鍛える。",
+    "practice": "10–15回×3セット。ゆっくり戻す。",
+    "image": ""
+  },
+  {
+    "id": "le-08",
+    "part": "legs",
+    "target": "calves",
+    "name": "カーフレイズ",
+    "equipment": "自重/マシン",
+    "level": "初級",
+    "desc": "ふくらはぎの強化。",
+    "practice": "15–25回×3セット。フルレンジ。",
+    "image": ""
+  },
+  {
+    "id": "le-09",
+    "part": "legs",
+    "target": "hams",
+    "name": "ヒップスラスト",
+    "equipment": "バーベル",
+    "level": "中級",
+    "desc": "臀部の筋肥大に極めて有効。",
+    "practice": "8–12回×3セット。腰を過伸展しない。",
+    "image": ""
+  },
+  {
+    "id": "le-10",
+    "part": "legs",
+    "target": "quads",
+    "name": "ハックスクワット",
+    "equipment": "マシン",
+    "level": "中級",
+    "desc": "背中を固定して四頭筋を攻める。",
+    "practice": "8–12回×3セット。足幅と深さを調整。",
+    "image": ""
+  },
+  {
+    "id": "le-12",
+    "part": "legs",
+    "target": "quads",
+    "name": "ランジ",
+    "equipment": "自重/ダンベル",
+    "level": "初中級",
+    "desc": "左右差改善・体幹安定も向上。",
+    "practice": "10–12回×3セット（片側）。前膝が足首より前に出ないように注意。",
+    "image": ""
+  },
+  {
+    "id": "le-13",
+    "part": "legs",
+    "target": "calves",
+    "name": "シーテッドカーフレイズ",
+    "equipment": "マシン",
+    "level": "初級",
+    "desc": "ヒラメ筋（下腿の横幅）をメインに強化。",
+    "practice": "15–25回×3セット。最大伸展と収縮を意識。",
+    "image": ""
+  }
+]

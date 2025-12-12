@@ -1,0 +1,79 @@
+[
+  {
+    "id": "ab-01",
+    "part": "abs",
+    "target": "front",
+    "name": "クランチ",
+    "equipment": "自重",
+    "level": "初級",
+    "desc": "腹直筋上部の基本的収縮種目。",
+    "practice": "15–25回×3セット。首を無理に引かない。",
+    "image": ""
+  },
+  {
+    "id": "ab-02",
+    "part": "abs",
+    "target": "front",
+    "name": "レッグレイズ",
+    "equipment": "自重",
+    "level": "中級",
+    "desc": "下腹部への高負荷。腰を浮かせないこと。",
+    "practice": "10–20回×3セット。腹筋の収縮を意識。",
+    "image": ""
+  },
+  {
+    "id": "ab-03",
+    "part": "abs",
+    "target": "core",
+    "name": "プランク",
+    "equipment": "自重",
+    "level": "初級",
+    "desc": "体幹（コア）を固める等尺性トレーニング。",
+    "practice": "30–90秒×3セット。フォーム維持が最重要。",
+    "image": ""
+  },
+  {
+    "id": "ab-04",
+    "part": "abs",
+    "target": "front",
+    "name": "アブローラー",
+    "equipment": "器具",
+    "level": "中級",
+    "desc": "伸張・収縮ともに強烈な負荷。",
+    "practice": "8–15回×3セット。腰を落とさない。",
+    "image": ""
+  },
+  {
+    "id": "ab-05",
+    "part": "abs",
+    "target": "side",
+    "name": "ロシアンツイスト",
+    "equipment": "自重/プレート",
+    "level": "初中級",
+    "desc": "腹斜筋（横腹）と回旋機能を強化。",
+    "practice": "20回（左右合計）×3セット。腰を過度に捻らない。",
+    "image": ""
+  },
+  {
+    "id": "ab-06",
+    "part": "abs",
+    "target": "front",
+    "name": "ハンギングレッグレイズ",
+    "equipment": "鉄棒/器具",
+    "level": "上級",
+    "desc": "最難関の腹筋種目。下腹部への刺激が極めて高い。",
+    "practice": "できる回数で3セット。膝を曲げると負荷軽減。",
+    "image": ""
+  },
+  {
+    "id": "ab-07",
+    "part": "abs",
+    "target": "side",
+    "name": "サイドプランク",
+    "equipment": "自重",
+    "level": "初級",
+    "desc": "横向き体幹種目。腹斜筋や側面の安定性を高める。",
+    "practice": "30–60秒×3セット（片側）。一直線を維持。",
+    "image": ""
+  }
+]

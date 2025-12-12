@@ -1,0 +1,145 @@
+[
+  {
+    "id": "ba-01",
+    "part": "back",
+    "target": "low",
+    "name": "デッドリフト",
+    "equipment": "バーベル",
+    "level": "上級",
+    "desc": "全身性のハイパワー種目。背中全体・下背部に強い刺激。",
+    "practice": "3–6回×3–5セット（高重量）／フォーム徹底。",
+    "image": ""
+  },
+  {
+    "id": "ba-02",
+    "part": "back",
+    "target": "width",
+    "name": "チンニング（懸垂）",
+    "equipment": "自重/バー",
+    "level": "中級",
+    "desc": "広背筋を中心に上背部の「幅」を作る。",
+    "practice": "できる回数で3–5セット。ネガティブやアシストで調整。",
+    "image": ""
+  },
+  {
+    "id": "ba-03",
+    "part": "back",
+    "target": "width",
+    "name": "ラットプルダウン",
+    "equipment": "マシン",
+    "level": "初中級",
+    "desc": "懸垂が難しい場合の代替。背中の広がりを作る。",
+    "practice": "8–12回×3セット。肘を下に引くイメージ。",
+    "image": ""
+  },
+  {
+    "id": "ba-04",
+    "part": "back",
+    "target": "thickness",
+    "name": "バーベルローイング",
+    "equipment": "バーベル",
+    "level": "中級",
+    "desc": "中背部（僧帽筋・広背筋）の「厚み」を作る。",
+    "practice": "6–10回×3セット。肩甲骨を寄せる感覚で。",
+    "image": ""
+  },
+  {
+    "id": "ba-05",
+    "part": "back",
+    "target": "thickness",
+    "name": "ワンアームダンベルロー",
+    "equipment": "ダンベル",
+    "level": "中級",
+    "desc": "片側ずつ行うことで可動域を広く取れる。",
+    "practice": "8–12回×3セット（片側）。コアで姿勢を支える。",
+    "image": ""
+  },
+  {
+    "id": "ba-06",
+    "part": "back",
+    "target": "thickness",
+    "name": "Tバーロー",
+    "equipment": "Tバー",
+    "level": "中級",
+    "desc": "厚み付けに効果的な引き種目。",
+    "practice": "6–10回×3セット。胸を張り引く。",
+    "image": ""
+  },
+  {
+    "id": "ba-07",
+    "part": "back",
+    "target": "thickness",
+    "name": "シーテッドロー",
+    "equipment": "ケーブル",
+    "level": "中級",
+    "desc": "肩甲骨の収縮（厚み）を意識しやすい。",
+    "practice": "8–12回×3セット。引き切ってキープすると効果大。",
+    "image": ""
+  },
+  {
+    "id": "ba-08",
+    "part": "back",
+    "target": "width",
+    "name": "プルオーバー",
+    "equipment": "ダンベル/ケーブル",
+    "level": "初中級",
+    "desc": "広背筋をストレッチさせる種目。",
+    "practice": "10–15回×3セット。胸郭を引き伸ばす感覚。",
+    "image": ""
+  },
+  {
+    "id": "ba-09",
+    "part": "back",
+    "target": "low",
+    "name": "ルーマニアンデッドリフト",
+    "equipment": "バーベル",
+    "level": "中級",
+    "desc": "脊柱起立筋とハムストリングを狙う背面種目。",
+    "practice": "6–12回×3セット。背筋を伸ばしたまま股関節で折る。",
+    "image": ""
+  },
+  {
+    "id": "ba-10",
+    "part": "back",
+    "target": "width",
+    "name": "パラレルグリッププルダウン",
+    "equipment": "マシン",
+    "level": "中級",
+    "desc": "手のひらを向き合わせたグリップで、広背筋の下部・外側への刺激を高める。",
+    "practice": "8–12回×3セット。胸を張り、肘を下方に引き切る。",
+    "image": ""
+  },
+  {
+    "id": "ba-11",
+    "part": "back",
+    "target": "thickness",
+    "name": "ハーフデッドリフト",
+    "equipment": "バーベル",
+    "level": "上級",
+    "desc": "高重量を扱いやすく、上背部の厚みを作る。",
+    "practice": "5–8回×3セット。腰を丸めずに引く。",
+    "image": ""
+  },
+  {
+    "id": "ba-12",
+    "part": "back",
+    "target": "thickness",
+    "name": "ダンベルシュラッグ",
+    "equipment": "ダンベル",
+    "level": "初中級",
+    "desc": "僧帽筋上部を強化。バーベルよりも可動域を大きく取れる。",
+    "practice": "10–15回×3セット。肩を真上に持ち上げる。",
+    "image": ""
+  },
+  {
+    "id": "ba-13",
+    "part": "back",
+    "target": "width",
+    "name": "ストレートアームプルダウン",
+    "equipment": "ケーブル",
+    "level": "初級",
+    "desc": "肘を曲げず、広背筋の収縮のみでウェイトを引くアイソレーション種目。",
+    "practice": "12–18回×3セット。背中のストレッチを意識。",
+    "image": ""
+  }
+]

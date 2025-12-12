@@ -1,0 +1,123 @@
+[
+  {
+    "id": "ar-01",
+    "part": "arms",
+    "target": "biceps",
+    "name": "バーベルカール",
+    "equipment": "バーベル",
+    "level": "初中級",
+    "desc": "上腕二頭筋（力こぶ）の基本。",
+    "practice": "8–12回×3セット。肘を動かさずに巻き上げる。",
+    "image": ""
+  },
+  {
+    "id": "ar-02",
+    "part": "arms",
+    "target": "biceps",
+    "name": "ダンベルハンマーカール",
+    "equipment": "ダンベル",
+    "level": "初中級",
+    "desc": "腕橈骨筋と二頭短頭を刺激。腕の厚みを作る。",
+    "practice": "10–12回×3セット。中間位で握る。",
+    "image": ""
+  },
+  {
+    "id": "ar-03",
+    "part": "arms",
+    "target": "biceps",
+    "name": "プリーチャーカール",
+    "equipment": "プリーチャー台",
+    "level": "中級",
+    "desc": "二頭筋をストレッチさせにくい状態で収縮させる。",
+    "practice": "8–12回×3セット。フォームで収縮を最大化。",
+    "image": ""
+  },
+  {
+    "id": "ar-04",
+    "part": "arms",
+    "target": "biceps",
+    "name": "ケーブルカール",
+    "equipment": "ケーブル",
+    "level": "初中級",
+    "desc": "動作中ずっと負荷が抜けにくい。",
+    "practice": "12–15回×3セット。ゆっくり戻す。",
+    "image": ""
+  },
+  {
+    "id": "ar-05",
+    "part": "arms",
+    "target": "triceps",
+    "name": "トライセプスプレスダウン",
+    "equipment": "ケーブル",
+    "level": "初中級",
+    "desc": "上腕三頭筋（二の腕）の基本。",
+    "practice": "10–15回×3セット。肘を固定して押し下げる。",
+    "image": ""
+  },
+  {
+    "id": "ar-06",
+    "part": "arms",
+    "target": "triceps",
+    "name": "ダンベルキックバック",
+    "equipment": "ダンベル",
+    "level": "中級",
+    "desc": "三頭筋の収縮を強く感じる種目。",
+    "practice": "10–15回×3セット。上体を安定させる。",
+    "image": ""
+  },
+  {
+    "id": "ar-07",
+    "part": "arms",
+    "target": "triceps",
+    "name": "ナローベンチプレス",
+    "equipment": "バーベル",
+    "level": "中級",
+    "desc": "高重量を扱える三頭筋種目。",
+    "practice": "6–10回×3セット。手幅を狭くして行う。",
+    "image": ""
+  },
+  {
+    "id": "ar-08",
+    "part": "arms",
+    "target": "triceps",
+    "name": "スカルクラッシャー",
+    "equipment": "バーベル",
+    "level": "中級",
+    "desc": "三頭筋長頭を強く刺激し、腕を太くする。",
+    "practice": "8–12回×3セット。肘の位置を固定。",
+    "image": ""
+  },
+  {
+    "id": "ar-09",
+    "part": "arms",
+    "target": "biceps",
+    "name": "コンセントレーションカール",
+    "equipment": "ダンベル",
+    "level": "中級",
+    "desc": "肘を固定して二頭筋を単独で収縮。",
+    "practice": "8–12回×3セット（片側）。ネガティブ動作を意識。",
+    "image": ""
+  },
+  {
+    "id": "ar-10",
+    "part": "arms",
+    "target": "triceps",
+    "name": "オーバーヘッドトライセプスエクステンション",
+    "equipment": "ダンベル/ケーブル",
+    "level": "中級",
+    "desc": "三頭筋の長頭を強くストレッチし太くする。",
+    "practice": "10–15回×3セット。肘を頭の横に固定。",
+    "image": ""
+  },
+  {
+    "id": "ar-11",
+    "part": "arms",
+    "target": "biceps",
+    "name": "リバースカール",
+    "equipment": "バーベル/EZバー",
+    "level": "初中級",
+    "desc": "順手（オーバーハンド）で行い前腕と二頭を鍛える。",
+    "practice": "10–15回×3セット。手首を過度に曲げない。",
+    "image": ""
+  }
+]

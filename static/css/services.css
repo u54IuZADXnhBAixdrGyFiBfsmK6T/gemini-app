@@ -1,0 +1,157 @@
+/* 全体 */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f7f9fc;
+    color: #1e293b;
+}
+
+/* コンテナ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+.header {
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #111827;
+}
+
+.logo-accent {
+    color: #3b82f6;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-link {
+    text-decoration: none;
+    padding: 8px;
+    color: #1e293b;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    color: #3b82f6;
+}
+
+.nav-link.active {
+    color: #3b82f6;
+    font-weight: 600;
+    border-bottom: 2px solid #3b82f6;
+}
+
+/* セクションタイトル */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 4px solid #3b82f6;
+    display: inline-block;
+    margin: 0 auto 50px;
+}
+
+/* カード共通 */
+.service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card.reverse {
+    flex-direction: column-reverse;
+}
+
+/* ラージスクリーンで左右配置 */
+@media (min-width: 900px) {
+    .service-card {
+        flex-direction: row;
+    }
+    .service-card.reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+/* カラー枠線 */
+.border-blue { border-color: #bfdbfe; }
+.border-indigo { border-color: #c7d2fe; }
+.border-green { border-color: #bbf7d0; }
+
+/* アイコン */
+.service-icon {
+    font-size: 64px;
+    padding: 20px;
+}
+
+.icon-blue { color: #2563eb; }
+.icon-indigo { color: #4f46e5; }
+.icon-green { color: #16a34a; }
+
+/* テキスト部分 */
+.service-content {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.service-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.service-text {
+    color: #475569;
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.service-ul {
+    margin-left: 20px;
+    color: #475569;
+    line-height: 1.7;
+}
+
+/* Footer */
+.footer {
+    background: #1f2937;
+    color: #ffffff;
+    text-align: center;
+    padding: 24px 0;
+    margin-top: 40px;
+}
