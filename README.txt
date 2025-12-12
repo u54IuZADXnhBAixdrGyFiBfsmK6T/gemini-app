@@ -4,28 +4,27 @@ render
     GEMINI_API_KEY=""
 
 
-terminal
-    1.スクリプト実行許可
-    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+1.スクリプト実行許可
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 
-    2.pip 
-    python -m pip install --upgrade pip
+2.pip 
+python -m pip install --upgrade pip
 
-    3.仮想環境を作成
-    python -m venv venv
-
-
-    4.仮想環境をアクティベート
-    .\venv\Scripts\Activate.ps1
+3.仮想環境を作成
+python -m venv venv
 
 
-    5.必要な全ライブラリをインストール
-    pip install -r requirements.txt
+4.仮想環境をアクティベート
+.\venv\Scripts\Activate.ps1
 
 
-    6.APIキーを設定
-    $env:GEMINI_API_KEY=""
+5.必要な全ライブラリをインストール
+pip install -r requirements.txt
 
 
-    7.起動
-    python app.py
+6.APIキーを設定
+$env:GEMINI_API_KEY=""
+
+
+7.起動
+python app.py
