@@ -237,30 +237,65 @@ function createCard(item){
 }
 
 // モーダルを開く
+// training.js の openModal 関数全体をこのブロックに置き換える
 function openModal(id){
   const item = DATA.find(d => d.id === id);
   if(!item) return;
-
-
+  
   // 部位表示用のマッピング
   const p = PARTS.find(x => x.key === item.part);
   const z = p ? p.zones.find(z => z.key === item.target) : null;
   const partLabel = p ? p.title : item.part;
   const zoneLabel = z ? z.label : '';
-// 改行を<br>に変換 なぜかこれがないとうまくいかない
-const practiceContent = escapeHtml(item.practice).replace(/\n/g, '<br>');
+
+  // 種目説明を整形する関数
+  // 【キーワード】を強調するために、それを<p class="key-highlight">として抽出
+  // それ以外の段落を通常の<p class="desc-text">として扱う
+  const descHtml = escapeHtml(item.desc);
+  let descriptionArray = descHtml.split(/【([^】]+)】/g);
+  let formattedDesc = '';
+  let isKey = false;
+  descriptionArray.forEach(segment => {
+    if (isKey) {
+      // 奇数インデックス（【】の中身）
+      if (segment.includes('】')) { // 安全のため
+        formattedDesc += `<p class="key-highlight">${segment}</p>`;
+      } else {
+        formattedDesc += `<p class="key-highlight">${segment}</p>`;
+      }
+    } else {
+      // 偶数インデックス（それ以外の文章）
+      if (segment.trim() !== '') {
+        // ピリオドや読点で区切られた文章を<p>タグで囲む (見やすさのため)
+        const sentences = segment.split(/(\n|。|．|．\s)/g).filter(s => s.trim() !== '');
+        sentences.forEach(s => {
+          if(s.trim() === '。' || s.trim() === '．') return; // 区切り文字そのものは無視
+          formattedDesc += `<p class="desc-text">${s.trim()}</p>`;
+        });
+        
+        // 分割しない場合は下記を使用
+        // formattedDesc += `<p class="desc-text">${segment.trim().replace(/\n/g, '<br>')}</p>`;
+      }
+    }
+    isKey = !isKey;
+  });
+
   modalBody.innerHTML = `
-    <h3 style="margin:0 0 6px">${escapeHtml(item.name)}</h3>
+    <h3 class="modal-title-custom">${escapeHtml(item.name)}</h3>
     <div class="meta-list">
-      <div class="meta-item">${partLabel} ${zoneLabel ? `(${zoneLabel})` : ''}</div>
+      <div class="meta-item">${partLabel}${zoneLabel ? ` (${zoneLabel})` : ''}</div>
       <div class="meta-item">${escapeHtml(item.level)}</div>
       <div class="meta-item">${escapeHtml(item.equipment)}</div>
     </div>
-    <p class="hint">${escapeHtml(item.desc)}</p>
-    <hr class="soft" />
-    <h4 style="margin:6px 0">実践例（目安）</h4>
-    <p class="hint">${escapeHtml(item.practice)}</p>
-    <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+    
+    <div class="description-area">
+      ${formattedDesc}
+    </div>
+
+    <h4 class="practice-heading">実践例（目安）</h4>
+    <p class="practice-text">${escapeHtml(item.practice)}</p>
+    
+    <div class="modal-footer-controls">
       <button id="modalFavBtn" class="small-btn">☆ お気に入り</button>
       <button id="modalCloseBtn" class="small-btn">閉じる</button>
     </div>
@@ -274,9 +309,13 @@ const practiceContent = escapeHtml(item.practice).replace(/\n/g, '<br>');
   document.getElementById('modalClose').focus();
   updateFavUI();
 }
-function closeModal(){ modal.setAttribute('aria-hidden','true'); }
 
-// 検索・フィルタ処理
+// モーダルを閉じる関数（前回の修正で削除された可能性あり）
+function closeModal(){ 
+  modal.setAttribute('aria-hidden','true'); 
+}
+
+// 検索・フィルタ処理 (applySearch) を再定義/再配置
 function applySearch(){
   const q = searchInput.value.trim().toLowerCase();
   const favView = isFavView();

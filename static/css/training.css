@@ -105,3 +105,70 @@ body {
 hr.soft{border:0;height:1px;background:#f1f5f9;margin:10px 0}
 
 
+
+
+
+
+
+
+
+/* 以下AI */
+
+/* 種目名 */
+.modal-title-custom {
+  margin: 0 0 6px;
+  font-size: 1.5rem; /* 大きめに */
+  font-weight: 800;
+}
+
+/* 説明文エリア */
+.description-area {
+  margin: 10px 0 16px;
+}
+
+/* 通常の説明文 */
+.desc-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #263244;
+  margin: 8px 0;
+}
+
+/* 【キーワード】を強調するためのスタイル */
+.key-highlight {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-weight: 700;
+  color: #0b1220;
+  background: #f1f5f9; /* 背景色で目立たせる */
+  padding: 10px 12px;
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  margin: 12px 0;
+  display: block; /* ブロック要素として表示 */
+}
+
+/* 実践例のセクション */
+.practice-heading {
+  margin: 18px 0 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0b1220;
+  border-bottom: 2px solid #eef2ff;
+  padding-bottom: 4px;
+}
+
+.practice-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent); /* アクセントカラーで目立たせる */
+  padding: 8px 0 12px;
+}
+
+/* モーダル内のボタン配置 */
+.modal-footer-controls {
+  margin-top: 18px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
