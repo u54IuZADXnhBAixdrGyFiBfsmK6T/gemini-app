@@ -1,4 +1,4 @@
-#render
+# render
     gunicorn app:app --workers 2 --bind 0.0.0.0:$PORT
     pip install -r requirements.txt
     GEMINI_API_KEY=""
@@ -6,7 +6,7 @@
 
 
 
-#vscode terminal
+# vscode terminal
 1.スクリプト実行許可
 ``` 
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
@@ -40,4 +40,5 @@ $env:GEMINI_API_KEY=""
 7.起動
 ```
 python app.py
+
 ```
