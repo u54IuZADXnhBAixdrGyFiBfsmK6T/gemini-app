@@ -1,5 +1,3 @@
-// training.js の冒頭に追記
-
 // データを保持するグローバル変数
 let DATA = []; 
 // 部位ごとのJSONファイル名リスト
@@ -221,15 +219,15 @@ function createCard(item){
         <button class="fav-btn" aria-label="お気に入り" data-id="${item.id}">☆</button>
       </div>
     </div>
-    <p class="card-desc">${escapeHtml(item.desc)}</p>
+    <p class="card-desc">${escapeHtml(item.summary || item.desc)}</p>
     <div class="card-footer">
       <button class="small-btn" data-action="detail" data-id="${item.id}">詳細</button>
-      <button class="small-btn" data-action="addprogram" data-id="${item.id}">プログラムに追加</button>
+      <button class="small-btn" data-action="addprogram" data-id="${item.id}">youtubeで見る</button>
     </div>
   `;
   // ボタンイベント
   card.querySelector('[data-action="detail"]').addEventListener('click', ()=> openModal(item.id));
-  card.querySelector('[data-action="addprogram"]').addEventListener('click', ()=> showTempMsg('（ダミー）プログラムに追加しました'));
+  card.querySelector('[data-action="addprogram"]').addEventListener('click', ()=> showTempMsg('（ダミー）YouTube動画リンクを追加する処理）'));
   card.querySelector('.fav-btn').addEventListener('click', (e)=> {
     const id = e.currentTarget.dataset.id;
     toggleFav(id);
@@ -242,13 +240,15 @@ function createCard(item){
 function openModal(id){
   const item = DATA.find(d => d.id === id);
   if(!item) return;
-  
+
+
   // 部位表示用のマッピング
   const p = PARTS.find(x => x.key === item.part);
   const z = p ? p.zones.find(z => z.key === item.target) : null;
   const partLabel = p ? p.title : item.part;
   const zoneLabel = z ? z.label : '';
-
+// 改行を<br>に変換 なぜかこれがないとうまくいかない
+const practiceContent = escapeHtml(item.practice).replace(/\n/g, '<br>');
   modalBody.innerHTML = `
     <h3 style="margin:0 0 6px">${escapeHtml(item.name)}</h3>
     <div class="meta-list">
@@ -376,7 +376,6 @@ function debounce(fn, wait=200){
 }
 searchInput.addEventListener('input', debounce(applySearch, 180));
 
-// ...（中略）...
 
 // 初期化
 (async function(){ // 変更点: async を追加
