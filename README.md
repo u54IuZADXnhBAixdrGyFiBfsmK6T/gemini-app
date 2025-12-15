@@ -1,8 +1,16 @@
 # render
-    gunicorn app:app --workers 2 --bind 0.0.0.0:$PORT
-    pip install -r requirements.txt
-    GEMINI_API_KEY=""
 
+```
+gunicorn app:app --workers 2 --bind 0.0.0.0:$PORT
+```
+
+```
+pip install -r requirements.txt
+```
+
+```
+GEMINI_API_KEY=""
+```
 
 
 
@@ -40,5 +48,4 @@ $env:GEMINI_API_KEY=""
 7.起動
 ```
 python app.py
-
 ```
