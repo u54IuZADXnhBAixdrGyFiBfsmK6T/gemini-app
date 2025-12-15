@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fitness Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gemini_fitness.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header_footer.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>AI FITNESS <span>PRO</span></h1>
+        <p>Gemini AIがあなたの身体データを分析。<br>最適な栄養プランとワークアウトを構築します。</p>
+
+        <label for="height">HEIGHT <span>(身長 cm)</span></label>
+        <input type="number" id="height" placeholder="例: 170" value="170">
+
+        <label for="weight">WEIGHT <span>(体重 kg)</span></label>
+        <input type="number" id="weight" placeholder="例: 65" value="65">
+
+        <label for="activity">LIFESTYLE <span>(生活習慣)</span></label>
+        <textarea id="activity" placeholder="例 : デスクワーク中心で、運動は週末のみ。"></textarea>
+
+        <label for="ideal">GOAL <span>(理想の体型)</span></label>
+        <textarea id="ideal" placeholder="例 : 筋肉を残しながら、体脂肪を落としたい"></textarea>
+
+        <button id="recommendBtn">🚀 GENERATE PLAN 🚀</button>
+
+        <div id="output">
+                   😁データの入力を待っています😁
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+
+</html>

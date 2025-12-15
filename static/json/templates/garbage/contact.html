@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | FutureNexus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fc; color: #1e293b; }
+        .active-link { border-bottom: 2px solid #3b82f6; color: #3b82f6; font-weight: 600; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold text-gray-900">
+            <span class="text-blue-600">Future</span>Nexus
+        </a>
+        <nav class="space-x-4 flex">
+            <a href="/" class="p-2 hover:text-blue-500">ホーム</a>
+            <a href="/services" class="p-2 hover:text-blue-500">サービス</a>
+            <a href="/contact" class="active-link p-2">お問い合わせ</a>
+        </nav>
+    </div>
+</header>
+
+<main class="flex-grow">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+
+        <h2 class="text-4xl font-bold text-center mb-12 border-b-4 border-blue-500 pb-2 inline-block">
+            お問い合わせ
+        </h2>
+
+        <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
+
+            <p class="text-center text-gray-600 mb-6">
+                具体的な課題やプロジェクトについて、お気軽にご相談ください。
+            </p>
+
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">お名前</label>
+                    <input type="text" required class="mt-1 w-full border rounded-md p-3">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">メールアドレス</label>
+                    <input type="email" required class="mt-1 w-full border rounded-md p-3">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">メッセージ</label>
+                    <textarea rows="4" required class="mt-1 w-full border rounded-md p-3"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3 px-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700">
+                    送信する
+                </button>
+            </form>
+
+            <div class="mt-8 pt-6 border-t border-gray-200">
+                <h4 class="text-lg font-semibold text-gray-800 mb-3">会社情報</h4>
+                <p class="text-gray-600">〒100-0005 東京都千代田区丸の内 1-9-2 Future Tower 15F</p>
+                <p class="text-gray-600">電話: 03-XXXX-XXXX</p>
+                <p class="text-gray-600">Eメール: info@future-nexus.jp</p>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<footer class="bg-gray-800 text-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-8 text-center">
+        <p>&copy; 2025 FutureNexus Consulting. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
