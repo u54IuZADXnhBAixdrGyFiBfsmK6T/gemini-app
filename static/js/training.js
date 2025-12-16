@@ -65,8 +65,8 @@ const PARTS = [
   { 
     key: 'back', title: '背中', subtitle: '逆三角形と厚み',
     zones: [
-      { key: 'width', label: '広がり（広背筋）' },
-      { key: 'thickness', label: '厚み（僧帽筋・中背部）' },
+      { key: 'width', label: '広背筋（広がり）' },
+      { key: 'thickness', label: '僧帽筋・中背部（厚み）' },
       { key: 'low', label: '下背部・全体' }
     ]
   },
@@ -74,7 +74,8 @@ const PARTS = [
     key: 'arms', title: '腕', subtitle: '太く逞しい腕',
     zones: [
       { key: 'biceps', label: '上腕二頭筋（力こぶ）' },
-      { key: 'triceps', label: '上腕三頭筋（二の腕）' }
+      { key: 'triceps', label: '上腕三頭筋（二の腕）' },
+      {key: 'forearms', label: '前腕（肘から手首）' }
     ]
   },
   { 
