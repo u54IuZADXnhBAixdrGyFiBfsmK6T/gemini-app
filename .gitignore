@@ -6,3 +6,6 @@ __pycache__/
 
 # VS Code
 .vscode/
+
+# 環境変数や秘密
+.env
