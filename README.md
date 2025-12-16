@@ -1,14 +1,14 @@
 
 # git
 
-**作業開始**
+**start**
 ```
 cd <repositorie name>
 git pull
 venv\Scripts\Activate.ps1
 code .
 ```
-**作業終了**
+**end**
 ```
 git add .
 git commit -m "作業内容の説明"
@@ -45,4 +45,5 @@ python app.py
 gunicorn app:app --workers 2 --bind 0.0.0.0:$PORT
 pip install -r requirements.txt
 GEMINI_API_KEY=""
+
 ```
