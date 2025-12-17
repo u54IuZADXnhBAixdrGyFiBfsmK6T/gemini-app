@@ -1,3 +1,10 @@
+:root {
+    --font-sans: 'Inter', sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+
 #site-header {
     position: fixed;
     top: 0;
@@ -7,6 +14,8 @@
     border-bottom: 1px solid #eee;  /* 境界線の明確化 */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);  /* 影で境界をさらに強調 */
     z-index: 2000;
+    /* index.cssで定義されているフォントをここで適用 */
+    font-family: var(--font-sans); 
 }
 
 #site-header .main-header {
@@ -179,18 +188,18 @@
     color: #fff;
 }
 
-#site-header .diagnostic-button {
-    background-color: #000;
-    color: #fff;
-    border: 2px solid #000;
-    padding: 8px 16px;
-    border-radius: 4px;
+#site-header .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    height: 72px;
+    font-size: 0.85rem; 
     font-weight: 700;
-    font-size: 0.9em;
-    margin-left: 0;
-    transition: background-color 0.3s, opacity 0.3s;
-    order: 4;
+    color: #333;
     text-decoration: none;
+    gap: 4px; 
 }
 
 #site-header .diagnostic-button:hover {

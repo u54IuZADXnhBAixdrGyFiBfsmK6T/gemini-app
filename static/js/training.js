@@ -344,7 +344,12 @@ jumpTo.addEventListener('change', ()=> {
   }
   const el = document.getElementById(`part-${v}`);
   if(el){
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const headerHeight = 72;
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elRect = el.getBoundingClientRect().top;
+    // 20pxほど余裕を持たせてスクロール
+    const scrollPosition = elRect - bodyRect - headerHeight - 20; 
+    window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
   }
 });
 
@@ -435,8 +440,14 @@ searchInput.addEventListener('input', debounce(applySearch, 180));
       const targetId = 'part-' + key;
       const targetElement = document.getElementById(targetId);
       if(targetElement) {
+        // CSSの scroll-margin-top が効かないブラウザ向けに、JavaScriptでスクロールを調整
+        const headerHeight = 72; 
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elRect = targetElement.getBoundingClientRect().top;
+        const scrollPosition = elRect - bodyRect - headerHeight - 10;
+        
         setTimeout(() => {
-          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
         }, 100);
       }
     }
