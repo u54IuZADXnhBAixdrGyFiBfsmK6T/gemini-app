@@ -244,44 +244,61 @@ function createCard(item){
 function openModal(id){
   const item = DATA.find(d => d.id === id);
   if(!item) return;
-  
+
   // 部位表示用のマッピング
   const p = PARTS.find(x => x.key === item.part);
   const z = p ? p.zones.find(z => z.key === item.target) : null;
   const partLabel = p ? p.title : item.part;
   const zoneLabel = z ? z.label : '';
 
+  // --- Start of new logic ---
   // 種目説明を整形する関数
-  // 【キーワード】を強調するために、それを<p class="key-highlight">として抽出
-  // それ以外の段落を通常の<p class="desc-text">として扱う
+  // 各【キーワード】セクションを detail-block としてグループ化する
   const descHtml = escapeHtml(item.desc);
   let descriptionArray = descHtml.split(/【([^】]+)】/g);
   let formattedDesc = '';
-  let isKey = false;
-  descriptionArray.forEach(segment => {
-    if (isKey) {
-      // 奇数インデックス（【】の中身）
-      if (segment.includes('】')) { // 安全のため
-        formattedDesc += `<p class="key-highlight">${segment}</p>`;
-      } else {
-        formattedDesc += `<p class="key-highlight">${segment}</p>`;
-      }
-    } else {
-      // 偶数インデックス（それ以外の文章）
-      if (segment.trim() !== '') {
-        // ピリオドや読点で区切られた文章を<p>タグで囲む (見やすさのため)
-        const sentences = segment.split(/(\n|。|．|．\s)/g).filter(s => s.trim() !== '');
-        sentences.forEach(s => {
-          if(s.trim() === '。' || s.trim() === '．') return; // 区切り文字そのものは無視
-          formattedDesc += `<p class="desc-text">${s.trim()}</p>`;
-        });
-        
-        // 分割しない場合は下記を使用
-        // formattedDesc += `<p class="desc-text">${segment.trim().replace(/\n/g, '<br>')}</p>`;
-      }
+
+  // 最初のキーワードの前にテキストがあればそれを表示
+  if (descriptionArray[0] && descriptionArray[0].trim() !== '') {
+    const introSentences = descriptionArray[0].split('\n').filter(s => s.trim() !== '');
+    introSentences.forEach(s => {
+      formattedDesc += `<p class="desc-text-intro">${s.trim()}</p>`;
+    });
+  }
+
+  // キーワードと内容をループしてブロックを生成
+  for (let i = 1; i < descriptionArray.length; i += 2) {
+    const keyword = descriptionArray[i];
+    const content = descriptionArray[i + 1];
+
+    if (!keyword) continue;
+
+    let blockClass = 'detail-block';
+    let headerClass = 'key-highlight';
+
+    if (keyword === 'フォームの極意') {
+      blockClass += ' form-block';
+      headerClass += ' key-highlight-form';
+    } else if (keyword === '注意点') {
+      blockClass += ' caution-block';
+      headerClass += ' key-highlight-caution';
     }
-    isKey = !isKey;
-  });
+
+    formattedDesc += `<div class="${blockClass}">`;
+    formattedDesc += `  <h4 class="${headerClass}">【${keyword}】</h4>`;
+
+    if (content && content.trim() !== '') {
+      const sentences = content.split('\n').filter(s => s.trim() !== '');
+      formattedDesc += `<div class="block-content">`;
+      sentences.forEach(s => {
+        formattedDesc += `<p>${s.trim()}</p>`;
+      });
+      formattedDesc += `</div>`;
+    }
+    
+    formattedDesc += `</div>`;
+  }
+  // --- End of new logic ---
 
   modalBody.innerHTML = `
     <h3 class="modal-title-custom">${escapeHtml(item.name)}</h3>
@@ -295,8 +312,12 @@ function openModal(id){
       ${formattedDesc}
     </div>
 
-    <h4 class="practice-heading">実践例（目安）</h4>
-    <p class="practice-text">${escapeHtml(item.practice)}</p>
+    <div class="detail-block practice-block">
+      <h4 class="practice-heading key-highlight">実践例（目安）</h4>
+      <div class="block-content">
+        <p>${escapeHtml(item.practice)}</p>
+      </div>
+    </div>
     
     <div class="modal-footer-controls">
       <button id="modalFavBtn" class="small-btn">☆ お気に入り</button>

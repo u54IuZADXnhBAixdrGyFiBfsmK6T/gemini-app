@@ -410,75 +410,63 @@ body {
   color: #334155;
 }
 
-/* 【キーワード】の強調表示 */
-.key-highlight {
-  padding: 12px 16px;
-  margin: 24px 0 8px 0;
-  border-radius: 8px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* モーダル内の詳細情報ブロック */
+.desc-text-intro {
+  margin-bottom: 16px;
+  color: var(--text-muted);
 }
 
-.desc-text {
-  margin-top: 0;
-  margin-bottom: 10px;
-  padding-left: 42px; /* Indent to align with text after icon */
-  color: #475569;
+.detail-block {
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
 }
 
-/* フォームの極意 */
-.key-highlight-form {
-  background: #eff6ff; /* blue-50 */
-  border-left: 4px solid #3b82f6; /* blue-500 */
-  color: #1e40af; /* blue-800 */
+.form-block {
+  background: #f0f9ff; /* sky-50 */
+  border: 1px solid #e0f2fe; /* sky-100 */
 }
 
-.key-highlight-form::before {
-  content: '🎯';
-  font-size: 1.2rem;
-}
-
-/* 注意点 */
-.key-highlight-caution {
+.caution-block {
   background: #fefce8; /* yellow-50 */
-  border-left: 4px solid #facc15; /* yellow-400 */
-  color: #854d0e; /* yellow-800 */
+  border: 1px solid #fef9c3; /* yellow-100 */
 }
 
-.key-highlight-caution::before {
-  content: '⚠️';
-  font-size: 1.2rem;
+.practice-block {
+  background: #f0fdf4; /* green-50 */
+  border: 1px solid #dcfce7; /* green-100 */
 }
 
-/* 実践例 */
-.practice-heading {
-  margin-top: 32px;
-  margin-bottom: 8px;
+/* ブロック内の見出し (h4) */
+.key-highlight {
   font-size: 1.1rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #f0fdf4; /* green-50 */
-  border-left: 4px solid #22c55e; /* green-500 */
-  padding: 12px 16px;
-  border-radius: 8px;
-  color: #166534; /* green-800 */
+  margin: 0 0 16px 0;
 }
 
-.practice-heading::before {
-  content: '💪';
+.key-highlight-form { color: #0369a1; }      /* sky-700 */
+.key-highlight-caution { color: #a16207; }   /* yellow-700 */
+.practice-heading { color: #15803d; }      /* green-700 */
+
+.key-highlight::before {
   font-size: 1.2rem;
 }
+.key-highlight-form::before { content: '🎯'; }
+.key-highlight-caution::before { content: '⚠️'; }
+.practice-heading::before { content: '💪'; }
 
-.practice-text {
-  color: #16a34a; /* green-600 */
-  font-weight: 700;
-  font-size: 1.05rem;
-  margin-bottom: 32px;
-  padding-left: 42px; /* Indent to align with text after icon */
+/* ブロック内のコンテンツ */
+.block-content p {
+  margin: 0 0 8px 0;
+  line-height: 1.7;
+  color: #334155; /* slate-700 */
+  padding-left: 2.2rem; /* アイコンとgapの分だけインデント */
+}
+.block-content p:last-child {
+  margin-bottom: 0;
 }
 
 /* モーダル下部のボタン */
