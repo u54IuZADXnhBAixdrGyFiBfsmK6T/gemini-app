@@ -154,15 +154,15 @@ function renderAllCards(list){
       
       if(zoneItems.length > 0){
         hasOutput = true;
+        
+        const zoneGroup = document.createElement('div');
+        zoneGroup.className = 'zone-group';
+
         // 小見出し作成
         const subHeader = document.createElement('h3');
-        subHeader.style.fontSize = '0.95rem';
-        subHeader.style.margin = '16px 0 8px 4px';
-        subHeader.style.color = '#4b5563'; // var(--muted)に近い色
-        subHeader.style.borderLeft = '4px solid #2563eb'; // var(--accent)
-        subHeader.style.paddingLeft = '8px';
+        subHeader.className = 'zone-title';
         subHeader.textContent = zone.label;
-        area.appendChild(subHeader);
+        zoneGroup.appendChild(subHeader);
 
         // グリッド作成
         const grid = document.createElement('div');
@@ -171,7 +171,9 @@ function renderAllCards(list){
         zoneItems.forEach(item => {
           grid.appendChild(createCard(item));
         });
-        area.appendChild(grid);
+        zoneGroup.appendChild(grid);
+        
+        area.appendChild(zoneGroup);
       }
     });
 

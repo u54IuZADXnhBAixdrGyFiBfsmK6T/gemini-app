@@ -24,8 +24,8 @@ html, body {
 body {
   margin: 0;
   font-family: var(--font-sans);
-  /* 背景グラデーション */
-  background: linear-gradient(180deg, #e5e9f0 0%, #f9fafb 100%);
+  /* ▼ 背景グラデーションを調整 */
+  background: linear-gradient(180deg, #eef2f9 0%, #fcfdff 100%);
   background-attachment: fixed;
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
@@ -141,6 +141,34 @@ body {
 .part-section {
   margin-bottom: 50px;
   scroll-margin-top: calc(var(--header-height) + 20px);
+  /* ▼ 背景を白、影を少し調整 */
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* ▼ サブカテゴリ（ゾーン）のグループ */
+.zone-group {
+  background: #f1f5f9; /* slate-100 */
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  border: 1px solid #e2e8f0; /* slate-200 */
+}
+.zone-group:last-child {
+  margin-bottom: 0;
+}
+
+/* ▼ サブカテゴリ（ゾーン）のタイトル */
+.zone-title {
+  font-size: 0.95rem;
+  margin: 0 0 16px 0; /* 下マージンのみに変更 */
+  color: var(--text-muted);
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+  font-weight: 700;
 }
 
 .part-header {
@@ -384,35 +412,73 @@ body {
 
 /* 【キーワード】の強調表示 */
 .key-highlight {
-  background: #eff6ff;
-  border-left: 4px solid var(--accent);
   padding: 12px 16px;
-  margin: 16px 0;
-  border-radius: 0 8px 8px 0;
+  margin: 24px 0 8px 0;
+  border-radius: 8px;
   font-weight: 700;
-  color: #1e40af;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .desc-text {
-  margin-bottom: 12px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 42px; /* Indent to align with text after icon */
+  color: #475569;
+}
+
+/* フォームの極意 */
+.key-highlight-form {
+  background: #eff6ff; /* blue-50 */
+  border-left: 4px solid #3b82f6; /* blue-500 */
+  color: #1e40af; /* blue-800 */
+}
+
+.key-highlight-form::before {
+  content: '🎯';
+  font-size: 1.2rem;
+}
+
+/* 注意点 */
+.key-highlight-caution {
+  background: #fefce8; /* yellow-50 */
+  border-left: 4px solid #facc15; /* yellow-400 */
+  color: #854d0e; /* yellow-800 */
+}
+
+.key-highlight-caution::before {
+  content: '⚠️';
+  font-size: 1.2rem;
 }
 
 /* 実践例 */
 .practice-heading {
   margin-top: 32px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-size: 1.1rem;
   font-weight: 700;
-  border-bottom: 2px solid #e2e8f0;
-  padding-bottom: 8px;
-  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f0fdf4; /* green-50 */
+  border-left: 4px solid #22c55e; /* green-500 */
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #166534; /* green-800 */
+}
+
+.practice-heading::before {
+  content: '💪';
+  font-size: 1.2rem;
 }
 
 .practice-text {
-  color: var(--accent);
+  color: #16a34a; /* green-600 */
   font-weight: 700;
   font-size: 1.05rem;
   margin-bottom: 32px;
+  padding-left: 42px; /* Indent to align with text after icon */
 }
 
 /* モーダル下部のボタン */
