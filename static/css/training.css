@@ -227,6 +227,7 @@ body {
   min-height: 200px; /* 高さを揃えるため */
   padding : 16px;
   min-height: 180px;
+  cursor: pointer;
 }
 
 .card:hover {

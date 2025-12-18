@@ -228,14 +228,25 @@ function createCard(item){
       <button class="small-btn" data-action="addprogram" data-id="${item.id}">youtubeで見る</button>
     </div>
   `;
-  // ボタンイベント
-  card.querySelector('[data-action="detail"]').addEventListener('click', ()=> openModal(item.id));
-  card.querySelector('[data-action="addprogram"]').addEventListener('click', ()=> showTempMsg('（ダミー）YouTube動画リンクを追加する処理）'));
+  
+  // カード全体をクリック可能にし、モーダルを開く
+  card.addEventListener('click', () => {
+    openModal(item.id);
+  });
+
+  // ボタン個別のクリックイベントがカード全体に伝播しないようにする
+  card.querySelector('[data-action="addprogram"]').addEventListener('click', (e)=> {
+    e.stopPropagation(); // 親要素へのイベント伝播を停止
+    showTempMsg('（ダミー）YouTube動画リンクを追加する処理）');
+  });
+  
   card.querySelector('.fav-btn').addEventListener('click', (e)=> {
+    e.stopPropagation(); // 親要素へのイベント伝播を停止
     const id = e.currentTarget.dataset.id;
     toggleFav(id);
     updateFavUI();
   });
+
   return card;
 }
 
