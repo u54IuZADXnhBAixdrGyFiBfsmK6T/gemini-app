@@ -77,17 +77,16 @@
     <aside class="side-controls">
       <div class="side-controls-inner">
         <h1 class="logo">Training Portal</h1>
-        <nav class="controls" aria-label="検索と操作">
-          <input id="search" class="search" type="search" placeholder="種目名・器具・説明で検索（例：ベンチ／ダンベル）" aria-label="検索" />
-          <select id="jumpTo" class="select" aria-label="部位へ移動">
-            <option value="all">全ての部位を表示</option>
+        
+        <nav id="partJumpList" class="part-jump-list" aria-label="部位へのショートカット"></nav>
 
-            <option value="chest">胸</option>
-            <option value="shoulder">肩</option>
-            <option value="back">背中</option>
-            <option value="arms">腕</option>
-            <option value="legs">足</option>
-            <option value="abs">腹</option>
+        <nav class="controls" aria-label="検索と操作">
+          <input id="search" class="search" type="search" placeholder="キーワードで検索..." aria-label="検索" />
+          <select id="filterLevel" class="select" aria-label="レベルで絞り込む">
+            <option value="all">すべてのレベル</option>
+          </select>
+          <select id="filterEquipment" class="select" aria-label="器具で絞り込む">
+            <option value="all">すべての器具</option>
           </select>
           <button id="toggleFavView" class="btn">お気に入りを表示</button>
         </nav>

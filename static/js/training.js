@@ -37,15 +37,19 @@ async function loadAllData() {
 // DOM refs
 const main = document.getElementById('main');
 const searchInput = document.getElementById('search');
-const jumpTo = document.getElementById('jumpTo');
 const toggleFavView = document.getElementById('toggleFavView');
 const modal = document.getElementById('detailModal');
 const modalBody = document.getElementById('modalBody');
 const modalClose = document.getElementById('modalClose');
+// --- New/modified DOM refs ---
+const partJumpList = document.getElementById('partJumpList');
+const filterLevel = document.getElementById('filterLevel');
+const filterEquipment = document.getElementById('filterEquipment');
+
 
 // PARTS定義：ここに zones（サブカテゴリー）を追加
 const PARTS = [
-  { 
+  {
     key: 'chest', title: '胸', subtitle: '',
     zones: [
       { key: 'middle', label: '中部・全体（ベース）' },
@@ -53,7 +57,7 @@ const PARTS = [
       { key: 'lower', label: '下部（腹側・輪郭）' }
     ]
   },
-  { 
+  {
     key: 'shoulder', title: '肩', subtitle: '',
     zones: [
       { key: 'overall', label: '全体・プレス系' },
@@ -62,7 +66,7 @@ const PARTS = [
       { key: 'rear', label: '後部（リア）' }
     ]
   },
-  { 
+  {
     key: 'back', title: '背中', subtitle: '',
     zones: [
       { key: 'width', label: '広背筋（広がり）' },
@@ -70,7 +74,7 @@ const PARTS = [
       { key: 'low', label: '下背部・全体' }
     ]
   },
-  { 
+  {
     key: 'arms', title: '腕', subtitle: '',
     zones: [
       { key: 'biceps', label: '上腕二頭筋（力こぶ）' },
@@ -78,7 +82,7 @@ const PARTS = [
       {key: 'forearms', label: '前腕（肘から手首）' }
     ]
   },
-  { 
+  {
     key: 'legs', title: '足', subtitle: '',
     zones: [
       { key: 'overall', label: '全体・スクワット系' },
@@ -87,7 +91,7 @@ const PARTS = [
       { key: 'calves', label: 'ふくらはぎ' }
     ]
   },
-  { 
+  {
     key: 'abs', title: '腹', subtitle: '',
     zones: [
       { key: 'front', label: '腹直筋（シックスパック）' },
@@ -98,6 +102,55 @@ const PARTS = [
 ];
 
 const FAV_KEY = 'tp_favs_v2';
+
+// --- NEW: 部位ジャンプリストを生成 ---
+function createPartJumpList() {
+  const list = document.createElement('ul');
+  PARTS.forEach(part => {
+    const item = document.createElement('li');
+    item.innerHTML = `<a href="#part-${part.key}" data-jump-to="${part.key}">${part.title}</a>`;
+    list.appendChild(item);
+  });
+  partJumpList.appendChild(list);
+
+  // イベントリスナーを親要素に設定（イベント委譲）
+  partJumpList.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = e.target.closest('a');
+    if (target && target.dataset.jumpTo) {
+      const partKey = target.dataset.jumpTo;
+      const el = document.getElementById(`part-${partKey}`);
+      if (el) {
+        const headerHeight = 72;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elRect = el.getBoundingClientRect().top;
+        const scrollPosition = elRect - bodyRect - headerHeight - 20; 
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+      }
+    }
+  });
+}
+
+// --- NEW: フィルタの選択肢を動的に生成 ---
+function populateFilters() {
+  const levels = [...new Set(DATA.map(item => item.level))].filter(level => level !== '初中級');
+  const equipments = [...new Set(DATA.flatMap(item => Array.isArray(item.equipment) ? item.equipment : [item.equipment]))];
+
+  levels.sort().forEach(level => {
+    const option = document.createElement('option');
+    option.value = level;
+    option.textContent = level;
+    filterLevel.appendChild(option);
+  });
+
+  equipments.sort().forEach(equipment => {
+    const option = document.createElement('option');
+    option.value = equipment;
+    option.textContent = equipment;
+    filterEquipment.appendChild(option);
+  });
+}
+
 
 // 初期描画：部位ごとのセクション枠を作る
 function initialRender(){
@@ -178,7 +231,6 @@ function renderAllCards(list){
     });
 
     // 万が一、ゾーン定義漏れなどで表示されなかったアイテムがある場合（その他）
-    // （今回はDATAを完璧に作っているので起きないはずですが、安全策として）
     const handledIds = [];
     part.zones.forEach(z => {
       partItems.filter(i => i.target === z.key).forEach(i => handledIds.push(i.id));
@@ -212,11 +264,12 @@ function createCard(item){
   const card = document.createElement('article');
   card.className = 'card';
   card.dataset.id = item.id;
+  const equipmentText = Array.isArray(item.equipment) ? item.equipment.join(' / ') : item.equipment;
   card.innerHTML = `
     <div class="card-head">
       <div>
         <h3 class="card-title">${escapeHtml(item.name)}</h3>
-        <div class="card-meta">${escapeHtml(item.level)} • ${escapeHtml(item.equipment)}</div>
+        <div class="card-meta">${escapeHtml(item.level)} • ${escapeHtml(equipmentText)}</div>
       </div>
       <div>
         <button class="fav-btn" aria-label="お気に入り" data-id="${item.id}">☆</button>
@@ -251,7 +304,6 @@ function createCard(item){
 }
 
 // モーダルを開く
-// training.js の openModal 関数全体をこのブロックに置き換える
 function openModal(id){
   const item = DATA.find(d => d.id === id);
   if(!item) return;
@@ -261,15 +313,12 @@ function openModal(id){
   const z = p ? p.zones.find(z => z.key === item.target) : null;
   const partLabel = p ? p.title : item.part;
   const zoneLabel = z ? z.label : '';
+  const equipmentText = Array.isArray(item.equipment) ? item.equipment.join(' / ') : item.equipment;
 
-  // --- Start of new logic ---
-  // 種目説明を整形する関数
-  // 各【キーワード】セクションを detail-block としてグループ化する
   const descHtml = escapeHtml(item.desc);
   let descriptionArray = descHtml.split(/【([^】]+)】/g);
   let formattedDesc = '';
 
-  // 最初のキーワードの前にテキストがあればそれを表示
   if (descriptionArray[0] && descriptionArray[0].trim() !== '') {
     const introSentences = descriptionArray[0].split('\n').filter(s => s.trim() !== '');
     introSentences.forEach(s => {
@@ -277,7 +326,6 @@ function openModal(id){
     });
   }
 
-  // キーワードと内容をループしてブロックを生成
   for (let i = 1; i < descriptionArray.length; i += 2) {
     const keyword = descriptionArray[i];
     const content = descriptionArray[i + 1];
@@ -309,14 +357,13 @@ function openModal(id){
     
     formattedDesc += `</div>`;
   }
-  // --- End of new logic ---
 
   modalBody.innerHTML = `
     <h3 class="modal-title-custom">${escapeHtml(item.name)}</h3>
     <div class="meta-list">
       <div class="meta-item">${partLabel}${zoneLabel ? ` (${zoneLabel})` : ''}</div>
       <div class="meta-item">${escapeHtml(item.level)}</div>
-      <div class="meta-item">${escapeHtml(item.equipment)}</div>
+      <div class="meta-item">${escapeHtml(equipmentText)}</div>
     </div>
     
     <div class="description-area">
@@ -345,47 +392,46 @@ function openModal(id){
   updateFavUI();
 }
 
-// モーダルを閉じる関数（前回の修正で削除された可能性あり）
 function closeModal(){ 
   modal.setAttribute('aria-hidden','true'); 
 }
 
-// 検索・フィルタ処理 (applySearch) を再定義/再配置
+// --- MODIFIED: 検索・フィルタ処理 ---
 function applySearch(){
   const q = searchInput.value.trim().toLowerCase();
+  const level = filterLevel.value;
+  const equipment = filterEquipment.value;
   const favView = isFavView();
+  
   let list = DATA.slice();
+
+  // 1. お気に入りフィルタ
   if(favView){
     const favs = getFavorites();
     list = list.filter(i => favs.includes(i.id));
   }
+  
+  // 2. キーワードフィルタ
   if(q){
     list = list.filter(i => {
-      return (i.name + ' ' + i.desc + ' ' + i.equipment + ' ' + i.practice).toLowerCase().includes(q);
+      const equipmentText = Array.isArray(i.equipment) ? i.equipment.join(' ') : i.equipment;
+      return (i.name + ' ' + i.desc + ' ' + equipmentText + ' ' + i.practice).toLowerCase().includes(q);
     });
   }
+
+  // 3. レベルフィルタ
+  if (level !== 'all') {
+    list = list.filter(i => i.level === level);
+  }
+
+  // 4. 器具フィルタ
+  if (equipment !== 'all') {
+    list = list.filter(i => Array.isArray(i.equipment) ? i.equipment.includes(equipment) : i.equipment === equipment);
+  }
+
   renderAllCards(list);
   updateFavUI();
 }
-
-// 部位へジャンプ
-jumpTo.addEventListener('change', ()=> {
-  const v = jumpTo.value;
-  if(v === 'all'){
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    applySearch();
-    return;
-  }
-  const el = document.getElementById(`part-${v}`);
-  if(el){
-    const headerHeight = 72;
-    const bodyRect = document.body.getBoundingClientRect().top;
-    const elRect = el.getBoundingClientRect().top;
-    // 20pxほど余裕を持たせてスクロール
-    const scrollPosition = elRect - bodyRect - headerHeight - 20; 
-    window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-  }
-});
 
 // お気に入りビュー切替
 toggleFavView.addEventListener('click', ()=> {
@@ -441,7 +487,7 @@ function showTempMsg(text){
 }
 
 // ユーティリティ
-function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function escapeHtml(s){ return String(s).replace(/[&<>'"`]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;','`':'&#96;'}[c])); }
 
 // モーダル閉じるイベント
 modalClose.addEventListener('click', closeModal);
@@ -453,28 +499,38 @@ function debounce(fn, wait=200){
   let t;
   return function(...a){ clearTimeout(t); t = setTimeout(()=> fn.apply(this,a), wait); };
 }
-searchInput.addEventListener('input', debounce(applySearch, 180));
 
-
-// 初期化
-(async function(){ // 変更点: async を追加
+// --- MODIFIED: 初期化処理 ---
+(async function(){
   toggleFavView.textContent = isFavView() ? '全てを表示' : 'お気に入りを表示';
   
-  // 変更点: loadAllDataを await で呼び出す
   const success = await loadAllData(); 
   
   if(success) {
-    initialRender();
+    // 1. メインコンテンツの枠をレンダリング
+    initialRender(); 
+    
+    // 2. 部位ジャンプリストを生成
+    createPartJumpList();
+
+    // 3. フィルターの選択肢を生成
+    populateFilters();
+
+    // 4. UI（お気に入りボタンなど）を更新
     updateFavUI();
     
-    // URLハッシュスクロール
+    // 5. イベントリスナーを設定
+    searchInput.addEventListener('input', debounce(applySearch, 180));
+    filterLevel.addEventListener('change', applySearch);
+    filterEquipment.addEventListener('change', applySearch);
+    
+    // URLハッシュに対応したスクロール処理
     const hash = window.location.hash; 
     if(hash) {
       const key = hash.replace('#', '');
       const targetId = 'part-' + key;
       const targetElement = document.getElementById(targetId);
       if(targetElement) {
-        // CSSの scroll-margin-top が効かないブラウザ向けに、JavaScriptでスクロールを調整
         const headerHeight = 72; 
         const bodyRect = document.body.getBoundingClientRect().top;
         const elRect = targetElement.getBoundingClientRect().top;
@@ -486,7 +542,6 @@ searchInput.addEventListener('input', debounce(applySearch, 180));
       }
     }
   } else {
-      // ロード失敗時のエラー表示など
       main.innerHTML = `<div style="text-align:center; padding: 40px;">トレーニングデータの読み込みに失敗しました。ファイルパスを確認してください。</div>`;
   }
-})(); // 変更点: 自己実行関数を閉じる
+})();
