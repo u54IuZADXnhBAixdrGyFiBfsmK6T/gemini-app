@@ -50,7 +50,7 @@ const filterEquipment = document.getElementById('filterEquipment');
 // PARTS定義：ここに zones（サブカテゴリー）を追加
 const PARTS = [
   {
-    key: 'chest', title: '胸', subtitle: '',
+    key: 'chest', title: 'Cheat', subtitle: '',
     zones: [
       { key: 'middle', label: '中部・全体（ベース）' },
       { key: 'upper', label: '上部（鎖骨側）' },
@@ -58,7 +58,7 @@ const PARTS = [
     ]
   },
   {
-    key: 'shoulder', title: '肩', subtitle: '',
+    key: 'shoulder', title: 'Shoulder', subtitle: '',
     zones: [
       { key: 'overall', label: '全体・プレス系' },
       { key: 'front', label: '前部（フロント）' },
@@ -67,7 +67,7 @@ const PARTS = [
     ]
   },
   {
-    key: 'back', title: '背中', subtitle: '',
+    key: 'back', title: 'Back', subtitle: '',
     zones: [
       { key: 'width', label: '広背筋（広がり）' },
       { key: 'thickness', label: '僧帽筋・中背部（厚み）' },
@@ -75,7 +75,7 @@ const PARTS = [
     ]
   },
   {
-    key: 'arms', title: '腕', subtitle: '',
+    key: 'arms', title: 'Arms', subtitle: '',
     zones: [
       { key: 'biceps', label: '上腕二頭筋（力こぶ）' },
       { key: 'triceps', label: '上腕三頭筋（二の腕）' },
@@ -83,7 +83,7 @@ const PARTS = [
     ]
   },
   {
-    key: 'legs', title: '足', subtitle: '',
+    key: 'legs', title: 'Lesg', subtitle: '',
     zones: [
       { key: 'overall', label: '全体・スクワット系' },
       { key: 'quads', label: '大腿四頭筋（前もも）' },
@@ -92,7 +92,7 @@ const PARTS = [
     ]
   },
   {
-    key: 'abs', title: '腹', subtitle: '',
+    key: 'abs', title: 'Abs', subtitle: '',
     zones: [
       { key: 'front', label: '腹直筋（シックスパック）' },
       { key: 'side', label: '腹斜筋（くびれ・横腹）' },

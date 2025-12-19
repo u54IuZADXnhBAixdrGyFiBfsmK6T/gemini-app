@@ -16,44 +16,44 @@
     <div id="site-header__content" class="header-content">
       <a id="site-header__logo" class="logo" href="/"><span class="logo-accent">GEMINI</span>-Fitness</a>
       <a id="site-header__promo" class="header-promo-banner ai-consult-button" href="/gemini_fitness"><span
-          class="icon">💻</span>AIに相談する</a>
-      <nav id="site-header__nav" class="main-nav" aria-label="メインナビゲーション">
+          class="icon">💻</span>AI Consultant</a>
+      <nav id="site-header__nav" class="main-nav" aria-label="Main Navigation">
         <ul id="site-header__nav-list">
           <li class="nav-item has-dropdown">
-            <a class="nav-link" href="/training"><span class="nav-icon">💪</span> 筋トレ</a>
+            <a class="nav-link" href="/training"><span class="nav-icon">💪</span> Workouts</a>
             <div class="product-dropdown" role="menu" aria-hidden="true">
               <div class="product-menu-content">
                 <ul class="dropdown-list">
-                  <li><a href="{{ url_for('training') }}#chest">胸</a></li>
-                  <li><a href="{{ url_for('training') }}#shoulder">肩</a></li>
-                  <li><a href="{{ url_for('training') }}#back">背中</a></li>
-                  <li><a href="{{ url_for('training') }}#arms">腕</a></li>
-                  <li><a href="{{ url_for('training') }}#legs">足</a></li>
-                  <li><a href="{{ url_for('training') }}#abs">腹</a></li>
+                  <li><a href="{{ url_for('training') }}#chest">Chest</a></li>
+                  <li><a href="{{ url_for('training') }}#shoulder">Shoulder</a></li>
+                  <li><a href="{{ url_for('training') }}#back">Back</a></li>
+                  <li><a href="{{ url_for('training') }}#arms">Arms</a></li>
+                  <li><a href="{{ url_for('training') }}#legs">Legs</a></li>
+                  <li><a href="{{ url_for('training') }}#abs">Abs</a></li>
                 </ul>
               </div>
             </div>
           </li>
           <li class="nav-item has-dropdown">
-            <a class="nav-link" href="#"><span class="nav-icon">🥗</span> 食生活</a>
+            <a class="nav-link" href="#"><span class="nav-icon">🥗</span> Nutrition</a>
             <div class="product-dropdown" role="menu" aria-hidden="true">
               <div class="product-menu-content">
                 <ul class="dropdown-list">
-                  <li><a href="#">ダイエット</a></li>
-                  <li><a href="#">筋肉をつける</a></li>
-                  <li><a href="#">時短メニュー</a></li>
+                  <li><a href="#">Diet</a></li>
+                  <li><a href="#">Muscle Gain</a></li>
+                  <li><a href="#">Quick Meals</a></li>
                 </ul>
               </div>
             </div>
           </li>
           <li class="nav-item has-dropdown">
-            <a class="nav-link" href="#"><span class="nav-icon">🛌🏻</span> 生活習慣</a>
+            <a class="nav-link" href="#"><span class="nav-icon">🛌🏻</span> Lifestyle</a>
             <div class="product-dropdown" role="menu" aria-hidden="true">
               <div class="product-menu-content">
                 <ul class="dropdown-list">
-                  <li><a href="#">ストレス</a></li>
-                  <li><a href="#">睡眠</a></li>
-                  <li><a href="#">飲酒喫煙</a></li>
+                  <li><a href="#">Stress</a></li>
+                  <li><a href="#">Sleep</a></li>
+                  <li><a href="#">Drinking & Smoking</a></li>
                 </ul>
               </div>
             </div>
@@ -63,8 +63,8 @@
             <div class="product-dropdown" role="menu" aria-hidden="true">
               <div class="product-menu-content">
                 <ul class="dropdown-list">
-                  <li><a href="#">このサイトは？</a></li>
-                  <li><a href="#">まず何をすればいいの？</a></li>
+                  <li><a href="#">About this site</a></li>
+                  <li><a href="#">Where to start?</a></li>
                 </ul>
               </div>
             </div>
@@ -78,17 +78,17 @@
       <div class="side-controls-inner">
         <h1 class="logo">Training Portal</h1>
         
-        <nav id="partJumpList" class="part-jump-list" aria-label="部位へのショートカット"></nav>
+        <nav id="partJumpList" class="part-jump-list" aria-label="Part Shortcuts"></nav>
 
-        <nav class="controls" aria-label="検索と操作">
-          <input id="search" class="search" type="search" placeholder="キーワードで検索..." aria-label="検索" />
-          <select id="filterLevel" class="select" aria-label="レベルで絞り込む">
-            <option value="all">すべてのレベル</option>
+        <nav class="controls" aria-label="Search and Actions">
+          <input id="search" class="search" type="search" placeholder="Search by keyword..." aria-label="Search" />
+          <select id="filterLevel" class="select" aria-label="Filter by level">
+            <option value="all">All Levels</option>
           </select>
-          <select id="filterEquipment" class="select" aria-label="器具で絞り込む">
-            <option value="all">すべての器具</option>
+          <select id="filterEquipment" class="select" aria-label="Filter by equipment">
+            <option value="all">All Equipment</option>
           </select>
-          <button id="toggleFavView" class="btn">お気に入りを表示</button>
+          <button id="toggleFavView" class="btn">Show Favorites</button>
         </nav>
       </div>
     </aside>
@@ -97,14 +97,14 @@
 
     <div id="detailModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
       <div class="modal-content" role="document">
-        <button class="modal-close" id="modalClose" aria-label="閉じる">✕</button>
+        <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
         <div id="modalBody"></div>
       </div>
     </div>
   </div>
   <footer class="site-footer">
     <div class="container">
-      <small>© Training Portal — サンプルデータ / ローカル保存のお気に入り対応</small>
+      <small>© Training Portal — Sample data / Local favorites supported</small>
     </div>
   </footer>
 
