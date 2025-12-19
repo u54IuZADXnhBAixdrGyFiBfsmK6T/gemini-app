@@ -21,6 +21,12 @@ cat ~/.ssh/id_ed25519.pub
 ssh -T git@github.com
 ```
 
+**miss**
+```
+git reset --hard HEAD~1
+git push --force
+```
+
 ```
 cd <work folder>
 git clone git@github.com:u54IuZADXnhBAixdrGyFiBfsmK6T/gemini-app.git
