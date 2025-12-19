@@ -46,7 +46,7 @@
 }
 
 #site-header .logo-accent {
-    color: #007bff;
+    color: #188fd0;
 }
 
 #site-header .header-promo-banner {
@@ -202,7 +202,111 @@
     gap: 4px; 
 }
 
-#site-header .diagnostic-button:hover {
-    background-color: #333;
-    border-color: #333;
-}
+
+
+    #site-header .diagnostic-button:hover {
+        background-color: #333;
+        border-color: #333;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        #site-header #site-header__content {
+            flex-direction: column; /* Stack logo, promo, and nav vertically */
+            justify-content: center;
+            height: auto;
+            padding: 10px 15px;
+            text-align: center;
+        }
+
+        #site-header .logo {
+            font-size: 1.2em; /* Even smaller logo on mobile */
+            margin-bottom: 5px;
+            order: 1; /* Keep logo at the top */
+        }
+        
+        #site-header .logo-accent {
+            display: block; /* Ensure accent wraps if needed */
+        }
+
+        #site-header .header-promo-banner {
+            width: auto; /* Allow button to size naturally */
+            min-width: 120px;
+            height: 30px;
+            margin: 5px auto 10px auto; /* Center button and add vertical margin */
+            order: 2; /* Promo button below logo */
+            font-size: 0.8em; /* Smaller font for promo */
+            padding: 0 10px;
+        }
+
+        #site-header .main-nav {
+            display: flex; /* Show main navigation */
+            flex-grow: 1;
+            margin-left: 0;
+            margin-right: 0;
+            order: 3; /* Nav below promo button */
+            justify-content: center; /* Center nav items */
+            width: 100%;
+        }
+
+        #site-header #site-header__nav-list {
+            flex-direction: row; /* Display nav items horizontally */
+            flex-wrap: wrap; /* Allow items to wrap */
+            gap: 15px; /* Reduced gap between items */
+            justify-content: center;
+            padding-top: 10px; /* Add some space from above */
+        }
+
+        #site-header .nav-item {
+            padding: 0;
+            flex-basis: auto; /* Allow items to size naturally */
+        }
+
+        #site-header .nav-link {
+            flex-direction: column; /* Keep icon and text stacked within link */
+            height: auto;
+            padding: 5px 0;
+            font-size: 0.7em; /* Very small text */
+            gap: 2px; /* Smaller gap between icon and text */
+        }
+
+        #site-header .nav-icon {
+            font-size: 1.8em; /* Larger icon to be prominent */
+            margin-bottom: 0; /* Remove margin, gap handles spacing */
+        }
+
+        #site-header .product-dropdown {
+            /* Adjust dropdowns for mobile if they are to be used */
+            position: static; /* Make dropdowns static to flow with content */
+            transform: none; /* Remove transform */
+            width: 100%; /* Full width */
+            border-radius: 0; /* No rounded corners */
+            box-shadow: none; /* No shadow */
+            border-top: none; /* No top border */
+            background-color: #f9f9f9; /* Slightly different background */
+            visibility: visible; /* Always visible if parent is shown */
+            opacity: 1; /* Always opaque */
+            padding: 10px 0;
+        }
+
+        #site-header .nav-item.show-dropdown .product-dropdown {
+            /* Ensure dropdowns are still visible if toggled */
+            visibility: visible;
+            opacity: 1;
+            transform: none;
+        }
+        
+        #site-header .dropdown-list li a {
+            padding: 8px 15px; /* Smaller padding for dropdown items */
+            font-size: 0.8em;
+        }
+
+        /* Hide dropdowns by default, can be toggled by JS if needed */
+        .product-dropdown {
+            display: none;
+        }
+
+        .nav-item.show-dropdown .product-dropdown {
+            display: block;
+        }
+    }
