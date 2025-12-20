@@ -14,7 +14,7 @@
 <body>
     <header id="site-header" class="main-header">
         <div id="site-header__content" class="header-content">
-            <a id="site-header__logo" class="logo" href="/"><span class="logo-accent">GEMINI</span>-Fitness</a>
+            <a id="site-header__logo" class="logo" href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="GEMINI-Fitness Logo" style="height: 40px;"></a>
             <a id="site-header__promo" class="header-promo-banner ai-consult-button" href="/gemini_fitness"><span class="icon">💻</span>AI</a>
             <nav id="site-header__nav" class="main-nav" aria-label="Main Navigation">
                 <ul id="site-header__nav-list">
@@ -73,14 +73,31 @@
         </div>
     </header>
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">AI × 健康管理の未来を、あなたに</h1>
-                <p class="hero-text">
-                    最先端AIと科学的データで、トレーニング・栄養・生活習慣を完全最適化。
-                    パフォーマンスを最大化し、最高の自分へ。
-                </p>
-                <a class="cta-btn" href="/gemini_fitness">GEMINIに相談する →</a>
+        <section class="hero-section">
+            <div class="hero-content-grid">
+                <div class="hero-text-content">
+                    <h1 class="hero-main-title">AIコーチと、理想のカラダへ</h1>
+                    <p class="hero-subtitle">
+                        あなたの目標、レベル、ライフスタイルに合わせて、Geminiが最適なトレーニングと食事プランを完全パーソナライズ。
+                    </p>
+                    <a href="/gemini_fitness" class="hero-cta-button">今すぐAIプランを体験 →</a>
+                </div>
+                <div class="hero-visual-content">
+                    <div class="ai-coach-card">
+                        <div class="card-header">
+                            <span class="light"></span>
+                            <span class="dots"></span>
+                        </div>
+                        <div class="card-body">
+                            <p class="prompt"><span class="prompt-label">目標:</span> 筋肉を増やし、引き締まった体へ</p>
+                            <p class="prompt"><span class="prompt-label">経験:</span> 週2回のジム通い</p>
+                            <p class="prompt"><span class="prompt-label">食事:</span> 外食が多め</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>AIプランを生成中...</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="container section">
