@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}GEMINI-FITNESS{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <header id="site-header" class="site-header">
+        <div class="site-header__content">
+            <a class="site-header__logo" href="/"><img src="{{ url_for('static', filename='img/logo.png') }}"
+                    alt="GEMINI-Fitness Logo" style="height: 40px;"></a>
+            <nav id="site-header__nav" class="site-header__nav" aria-label="Main Navigation">
+                <ul class="site-header__nav-list">
+                    <li class="site-header__nav-item has-dropdown">
+                        <a class="site-header__nav-link" href="/training"><span class="site-header__nav-icon">💪</span>Workouts</a>
+                        <div class="site-header__dropdown" role="menu" aria-hidden="true">
+                            <div class="site-header__dropdown-content">
+                                <ul class="site-header__dropdown-list">
+                                    <li><a href="{{ url_for('training') }}#chest">Chest</a></li>
+                                    <li><a href="{{ url_for('training') }}#shoulder">Shoulder</a></li>
+                                    <li><a href="{{ url_for('training') }}#back">Back</a></li>
+                                    <li><a href="{{ url_for('training') }}#arms">Arms</a></li>
+                                    <li><a href="{{ url_for('training') }}#legs">Legs</a></li>
+                                    <li><a href="{{ url_for('training') }}#abs">Abs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="site-header__nav-item has-dropdown">
+                        <a class="site-header__nav-link" href="#"><span class="site-header__nav-icon">🥗</span>meals</a>
+                        <div class="site-header__dropdown" role="menu" aria-hidden="true">
+                            <div class="site-header__dropdown-content">
+                                <ul class="site-header__dropdown-list">
+                                    <li><a href="#">Diet</a></li>
+                                    <li><a href="#">Muscle Gain</a></li>
+                                    <li><a href="#">Quick Meals</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="site-header__nav-item has-dropdown">
+                        <a class="site-header__nav-link" href="#"><span class="site-header__nav-icon">🛌🏻</span>Lifestyle</a>
+                        <div class="site-header__dropdown" role="menu" aria-hidden="true">
+                            <div class="site-header__dropdown-content">
+                                <ul class="site-header__dropdown-list">
+                                    <li><a href="#">Stress</a></li>
+                                    <li><a href="#">Sleep</a></li>
+                                    <li><a href="#">Drinking & Smoking</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="site-header__nav-item">
+                        <a class="site-header__promo site-header__promo--ai-coach" href="/gemini_fitness">
+                            <span class="site-header__promo-icon">🤖</span>
+                            <span class="site-header__promo-text">AI-Coach</span>
+                        </a>
+                    </li>
+                    <li class="site-header__nav-item">
+                        <a class="site-header__promo site-header__promo--record" href="#">
+                            <span class="site-header__promo-icon">🗒️</span>
+                            <span class="site-header__promo-text">Record</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="site-header__hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-header__nav">
+                <span class="site-header__hamburger-bar"></span>
+                <span class="site-header__hamburger-bar"></span>
+                <span class="site-header__hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    {% block footer %}
+    <footer class="site-footer">
+        <p class="site-footer__copyright">&copy;Copyright MY SERVICES, INC. All Rights Reserved..</p>
+        <p class="site-footer__subtitle">未来を共に創造する。</p>
+    </footer>
+    {% endblock %}
+
+    <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

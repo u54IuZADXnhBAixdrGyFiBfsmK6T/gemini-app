@@ -1,119 +1,51 @@
-<!doctype html>
-<html lang="ja">
+{% extends "base.html" %}
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TRAINING</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/training.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-</head>
+{% block title %}TRAINING{% endblock %}
 
-<body>
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/training.css') }}">
+{% endblock %}
 
-  <header id="site-header" class="main-header">
-    <div id="site-header__content" class="header-content">
-      <a id="site-header__logo" class="logo" href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="GEMINI-Fitness Logo" style="height: 40px;"></a>
-      <nav id="site-header__nav" class="main-nav" aria-label="Main Navigation">
-        <ul id="site-header__nav-list" class="nav-list">
-          <li class="nav-item has-dropdown">
-            <a class="nav-link" href="/training"><span class="nav-icon">💪</span>Workouts</a>
-            <div class="product-dropdown" role="menu" aria-hidden="true">
-              <div class="product-menu-content">
-                <ul class="dropdown-list">
-                  <li><a href="{{ url_for('training') }}#chest">Chest</a></li>
-                  <li><a href="{{ url_for('training') }}#shoulder">Shoulder</a></li>
-                  <li><a href="{{ url_for('training') }}#back">Back</a></li>
-                  <li><a href="{{ url_for('training') }}#arms">Arms</a></li>
-                  <li><a href="{{ url_for('training') }}#legs">Legs</a></li>
-                  <li><a href="{{ url_for('training') }}#abs">Abs</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item has-dropdown">
-            <a class="nav-link" href="#"><span class="nav-icon">🥗</span>meals</a>
-            <div class="product-dropdown" role="menu" aria-hidden="true">
-              <div class="product-menu-content">
-                <ul class="dropdown-list">
-                  <li><a href="#">Diet</a></li>
-                  <li><a href="#">Muscle Gain</a></li>
-                  <li><a href="#">Quick Meals</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item has-dropdown">
-            <a class="nav-link" href="#"><span class="nav-icon">🛌🏻</span>Lifestyle</a>
-            <div class="product-dropdown" role="menu" aria-hidden="true">
-              <div class="product-menu-content">
-                <ul class="dropdown-list">
-                  <li><a href="#">Stress</a></li>
-                  <li><a href="#">Sleep</a></li>
-                  <li><a href="#">Drinking & Smoking</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a id="site-header__promo" class="header-promo-banner ai-consult-button" href="/gemini_fitness">
-              <span class="nav-icon">🤖</span>
-              <span class="nav-text">AI-Coach</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a id="site-header__record" class="header-promo-banner record-button" href="#">
-              <span class="nav-icon">🗒️</span>
-              <span class="nav-text">Record</span>
-            </a>
-          </li>
-        </ul>
+{% block content %}
+<div id="training-page-content" class="content-wrapper">
+  <aside class="side-controls">
+    <div class="side-controls-inner">
+      <h1 class="logo">Training Portal</h1>
+      
+      <nav id="partJumpList" class="part-jump-list" aria-label="Part Shortcuts"></nav>
+
+      <nav class="controls" aria-label="Search and Actions">
+        <input id="search" class="search" type="search" placeholder="Search by keyword..." aria-label="Search" />
+        <select id="filterLevel" class="select" aria-label="Filter by level">
+          <option value="all">All Levels</option>
+        </select>
+        <select id="filterEquipment" class="select" aria-label="Filter by equipment">
+          <option value="all">All Equipment</option>
+        </select>
+        <button id="toggleFavView" class="btn">Show Favorites</button>
       </nav>
-      <button id="hamburger-btn" class="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-header__nav">
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-      </button>
     </div>
-  </header>
-  <div class="content-wrapper">
-    <aside class="side-controls">
-      <div class="side-controls-inner">
-        <h1 class="logo">Training Portal</h1>
-        
-        <nav id="partJumpList" class="part-jump-list" aria-label="Part Shortcuts"></nav>
+  </aside>
+  <main class="main" id="main">
+  </main>
 
-        <nav class="controls" aria-label="Search and Actions">
-          <input id="search" class="search" type="search" placeholder="Search by keyword..." aria-label="Search" />
-          <select id="filterLevel" class="select" aria-label="Filter by level">
-            <option value="all">All Levels</option>
-          </select>
-          <select id="filterEquipment" class="select" aria-label="Filter by equipment">
-            <option value="all">All Equipment</option>
-          </select>
-          <button id="toggleFavView" class="btn">Show Favorites</button>
-        </nav>
-      </div>
-    </aside>
-    <main class="main" id="main">
-    </main>
-
-    <div id="detailModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
-      <div class="modal-content" role="document">
-        <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-        <div id="modalBody"></div>
-      </div>
+  <div id="detailModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content" role="document">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div id="modalBody"></div>
     </div>
   </div>
-  <footer class="site-footer">
-    <div class="container">
-      <small>© Training Portal — Sample data / Local favorites supported</small>
-    </div>
-  </footer>
+</div>
+{% endblock %}
 
-  <script src="{{ url_for('static', filename='js/training.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/header.js') }}"></script>
-</body>
+{% block footer %}
+<footer class="site-footer">
+  <div class="container">
+    <small>© Training Portal — Sample data / Local favorites supported</small>
+  </div>
+</footer>
+{% endblock %}
 
-</html>
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/training.js') }}"></script>
+{% endblock %}

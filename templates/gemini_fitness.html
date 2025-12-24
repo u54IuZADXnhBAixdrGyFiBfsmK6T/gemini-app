@@ -1,105 +1,36 @@
-<!DOCTYPE html>
-<html lang="ja">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Fitness Pro</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/gemini_fitness.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+{% block title %}AI Fitness Pro{% endblock %}
 
-</head>
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gemini_fitness.css') }}">
+{% endblock %}
 
-<body>
-    <header id="site-header" class="main-header">
-        <div id="site-header__content" class="header-content">
-            <a id="site-header__logo" class="logo" href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="GEMINI-Fitness Logo" style="height: 40px;"></a>
-            <nav id="site-header__nav" class="main-nav" aria-label="Main Navigation">
-                <ul id="site-header__nav-list" class="nav-list">
-                    <li class="nav-item has-dropdown">
-                        <a class="nav-link" href="/training"><span class="nav-icon">💪</span> Workouts</a>
-                        <div class="product-dropdown" role="menu" aria-hidden="true">
-                            <div class="product-menu-content">
-                                <ul class="dropdown-list">
-                                    <li><a href="{{ url_for('training') }}#chest">Chest</a></li>
-                                    <li><a href="{{ url_for('training') }}#shoulder">Shoulder</a></li>
-                                    <li><a href="{{ url_for('training') }}#back">Back</a></li>
-                                    <li><a href="{{ url_for('training') }}#arms">Arms</a></li>
-                                    <li><a href="{{ url_for('training') }}#legs">Legs</a></li>
-                                    <li><a href="{{ url_for('training') }}#abs">Abs</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item has-dropdown">
-                        <a class="nav-link" href="#"><span class="nav-icon">🥗</span> Nutrition</a>
-                        <div class="product-dropdown" role="menu" aria-hidden="true">
-                            <div class="product-menu-content">
-                                <ul class="dropdown-list">
-                                    <li><a href="#">Diet</a></li>
-                                    <li><a href="#">Muscle Gain</a></li>
-                                    <li><a href="#">Quick Meals</a></li>
-                            </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item has-dropdown">
-                        <a class="nav-link" href="#"><span class="nav-icon">🛌🏻</span> Lifestyle</a>
-                        <div class="product-dropdown" role="menu" aria-hidden="true">
-                            <div class="product-menu-content">
-                                <ul class="dropdown-list">
-                                    <li><a href="#">Stress</a></li>
-                                    <li><a href="#">Sleep</a></li>
-                                    <li><a href="#">Drinking & Smoking</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a id="site-header__promo" class="header-promo-banner ai-consult-button" href="/gemini_fitness">
-                            <span class="nav-icon">🤖</span>
-                            <span class="nav-text">AI</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="site-header__record" class="header-promo-banner record-button" href="#">
-                            <span class="nav-icon">🗒️</span>
-                            <span class="nav-text">Record</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <button id="hamburger-btn" class="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-header__nav">
-                <span class="hamburger-bar"></span>
-                <span class="hamburger-bar"></span>
-                <span class="hamburger-bar"></span>
-            </button>
-        </div>
-    </header>
+{% block content %}
+<div class="container">
+    <label for="height">HEIGHT <span>(身長 cm)</span></label>
+    <input type="number" id="height" placeholder="例: 170" value="170">
 
-    <div class="container">
-        <label for="height">HEIGHT <span>(身長 cm)</span></label>
-        <input type="number" id="height" placeholder="例: 170" value="170">
+    <label for="weight">WEIGHT <span>(体重 kg)</span></label>
+    <input type="number" id="weight" placeholder="例: 65" value="65">
 
-        <label for="weight">WEIGHT <span>(体重 kg)</span></label>
-        <input type="number" id="weight" placeholder="例: 65" value="65">
+    <label for="activity">LIFESTYLE <span>(生活習慣)</span></label>
+    <textarea id="activity" placeholder="例 : デスクワーク中心で、運動は週末のみ">デスクワーク中心で、運動は週末のみ</textarea>
 
-        <label for="activity">LIFESTYLE <span>(生活習慣)</span></label>
-        <textarea id="activity" placeholder="例 : デスクワーク中心で、運動は週末のみ">デスクワーク中心で、運動は週末のみ</textarea>
+    <label for="ideal">GOAL <span>(理想の体型)</span></label>
+    <textarea id="ideal" placeholder="例 : 筋肉を残しながら、体脂肪を落としたい">筋肉を残しながら、体脂肪を落としたい</textarea>
 
-        <label for="ideal">GOAL <span>(理想の体型)</span></label>
-        <textarea id="ideal" placeholder="例 : 筋肉を残しながら、体脂肪を落としたい">筋肉を残しながら、体脂肪を落としたい</textarea>
+    <button id="recommendBtn">🚀 GENERATE PLAN 🚀</button>
 
-        <button id="recommendBtn">🚀 GENERATE PLAN 🚀</button>
+    <div id="output">😁データの入力を待っています😁</div>
+</div>
+{% endblock %}
 
-        <div id="output">😁データの入力を待っています😁</div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+{% block footer %}
+{% endblock %}
 
-
-</body>
-
-</html>
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
