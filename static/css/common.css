@@ -15,7 +15,12 @@
     border-bottom: 1px solid #eee;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     z-index: 2000;
-    font-family: var(--font-sans); 
+    font-family: var(--font-sans);
+    transition: transform 0.3s ease;
+}
+
+.site-header.is-hidden {
+    transform: translateY(-100%);
 }
 
 .site-header__content {

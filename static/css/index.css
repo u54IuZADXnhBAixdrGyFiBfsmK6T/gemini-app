@@ -10,7 +10,7 @@ body {
     padding: 0 24px;
 }
 .hero {
-    margin-top: 60px;
+    margin-top: 72px;
     padding: 60px 40px;
     background: white;
     border: 1px solid #e2e8f0;
@@ -152,7 +152,7 @@ body {
     padding: 60px 24px;
     width: 100%;
     max-width: 1200px;
-    margin: 60px auto 0 auto;
+    margin: 72px auto 0 auto;
     box-sizing: border-box;
 }
 
