@@ -344,3 +344,24 @@ body {
     }
 }
 
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 80px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 0 0 8px 0;
+}
+
+.footer .footer-sub {
+    font-size: 12px;
+    opacity: 0.8;
+    margin: 0;
+}
+

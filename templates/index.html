@@ -14,12 +14,12 @@
 <body>
     <header id="site-header" class="main-header">
         <div id="site-header__content" class="header-content">
-            <a id="site-header__logo" class="logo" href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="GEMINI-Fitness Logo" style="height: 40px;"></a>
-            <a id="site-header__promo" class="header-promo-banner ai-consult-button" href="/gemini_fitness"><span class="icon">💻</span>AI</a>
+            <a id="site-header__logo" class="logo" href="/"><img src="{{ url_for('static', filename='img/logo.png') }}"
+                    alt="GEMINI-Fitness Logo" style="height: 40px;"></a>
             <nav id="site-header__nav" class="main-nav" aria-label="Main Navigation">
-                <ul id="site-header__nav-list">
+                <ul id="site-header__nav-list" class="nav-list">
                     <li class="nav-item has-dropdown">
-                        <a class="nav-link" href="/training"><span class="nav-icon">💪</span> Workouts</a>
+                        <a class="nav-link" href="/training"><span class="nav-icon">💪</span>Workouts</a>
                         <div class="product-dropdown" role="menu" aria-hidden="true">
                             <div class="product-menu-content">
                                 <ul class="dropdown-list">
@@ -34,7 +34,7 @@
                         </div>
                     </li>
                     <li class="nav-item has-dropdown">
-                        <a class="nav-link" href="#"><span class="nav-icon">🥗</span> Nutrition</a>
+                        <a class="nav-link" href="#"><span class="nav-icon">🥗</span>meals</a>
                         <div class="product-dropdown" role="menu" aria-hidden="true">
                             <div class="product-menu-content">
                                 <ul class="dropdown-list">
@@ -46,7 +46,7 @@
                         </div>
                     </li>
                     <li class="nav-item has-dropdown">
-                        <a class="nav-link" href="#"><span class="nav-icon">🛌🏻</span> Lifestyle</a>
+                        <a class="nav-link" href="#"><span class="nav-icon">🛌🏻</span>Lifestyle</a>
                         <div class="product-dropdown" role="menu" aria-hidden="true">
                             <div class="product-menu-content">
                                 <ul class="dropdown-list">
@@ -57,28 +57,34 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item has-dropdown">
-                        <a class="nav-link" href="#"><span class="nav-icon">🤔</span> Q&A</a>
-                        <div class="product-dropdown" role="menu" aria-hidden="true">
-                            <div class="product-menu-content">
-                                <ul class="dropdown-list">
-                                    <li><a href="#">About this site</a></li>
-                                    <li><a href="#">Where to start?</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                    <li class="nav-item">
+                        <a id="site-header__promo" class="header-promo-banner ai-consult-button" href="/gemini_fitness">
+                            <span class="nav-icon">🤖</span>
+                            <span class="nav-text">AI-Coach</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="site-header__record" class="header-promo-banner record-button" href="#">
+                            <span class="nav-icon">🗒️</span>
+                            <span class="nav-text">Record</span>
+                        </a>
                     </li>
                 </ul>
             </nav>
+            <button id="hamburger-btn" class="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-header__nav">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
         </div>
     </header>
     <main>
         <section class="hero-section">
             <div class="hero-content-grid">
                 <div class="hero-text-content">
-                    <h1 class="hero-main-title">AIコーチと、理想のカラダへ</h1>
+                    <h1 class="hero-main-title">AIと、理想のカラダへ</h1>
                     <p class="hero-subtitle">
-                        あなたの目標、レベル、ライフスタイルに合わせて、Geminiが最適なトレーニングと食事プランを完全パーソナライズ。
+                        あなたの目標、レベル、ライフスタイルに合わせて、Geminiが最適なトレーニングと食事プランをパーソナライズ。
                     </p>
                     <a href="/gemini_fitness" class="hero-cta-button">今すぐAIプランを体験 →</a>
                 </div>
@@ -101,25 +107,48 @@
             </div>
         </section>
         <section class="container section">
-            <h2 class="section-title">知識をつけよう</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <div class="emoji">💪</div>
-                    <h3 class="card-title">トレーニング</h3>
-                    <p class="card-text">筋力や生活リズムをもとに、最適なメニューをAIが生成。</p>
-                </div>
-                <div class="card">
-                    <div class="emoji">🥗</div>
-                    <h3 class="card-title">栄養学</h3>
-                    <p class="card-text">あなただけのPFCバランスとカロリーを知ろう</p>
-                </div>
-                <div class="card">
-                    <div class="emoji">🧠</div>
-                    <h3 class="card-title">生活改善</h3>
-                    <p class="card-text">睡眠やストレスを分析し、改善点を可視化。</p>
-                </div>
-            </div>
-        </section>
+    <h2 class="section-title">知識をつけよう</h2>
+    <div class="grid-3">
+        <div class="card" style="text-align: left;">
+            <div class="emoji" style="text-align: center;">💪</div>
+            <h3 class="card-title" style="text-align: center; margin-bottom: 20px;">筋トレを「今」始めるべき理由</h3>
+            <p class="card-text">
+                筋トレの最大のメリットは、単なる見た目の変化に留まりません。<strong>基礎代謝の向上</strong>により、寝ている間も脂肪を燃焼しやすい「燃焼体質」へと根本から作り変えることができます。
+            </p>
+            <ul style="padding-left: 20px; font-size: 14px; color: #475569; line-height: 1.8;">
+                <li><strong>成長ホルモンの分泌:</strong> 若々しさを保つアンチエイジング効果。</li>
+                <li><strong>メンタルヘルス:</strong> 幸福ホルモン「セロトニン」の分泌により、ストレス耐性が飛躍的に向上します。</li>
+                <li><strong>脳機能の活性化:</strong> 記憶力や集中力を高めるBDNF（脳由来神経栄養因子）の放出を促します。</li>
+            </ul>
+        </div>
+
+        <div class="card" style="text-align: left;">
+            <div class="emoji" style="text-align: center;">🥗</div>
+            <h3 class="card-title" style="text-align: center; margin-bottom: 20px;">食事が「体型改善の鍵」である根拠</h3>
+            <p class="card-text">
+                「腹筋はキッチンで作られる」と言われるほど、食事の影響は絶大です。いくら激しい運動をしても、摂取カロリーと<strong>PFCバランス（タンパク質・脂質・炭水化物）</strong>が崩れていれば、体型は変わりません。
+            </p>
+            <ul style="padding-left: 20px; font-size: 14px; color: #475569; line-height: 1.8;">
+                <li><strong>筋肉の保持:</strong> タンパク質不足は、脂肪ではなく筋肉を削り、リバウンドを招きます。</li>
+                <li><strong>血糖値コントロール:</strong> 食事の質を変えることで、脂肪蓄積を促す「インスリン」の過剰分泌を防ぎます。</li>
+                <li><strong>腸内環境の改善:</strong> 栄養吸収効率を高め、肌荒れや倦怠感も解消します。</li>
+            </ul>
+        </div>
+
+        <div class="card" style="text-align: left;">
+            <div class="emoji" style="text-align: center;">⚠️</div>
+            <h3 class="card-title" style="text-align: center; margin-bottom: 20px;">成果を阻害する「生活の罠」</h3>
+            <p class="card-text">
+                悪い生活習慣は、トレーニング努力の<strong>50%以上を無効化</strong>する恐れがあります。特に飲酒や夜ふかしは、体内のホルモンバランスを劇的に悪化させます。
+            </p>
+            <ul style="padding-left: 20px; font-size: 14px; color: #475569; line-height: 1.8;">
+                <li><strong>飲酒の悪影響:</strong> アルコール分解が優先され、筋肉の合成（mTOR経路）が阻害されます。さらに男性ホルモン「テストステロン」を減少させ、筋肉の発達を妨げます。</li>
+                <li><strong>睡眠不足のリスク:</strong> 脂肪分解を促す成長ホルモンが不足し、逆に食欲を増進させる「グレリン」が急増します。</li>
+                <li><strong>ジャンクフード:</strong> 慢性的、体内の微細な炎症を引き起こし、代謝効率を著しく低下させます。</li>
+            </ul>
+        </div>
+    </div>
+</section>
     </main>
     <footer class="footer">
         <p>&copy;Copyright MY SERVICES, INC. All Rights Reserved..</p>

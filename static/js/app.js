@@ -12,7 +12,7 @@ async function getRecommendation() {
         return;
     }
 
-    outputDiv.innerHTML = '<p class="loading">              🤔Gemini AIが提案を作成しています🤔</p>';
+    outputDiv.innerHTML = '<p class="loading">           🤔Gemini AIが提案を作成しています🤔</p>';
 
     try {
         const response = await fetch('/get_recommendation', {

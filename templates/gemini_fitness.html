@@ -14,10 +14,8 @@
     <header id="site-header" class="main-header">
         <div id="site-header__content" class="header-content">
             <a id="site-header__logo" class="logo" href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="GEMINI-Fitness Logo" style="height: 40px;"></a>
-            <a id="site-header__promo" class="header-promo-banner ai-consult-button" href="/gemini_fitness"><span
-                    class="icon">💻</span>AI Consultant</a>
             <nav id="site-header__nav" class="main-nav" aria-label="Main Navigation">
-                <ul id="site-header__nav-list">
+                <ul id="site-header__nav-list" class="nav-list">
                     <li class="nav-item has-dropdown">
                         <a class="nav-link" href="/training"><span class="nav-icon">💪</span> Workouts</a>
                         <div class="product-dropdown" role="menu" aria-hidden="true">
@@ -57,19 +55,25 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item has-dropdown">
-                        <a class="nav-link" href="#"><span class="nav-icon">🤔</span> Q&A</a>
-                        <div class="product-dropdown" role="menu" aria-hidden="true">
-                            <div class="product-menu-content">
-                                <ul class="dropdown-list">
-                                    <li><a href="#">About this site</a></li>
-                                    <li><a href="#">Where to start?</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                    <li class="nav-item">
+                        <a id="site-header__promo" class="header-promo-banner ai-consult-button" href="/gemini_fitness">
+                            <span class="nav-icon">🤖</span>
+                            <span class="nav-text">AI</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="site-header__record" class="header-promo-banner record-button" href="#">
+                            <span class="nav-icon">🗒️</span>
+                            <span class="nav-text">Record</span>
+                        </a>
                     </li>
                 </ul>
             </nav>
+            <button id="hamburger-btn" class="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-header__nav">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
         </div>
     </header>
 
@@ -88,9 +92,7 @@
 
         <button id="recommendBtn">🚀 GENERATE PLAN 🚀</button>
 
-        <div id="output">
-                   😁データの入力を待っています😁
-        </div>
+        <div id="output">😁データの入力を待っています😁</div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>

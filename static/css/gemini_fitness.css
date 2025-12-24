@@ -120,6 +120,7 @@ button:active {
 }
 
 #output {
+    text-align: center;
     margin-top: 40px;
     padding: 24px;
     background-color: #ffffff; 

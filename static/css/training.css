@@ -1,5 +1,4 @@
 :root {
-  /* --- 色・変数の定義 --- */
   --bg: #f6f8fb;
   --card-bg: #ffffff;
   --text-main: #0b1220;
@@ -24,43 +23,33 @@ html, body {
 body {
   margin: 0;
   font-family: var(--font-sans);
-  /* ▼ 背景グラデーションを調整 */
   background: linear-gradient(180deg, #eef2f9 0%, #fcfdff 100%);
   background-attachment: fixed;
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
-  /* 固定ヘッダーの分だけ下げる */
   padding-top: var(--header-height);
 }
 
-/* =========================================
-   レイアウト構造 (Layout Wrapper)
-   ========================================= */
+/*レイアウト構造 (Layout Wrapper) */
 /* サイドバーとメインを中央に配置するための箱 */
 .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-  /* max-width は削除または画面幅いっぱい使えるように調整 */
   width: 100%; 
   margin: 0 auto;
-  
-  /* ▼ 修正: 右側にサイドバー分の余白を足して、メインを視覚的な中央へ寄せる */
-  /* 元のpadding-right(20px) + サイドバー幅(280px) + gap(40px) = calc(340px + 20px) */
-  padding: 40px calc(20px + var(--sidebar-width) + 40px) 40px 20px;
+  padding: 40px 20px;
 }
 
-/* =========================================
-   サイドバー (Sidebar)
-   ========================================= */
+/*サイドバー (Sidebar)*/
 .side-controls {
   /* スクロール追従設定 */
   position: sticky;
-  top: calc(var(--header-height) + 30px); /* ヘッダーの下に配置 */
+  top: calc(var(--header-height) + 30px); 
   width: var(--sidebar-width);
-  flex-shrink: 0; /* 幅を縮めない */
+  flex-shrink: 0;
   
   /* デザイン：浮いているカード風 */
   background: var(--card-bg);
@@ -129,13 +118,10 @@ body {
   opacity: 0.9;
 }
 
-/* =========================================
-   メインコンテンツ (Main)
-   ========================================= */
+/*メインコンテンツ (Main)*/
 .main {
-  flex: 1; /* 残りの幅を使う */
+  flex: 1; 
   max-width: var(--container-width);
-  /* wrapperで中央寄せしているのでmargin不要 */
 }
 
 /* 部位ごとのセクション */
@@ -152,12 +138,13 @@ body {
 
 /* ▼ サブカテゴリ（ゾーン）のグループ */
 .zone-group {
-  background: #f1f5f9; /* slate-100 */
+  background: #f1f5f9;
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 24px;
-  border: 1px solid #e2e8f0; /* slate-200 */
+  border: 1px solid #e2e8f0;
 }
+
 .zone-group:last-child {
   margin-bottom: 0;
 }
@@ -165,7 +152,7 @@ body {
 /* ▼ サブカテゴリ（ゾーン）のタイトル */
 .zone-title {
   font-size: 0.95rem;
-  margin: 0 0 16px 0; /* 下マージンのみに変更 */
+  margin: 0 0 16px 0;
   color: var(--text-muted);
   border-left: 4px solid var(--accent);
   padding-left: 12px;
@@ -211,9 +198,7 @@ body {
   gap: 20px;
 }
 
-/* =========================================
-   カードのデザイン (Card)
-   ========================================= */
+/*カードのデザイン*/
 .card {
   background: var(--card-bg);
   border-radius: var(--radius);
@@ -225,7 +210,7 @@ body {
   gap: 12px;
   transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
-  min-height: 200px; /* 高さを揃えるため */
+  min-height: 200px;
   padding : 16px;
   min-height: 180px;
   cursor: pointer;
@@ -264,7 +249,7 @@ body {
   font-size: 0.92rem;
   color: #334155;
   line-height: 1.6;
-  flex-grow: 1; /* ボタンを下揃えにするために伸ばす */
+  flex-grow: 1; 
   margin: 0;
 }
 
@@ -498,6 +483,10 @@ body {
    レスポンシブ対応 (Mobile)
    ========================================= */
 @media (max-width: 1000px) {
+  body {
+    padding-top: 0; /* 固定ヘッダー解除に伴い、bodyのpaddingをリセット */
+  }
+
   .content-wrapper {
     flex-direction: column;
     align-items: stretch;
