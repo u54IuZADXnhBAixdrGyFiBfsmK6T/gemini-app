@@ -8,8 +8,6 @@
   --radius: 16px;          /* 角丸の大きさ */
   --container-width: 1250px;/* メインコンテンツの幅 */
   --sidebar-width: 280px;  /* サイドバーの幅 */
-  --header-height: 72px;   /* ヘッダーの高さ */
-  --font-sans: "Inter", "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
 }
 
 * {
@@ -22,13 +20,10 @@ html, body {
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
   background: linear-gradient(180deg, #eef2f9 0%, #fcfdff 100%);
   background-attachment: fixed;
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
-  padding-top: var(--header-height);
 }
 
 /*レイアウト構造 (Layout Wrapper) */
