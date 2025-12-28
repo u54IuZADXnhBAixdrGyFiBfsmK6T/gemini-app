@@ -477,8 +477,7 @@ function openExerciseModal() {
     addBtn.textContent = '種目を追加';
     addBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      // 種目追加処理（後で実装）
-      showToast('種目管理画面は /manage_exercises から');
+      window.location.href = '/manage_exercises';
     });
     section.appendChild(addBtn);
     

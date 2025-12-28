@@ -57,6 +57,10 @@ def get_recommendation():
 def record_workout():
     return render_template("record_workout.html")
 
+@app.route("/manage_exercises")
+def manage_exercises():
+    return render_template("manage_exercises.html")
+
 # API: 指定した月の日別トレーニング有無を取得（カレンダーのドット用）
 @app.route("/api/workout_dates", methods=["GET"])
 def get_workout_dates():
