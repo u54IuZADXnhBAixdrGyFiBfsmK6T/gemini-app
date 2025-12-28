@@ -301,5 +301,112 @@ def save_log():
         print(f"Error saving log: {e}")
         return jsonify({"error": str(e)}), 500
 
+# API: 種目の追加
+@app.route("/api/add_exercise", methods=["POST"])
+def add_exercise():
+    data = request.json
+    user_id = 1
+    
+    try:
+        category_id = int(data['category_id'])
+        exercise_name = data['name'].strip()
+        
+        if not exercise_name:
+            return jsonify({"error": "種目名を入力してください"}), 400
+        
+        # 同じ名前の種目が既に存在するかチェック
+        existing = Exercise.query.filter_by(
+            category_id=category_id,
+            name=exercise_name
+        ).first()
+        
+        if existing:
+            return jsonify({"error": "この種目は既に登録されています"}), 400
+        
+        new_exercise = Exercise(
+            name=exercise_name,
+            category_id=category_id,
+            user_id=user_id,
+            is_recommended=False
+        )
+        
+        db.session.add(new_exercise)
+        db.session.commit()
+        
+        return jsonify({
+            "status": "success",
+            "exercise": {
+                "id": new_exercise.id,
+                "name": new_exercise.name,
+                "category_id": new_exercise.category_id
+            }
+        })
+        
+    except Exception as e:
+        db.session.rollback()
+        print(f"Error adding exercise: {e}")
+        return jsonify({"error": str(e)}), 500
+
+# API: 種目の削除
+@app.route("/api/delete_exercise", methods=["POST"])
+def delete_exercise():
+    data = request.json
+    user_id = 1
+    
+    try:
+        exercise_id = int(data['id'])
+        
+        exercise = Exercise.query.filter_by(id=exercise_id).first()
+        if not exercise:
+            return jsonify({"error": "種目が見つかりません"}), 404
+        
+        # システムデフォルト種目は削除不可
+        if exercise.user_id is None:
+            return jsonify({"error": "システム種目は削除できません"}), 403
+        
+        # 関連するログも削除
+        WorkoutLog.query.filter_by(exercise_id=exercise_id).delete()
+        
+        db.session.delete(exercise)
+        db.session.commit()
+        
+        return jsonify({"status": "success"})
+        
+    except Exception as e:
+        db.session.rollback()
+        print(f"Error deleting exercise: {e}")
+        return jsonify({"error": str(e)}), 500
+
+# API: 種目の編集
+@app.route("/api/edit_exercise", methods=["POST"])
+def edit_exercise():
+    data = request.json
+    user_id = 1
+    
+    try:
+        exercise_id = int(data['id'])
+        new_name = data['name'].strip()
+        
+        if not new_name:
+            return jsonify({"error": "種目名を入力してください"}), 400
+        
+        exercise = Exercise.query.filter_by(id=exercise_id).first()
+        if not exercise:
+            return jsonify({"error": "種目が見つかりません"}), 404
+        
+        # システムデフォルト種目は編集不可
+        if exercise.user_id is None:
+            return jsonify({"error": "システム種目は編集できません"}), 403
+        
+        exercise.name = new_name
+        db.session.commit()
+        
+        return jsonify({"status": "success"})
+        
+    except Exception as e:
+        db.session.rollback()
+        print(f"Error editing exercise: {e}")
+        return jsonify({"error": str(e)}), 500
+
 if __name__ == "__main__":
     app.run(debug=True)

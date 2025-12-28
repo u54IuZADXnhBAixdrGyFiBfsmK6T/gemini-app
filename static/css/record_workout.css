@@ -17,25 +17,40 @@
   padding: 0;
 }
 
+html {
+  background: var(--bg-gray);
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: var(--bg-gray);
   color: var(--text-dark);
-  padding-bottom: 80px;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+/* PC表示用：中央寄せコンテナ */
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--bg-gray);
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 80px;
 }
 
 /* ===== グローバルヘッダー ===== */
 .global-header {
   background: var(--primary-red);
   color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  position: relative; /* stickyから変更 */
+  z-index: 100; /* 共通ヘッダーより下に */
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
   box-shadow: var(--shadow-lg);
   padding-bottom: 20px;
+  margin-top: 72px; /* 共通ヘッダーの高さ分 */
 }
 
 .header-top {
@@ -215,8 +230,6 @@ body {
 
 /* ===== メインコンテンツ ===== */
 .main-content {
-  max-width: 600px;
-  margin: 0 auto;
   padding: 20px;
 }
 
@@ -359,7 +372,6 @@ body {
   font-size: 0.85rem;
 }
 
-/* スワイプ削除のスタイル */
 .set-row.swiping {
   transition: transform 0.2s ease-out;
 }
@@ -384,7 +396,7 @@ body {
   opacity: 1;
 }
 
-/* ===== FAB (Floating Action Button) ===== */
+/* ===== FAB ===== */
 .fab {
   position: fixed;
   right: 20px;
@@ -404,6 +416,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* PC表示の場合、FABを中央寄せコンテナ内に配置 */
+@media (min-width: 601px) {
+  .fab {
+    right: calc(50% - 280px);
+  }
 }
 
 .fab:hover {
@@ -522,17 +541,25 @@ body {
   flex: 1;
 }
 
-/* ===== 種目選択リスト ===== */
+/* ===== 種目選択リスト（画像スタイル） ===== */
 .category-section {
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .category-header {
-  background: var(--bg-gray);
-  padding: 10px 20px;
+  background: var(--primary-red);
+  color: white;
+  padding: 12px 20px;
   font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--text-dark);
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-last-modified {
+  font-size: 0.75rem;
+  opacity: 0.9;
 }
 
 .exercise-item {
@@ -543,6 +570,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: white;
 }
 
 .exercise-item:hover {
@@ -551,11 +579,29 @@ body {
 
 .exercise-item-name {
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .exercise-item-last {
   font-size: 0.85rem;
   color: var(--text-muted);
+}
+
+.add-exercise-btn {
+  padding: 14px 20px;
+  background: white;
+  border: none;
+  border-bottom: 1px solid var(--border-light);
+  text-align: left;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.add-exercise-btn:hover {
+  background: var(--bg-gray);
 }
 
 /* ===== セット入力テーブル ===== */
@@ -656,6 +702,12 @@ body {
   pointer-events: none;
 }
 
+@media (min-width: 601px) {
+  #toastContainer {
+    right: calc(50% - 280px);
+  }
+}
+
 .toast {
   background: rgba(15, 23, 42, 0.95);
   color: white;
@@ -695,33 +747,4 @@ body {
 .empty-state-text {
   font-size: 1rem;
   font-weight: 600;
-}
-
-/* ===== レスポンシブ ===== */
-@media (min-width: 768px) {
-  .calendar-days {
-    gap: 8px;
-  }
-  
-  .calendar-day {
-    font-size: 1rem;
-  }
-  
-  .modal-sheet {
-    border-radius: 24px;
-    max-height: 90vh;
-    margin: 20px;
-  }
-  
-  .modal {
-    align-items: center;
-  }
-  
-  .modal[aria-hidden="false"] .modal-sheet {
-    transform: scale(1);
-  }
-  
-  .modal-sheet {
-    transform: scale(0.9);
-  }
 }

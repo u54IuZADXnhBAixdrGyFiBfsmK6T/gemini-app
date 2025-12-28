@@ -420,21 +420,46 @@ function openExerciseModal() {
     const section = document.createElement('div');
     section.className = 'category-section';
     
+    // 赤いヘッダー
     const header = document.createElement('div');
     header.className = 'category-header';
-    header.textContent = category.category;
+    
+    // 最終更新日を計算
+    let lastModified = null;
+    category.exercises.forEach(ex => {
+      if (ex.last_date) {
+        const date = new Date(ex.last_date);
+        if (!lastModified || date > lastModified) {
+          lastModified = date;
+        }
+      }
+    });
+    
+    const lastModifiedText = lastModified 
+      ? `(Last modified: ${calculateDaysAgo(lastModified.toISOString().split('T')[0])})`
+      : '';
+    
+    header.innerHTML = `
+      <span>${category.category}</span>
+      <span class="category-last-modified">${lastModifiedText}</span>
+    `;
     section.appendChild(header);
     
+    // 種目リスト
     category.exercises.forEach(exercise => {
       const item = document.createElement('div');
       item.className = 'exercise-item';
       
       const lastText = exercise.last_date 
         ? `Last: ${calculateDaysAgo(exercise.last_date)}`
-        : 'Last: -';
+        : '';
+      
+      // カメラアイコンの判定（動画リンクがある場合）
+      const hasVideo = false; // 将来的に video_url フィールドを追加
+      const videoIcon = hasVideo ? '📹' : '';
       
       item.innerHTML = `
-        <div class="exercise-item-name">${exercise.name}</div>
+        <div class="exercise-item-name">${exercise.name} ${videoIcon}</div>
         <div class="exercise-item-last">${lastText}</div>
       `;
       
@@ -445,6 +470,17 @@ function openExerciseModal() {
       
       section.appendChild(item);
     });
+    
+    // 「種目を追加」ボタン
+    const addBtn = document.createElement('button');
+    addBtn.className = 'add-exercise-btn';
+    addBtn.textContent = '種目を追加';
+    addBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      // 種目追加処理（後で実装）
+      showToast('種目管理画面は /manage_exercises から');
+    });
+    section.appendChild(addBtn);
     
     list.appendChild(section);
   });

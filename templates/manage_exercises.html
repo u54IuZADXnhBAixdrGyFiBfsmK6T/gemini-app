@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>種目管理</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/manage_exercises.css') }}">
+</head>
+<body>
+<div class="app-container">
+    <!-- ヘッダー -->
+    <header class="page-header">
+        <button class="back-btn" onclick="location.href='/record_workout'">
+            ← 戻る
+        </button>
+        <h1>種目管理</h1>
+        <button class="add-category-btn" id="addCategoryBtn">＋部位</button>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="categoriesContainer">
+        <!-- ここに部位と種目のリストが動的に生成されます -->
+    </main>
+
+    <!-- 種目追加モーダル -->
+    <div class="modal" id="addExerciseModal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-sheet">
+            <div class="modal-header">
+                <h2>種目を追加</h2>
+                <button class="modal-close-btn" id="closeAddExerciseModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>種目名</label>
+                    <input type="text" id="newExerciseName" placeholder="例：ダンベルプレス" class="form-input">
+                </div>
+                <button class="submit-btn" id="submitAddExercise">追加する</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 種目編集モーダル -->
+    <div class="modal" id="editExerciseModal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-sheet">
+            <div class="modal-header">
+                <h2>種目を編集</h2>
+                <button class="modal-close-btn" id="closeEditExerciseModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>種目名</label>
+                    <input type="text" id="editExerciseName" class="form-input">
+                </div>
+                <button class="submit-btn" id="submitEditExercise">保存する</button>
+                <button class="delete-btn" id="submitDeleteExercise">削除する</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- トースト -->
+    <div id="toastContainer"></div>
+
+    <script src="{{ url_for('static', filename='js/manage_exercises.js') }}"></script>
+</div>
+</body>
+</html>
