@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>筋トレ記録</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/record_workout.css') }}">
+</head>
+<body>
+    <!-- グローバルヘッダー -->
+    <header class="global-header">
+        <div class="header-top">
+            <div class="header-date">
+                <div class="header-year" id="currentYear">2025</div>
+                <div class="header-month" id="currentMonth">December</div>
+            </div>
+            <div class="header-stats">
+                <div class="stats-label">MONTHLY ARCHIVE</div>
+                <div class="stats-row">
+                    <div class="stats-main" id="monthlyDays">0</div>
+                    <div class="stats-unit">days</div>
+                    <div class="stats-badge" id="totalDays">97</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- カレンダー -->
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <div class="calendar-nav">
+                    <button class="nav-btn" id="prevMonth">&lt;</button>
+                    <div class="calendar-title" id="calendarTitle">12月 2025</div>
+                    <button class="nav-btn" id="nextMonth">&gt;</button>
+                </div>
+            </div>
+            <div class="calendar-weekdays">
+                <div class="weekday">SUN</div>
+                <div class="weekday">MON</div>
+                <div class="weekday">TUE</div>
+                <div class="weekday">WED</div>
+                <div class="weekday">THU</div>
+                <div class="weekday">FRI</div>
+                <div class="weekday">SAT</div>
+            </div>
+            <div class="calendar-days" id="calendarDays"></div>
+        </div>
+    </header>
+
+    <!-- メインエリア -->
+    <main class="main-content">
+        <!-- 種目追加ボタン -->
+        <button class="add-training-btn" id="addTrainingBtn">
+            <div class="add-icon">＋</div>
+            <span>本日のトレーニングを追加</span>
+        </button>
+
+        <!-- トレーニングカード表示エリア -->
+        <div id="exerciseCardsContainer"></div>
+    </main>
+
+    <!-- 種目選択モーダル -->
+    <div class="modal" id="exerciseModal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-sheet">
+            <div class="modal-header">
+                <h2>種目を選択</h2>
+                <button class="modal-close-btn" id="closeExerciseModal">×</button>
+            </div>
+            <div class="modal-body" id="exerciseList"></div>
+        </div>
+    </div>
+
+    <!-- セット入力モーダル -->
+    <div class="modal" id="setInputModal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-sheet set-input-sheet">
+            <div class="modal-header">
+                <h2 id="exerciseName">ベンチプレス</h2>
+                <div class="modal-header-actions">
+                    <button class="icon-btn" id="videoBtn" title="動画を見る">📹</button>
+                    <button class="icon-btn success-btn" id="completeBtn" title="完了">✓</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="input-table-container">
+                    <table class="input-table">
+                        <thead>
+                            <tr>
+                                <th>SET</th>
+                                <th>重量(kg)</th>
+                                <th>lbs</th>
+                                <th>回数</th>
+                                <th>RM</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="setsTableBody"></tbody>
+                    </table>
+                </div>
+                <button class="add-set-btn" id="addSetBtn">
+                    <span>＋</span> セットを追加
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAB (種目追加ボタン) -->
+    <button class="fab" id="fabBtn" title="種目を追加">
+        ＋
+    </button>
+
+    <!-- 一時メッセージ表示用 -->
+    <div id="toastContainer"></div>
+
+    <script src="{{ url_for('static', filename='js/record_workout.js') }}"></script>
+</body>
+</html>
