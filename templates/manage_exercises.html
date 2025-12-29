@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>種目管理</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/manage_exercises.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}種目管理{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/manage_exercises.css') }}">
+{% endblock %}
+
+{% block content %}
 <div class="app-container">
     <!-- ヘッダー -->
     <header class="page-header">
@@ -61,8 +61,11 @@
 
     <!-- トースト -->
     <div id="toastContainer"></div>
-
-    <script src="{{ url_for('static', filename='js/manage_exercises.js') }}"></script>
 </div>
-</body>
-</html>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/manage_exercises.js') }}"></script>
+{% endblock %}

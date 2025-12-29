@@ -4,12 +4,15 @@ let selectedDate = new Date();
 let currentExerciseId = null;
 let exercisesData = [];
 let workoutDates = [];
+let weeklyStats = [];
 
 // ===== 初期化 =====
 document.addEventListener('DOMContentLoaded', async () => {
   await loadExercises();
   updateCalendar();
   await loadMonthlyStats();
+  await loadYearlyStats();
+  await loadWeeklyStats();
   await loadDailyLog();
   setupEventListeners();
 });
@@ -48,7 +51,6 @@ function setupEventListeners() {
   document.getElementById('videoBtn').addEventListener('click', () => {
     const exerciseName = document.getElementById('exerciseName').textContent;
     showToast(`「${exerciseName}」の動画を検索中...`);
-    // YouTube検索などの実装
   });
   
   // セット追加ボタン
@@ -61,9 +63,8 @@ function updateCalendar() {
   const month = currentDate.getMonth();
   
   // ヘッダー更新
-  document.getElementById('currentYear').textContent = year;
-  document.getElementById('currentMonth').textContent = new Date(year, month).toLocaleDateString('en-US', { month: 'long' });
-  document.getElementById('calendarTitle').textContent = `${month + 1}月 ${year}`;
+  document.getElementById('calendarMonth').textContent = new Date(year, month).toLocaleDateString('en-US', { month: 'long' });
+  document.getElementById('calendarYear').textContent = year;
   
   // カレンダー描画
   const firstDay = new Date(year, month, 1);
@@ -90,7 +91,7 @@ function updateCalendar() {
     calendarDays.appendChild(dayElement);
   }
   
-  // 次月の日付（42マス埋める）
+  // 次月の日付
   const totalCells = calendarDays.children.length;
   const remainingCells = 42 - totalCells;
   for (let day = 1; day <= remainingCells; day++) {
@@ -143,10 +144,10 @@ async function loadWorkoutDates(year, month) {
     const data = await response.json();
     workoutDates = data.dates || [];
     
-    // カレンダーにドットを追加
+    // カレンダーにハイライトを追加
     const dayElements = document.querySelectorAll('.calendar-day:not(.other-month)');
     dayElements.forEach((el, index) => {
-      const day = index + 1;
+      const day = parseInt(el.textContent);
       if (workoutDates.includes(day)) {
         el.classList.add('has-workout');
       }
@@ -164,11 +165,79 @@ async function loadMonthlyStats() {
     const response = await fetch(`/api/monthly_stats?year=${year}&month=${month}`);
     const data = await response.json();
     
-    document.getElementById('monthlyDays').textContent = data.monthly_days;
-    document.getElementById('totalDays').textContent = data.total_days;
+    document.getElementById('monthlyDaysDisplay').textContent = `${data.monthly_days} days`;
   } catch (error) {
     console.error('Error loading monthly stats:', error);
   }
+}
+
+async function loadYearlyStats() {
+  const year = currentDate.getFullYear();
+  
+  try {
+    const response = await fetch(`/api/yearly_stats?year=${year}`);
+    const data = await response.json();
+    
+    document.getElementById('yearlyDaysDisplay').textContent = `${data.total_days} days`;
+  } catch (error) {
+    console.error('Error loading yearly stats:', error);
+  }
+}
+
+// ===== 週間統計とグラフ =====
+async function loadWeeklyStats() {
+  try {
+    const response = await fetch('/api/weekly_stats');
+    weeklyStats = await response.json();
+    
+    renderWeeklyGraph();
+  } catch (error) {
+    console.error('Error loading weekly stats:', error);
+    showToast('週間統計の読み込みに失敗しました');
+  }
+}
+
+function renderWeeklyGraph() {
+  const container = document.getElementById('weeklyGraphContainer');
+  container.innerHTML = '';
+  
+  if (weeklyStats.length === 0) {
+    container.innerHTML = '<div style="text-align:center;color:#9ca3af;padding:20px;">データがありません</div>';
+    return;
+  }
+  
+  // APIから取得した配列の順序を逆にする
+  const reversedWeeklyStats = [...weeklyStats].reverse();
+
+  // 最大値を取得（グラフの横幅計算用）
+  const maxVolume = Math.max(...reversedWeeklyStats.map(w => w.total_volume));
+  
+  // 今週の総負荷量を表示
+  const currentWeek = reversedWeeklyStats.find(w => w.is_current);
+  if (currentWeek) {
+    document.getElementById('currentWeekVolume').textContent = `${currentWeek.total_volume.toLocaleString()} kg`;
+  }
+  
+  // グラフバーを生成
+  reversedWeeklyStats.forEach((week, index) => {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'graph-bar-wrapper';
+    
+    const weekLabel = index === 0 ? '今週' : `${index}週前`;
+    const percentage = maxVolume > 0 ? (week.total_volume / maxVolume * 100) : 0;
+    
+    wrapper.innerHTML = `
+      <div class="graph-bar-label">
+        <span class="graph-bar-label-week">${weekLabel}</span>
+        <span class="graph-bar-label-volume">${week.total_volume.toLocaleString()} kg</span>
+      </div>
+      <div class="graph-bar-bg">
+        <div class="graph-bar-fill ${week.is_current ? 'current-week' : ''}" style="width: ${percentage}%"></div>
+      </div>
+    `;
+    
+    container.appendChild(wrapper);
+  });
 }
 
 // ===== 種目データ読み込み =====
@@ -305,7 +374,6 @@ function setupSwipeDelete(row) {
       row.classList.add('show-delete');
       row.style.transform = 'translateX(-80px)';
       
-      // 削除ボタンをクリック可能に
       const deleteBtn = row.querySelector('.delete-action');
       deleteBtn.style.pointerEvents = 'auto';
       
@@ -328,7 +396,7 @@ function setupSwipeDelete(row) {
     row.classList.remove('swiping');
   });
   
-  // マウス操作（デスクトップ用）
+  // マウス操作
   let isMouseDown = false;
   
   row.addEventListener('mousedown', (e) => {
@@ -403,6 +471,8 @@ async function deleteSet(setId) {
     showToast('セットを削除しました');
     await loadDailyLog();
     await loadMonthlyStats();
+    await loadYearlyStats();
+    await loadWeeklyStats();
     await loadWorkoutDates(currentDate.getFullYear(), currentDate.getMonth() + 1);
   } catch (error) {
     console.error('Error deleting set:', error);
@@ -424,7 +494,6 @@ function openExerciseModal() {
     const header = document.createElement('div');
     header.className = 'category-header';
     
-    // 最終更新日を計算
     let lastModified = null;
     category.exercises.forEach(ex => {
       if (ex.last_date) {
@@ -454,12 +523,8 @@ function openExerciseModal() {
         ? `Last: ${calculateDaysAgo(exercise.last_date)}`
         : '';
       
-      // カメラアイコンの判定（動画リンクがある場合）
-      const hasVideo = false; // 将来的に video_url フィールドを追加
-      const videoIcon = hasVideo ? '📹' : '';
-      
       item.innerHTML = `
-        <div class="exercise-item-name">${exercise.name} ${videoIcon}</div>
+        <div class="exercise-item-name">${exercise.name}</div>
         <div class="exercise-item-last">${lastText}</div>
       `;
       
@@ -471,7 +536,7 @@ function openExerciseModal() {
       section.appendChild(item);
     });
     
-    // 「種目を追加」ボタン
+    // 種目追加ボタン
     const addBtn = document.createElement('button');
     addBtn.className = 'add-exercise-btn';
     addBtn.textContent = '種目を追加';
@@ -525,6 +590,8 @@ function closeSetInputModal() {
   document.getElementById('setInputModal').setAttribute('aria-hidden', 'true');
   loadDailyLog();
   loadMonthlyStats();
+  loadYearlyStats();
+  loadWeeklyStats();
   loadWorkoutDates(currentDate.getFullYear(), currentDate.getMonth() + 1);
 }
 
@@ -579,7 +646,6 @@ function addSetRow(setNumber, weight = '', reps = '', rm = '') {
   
   tbody.appendChild(row);
   
-  // オートセーブのイベントリスナー
   const weightInput = row.querySelector('.input-weight');
   const repsInput = row.querySelector('.input-reps');
   const lbsInput = row.querySelector('.input-lbs');
@@ -600,7 +666,6 @@ function addSetRow(setNumber, weight = '', reps = '', rm = '') {
     autoSaveSet(setNumber, weightInput, repsInput, rmInput);
   });
   
-  // 削除ボタン
   row.querySelector('.delete-set-btn').addEventListener('click', () => {
     row.remove();
     renumberModalSets();
@@ -657,7 +722,6 @@ async function autoSaveSet(setNumber, weightInput, repsInput, rmInput) {
       rmInput.value = data.calculated_rm.toFixed(1);
     }
     
-    // 保存成功の視覚的フィードバック
     weightInput.style.backgroundColor = '#dcfce7';
     repsInput.style.backgroundColor = '#dcfce7';
     setTimeout(() => {

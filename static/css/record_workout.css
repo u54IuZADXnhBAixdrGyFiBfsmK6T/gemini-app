@@ -30,106 +30,75 @@ body {
   padding: 0;
 }
 
-/* PC表示用：中央寄せコンテナ */
 .app-container {
-  max-width: 600px;
+  max-width: 1200px;
   margin: 0 auto;
   background: var(--bg-gray);
   min-height: 100vh;
-  position: relative;
-  padding-bottom: 80px;
+  padding-top: 72px; /* 共通ヘッダー分 */
 }
 
-/* ===== グローバルヘッダー ===== */
-.global-header {
-  background: var(--primary-red);
-  color: white;
-  position: relative; /* stickyから変更 */
-  z-index: 100; /* 共通ヘッダーより下に */
-  border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px;
-  box-shadow: var(--shadow-lg);
-  padding-bottom: 20px;
-  margin-top: 72px; /* 共通ヘッダーの高さ分 */
-}
-
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 16px 20px 12px;
-}
-
-.header-date {
+/* ===== レイアウト ===== */
+.layout-wrapper {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
 
-.header-year {
-  font-size: 0.85rem;
-  opacity: 0.9;
-  margin-bottom: 2px;
+/* PC: 2カラムレイアウト */
+@media (min-width: 768px) {
+  .layout-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .left-column {
+    width: 400px;
+    flex-shrink: 0;
+  }
+  
+  .right-column {
+    flex: 1;
+  }
 }
 
-.header-month {
-  font-size: 1.8rem;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-}
-
-.header-stats {
-  text-align: right;
-}
-
-.stats-label {
-  font-size: 0.7rem;
-  opacity: 0.85;
-  letter-spacing: 0.5px;
-  margin-bottom: 4px;
-}
-
-.stats-row {
+.left-column, .right-column {
   display: flex;
-  align-items: baseline;
-  gap: 6px;
-  justify-content: flex-end;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.stats-main {
-  font-size: 2.5rem;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.stats-unit {
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-.stats-badge {
-  background: white;
-  color: var(--primary-red);
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  margin-left: 4px;
-}
-
-/* ===== カレンダー ===== */
-.calendar-container {
-  padding: 0 20px 16px;
+/* ===== カレンダーセクション ===== */
+.calendar-section {
+  background: var(--primary-red);
+  color: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow-md);
 }
 
 .calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 12px;
 }
 
-.calendar-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+.calendar-title-wrapper {
+  text-align: center;
+  flex: 1;
+}
+
+.calendar-month {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.calendar-year {
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
 
 .nav-btn {
@@ -151,13 +120,6 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.calendar-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  min-width: 120px;
-  text-align: center;
-}
-
 .calendar-weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -167,7 +129,7 @@ body {
 
 .weekday {
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   opacity: 0.8;
   font-weight: 600;
   padding: 4px 0;
@@ -182,11 +144,10 @@ body {
 .calendar-day {
   aspect-ratio: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   position: relative;
@@ -203,36 +164,135 @@ body {
   cursor: default;
 }
 
+/* 記録あり: 薄い白背景 */
+.calendar-day.has-workout {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* 今日: 完全な白背景 */
 .calendar-day.today {
+  background: white;
+  color: var(--primary-red);
+  font-weight: 800;
+}
+
+/* 今日＋記録あり: 今日優先 */
+.calendar-day.today.has-workout {
   background: white;
   color: var(--primary-red);
 }
 
 .calendar-day.selected {
-  background: white;
-  color: var(--primary-red);
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
-.calendar-day.has-workout::after {
-  content: '';
-  width: 4px;
-  height: 4px;
+/* ===== 統計セクション ===== */
+.stats-section {
   background: white;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 6px;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
 }
 
-.calendar-day.selected.has-workout::after {
-  background: var(--primary-red);
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-/* ===== メインコンテンツ ===== */
-.main-content {
-  padding: 20px;
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--primary-red);
+}
+
+/* ===== グラフセクション ===== */
+.graph-section {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.graph-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.graph-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.graph-value {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--primary-red);
+}
+
+.graph-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.graph-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.graph-bar-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+.graph-bar-label-week {
+  font-weight: 600;
+}
+
+.graph-bar-label-volume {
+  color: var(--primary-red);
+  font-weight: 700;
+}
+
+.graph-bar-bg {
+  height: 24px;
+  background: var(--bg-gray);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.graph-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-red), #f87171);
+  border-radius: 6px;
+  transition: width 0.5s ease-out;
+  min-width: 2px;
+}
+
+.graph-bar-fill.current-week {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+/* ===== トレーニング追加ボタン ===== */
 .add-training-btn {
   width: 100%;
   background: white;
@@ -245,7 +305,6 @@ body {
   gap: 12px;
   cursor: pointer;
   transition: all 0.2s;
-  margin-bottom: 20px;
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-dark);
@@ -274,7 +333,6 @@ body {
   background: white;
   border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 16px;
   box-shadow: var(--shadow-sm);
 }
 
@@ -418,10 +476,9 @@ body {
   justify-content: center;
 }
 
-/* PC表示の場合、FABを中央寄せコンテナ内に配置 */
-@media (min-width: 601px) {
+@media (min-width: 768px) {
   .fab {
-    right: calc(50% - 280px);
+    right: calc(50% - 580px);
   }
 }
 
@@ -541,7 +598,7 @@ body {
   flex: 1;
 }
 
-/* ===== 種目選択リスト（画像スタイル） ===== */
+/* ===== 種目選択リスト ===== */
 .category-section {
   margin-bottom: 0;
 }
@@ -702,9 +759,9 @@ body {
   pointer-events: none;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 768px) {
   #toastContainer {
-    right: calc(50% - 280px);
+    right: calc(50% - 580px);
   }
 }
 

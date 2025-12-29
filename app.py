@@ -412,5 +412,66 @@ def edit_exercise():
         print(f"Error editing exercise: {e}")
         return jsonify({"error": str(e)}), 500
 
+# API: 週間統計の取得（過去5週間の総重量）
+@app.route("/api/weekly_stats", methods=["GET"])
+def get_weekly_stats():
+    user_id = 1
+    
+    from datetime import date, timedelta
+    
+    today = date.today()
+    # 日曜日を週の始まりとする
+    days_since_sunday = (today.weekday() + 1) % 7
+    current_sunday = today - timedelta(days=days_since_sunday)
+    
+    weekly_data = []
+    
+    for i in range(5):
+        week_start = current_sunday - timedelta(weeks=i)
+        week_end = week_start + timedelta(days=6)
+        
+        # その週の総重量を計算（kg * reps * sets）
+        logs = WorkoutLog.query.filter(
+            WorkoutLog.user_id == user_id,
+            WorkoutLog.date >= week_start,
+            WorkoutLog.date <= week_end
+        ).all()
+        
+        total_volume = sum(log.weight * log.reps for log in logs)
+        
+        weekly_data.append({
+            "week_start": week_start.strftime('%Y-%m-%d'),
+            "week_end": week_end.strftime('%Y-%m-%d'),
+            "total_volume": round(total_volume, 2),
+            "is_current": i == 0
+        })
+    
+    # 最新が先頭になるよう（現在は逆順なので反転）
+    weekly_data.reverse()
+    
+    return jsonify(weekly_data)
+
+# API: 年間統計の取得
+@app.route("/api/yearly_stats", methods=["GET"])
+def get_yearly_stats():
+    year = request.args.get('year', type=int)
+    user_id = 1
+    
+    if not year:
+        year = datetime.now().year
+    
+    # 指定年の実施日数
+    yearly_count = db.session.query(
+        func.count(func.distinct(WorkoutLog.date))
+    ).filter(
+        WorkoutLog.user_id == user_id,
+        db.extract('year', WorkoutLog.date) == year
+    ).scalar() or 0
+    
+    return jsonify({
+        "year": year,
+        "total_days": yearly_count
+    })
+
 if __name__ == "__main__":
     app.run(debug=True)

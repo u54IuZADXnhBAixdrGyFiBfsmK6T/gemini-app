@@ -1,63 +1,76 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>筋トレ記録</title>
+{% extends "base.html" %}
+
+{% block title %}筋トレ記録{% endblock %}
+
+{% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/record_workout.css') }}">
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
 <div class="app-container">
-    <!-- グローバルヘッダー -->
-    <header class="global-header">
-        <div class="header-top">
-            <div class="header-date">
-                <div class="header-year" id="currentYear">2025</div>
-                <div class="header-month" id="currentMonth">December</div>
+    <!-- PC版: 2カラムレイアウト -->
+    <div class="layout-wrapper">
+        <!-- 左カラム: カレンダー + 統計 + グラフ -->
+        <div class="left-column">
+            <!-- カレンダーセクション -->
+            <div class="calendar-section">
+                <div class="calendar-header">
+                    <button class="nav-btn" id="prevMonth">&lt;</button>
+                    <div class="calendar-title-wrapper">
+                        <div class="calendar-month" id="calendarMonth">December</div>
+                        <div class="calendar-year" id="calendarYear">2025</div>
+                    </div>
+                    <button class="nav-btn" id="nextMonth">&gt;</button>
+                </div>
+                
+                <div class="calendar-weekdays">
+                    <div class="weekday">SUN</div>
+                    <div class="weekday">MON</div>
+                    <div class="weekday">TUE</div>
+                    <div class="weekday">WED</div>
+                    <div class="weekday">THU</div>
+                    <div class="weekday">FRI</div>
+                    <div class="weekday">SAT</div>
+                </div>
+                <div class="calendar-days" id="calendarDays"></div>
             </div>
-            <div class="header-stats">
-                <div class="stats-label">MONTHLY ARCHIVE</div>
-                <div class="stats-row">
-                    <div class="stats-main" id="monthlyDays">0</div>
-                    <div class="stats-unit">days</div>
-                    <div class="stats-badge" id="totalDays">97</div>
+            
+            <!-- 統計表示 -->
+            <div class="stats-section">
+                <div class="stat-item">
+                    <span class="stat-label">MONTHLY ARCHIVE</span>
+                    <span class="stat-value" id="monthlyDaysDisplay">0 days</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">TOTAL</span>
+                    <span class="stat-value" id="yearlyDaysDisplay">0 days</span>
+                </div>
+            </div>
+            
+            <!-- 週間グラフ -->
+            <div class="graph-section">
+                <div class="graph-header">
+                    <span class="graph-label">今週の総負荷量</span>
+                    <span class="graph-value" id="currentWeekVolume">0 kg</span>
+                </div>
+                <div class="graph-container" id="weeklyGraphContainer">
+                    <!-- グラフがJSで動的生成される -->
                 </div>
             </div>
         </div>
         
-        <!-- カレンダー -->
-        <div class="calendar-container">
-            <div class="calendar-header">
-                <div class="calendar-nav">
-                    <button class="nav-btn" id="prevMonth">&lt;</button>
-                    <div class="calendar-title" id="calendarTitle">12月 2025</div>
-                    <button class="nav-btn" id="nextMonth">&gt;</button>
-                </div>
-            </div>
-            <div class="calendar-weekdays">
-                <div class="weekday">SUN</div>
-                <div class="weekday">MON</div>
-                <div class="weekday">TUE</div>
-                <div class="weekday">WED</div>
-                <div class="weekday">THU</div>
-                <div class="weekday">FRI</div>
-                <div class="weekday">SAT</div>
-            </div>
-            <div class="calendar-days" id="calendarDays"></div>
+        <!-- 右カラム: ボタン + 種目リスト -->
+        <div class="right-column">
+            <!-- トレーニング追加ボタン -->
+            <button class="add-training-btn" id="addTrainingBtn">
+                <div class="add-icon">＋</div>
+                <span>本日のトレーニングを追加</span>
+            </button>
+            
+            <!-- 種目カード表示エリア -->
+            <div id="exerciseCardsContainer"></div>
         </div>
-    </header>
-
-    <!-- メインエリア -->
-    <main class="main-content">
-        <!-- 種目追加ボタン -->
-        <button class="add-training-btn" id="addTrainingBtn">
-            <div class="add-icon">＋</div>
-            <span>本日のトレーニングを追加</span>
-        </button>
-
-        <!-- トレーニングカード表示エリア -->
-        <div id="exerciseCardsContainer"></div>
-    </main>
+    </div>
 
     <!-- 種目選択モーダル -->
     <div class="modal" id="exerciseModal" aria-hidden="true">
@@ -105,15 +118,14 @@
         </div>
     </div>
 
-    <!-- FAB (種目追加ボタン) -->
-    <button class="fab" id="fabBtn" title="種目を追加">
-        ＋
-    </button>
+    <!-- FAB -->
+    <button class="fab" id="fabBtn" title="種目を追加">＋</button>
 
-    <!-- 一時メッセージ表示用 -->
+    <!-- トースト -->
     <div id="toastContainer"></div>
-
-    <script src="{{ url_for('static', filename='js/record_workout.js') }}"></script>
 </div>
-</body>
-</html>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/record_workout.js') }}"></script>
+{% endblock %}
