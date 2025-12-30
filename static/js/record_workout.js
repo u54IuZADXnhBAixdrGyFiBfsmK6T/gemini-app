@@ -5,6 +5,15 @@ let currentExerciseId = null;
 let exercisesData = [];
 let workoutDates = [];
 let weeklyStats = [];
+let staticExercisesData = [];
+const STATIC_JSON_FILES = [
+  '/static/json/chest.json', 
+  '/static/json/shoulder.json', 
+  '/static/json/back.json', 
+  '/static/json/arms.json', 
+  '/static/json/legs.json', 
+  '/static/json/abs.json'
+];
 
 // ===== 初期化 =====
 document.addEventListener('DOMContentLoaded', async () => {
@@ -14,6 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   await loadYearlyStats();
   await loadWeeklyStats();
   await loadDailyLog();
+  loadStaticExercises(); // JSONデータを非同期で読み込み開始
   setupEventListeners();
 });
 
@@ -49,8 +59,22 @@ function setupEventListeners() {
   // セット入力モーダル
   document.getElementById('completeBtn').addEventListener('click', closeSetInputModal);
   document.getElementById('videoBtn').addEventListener('click', () => {
-    const exerciseName = document.getElementById('exerciseName').textContent;
-    showToast(`「${exerciseName}」の動画を検索中...`);
+    const exerciseName = document.getElementById('exerciseName').textContent.trim();
+    
+    // 1. 完全一致検索
+    let found = staticExercisesData.find(d => d.name === exerciseName);
+    // 2. 部分一致検索 (JSON側の名前に、記録された名前が含まれている場合。例:「スクワット」→「バックスクワット」)
+    if (!found) found = staticExercisesData.find(d => d.name.includes(exerciseName));
+    // 3. 逆の部分一致 (記録された名前に、JSON側の名前が含まれている場合)
+    if (!found) found = staticExercisesData.find(d => exerciseName.includes(d.name));
+
+    if (found && found.youtube_url) {
+      window.open(found.youtube_url, '_blank');
+    } else {
+      console.log('Video search failed for:', exerciseName);
+      console.log('Available data count:', staticExercisesData.length);
+      showToast(`「${exerciseName}」の動画は見つかりませんでした`);
+    }
   });
   
   // セット追加ボタン
@@ -248,6 +272,20 @@ async function loadExercises() {
   } catch (error) {
     console.error('Error loading exercises:', error);
     showToast('種目データの読み込みに失敗しました');
+  }
+}
+
+// ===== 静的データ（YouTubeリンク用）読み込み =====
+async function loadStaticExercises() {
+  try {
+    const promises = STATIC_JSON_FILES.map(file => fetch(file).then(res => {
+        if (!res.ok) return [];
+        return res.json();
+    }).catch(() => []));
+    const results = await Promise.all(promises);
+    staticExercisesData = results.flat();
+  } catch (error) {
+    console.error('Error loading static exercises:', error);
   }
 }
 

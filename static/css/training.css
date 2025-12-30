@@ -270,6 +270,7 @@ body {
   flex: 1; /* ボタンを均等な幅にする */
   text-align: center;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .small-btn:hover {

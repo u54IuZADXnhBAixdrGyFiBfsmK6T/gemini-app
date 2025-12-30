@@ -265,6 +265,12 @@ function createCard(item){
   card.className = 'card';
   card.dataset.id = item.id;
   const equipmentText = Array.isArray(item.equipment) ? item.equipment.join(' / ') : item.equipment;
+  
+  // YouTubeボタンのHTMLを条件付きで生成
+  const youtubeButtonHtml = item.youtube_url
+    ? `<a href="${item.youtube_url}" class="small-btn" target="_blank" rel="noopener noreferrer" data-action="youtube">youtubeで見る</a>`
+    : '';
+
   card.innerHTML = `
     <div class="card-head">
       <div>
@@ -278,20 +284,26 @@ function createCard(item){
     <p class="card-desc">${escapeHtml(item.summary || item.desc)}</p>
     <div class="card-footer">
       <button class="small-btn" data-action="detail" data-id="${item.id}">詳細</button>
-      <button class="small-btn" data-action="addprogram" data-id="${item.id}">youtubeで見る</button>
+      ${youtubeButtonHtml}
     </div>
   `;
   
   // カード全体をクリック可能にし、モーダルを開く
-  card.addEventListener('click', () => {
+  card.addEventListener('click', (e) => {
+    // YouTubeリンクのクリックではモーダルを開かない
+    if (e.target.closest('[data-action="youtube"]')) {
+      return;
+    }
     openModal(item.id);
   });
 
-  // ボタン個別のクリックイベントがカード全体に伝播しないようにする
-  card.querySelector('[data-action="addprogram"]').addEventListener('click', (e)=> {
-    e.stopPropagation(); // 親要素へのイベント伝播を停止
-    showTempMsg('（ダミー）YouTube動画リンクを追加する処理）');
-  });
+  // YouTubeボタンのクリックイベントがカード全体に伝播しないようにする
+  const youtubeLink = card.querySelector('[data-action="youtube"]');
+  if (youtubeLink) {
+    youtubeLink.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
   
   card.querySelector('.fav-btn').addEventListener('click', (e)=> {
     e.stopPropagation(); // 親要素へのイベント伝播を停止
