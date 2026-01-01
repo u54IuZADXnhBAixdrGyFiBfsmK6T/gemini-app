@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食事記録</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/record_meal.css') }}">
+</head>
+<body>
+<div class="app-container">
+    <div class="layout-wrapper">
+        <!-- 左カラム -->
+        <div class="left-column">
+            <!-- カレンダー -->
+            <div class="calendar-section">
+                <div class="calendar-header">
+                    <button class="nav-btn" id="prevMonth">&lt;</button>
+                    <div class="calendar-title-wrapper">
+                        <div class="calendar-month" id="calendarMonth">December</div>
+                        <div class="calendar-year" id="calendarYear">2025</div>
+                    </div>
+                    <button class="nav-btn" id="nextMonth">&gt;</button>
+                </div>
+                
+                <div class="calendar-weekdays">
+                    <div class="weekday">SUN</div>
+                    <div class="weekday">MON</div>
+                    <div class="weekday">TUE</div>
+                    <div class="weekday">WED</div>
+                    <div class="weekday">THU</div>
+                    <div class="weekday">FRI</div>
+                    <div class="weekday">SAT</div>
+                </div>
+                <div class="calendar-days" id="calendarDays"></div>
+            </div>
+            
+            <!-- 統計表示 -->
+            <div class="stats-section">
+                <div class="stat-item">
+                    <span class="stat-label">目標カロリー</span>
+                    <span class="stat-value" id="targetCalories">2000 kcal</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">今日のカロリー</span>
+                    <span class="stat-value" id="todayCalories">0 kcal</span>
+                </div>
+            </div>
+            
+            <!-- PFCグラフ -->
+            <div class="graph-section">
+                <div class="graph-header">
+                    <span class="graph-label">今日のPFC</span>
+                </div>
+                <div class="pfc-graph-container">
+                    <!-- Protein -->
+                    <div class="pfc-bar-wrapper">
+                        <div class="pfc-bar-label">
+                            <span class="pfc-label protein-label">タンパク質 (P)</span>
+                            <span class="pfc-value" id="proteinValue">0g</span>
+                        </div>
+                        <div class="pfc-bar-bg">
+                            <div class="pfc-bar-fill protein-fill" id="proteinBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Fat -->
+                    <div class="pfc-bar-wrapper">
+                        <div class="pfc-bar-label">
+                            <span class="pfc-label fat-label">脂質 (F)</span>
+                            <span class="pfc-value" id="fatValue">0g</span>
+                        </div>
+                        <div class="pfc-bar-bg">
+                            <div class="pfc-bar-fill fat-fill" id="fatBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carbs -->
+                    <div class="pfc-bar-wrapper">
+                        <div class="pfc-bar-label">
+                            <span class="pfc-label carbs-label">炭水化物 (C)</span>
+                            <span class="pfc-value" id="carbsValue">0g</span>
+                        </div>
+                        <div class="pfc-bar-bg">
+                            <div class="pfc-bar-fill carbs-fill" id="carbsBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Calories -->
+                    <div class="pfc-bar-wrapper">
+                        <div class="pfc-bar-label">
+                            <span class="pfc-label calories-label">カロリー</span>
+                            <span class="pfc-value" id="caloriesValue">0 kcal</span>
+                        </div>
+                        <div class="pfc-bar-bg">
+                            <div class="pfc-bar-fill calories-fill" id="caloriesBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 右カラム -->
+        <div class="right-column">
+            <button class="add-meal-btn" id="addMealBtn">
+                <div class="add-icon">＋</div>
+                <span>本日の食事を追加</span>
+            </button>
+            
+            <div id="mealsContainer"></div>
+        </div>
+    </div>
+
+    <!-- 食事入力モーダル -->
+    <div class="modal" id="mealInputModal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-sheet">
+            <div class="modal-header">
+                <h2>食事を追加</h2>
+                <button class="modal-close-btn" id="closeMealModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>食事名</label>
+                    <input type="text" id="mealName" class="form-input" placeholder="例: 朝食、寿司、焼肉">
+                </div>
+                
+                <div class="form-group">
+                    <label>タンパク質 (g)</label>
+                    <input type="number" id="proteinInput" class="form-input" placeholder="0" step="0.1" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label>脂質 (g)</label>
+                    <input type="number" id="fatInput" class="form-input" placeholder="0" step="0.1" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label>炭水化物 (g)</label>
+                    <input type="number" id="carbsInput" class="form-input" placeholder="0" step="0.1" min="0">
+                </div>
+                
+                <div class="calculated-calories">
+                    推定カロリー: <span id="calculatedCalories">0</span> kcal
+                </div>
+                
+                <button class="submit-btn" id="submitMeal">追加する</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="fab" id="fabBtn">+</button>
+    <div id="toastContainer"></div>
+
+    <script src="{{ url_for('static', filename='js/record_meal.js') }}"></script>
+</div>
+</body>
+</html>
