@@ -51,8 +51,6 @@ def get_recommendation():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# --- ここからトレーニング記録機能の追加ルート ---
-
 @app.route("/record_workout")
 def record_workout():
     return render_template("record_workout.html")
