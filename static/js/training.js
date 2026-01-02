@@ -268,11 +268,7 @@ function createCard(item) {
   `;
 
   // カード全体をクリック可能にし、モーダルを開く
-  card.addEventListener('click', (e) => {
-    // YouTubeリンクのクリックではモーダルを開かない
-    if (e.target.closest('[data-action="youtube"]')) {
-      return;
-    }
+  card.addEventListener('click', () => {
     openModal(item.id);
   });
 
