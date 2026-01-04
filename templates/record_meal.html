@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>食事記録</title>
+{% extends "base.html" %}
+
+{% block title %}食事記録{% endblock %}
+
+{% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/record_meal.css') }}">
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
 <div class="app-container">
     <div class="layout-wrapper">
-        <!-- 左カラム -->
         <div class="left-column">
-            <!-- カレンダー -->
             <div class="calendar-section">
                 <div class="calendar-header">
                     <button class="nav-btn" id="prevMonth">&lt;</button>
@@ -34,7 +32,6 @@
                 <div class="calendar-days" id="calendarDays"></div>
             </div>
             
-            <!-- 統計表示 -->
             <div class="stats-section">
                 <div class="stat-item">
                     <span class="stat-label">目標カロリー</span>
@@ -46,13 +43,11 @@
                 </div>
             </div>
             
-            <!-- PFCグラフ -->
             <div class="graph-section">
                 <div class="graph-header">
                     <span class="graph-label">今日のPFC</span>
                 </div>
                 <div class="pfc-graph-container">
-                    <!-- Protein -->
                     <div class="pfc-bar-wrapper">
                         <div class="pfc-bar-label">
                             <span class="pfc-label protein-label">タンパク質 (P)</span>
@@ -63,7 +58,6 @@
                         </div>
                     </div>
                     
-                    <!-- Fat -->
                     <div class="pfc-bar-wrapper">
                         <div class="pfc-bar-label">
                             <span class="pfc-label fat-label">脂質 (F)</span>
@@ -74,7 +68,6 @@
                         </div>
                     </div>
                     
-                    <!-- Carbs -->
                     <div class="pfc-bar-wrapper">
                         <div class="pfc-bar-label">
                             <span class="pfc-label carbs-label">炭水化物 (C)</span>
@@ -85,7 +78,6 @@
                         </div>
                     </div>
                     
-                    <!-- Calories -->
                     <div class="pfc-bar-wrapper">
                         <div class="pfc-bar-label">
                             <span class="pfc-label calories-label">カロリー</span>
@@ -99,7 +91,6 @@
             </div>
         </div>
         
-        <!-- 右カラム -->
         <div class="right-column">
             <button class="add-meal-btn" id="addMealBtn">
                 <div class="add-icon">＋</div>
@@ -110,7 +101,6 @@
         </div>
     </div>
 
-    <!-- 食事入力モーダル -->
     <div class="modal" id="mealInputModal" aria-hidden="true">
         <div class="modal-backdrop"></div>
         <div class="modal-sheet">
@@ -150,8 +140,9 @@
 
     <button class="fab" id="fabBtn">+</button>
     <div id="toastContainer"></div>
-
-    <script src="{{ url_for('static', filename='js/record_meal.js') }}"></script>
 </div>
-</body>
-</html>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/record_meal.js') }}"></script>
+{% endblock %}

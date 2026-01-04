@@ -7,6 +7,56 @@
     <title>{% block title %}GEMINI-FITNESS{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Record ドロップダウンのスタイル */
+        .site-header__dropdown--record {
+            min-width: 200px;
+        }
+        
+        .record-link {
+            display: flex !important;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .record-icon {
+            font-size: 1.2em;
+        }
+        
+        .record-link.active {
+            background-color: #007bff !important;
+            color: #fff !important;
+        }
+        
+        /* モバイル用のRecord展開 */
+        @media (max-width: 768px) {
+            #recordDropdown .site-header__dropdown {
+                display: block !important;
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                background: transparent;
+                padding-left: 20px;
+            }
+            
+            #recordDropdown .site-header__dropdown-content {
+                padding: 0;
+            }
+            
+            #recordDropdown .site-header__dropdown-list li a {
+                padding: 12px 20px;
+                font-size: 0.95rem;
+            }
+            
+            /* モバイルでRecordプロモボタンは非表示 */
+            #recordDropdown > .site-header__promo {
+                display: none;
+            }
+        }
+    </style>
     {% block head %}{% endblock %}
 </head>
 
@@ -62,11 +112,26 @@
                             <span class="site-header__promo-text">AI-Coach</span>
                         </a>
                     </li>
-                    <li class="site-header__nav-item">
-                        <a class="site-header__promo site-header__promo--record" href="/record_workout">
+                    <li class="site-header__nav-item has-dropdown" id="recordDropdown">
+                        <a class="site-header__promo site-header__promo--record" href="#" onclick="return false;">
                             <span class="site-header__promo-icon">🗒️</span>
                             <span class="site-header__promo-text">Record</span>
                         </a>
+                        <div class="site-header__dropdown site-header__dropdown--record" role="menu" aria-hidden="true">
+                            <div class="site-header__dropdown-content">
+                                <ul class="site-header__dropdown-list">
+                                    <li><a href="/record_workout" class="record-link" data-page="workout">
+                                        <span class="record-icon">💪</span> 筋トレ記録
+                                    </a></li>
+                                    <li><a href="/record_meal" class="record-link" data-page="meal">
+                                        <span class="record-icon">🍽️</span> 食事記録
+                                    </a></li>
+                                    <li><a href="/manage_exercises" class="record-link" data-page="manage">
+                                        <span class="record-icon">⚙️</span> 種目管理
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </nav>

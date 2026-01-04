@@ -44,4 +44,19 @@ document.addEventListener('DOMContentLoaded', () => {
             lastScrollY = currentScrollY;
         }, { passive: true });
     }
+    
+    // ===== Record ドロップダウンの現在ページハイライト =====
+    highlightCurrentRecordPage();
 });
+
+function highlightCurrentRecordPage() {
+    const currentPath = window.location.pathname;
+    const recordLinks = document.querySelectorAll('.record-link');
+    
+    recordLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (currentPath === href) {
+            link.classList.add('active');
+        }
+    });
+}
