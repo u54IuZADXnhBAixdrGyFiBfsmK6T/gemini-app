@@ -1,7 +1,6 @@
 # init_db.py
-# データベースの初期化と初期データの投入
-
-from app import app, db
+from app import app
+from extensions import db  
 from models import User, Category, Exercise
 
 def init_database():

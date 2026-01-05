@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}MEALS{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/meals.css') }}">
+{% endblock %}
+
+{% block content %}
+<div id="meals-page-content" class="content-wrapper">
+  <aside class="side-controls">
+    <div class="side-controls-inner">
+      <h1 class="logo">Meal Portal</h1>
+      
+      <nav id="categoryJumpList" class="category-jump-list" aria-label="Category Shortcuts"></nav>
+
+      <nav class="controls" aria-label="Search and Actions">
+        <input id="search" class="search" type="search" placeholder="メニュー検索..." aria-label="Search" />
+        <select id="filterCategory" class="select" aria-label="Filter by category">
+          <option value="all">全カテゴリー</option>
+        </select>
+        <select id="filterSubcategory" class="select" aria-label="Filter by subcategory">
+          <option value="all">全タイプ</option>
+        </select>
+        <button id="toggleFavView" class="btn">お気に入りを表示</button>
+      </nav>
+    </div>
+  </aside>
+  <main class="main" id="main">
+  </main>
+
+  <div id="detailModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content" role="document">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<footer class="site-footer">
+  <div class="container">
+    <small>© Meal Portal – バランスの取れた食事でボディメイク</small>
+  </div>
+</footer>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/meals_js.js') }}"></script>
+{% endblock %}

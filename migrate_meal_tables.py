@@ -1,7 +1,8 @@
 # migrate_meal_tables.py
 # 食事記録用のテーブルを追加
 
-from app import app, db
+from app import app
+from extensions import db  # <--- 変更: extensionsからインポート
 from models import MealLog, UserGoal
 
 def migrate():

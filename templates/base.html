@@ -63,27 +63,27 @@
 <body>
     <header id="site-header" class="site-header">
         <div class="site-header__content">
-            <a class="site-header__logo" href="/"><img src="{{ url_for('static', filename='img/logo.png') }}"
+            <a class="site-header__logo" href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='img/logo.png') }}"
                     alt="GEMINI-Fitness Logo" style="height: 40px;"></a>
             <nav id="site-header__nav" class="site-header__nav" aria-label="Main Navigation">
                 <ul class="site-header__nav-list">
                     <li class="site-header__nav-item has-dropdown">
-                        <a class="site-header__nav-link" href="/training"><span class="site-header__nav-icon">💪</span>Workouts</a>
+                        <a class="site-header__nav-link" href="{{ url_for('main.training') }}"><span class="site-header__nav-icon">💪</span>Workouts</a>
                         <div class="site-header__dropdown" role="menu" aria-hidden="true">
                             <div class="site-header__dropdown-content">
                                 <ul class="site-header__dropdown-list">
-                                    <li><a href="{{ url_for('training') }}#chest">Chest</a></li>
-                                    <li><a href="{{ url_for('training') }}#shoulder">Shoulder</a></li>
-                                    <li><a href="{{ url_for('training') }}#back">Back</a></li>
-                                    <li><a href="{{ url_for('training') }}#arms">Arms</a></li>
-                                    <li><a href="{{ url_for('training') }}#legs">Legs</a></li>
-                                    <li><a href="{{ url_for('training') }}#abs">Abs</a></li>
+                                    <li><a href="{{ url_for('main.training') }}#chest">Chest</a></li>
+                                    <li><a href="{{ url_for('main.training') }}#shoulder">Shoulder</a></li>
+                                    <li><a href="{{ url_for('main.training') }}#back">Back</a></li>
+                                    <li><a href="{{ url_for('main.training') }}#arms">Arms</a></li>
+                                    <li><a href="{{ url_for('main.training') }}#legs">Legs</a></li>
+                                    <li><a href="{{ url_for('main.training') }}#abs">Abs</a></li>
                                 </ul>
                             </div>
                         </div>
                     </li>
                     <li class="site-header__nav-item has-dropdown">
-                        <a class="site-header__nav-link" href="#"><span class="site-header__nav-icon">🥗</span>meals</a>
+                        <a class="site-header__nav-link" href="{{ url_for('main.meals') }}"><span class="site-header__nav-icon">🥗</span>meals</a>
                         <div class="site-header__dropdown" role="menu" aria-hidden="true">
                             <div class="site-header__dropdown-content">
                                 <ul class="site-header__dropdown-list">
@@ -107,7 +107,7 @@
                         </div>
                     </li>
                     <li class="site-header__nav-item">
-                        <a class="site-header__promo site-header__promo--ai-coach" href="/gemini_fitness">
+                        <a class="site-header__promo site-header__promo--ai-coach" href="{{ url_for('main.gemini_fitness') }}">
                             <span class="site-header__promo-icon">🤖</span>
                             <span class="site-header__promo-text">AI-Coach</span>
                         </a>
@@ -120,13 +120,13 @@
                         <div class="site-header__dropdown site-header__dropdown--record" role="menu" aria-hidden="true">
                             <div class="site-header__dropdown-content">
                                 <ul class="site-header__dropdown-list">
-                                    <li><a href="/record_workout" class="record-link" data-page="workout">
+                                    <li><a href="{{ url_for('main.record_workout') }}" class="record-link" data-page="workout">
                                         <span class="record-icon">💪</span> 筋トレ記録
                                     </a></li>
-                                    <li><a href="/record_meal" class="record-link" data-page="meal">
+                                    <li><a href="{{ url_for('main.record_meal') }}" class="record-link" data-page="meal">
                                         <span class="record-icon">🍽️</span> 食事記録
                                     </a></li>
-                                    <li><a href="/manage_exercises" class="record-link" data-page="manage">
+                                    <li><a href="{{ url_for('main.manage_exercises') }}" class="record-link" data-page="manage">
                                         <span class="record-icon">⚙️</span> 種目管理
                                     </a></li>
                                 </ul>

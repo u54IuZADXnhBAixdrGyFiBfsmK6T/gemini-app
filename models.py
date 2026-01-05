@@ -1,7 +1,10 @@
-from flask_sqlalchemy import SQLAlchemy
+# models.py
+
+# 【変更点】flask_sqlalchemyからではなく、extensionsからdbをインポートします
+from extensions import db
 from datetime import datetime
 
-db = SQLAlchemy()
+# db = SQLAlchemy()  <-- この行は削除しました（extensions.pyに移動したため）
 
 # ユーザーテーブル
 class User(db.Model):

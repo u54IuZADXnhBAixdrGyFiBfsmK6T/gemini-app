@@ -14,7 +14,7 @@
             <p class="hero-subtitle">
                 あなたの目標、レベル、ライフスタイルに合わせて、Geminiが最適なトレーニングと食事プランをパーソナライズ。
             </p>
-            <a href="/gemini_fitness" class="hero-cta-button">今すぐAIプランを体験 →</a>
+            <a href="{{ url_for('main.gemini_fitness') }}" class="hero-cta-button">今すぐAIプランを体験 →</a>
         </div>
         <div class="hero-visual-content">
             <div class="ai-coach-card">
@@ -34,47 +34,100 @@
         </div>
     </div>
 </section>
-<section class="container section">
-    <h2 class="section-title">知識をつけよう</h2>
-    <div class="grid-3">
-        <div class="card" style="text-align: left;">
-            <div class="emoji" style="text-align: center;">💪</div>
-            <h3 class="card-title" style="text-align: center; margin-bottom: 20px;">筋トレを「今」始めるべき理由</h3>
-            <p class="card-text">
-                筋トレの最大のメリットは、単なる見た目の変化に留まりません。<strong>基礎代謝の向上</strong>により、寝ている間も脂肪を燃焼しやすい「燃焼体質」へと根本から作り変えることができます。
-            </p>
-            <ul style="padding-left: 20px; font-size: 14px; color: #475569; line-height: 1.8;">
-                <li><strong>成長ホルモンの分泌:</strong> 若々しさを保つアンチエイジング効果。</li>
-                <li><strong>メンタルヘルス:</strong> 幸福ホルモン「セロトニン」の分泌により、ストレス耐性が飛躍的に向上します。</li>
-                <li><strong>脳機能の活性化:</strong> 記憶力や集中力を高めるBDNF（脳由来神経栄養因子）の放出を促します。</li>
-            </ul>
+
+<section class="knowledge-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">ESSENTIALS</span>
+            <h2 class="section-title">理想の体を作るための3原則</h2>
+            <p class="section-intro">理想の体型は、正しい知識の上に成り立ちます。科学的根拠に基づいたアプローチを学びましょう。</p>
         </div>
 
-        <div class="card" style="text-align: left;">
-            <div class="emoji" style="text-align: center;">🥗</div>
-            <h3 class="card-title" style="text-align: center; margin-bottom: 20px;">食事が「体型改善の鍵」である根拠</h3>
-            <p class="card-text">
-                「腹筋はキッチンで作られる」と言われるほど、食事の影響は絶大です。いくら激しい運動をしても、摂取カロリーと<strong>PFCバランス（タンパク質・脂質・炭水化物）</strong>が崩れていれば、体型は変わりません。
-            </p>
-            <ul style="padding-left: 20px; font-size: 14px; color: #475569; line-height: 1.8;">
-                <li><strong>筋肉の保持:</strong> タンパク質不足は、脂肪ではなく筋肉を削り、リバウンドを招きます。</li>
-                <li><strong>血糖値コントロール:</strong> 食事の質を変えることで、脂肪蓄積を促す「インスリン」の過剰分泌を防ぎます。</li>
-                <li><strong>腸内環境の改善:</strong> 栄養吸収効率を高め、肌荒れや倦怠感も解消します。</li>
-            </ul>
-        </div>
+        <div class="knowledge-grid">
+            <div class="k-card training">
+                <div class="k-card-icon">💪</div>
+                <div class="k-card-content">
+                    <div class="k-tag">TRAINING</div>
+                    <h3 class="k-card-title">筋トレを「今」始める理由</h3>
+                    <p class="k-card-description">
+                        筋トレは見た目を変えるだけでなく、体質そのものを<strong>「燃焼型」</strong>へと作り変える唯一の方法です。
+                    </p>
+                    <ul class="k-list">
+                        <li>
+                            <span class="k-list-icon">✓</span>
+                            <div><strong>代謝アップ:</strong> 基礎代謝が向上し、痩せやすく太りにくい体へ。</div>
+                        </li>
+                        <li>
+                            <span class="k-list-icon">✓</span>
+                            <div><strong>若返り効果:</strong> 成長ホルモンの分泌で肌や髪のツヤが改善。</div>
+                        </li>
+                        <li>
+                            <span class="k-list-icon">✓</span>
+                            <div><strong>メンタル強化:</strong> セロトニン分泌によりストレスに強い心を作ります。</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="card" style="text-align: left;">
-            <div class="emoji" style="text-align: center;">⚠️</div>
-            <h3 class="card-title" style="text-align: center; margin-bottom: 20px;">成果を阻害する「生活の罠」</h3>
-            <p class="card-text">
-                悪い生活習慣は、トレーニング努力の<strong>50%以上を無効化</strong>する恐れがあります。特に飲酒や夜ふかしは、体内のホルモンバランスを劇的に悪化させます。
-            </p>
-            <ul style="padding-left: 20px; font-size: 14px; color: #475569; line-height: 1.8;">
-                <li><strong>飲酒の悪影響:</strong> アルコール分解が優先され、筋肉の合成（mTOR経路）が阻害されます。さらに男性ホルモン「テストステロン」を減少させ、筋肉の発達を妨げます。</li>
-                <li><strong>睡眠不足のリスク:</strong> 脂肪分解を促す成長ホルモンが不足し、逆に食欲を増進させる「グレリン」が急増します。</li>
-                <li><strong>ジャンクフード:</strong> 慢性的、体内の微細な炎症を引き起こし、代謝効率を著しく低下させます。</li>
-            </ul>
+            <div class="k-card nutrition">
+                <div class="k-card-icon">🥗</div>
+                <div class="k-card-content">
+                    <div class="k-tag">NUTRITION</div>
+                    <h3 class="k-card-title">食事が体型改善の鍵である根拠</h3>
+                    <p class="k-card-description">
+                        「腹筋はキッチンで作られる」と言われるほど、食事の影響は絶大。PFCバランスを整えることが近道です。
+                    </p>
+                    <ul class="k-list">
+                        <li>
+                            <span class="k-list-icon">✓</span>
+                            <div><strong>リバウンド防止:</strong> タンパク質中心の食事で筋肉を落とさず脂肪を燃焼。</div>
+                        </li>
+                        <li>
+                            <span class="k-list-icon">✓</span>
+                            <div><strong>血糖値制御:</strong> インスリンの過剰分泌を抑え、脂肪蓄積をブロック。</div>
+                        </li>
+                        <li>
+                            <span class="k-list-icon">✓</span>
+                            <div><strong>吸収効率:</strong> 腸内環境を整えることで、栄養を効率よくエネルギーへ。</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="k-card habits">
+                <div class="k-card-icon">⚠️</div>
+                <div class="k-card-content">
+                    <div class="k-tag">HABITS</div>
+                    <h3 class="k-card-title">成果を阻害する「生活の罠」</h3>
+                    <p class="k-card-description">
+                        悪い習慣は、トレーニングの努力を<strong>50%以上無効化</strong>します。特に「睡眠」と「酒」には要注意。
+                    </p>
+                    <ul class="k-list">
+                        <li>
+                            <span class="k-list-icon">✓</span>
+                            <div><strong>アルコールの害:</strong> 筋肉の合成を直接阻害し、脂肪燃焼をストップさせます。</div>
+                        </li>
+                        <li>
+                            <span class="k-list-icon">✓</span>
+                            <div><strong>睡眠不足:</strong> 食欲増進ホルモンが増加し、翌日のドカ食いを招きます。</div>
+                        </li>
+                        <li>
+                            <span class="k-list-icon">✓</span>
+                            <div><strong>慢性炎症:</strong> 加工食品の摂りすぎは代謝を停滞させる大きな原因です。</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<!-- <section class="cta-section">
+    <div class="container">
+        <h2 class="cta-title">準備はできましたか？</h2>
+        <p class="cta-description">次はあなたのライフスタイルに合わせて、具体的なプランをAIと作成しましょう。</p>
+        <a href="{{ url_for('main.gemini_fitness') }}" class="hero-cta-button">パーソナライズを開始する</a>
+    </div>
+</section> -->
+
 {% endblock %}
