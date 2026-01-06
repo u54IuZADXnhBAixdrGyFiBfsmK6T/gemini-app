@@ -1,11 +1,23 @@
 let DATA = [];
+const JSON_FILES = [
+  'static/json/meals_balance.json',
+  'static/json/meals_cut.json',
+  'static/json/meals_bulk.json'
+];
 
-// JSONファイルを読み込み
+// すべてのJSONファイルを非同期で読み込み、DATAに結合する
 async function loadAllData() {
   try {
-    const response = await fetch('static/json/meals.json');
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-    DATA = await response.json();
+    const fetchPromises = JSON_FILES.map(file => fetch(file).then(res => {
+      if (!res.ok) throw new Error(`HTTP error! status: ${res.status} for ${file}`);
+      return res.json();
+    }));
+
+    const allDataArrays = await Promise.all(fetchPromises);
+
+    // 配列を結合してDATAに格納
+    DATA = allDataArrays.flat();
+
     console.log(`データをロードしました。合計: ${DATA.length} メニュー`);
     return true;
   } catch (error) {
