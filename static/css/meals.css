@@ -44,7 +44,9 @@ body {
   padding: 40px 20px;
 }
 
-/* サイドバー (Sidebar) */
+/* =========================================
+   サイドバー (Sidebar) - 基本設定
+   ========================================= */
 .side-controls {
   position: sticky;
   top: calc(var(--header-height) + 30px); 
@@ -76,6 +78,43 @@ body {
   text-align: center;
 }
 
+/* --- サイドバー - カテゴリージャンプリスト (PC/基本は縦並び) --- */
+#categoryJumpList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#categoryJumpList a {
+  display: block;
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  transition: background-color 0.2s, color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+#categoryJumpList a:hover {
+  background-color: #e2e8f0;
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#categoryJumpList a:active {
+  transform: translateY(0);
+  background-color: #d1fae5;
+  box-shadow: none;
+}
+
+/* --- 操作パネル (検索・フィルタ等) --- */
 .controls {
   display: flex;
   flex-direction: column;
@@ -359,9 +398,7 @@ body {
   border: 1px dashed #cbd5e1;
 }
 
-/* ========================================= */
 /* モーダル (Modal) */
-/* ========================================= */
 .modal {
   position: fixed;
   inset: 0;
@@ -554,9 +591,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* ========================================= */
 /* フッター (Footer) */
-/* ========================================= */
 .site-footer {
   margin-top: 60px;
   text-align: center;
@@ -565,47 +600,9 @@ body {
   padding-bottom: 40px;
 }
 
-/* ========================================= */
-/* サイドバー - カテゴリージャンプリスト */
-/* ========================================= */
-#categoryJumpList ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-#categoryJumpList a {
-  display: block;
-  padding: 12px 16px;
-  border-radius: 10px;
-  color: var(--text-main);
-  text-decoration: none;
-  font-weight: 700;
-  text-align: center;
-  background-color: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  transition: background-color 0.2s, color 0.2s, transform 0.1s, box-shadow 0.2s;
-}
-
-#categoryJumpList a:hover {
-  background-color: #e2e8f0;
-  color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-#categoryJumpList a:active {
-  transform: translateY(0);
-  background-color: #d1fae5;
-  box-shadow: none;
-}
-
-/* ========================================= */
-/* レスポンシブ対応 (Mobile) */
-/* ========================================= */
+/* =========================================
+   レスポンシブ対応 (Mobile)
+   ========================================= */
 @media (max-width: 1000px) {
   body {
     padding-top: 0;
@@ -618,10 +615,60 @@ body {
     gap: 30px;
   }
 
+  /* --- サイドバーのモバイル最適化 --- */
   .side-controls {
     position: static;
     width: 100%;
     z-index: 10;
+    padding: 16px; /* 圧迫感軽減 */
+  }
+
+  .side-controls-inner {
+    gap: 12px;
+  }
+
+  /* ジャンプリストを横3列(Grid)表示 */
+  #categoryJumpList ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  #categoryJumpList a {
+    padding: 8px 4px;
+    font-size: 0.85rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  /* コントロール（検索・フィルタ・お気に入り）をグリッド化 */
+  .controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2列 */
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  /* 検索バー: 全幅 */
+  .search {
+    grid-column: 1 / -1; 
+    margin: 0;
+  }
+
+  /* 選択ボックス: 1列ずつ (2つ並ぶ) */
+  .select {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .btn {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 10px;
   }
 
   .main {
@@ -630,6 +677,6 @@ body {
   }
 
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* スマホは1列 */
   }
 }

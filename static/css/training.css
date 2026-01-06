@@ -39,7 +39,9 @@ body {
   padding: 40px 20px;
 }
 
-/*サイドバー (Sidebar)*/
+/* =========================================
+   サイドバー (Sidebar) - 基本設定
+   ========================================= */
 .side-controls {
   /* スクロール追従設定 */
   position: sticky;
@@ -74,6 +76,53 @@ body {
   text-align: center;
 }
 
+/* --- サイドバー内の見出し --- */
+.side-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #8899aa;
+  margin: 20px 0 8px 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --- 部位ジャンプリスト (PC/基本は縦並び) --- */
+#partJumpList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; 
+}
+
+#partJumpList a {
+  display: block;
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  transition: background-color 0.2s, color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+#partJumpList a:hover {
+  background-color: #e2e8f0;
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#partJumpList a:active {
+  transform: translateY(0);
+  background-color: #dbeafe;
+  box-shadow: none;
+}
+
+/* --- 操作パネル (検索・フィルタ等) --- */
 .controls {
   display: flex;
   flex-direction: column;
@@ -188,7 +237,7 @@ body {
 /* グリッドレイアウト */
 .grid {
   display: grid;
-  /* 常に3列固定、または1枚のサイズを現在の75%程度（約260px〜）に調整 */
+  /* 常に3列固定 */
   grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
 }
@@ -256,7 +305,7 @@ body {
   flex-wrap: wrap; /* ボタンがはみ出さないように */
 }
 
-/* 小さいボタンのスタイル（崩れていた部分の修正） */
+/* 小さいボタンのスタイル */
 .small-btn {
   padding: 8px 14px;
   border-radius: 8px;
@@ -312,12 +361,12 @@ body {
    ========================================= */
 .modal {
   position: fixed;
-  inset: 0; /* top/left/right/bottom: 0 と同じ */
+  inset: 0; 
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: rgba(15, 23, 42, 0.6); /* 背景を少し暗く */
+  background: rgba(15, 23, 42, 0.6); 
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s;
@@ -339,7 +388,7 @@ body {
   position: relative;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   max-height: 90vh;
-  overflow-y: auto; /* コンテンツが長い場合はスクロール */
+  overflow-y: auto; 
 }
 
 .modal-close {
@@ -406,18 +455,18 @@ body {
 }
 
 .form-block {
-  background: #f0f9ff; /* sky-50 */
-  border: 1px solid #e0f2fe; /* sky-100 */
+  background: #f0f9ff; 
+  border: 1px solid #e0f2fe; 
 }
 
 .caution-block {
-  background: #fefce8; /* yellow-50 */
-  border: 1px solid #fef9c3; /* yellow-100 */
+  background: #fefce8; 
+  border: 1px solid #fef9c3; 
 }
 
 .practice-block {
-  background: #f0fdf4; /* green-50 */
-  border: 1px solid #dcfce7; /* green-100 */
+  background: #f0fdf4; 
+  border: 1px solid #dcfce7; 
 }
 
 /* ブロック内の見出し (h4) */
@@ -430,9 +479,9 @@ body {
   margin: 0 0 16px 0;
 }
 
-.key-highlight-form { color: #0369a1; }      /* sky-700 */
-.key-highlight-caution { color: #a16207; }   /* yellow-700 */
-.practice-heading { color: #15803d; }      /* green-700 */
+.key-highlight-form { color: #0369a1; }     
+.key-highlight-caution { color: #a16207; }   
+.practice-heading { color: #15803d; }      
 
 .key-highlight::before {
   font-size: 1.2rem;
@@ -445,8 +494,8 @@ body {
 .block-content p {
   margin: 0 0 8px 0;
   line-height: 1.7;
-  color: #334155; /* slate-700 */
-  padding-left: 2.2rem; /* アイコンとgapの分だけインデント */
+  color: #334155; 
+  padding-left: 2.2rem; 
 }
 .block-content p:last-child {
   margin-bottom: 0;
@@ -480,21 +529,65 @@ body {
    ========================================= */
 @media (max-width: 1000px) {
   body {
-    padding-top: 0; /* 固定ヘッダー解除に伴い、bodyのpaddingをリセット */
+    padding-top: 0; 
   }
 
   .content-wrapper {
     flex-direction: column;
     align-items: stretch;
-    /* ▼ 修正: 右側の大きな余白を元に戻す */
     padding: 20px; 
     gap: 30px;
   }
 
+  /* --- サイドバーのモバイル最適化 --- */
   .side-controls {
-    position: static; /* 固定を解除 */
+    position: static; 
     width: 100%;
     z-index: 10;
+    padding: 16px; /* 圧迫感を減らすため余白を縮小 */
+  }
+
+  .side-controls-inner {
+    gap: 12px; /* 要素間隔を詰める */
+  }
+
+  /* ジャンプリストを横3列(Grid)表示に変更 */
+  #partJumpList ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    flex-direction: row; 
+  }
+
+  /* ジャンプボタンを小さく */
+  #partJumpList a {
+    padding: 8px 4px;
+    font-size: 0.85rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: normal; /* 折り返し許可 */
+    line-height: 1.2;
+  }
+
+  /* controlsをレスポンシブなグリッドレイアウトに変更 (meals.css参考) */
+  .controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    gap: 8px; /* 要素間の隙間を調整 */
+  }
+
+  /* 検索ボックスとボタンを全幅に */
+  .controls .search,
+  .controls .btn {
+    grid-column: 1 / -1; /* = 2列分を専有 */
+  }
+
+  .controls .select,
+  .controls .btn {
+    margin-top: 0; /* grid layoutにしたので不要 */
   }
 
   .main {
@@ -503,57 +596,6 @@ body {
   }
 
   .grid {
-    grid-template-columns: 1fr; /* スマホは1列 */
+    grid-template-columns: 1fr; /* スマホはカード1列 */
   }
-}
-
-/* --- サイドバー --- */
-.side-title {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #8899aa;
-  margin: 20px 0 8px 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-#partJumpList ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px; /* li間のスペース */
-}
-
-#partJumpList a {
-  display: block;
-  padding: 12px 16px;
-  border-radius: 10px; /* 角丸を大きく */
-  color: var(--text-main);
-  text-decoration: none;
-  font-weight: 700; /* 太字に */
-  text-align: center; /* 中央揃え */
-  background-color: #f1f5f9; /* 明るいグレー */
-  border: 1px solid #e2e8f0;
-  transition: background-color 0.2s, color 0.2s, transform 0.1s, box-shadow 0.2s;
-}
-
-#partJumpList a:hover {
-  background-color: #e2e8f0;
-  color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-#partJumpList a:active {
-  transform: translateY(0);
-  background-color: #dbeafe; /* 青みがかった背景 */
-  box-shadow: none;
-}
-
-/* --- controls内の要素の間隔調整 --- */
-.controls .select,
-.controls .btn {
-  margin-top: 8px;
 }
