@@ -8,7 +8,36 @@ document.addEventListener('DOMContentLoaded', async () => {
   await loadExercises();
   renderCategories();
   setupEventListeners();
+  setupStickyHeader(); // スティッキーヘッダーの初期化
 });
+
+// ===== スティッキーヘッダー処理 =====
+function setupStickyHeader() {
+  const siteHeader = document.getElementById('site-header');
+  const pageHeader = document.querySelector('.page-header');
+
+  // 必要な要素がなければ何もしない
+  if (!siteHeader || !pageHeader) return;
+
+  // サイトヘッダーのクラス属性の変更を監視するオブザーバーを作成
+  // スクロールイベントよりも効率的
+  const observer = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+          if (mutation.attributeName === 'class') {
+              // 'is-hidden'クラスの有無に基づいてtopの位置を動的に変更
+              const isHidden = siteHeader.classList.contains('is-hidden');
+              pageHeader.style.top = isHidden ? '0px' : '72px';
+          }
+      });
+  });
+
+  // オブザーバーを開始
+  observer.observe(siteHeader, { attributes: true });
+
+  // ページ読み込み時の初期状態を設定
+  const isInitiallyHidden = siteHeader.classList.contains('is-hidden');
+  pageHeader.style.top = isInitiallyHidden ? '0px' : '72px';
+}
 
 // ===== イベントリスナー設定 =====
 function setupEventListeners() {

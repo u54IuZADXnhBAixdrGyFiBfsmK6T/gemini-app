@@ -30,3 +30,35 @@ def record_meal():
 @main_bp.route('/meals')
 def meals():
     return render_template('meals.html')
+
+@main_bp.route('/lifestyle')
+def lifestyle():
+    return render_template('lifestyle.html')
+
+@main_bp.route('/lifestyle/stress')
+def lifestyle_stress():
+    return render_template('lifestyle_stress.html')
+
+@main_bp.route('/lifestyle/sleep')
+def lifestyle_sleep():
+    return render_template('lifestyle_sleep.html')
+
+@main_bp.route('/lifestyle/drinking')
+def lifestyle_drinking():
+    return render_template('lifestyle_drinking.html')
+
+@main_bp.route('/lifestyle/smoking')
+def lifestyle_smoking():
+    return render_template('lifestyle_smoking.html')
+
+@main_bp.route('/lifestyle/recovery')
+def lifestyle_recovery():
+    return render_template('lifestyle_recovery.html')
+
+@main_bp.route('/lifestyle/mental-health')
+def lifestyle_mental_health():
+    return render_template('lifestyle_mental_health.html')
+
+@main_bp.route('/lifestyle/hydration')
+def lifestyle_hydration():
+    return render_template('lifestyle_hydration.html')

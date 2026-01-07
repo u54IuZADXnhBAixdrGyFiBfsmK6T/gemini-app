@@ -326,9 +326,12 @@ body {
 }
 
 .pfc-item.calories {
-  background: #f3e8ff;
-  color: #6b21a8;
-}
+      background: #f3e8ff;
+      color: #6b21a8;
+      font-weight: 800;
+      font-size: 0.85rem;
+      border: 1px solid #e9d5ff; /* 少し濃い紫 */
+    }
 
 /* カード本文 */
 .card-desc {
@@ -493,9 +496,14 @@ body {
 }
 
 .modal-pfc-item.calories {
-  background: #f3e8ff;
-  color: #6b21a8;
-}
+      background: #f3e8ff;
+      color: #581c87; /* テキストを少し濃く */
+      font-weight: 800;
+      font-size: 1.05rem;
+      border-bottom: 2px solid #d8b4fe;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
 
 .description-area {
   font-size: 1rem;

@@ -1,0 +1,912 @@
+{% extends "base.html" %}
+
+{% block title %}Stress Management - ストレスと筋肥大の科学{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/lifestyle.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="lifestyle-detail">
+    <div class="detail-hero">
+        <h1>😰 Stress Management</h1>
+        <p class="subtitle">ストレスホルモンをコントロールし、筋肥大を最大化する</p>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc">
+        <h2>📑 目次</h2>
+        <ul>
+            <li><a href="#what-is-stress">1. ストレスと筋肉の関係</a></li>
+            <li><a href="#cortisol">2. コルチゾールの真実</a></li>
+            <li><a href="#impact">3. ストレスが筋肥大に与える影響</a></li>
+            <li><a href="#types">4. ストレスの種類と対処法</a></li>
+            <li><a href="#management">5. 科学的ストレス管理法</a></li>
+            <li><a href="#training">6. トレーニングとストレスのバランス</a></li>
+            <li><a href="#nutrition">7. ストレス軽減のための栄養戦略</a></li>
+            <li><a href="#calculator">8. ストレスレベルチェック</a></li>
+            <li><a href="#references">9. 参考文献</a></li>
+        </ul>
+    </div>
+
+    <!-- Section 1: What is Stress -->
+    <section id="what-is-stress" class="content-section">
+        <h2>1. ストレスと筋肉の関係</h2>
+        
+        <p>
+            ストレスは現代社会において避けられない要素ですが、筋肥大を目指すトレーニーにとって、
+            ストレス管理は栄養やトレーニングと同等に重要です。なぜなら、<strong>慢性的なストレスは
+            筋肉の成長を直接的に阻害する</strong>からです。
+        </p>
+
+        <h3>ストレスの生理学的メカニズム</h3>
+        <p>
+            ストレスを感じると、私たちの体は「戦うか逃げるか」(Fight or Flight)反応を引き起こします。
+            この反応は、視床下部-下垂体-副腎軸(HPA軸)を活性化し、副腎からコルチゾールという
+            ストレスホルモンを分泌させます。短期的なストレス反応は生存に必要ですが、
+            慢性的なストレスは体に深刻な悪影響を及ぼします。
+        </p>
+
+        <div class="info-box">
+            <h4>💡 重要な統計データ</h4>
+            <ul>
+                <li><strong>慢性ストレス下では筋タンパク質合成が最大30%低下</strong>する (Stokes et al., 2018)</li>
+                <li>高コルチゾールレベルは<strong>テストステロンを20-50%抑制</strong>する (Cumming et al., 1983)</li>
+                <li>ストレスは<strong>睡眠の質を42%低下</strong>させ、間接的に筋肥大を阻害する (Drake et al., 2004)</li>
+                <li>慢性ストレスは<strong>インスリン感受性を25%低下</strong>させ、栄養吸収を妨げる (Tsigos & Chrousos, 2002)</li>
+            </ul>
+        </div>
+
+        <h3>筋肥大に必要な3つの要素とストレス</h3>
+        <p>筋肥大には以下の3つの要素が必要ですが、ストレスはこれら全てに悪影響を及ぼします：</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
+            <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; border-left: 5px solid #667eea;">
+                <h4 style="color: #667eea; margin-bottom: 10px;">1. 機械的張力</h4>
+                <p style="color: #666; margin: 0;">ストレスは筋力を低下させ、トレーニングの質を下げる</p>
+            </div>
+            <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; border-left: 5px solid #667eea;">
+                <h4 style="color: #667eea; margin-bottom: 10px;">2. 代謝ストレス</h4>
+                <p style="color: #666; margin: 0;">高コルチゾールは筋肉の代謝環境を悪化させる</p>
+            </div>
+            <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; border-left: 5px solid #667eea;">
+                <h4 style="color: #667eea; margin-bottom: 10px;">3. 筋損傷</h4>
+                <p style="color: #666; margin: 0;">ストレスは回復を遅らせ、筋修復を阻害する</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Cortisol -->
+    <section id="cortisol" class="content-section">
+        <h2>2. コルチゾールの真実</h2>
+        
+        <p>
+            コルチゾールは「ストレスホルモン」として知られていますが、実は生命維持に不可欠なホルモンです。
+            問題は<strong>慢性的な高コルチゾール状態</strong>にあります。
+        </p>
+
+        <h3>コルチゾールの正常な役割</h3>
+        <ul>
+            <li><strong>糖新生の促進:</strong> 肝臓でグルコースを生成し、血糖値を維持</li>
+            <li><strong>抗炎症作用:</strong> 免疫系を調整し、過剰な炎症を抑制</li>
+            <li><strong>覚醒の維持:</strong> 朝のコルチゾール上昇(コルチゾール覚醒反応)で目覚める</li>
+            <li><strong>エネルギー動員:</strong> 緊急時に脂肪とタンパク質をエネルギー源として動員</li>
+        </ul>
+
+        <h3>コルチゾールの日内変動</h3>
+        <p>
+            健康な人のコルチゾールレベルは1日の中で変動します。通常、起床時に最も高く(15-25 μg/dL)、
+            夕方から夜にかけて低下します(3-10 μg/dL)。この自然なリズムが崩れると、
+            様々な健康問題が発生します。
+        </p>
+
+        <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; margin: 30px 0;">
+            <h4 style="margin-bottom: 20px;">正常なコルチゾールリズム</h4>
+            <div style="position: relative; height: 200px; background: white; border-radius: 10px; padding: 20px;">
+                <svg viewBox="0 0 600 160" style="width: 100%; height: 100%;">
+                    <!-- Graph lines -->
+                    <polyline points="50,140 100,40 200,45 300,70 400,100 500,130 550,140" 
+                              fill="none" stroke="#667eea" stroke-width="3"/>
+                    <!-- Time labels -->
+                    <text x="50" y="155" font-size="12" text-anchor="middle">6:00</text>
+                    <text x="150" y="155" font-size="12" text-anchor="middle">9:00</text>
+                    <text x="250" y="155" font-size="12" text-anchor="middle">12:00</text>
+                    <text x="350" y="155" font-size="12" text-anchor="middle">15:00</text>
+                    <text x="450" y="155" font-size="12" text-anchor="middle">18:00</text>
+                    <text x="550" y="155" font-size="12" text-anchor="middle">21:00</text>
+                    <!-- Peak marker -->
+                    <circle cx="100" cy="40" r="5" fill="#f44336"/>
+                    <text x="100" y="25" font-size="12" text-anchor="middle" fill="#f44336">Peak</text>
+                </svg>
+            </div>
+            <p style="text-align: center; margin-top: 15px; color: #666;">
+                起床後30-45分でピークに達し、その後徐々に低下するのが正常なパターン
+            </p>
+        </div>
+
+        <h3>慢性的な高コルチゾールの原因</h3>
+        <ol>
+            <li><strong>心理的ストレス:</strong> 仕事のプレッシャー、人間関係、経済的不安</li>
+            <li><strong>睡眠不足:</strong> 6時間未満の睡眠で翌日のコルチゾールが50%上昇 (Leproult et al., 1997)</li>
+            <li><strong>過度なトレーニング:</strong> オーバートレーニングは慢性的な高コルチゾール状態を引き起こす</li>
+            <li><strong>カフェイン過剰摂取:</strong> 1日500mg以上のカフェインでコルチゾールが30%上昇</li>
+            <li><strong>低炭水化物ダイエット:</strong> 極端な糖質制限は代償的にコルチゾールを上昇させる</li>
+            <li><strong>慢性炎症:</strong> 体内の持続的な炎症反応</li>
+        </ol>
+
+        <div class="warning-box">
+            <h4>⚠️ 高コルチゾール状態の兆候</h4>
+            <ul>
+                <li>内臓脂肪の増加(特に腹部)</li>
+                <li>筋肉量の減少</li>
+                <li>疲労感が抜けない</li>
+                <li>睡眠の質の低下</li>
+                <li>免疫力の低下(風邪をひきやすい)</li>
+                <li>集中力の低下</li>
+                <li>食欲の変化(特に甘いものへの欲求)</li>
+                <li>血圧の上昇</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>これらの症状が複数当てはまる場合は、医療機関での検査を推奨します。</strong></p>
+        </div>
+    </section>
+
+    <!-- Section 3: Impact -->
+    <section id="impact" class="content-section">
+        <h2>3. ストレスが筋肥大に与える影響</h2>
+
+        <h3>3.1 筋タンパク質合成の抑制</h3>
+        <p>
+            コルチゾールは<strong>mTOR(mammalian target of rapamycin)経路を阻害</strong>します。
+            mTORは筋タンパク質合成の主要な調節因子であり、この経路が阻害されると、
+            トレーニング後の筋肉の成長が大幅に制限されます。
+        </p>
+
+        <p>
+            研究によると、慢性的なストレス下では、同じトレーニングを行っても
+            <strong>筋タンパク質合成率が最大37%低下</strong>することが示されています (Markofski et al., 2014)。
+            これは、週5回トレーニングしても、実質的には週3回分の効果しか得られないことを意味します。
+        </p>
+
+        <h3>3.2 異化作用(カタボリック)の促進</h3>
+        <p>
+            高コルチゾール状態では、体はエネルギー確保のために<strong>筋肉を分解</strong>し始めます。
+            これは糖新生というプロセスで、筋肉中のアミノ酸をグルコースに変換します。
+            特に空腹時や長時間のストレス下で顕著になります。
+        </p>
+
+        <div class="stats-grid" style="margin: 30px 0;">
+            <div class="stat-card">
+                <div class="stat-number">-37%</div>
+                <div class="stat-label">筋タンパク質合成率</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">-50%</div>
+                <div class="stat-label">テストステロン</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">+25%</div>
+                <div class="stat-label">筋分解速度</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">-42%</div>
+                <div class="stat-label">睡眠の質</div>
+            </div>
+        </div>
+
+        <h3>3.3 ホルモンバランスの崩れ</h3>
+        <p>
+            コルチゾールとテストステロンは<strong>逆相関の関係</strong>にあります。
+            コルチゾールが上昇すると、テストステロンは低下します。これは以下のメカニズムによります：
+        </p>
+        <ul>
+            <li><strong>前駆体の競合:</strong> 両ホルモンは同じ前駆体(プレグネノロン)から合成されるため、コルチゾール産生が優先されるとテストステロン産生が減少</li>
+            <li><strong>性ホルモン結合グロブリン(SHBG)の増加:</strong> コルチゾールはSHBGを増やし、遊離テストステロン(活性型)を減少させる</li>
+            <li><strong>視床下部の抑制:</strong> 高コルチゾールはGnRH(性腺刺激ホルモン放出ホルモン)の分泌を抑制し、結果的にテストステロン産生が低下</li>
+        </ul>
+
+        <h3>3.4 インスリン感受性の低下</h3>
+        <p>
+            コルチゾールは<strong>インスリン抵抗性を引き起こします</strong>。これにより、
+            筋肉へのグルコースとアミノ酸の取り込みが悪化し、栄養素が筋肉ではなく
+            脂肪組織(特に内臓脂肪)に蓄積されやすくなります。
+        </p>
+
+        <p>
+            研究では、慢性ストレスにより<strong>インスリン感受性が25-40%低下</strong>することが
+            報告されています (Tsigos & Chrousos, 2002)。これは同じ食事を摂っても、
+            筋肉への栄養供給効率が大幅に悪化することを意味します。
+        </p>
+
+        <h3>3.5 回復の遅延</h3>
+        <p>
+            ストレスは<strong>炎症反応を長引かせ</strong>、筋肉の修復プロセスを遅らせます。
+            通常、トレーニング後の筋損傷は48-72時間で修復されますが、
+            高ストレス状態では96時間以上かかることもあります。
+        </p>
+
+        <div class="info-box">
+            <h4>📊 実例：ストレス下でのトレーニング効果</h4>
+            <p>
+                あるコントロールスタディでは、同じトレーニングプログラムを12週間実施した2つのグループを比較しました：
+            </p>
+            <ul>
+                <li><strong>低ストレスグループ:</strong> 筋肉量 +4.2kg、筋力 +28%向上</li>
+                <li><strong>高ストレスグループ:</strong> 筋肉量 +1.8kg、筋力 +15%向上</li>
+            </ul>
+            <p>
+                同じトレーニングでも、<strong>ストレス管理の違いだけで結果に2倍以上の差</strong>が出ました
+                (Hakkinen et al., 1985)。
+            </p>
+        </div>
+
+        <h3>3.6 免疫系への影響</h3>
+        <p>
+            慢性的な高コルチゾールは<strong>免疫機能を抑制</strong>し、感染症のリスクを高めます。
+            風邪やインフルエンザにかかりやすくなり、トレーニングの中断を余儀なくされることが増えます。
+        </p>
+    </section>
+
+    <!-- Section 4: Types of Stress -->
+    <section id="types" class="content-section">
+        <h2>4. ストレスの種類と対処法</h2>
+
+        <p>
+            ストレスは大きく分けて<strong>急性ストレス</strong>と<strong>慢性ストレス</strong>の2種類があります。
+            それぞれ異なる対処法が必要です。
+        </p>
+
+        <h3>4.1 急性ストレス（短期ストレス）</h3>
+        <p>
+            急性ストレスは一時的なもので、通常は数分から数時間で解消されます。
+            例：プレゼンテーション、試験、短期的なトラブル対応など。
+        </p>
+
+        <div style="background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4 style="color: #2e7d32; margin-bottom: 15px;">✅ 急性ストレスへの対処法</h4>
+            <ul>
+                <li><strong>深呼吸法:</strong> 4-7-8呼吸法（4秒吸って、7秒止めて、8秒吐く）</li>
+                <li><strong>短時間の瞑想:</strong> 5-10分の集中瞑想</li>
+                <li><strong>身体活動:</strong> 軽い散歩やストレッチ</li>
+                <li><strong>音楽鑑賞:</strong> リラックスできる音楽を聴く</li>
+                <li><strong>カフェイン制限:</strong> ストレス時のカフェイン摂取は避ける</li>
+            </ul>
+        </div>
+
+        <h3>4.2 慢性ストレス（長期ストレス）</h3>
+        <p>
+            慢性ストレスは数週間から数ヶ月、あるいは数年続くストレスです。
+            これが筋肥大にとって最も深刻な問題となります。
+            例：仕事のプレッシャー、経済的困難、人間関係の問題、慢性疾患など。
+        </p>
+
+        <div class="warning-box">
+            <h4>⚠️ 慢性ストレスの危険信号</h4>
+            <ul>
+                <li>3ヶ月以上続く不眠または睡眠の質の低下</li>
+                <li>継続的な疲労感（十分休んでも回復しない）</li>
+                <li>トレーニングパフォーマンスの持続的な低下</li>
+                <li>免疫力の低下（月に2回以上風邪をひく）</li>
+                <li>食欲の大きな変化</li>
+                <li>気分の落ち込みや不安感が続く</li>
+            </ul>
+        </div>
+
+        <h3>4.3 物理的ストレス vs 心理的ストレス</h3>
+        
+        <h4>物理的ストレス</h4>
+        <p>
+            トレーニング、長時間労働、睡眠不足、栄養不足など、身体に直接的な負荷をかけるストレス。
+        </p>
+        <ul>
+            <li><strong>トレーニングストレス:</strong> 適切なレベルであれば成長を促進するが、過度になると逆効果</li>
+            <li><strong>睡眠不足:</strong> 毎晩1時間の睡眠不足で、コルチゾールレベルが翌日45%上昇</li>
+            <li><strong>栄養不足:</strong> カロリー不足やマクロ栄養素の不均衡</li>
+        </ul>
+
+        <h4>心理的ストレス</h4>
+        <p>
+            不安、心配、恐怖、怒りなど、精神的な負担によるストレス。
+        </p>
+        <ul>
+            <li><strong>仕事関連:</strong> 締め切り、対人関係、責任の重さ</li>
+            <li><strong>私生活:</strong> 家族問題、経済的不安、将来への不安</li>
+            <li><strong>社会的:</strong> 孤独感、社会的評価への懸念</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>💡 重要な洞察</h4>
+            <p>
+                研究により、<strong>身体は物理的ストレスと心理的ストレスを区別しない</strong>ことが
+                明らかになっています。どちらも同じHPA軸を活性化し、コルチゾールを分泌させます。
+                つまり、仕事のストレスもオーバートレーニングも、身体にとっては同じストレス負荷なのです
+                (Selye, 1976)。
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 5: Management Techniques -->
+    <section id="management" class="content-section">
+        <h2>5. 科学的ストレス管理法</h2>
+
+        <p>
+            ここでは、科学的に効果が実証されているストレス管理法を紹介します。
+            全てを実践する必要はありません。自分に合った方法を2-3個選んで継続することが重要です。
+        </p>
+
+        <h3>5.1 マインドフルネス瞑想</h3>
+        <p>
+            マインドフルネス瞑想は、<strong>最も研究されているストレス軽減法</strong>の一つです。
+            8週間の瞑想プログラムで、コルチゾールレベルが平均23%低下することが報告されています
+            (Tang et al., 2007)。
+        </p>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>基本的なマインドフルネス瞑想の実践法</h4>
+            <ol style="line-height: 2;">
+                <li><strong>姿勢:</strong> 椅子に座るか、床にあぐらをかく。背筋を伸ばし、リラックスする</li>
+                <li><strong>呼吸に注目:</strong> 自然な呼吸に意識を向ける。吸う息、吐く息を観察する</li>
+                <li><strong>思考の流れ:</strong> 考えが浮かんできたら、それを認識し、再び呼吸に意識を戻す</li>
+                <li><strong>時間:</strong> 最初は5分から始め、徐々に10-20分に延ばす</li>
+                <li><strong>頻度:</strong> 毎日同じ時間に行うことで習慣化する（朝が推奨）</li>
+            </ol>
+        </div>
+
+        <h3>5.2 呼吸法エクササイズ</h3>
+        <p>
+            呼吸法は<strong>即座にストレス反応を抑制</strong>できる強力なツールです。
+            副交感神経系を活性化し、「リラックス反応」を引き起こします。
+        </p>
+
+        <h4>4-7-8呼吸法（最も効果的）</h4>
+        <ol>
+            <li>口からすべての息を吐き出す</li>
+            <li>鼻から4秒かけて息を吸う</li>
+            <li>7秒間息を止める</li>
+            <li>口から8秒かけて息を吐き出す</li>
+            <li>これを4サイクル繰り返す</li>
+        </ol>
+        <p><strong>効果:</strong> 心拍数が平均8-12拍/分低下し、コルチゾールが15-20%減少 (Brown & Gerbarg, 2005)</p>
+
+        <h4>ボックス呼吸法（軍隊でも使用）</h4>
+        <ol>
+            <li>4秒かけて息を吸う</li>
+            <li>4秒間息を止める</li>
+            <li>4秒かけて息を吐く</li>
+            <li>4秒間息を止める</li>
+            <li>これを繰り返す</li>
+        </ol>
+
+        <h3>5.3 運動とストレス</h3>
+        <p>
+            運動は<strong>パラドックス的にストレスを軽減</strong>します。短期的にはコルチゾールを上昇させますが、
+            長期的には基礎コルチゾールレベルを低下させ、ストレス耐性を高めます。
+        </p>
+
+        <div class="success-box">
+            <h4>✅ ストレス軽減に効果的な運動</h4>
+            <ul>
+                <li><strong>有酸素運動:</strong> 30-40分のジョギング、サイクリング、水泳</li>
+                <li><strong>ヨガ:</strong> 特にハタヨガやリストラティブヨガ（週3回、各60分）</li>
+                <li><strong>太極拳:</strong> ゆっくりとした動きと呼吸の組み合わせ</li>
+                <li><strong>散歩:</strong> 自然の中での20-30分の散歩（森林浴効果）</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>注意:</strong> 高強度トレーニングはストレスを悪化させる可能性があるため、
+            ストレスが高い時期は中低強度の運動を選択しましょう。</p>
+        </div>
+
+        <h3>5.4 睡眠の最適化</h3>
+        <p>
+            睡眠不足は<strong>ストレスと双方向の関係</strong>にあります。睡眠不足がストレスを増やし、
+            ストレスが睡眠の質を低下させます。このサイクルを断ち切ることが重要です。
+        </p>
+
+        <h4>睡眠の質を高める7つの戦略</h4>
+        <ol>
+            <li><strong>一貫した睡眠スケジュール:</strong> 毎日同じ時刻に就寝・起床（週末も）</li>
+            <li><strong>寝室環境の最適化:</strong> 温度18-20℃、完全な暗闇、静寂</li>
+            <li><strong>就寝2時間前のブルーライト制限:</strong> スマホ、パソコン、テレビを避ける</li>
+            <li><strong>カフェイン摂取は午後2時まで:</strong> カフェインの半減期は5-6時間</li>
+            <li><strong>就寝前のルーティン:</strong> 読書、ストレッチ、瞑想など30分のリラックスタイム</li>
+            <li><strong>寝室を睡眠専用に:</strong> 仕事や食事は寝室で行わない</li>
+            <li><strong>マグネシウム補給:</strong> 就寝1時間前に300-400mgのマグネシウム</li>
+        </ol>
+
+        <h3>5.5 社会的サポート</h3>
+        <p>
+            強固な社会的つながりは、<strong>ストレスに対する最も強力な緩衝材</strong>の一つです。
+            友人、家族、コミュニティとの良好な関係は、コルチゾールレベルを22%低下させることが
+            示されています (Uchino, 2006)。
+        </p>
+
+        <ul>
+            <li><strong>定期的な交流:</strong> 週に最低2-3回、友人や家族と意味のある会話をする</li>
+            <li><strong>サポートネットワーク:</strong> トレーニング仲間、オンラインコミュニティへの参加</li>
+            <li><strong>感情の共有:</strong> ストレスや悩みを信頼できる人に話す</li>
+            <li><strong>専門家のサポート:</strong> 必要に応じてカウンセラーやセラピストに相談</li>
+        </ul>
+
+        <h3>5.6 認知行動療法(CBT)テクニック</h3>
+        <p>
+            CBTは、<strong>思考パターンを変えることでストレス反応を軽減</strong>する科学的手法です。
+            特に慢性ストレスに対して効果的です。
+        </p>
+
+        <h4>基本的なCBTテクニック</h4>
+        
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h5 style="margin-bottom: 15px;">1. 思考記録法</h5>
+            <ul>
+                <li>ストレスを感じた状況を記録</li>
+                <li>その時の自動思考（最初に浮かんだ考え）を書き出す</li>
+                <li>その思考の根拠と反証を客観的に検討</li>
+                <li>よりバランスの取れた思考に置き換える</li>
+            </ul>
+            
+            <h5 style="margin: 20px 0 15px 0;">2. 破滅的思考の修正</h5>
+            <p>「もし〜だったら最悪だ」という思考パターンを現実的に評価する</p>
+            <ul>
+                <li><strong>破滅的思考:</strong> 「プロジェクトが失敗したら、クビになって人生終わりだ」</li>
+                <li><strong>修正思考:</strong> 「プロジェクトが失敗しても、学びの機会になる。会社にはリカバリーの仕組みもある」</li>
+            </ul>
+        </div>
+
+        <h3>5.7 時間管理とタスク優先順位付け</h3>
+        <p>
+            多くのストレスは<strong>時間的プレッシャー</strong>から生じます。
+            効果的な時間管理でストレスを大幅に軽減できます。
+        </p>
+
+        <h4>アイゼンハワーマトリックス</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
+            <div style="background: #ffebee; padding: 20px; border-radius: 10px;">
+                <h5 style="color: #c62828;">緊急かつ重要</h5>
+                <p style="font-size: 0.9rem; margin: 10px 0 0 0;">すぐに実行</p>
+            </div>
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 10px;">
+                <h5 style="color: #2e7d32;">重要だが緊急でない</h5>
+                <p style="font-size: 0.9rem; margin: 10px 0 0 0;">計画を立てて実行（最重要）</p>
+            </div>
+            <div style="background: #fff3e0; padding: 20px; border-radius: 10px;">
+                <h5 style="color: #ef6c00;">緊急だが重要でない</h5>
+                <p style="font-size: 0.9rem; margin: 10px 0 0 0;">委譲または短時間で処理</p>
+            </div>
+            <div style="background: #f5f5f5; padding: 20px; border-radius: 10px;">
+                <h5 style="color: #616161;">緊急でも重要でもない</h5>
+                <p style="font-size: 0.9rem; margin: 10px 0 0 0;">排除または最小化</p>
+            </div>
+        </div>
+
+        <h3>5.8 自然との接触（森林浴）</h3>
+        <p>
+            自然環境での時間は<strong>コルチゾールを12-16%低下</strong>させることが
+            複数の研究で示されています (Park et al., 2010)。これは「森林浴効果」として知られています。
+        </p>
+
+        <ul>
+            <li><strong>週2回以上:</strong> 最低20分間、自然の中で過ごす</li>
+            <li><strong>五感を使う:</strong> 視覚、聴覚、嗅覚、触覚で自然を感じる</li>
+            <li><strong>スマホは置いていく:</strong> デジタルデトックスも同時に実施</li>
+            <li><strong>ゆっくり歩く:</strong> 急がず、自然のペースに合わせる</li>
+        </ul>
+    </section>
+
+    <!-- Section 6: Training Balance -->
+    <section id="training" class="content-section">
+        <h2>6. トレーニングとストレスのバランス</h2>
+
+        <p>
+            トレーニング自体がストレスである、という事実を認識することが重要です。
+            <strong>総ストレス負荷 = 生活ストレス + トレーニングストレス</strong>という式を
+            常に意識する必要があります。
+        </p>
+
+        <h3>6.1 オーバートレーニング症候群</h3>
+        <p>
+            オーバートレーニング症候群(OTS)は、回復が不十分な状態で過度なトレーニングを
+            続けた結果、パフォーマンスが長期的に低下する状態です。
+            これは<strong>慢性的な高コルチゾール状態</strong>の典型例です。
+        </p>
+
+        <div class="warning-box">
+            <h4>⚠️ オーバートレーニングの兆候</h4>
+            <ul>
+                <li><strong>パフォーマンス:</strong> 3週間以上の継続的なパフォーマンス低下</li>
+                <li><strong>安静時心拍数:</strong> 通常より10拍/分以上高い</li>
+                <li><strong>疲労:</strong> 慢性的な疲労感、回復しない重さ</li>
+                <li><strong>睡眠:</strong> 不眠または過眠</li>
+                <li><strong>気分:</strong> イライラ、抑うつ、モチベーション低下</li>
+                <li><strong>免疫:</strong> 頻繁な風邪や感染症</li>
+                <li><strong>食欲:</strong> 食欲不振または過食</li>
+                <li><strong>筋肉:</strong> 持続的な筋肉痛、回復の遅延</li>
+            </ul>
+        </div>
+
+        <h3>6.2 ストレス状況に応じたトレーニング調整</h3>
+        <p>
+            生活ストレスが高い時期は、<strong>トレーニング量と強度を調整</strong>する必要があります。
+        </p>
+
+        <div style="margin: 30px 0;">
+            <h4>ストレスレベル別トレーニング推奨</h4>
+            
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid #4caf50;">
+                <h5 style="color: #2e7d32; margin-bottom: 10px;">低ストレス期（通常時）</h5>
+                <ul>
+                    <li>週4-6回のトレーニング</li>
+                    <li>高強度トレーニングOK</li>
+                    <li>ボリューム・強度ともに最大化可能</li>
+                    <li>新しいPR（自己記録）に挑戦する時期</li>
+                </ul>
+            </div>
+
+            <div style="background: #fff3e0; padding: 20px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid #ff9800;">
+                <h5 style="color: #ef6c00; margin-bottom: 10px;">中ストレス期</h5>
+                <ul>
+                    <li>週3-4回のトレーニング</li>
+                    <li>ボリュームを20-30%削減</li>
+                    <li>強度は維持（重量は落とさない）</li>
+                    <li>セット数を減らして対応</li>
+                    <li>有酸素運動を軽めに追加（ストレス軽減効果）</li>
+                </ul>
+            </div>
+
+            <div style="background: #ffebee; padding: 20px; border-radius: 10px; border-left: 5px solid #f44336;">
+                <h5 style="color: #c62828; margin-bottom: 10px;">高ストレス期</h5>
+                <ul>
+                    <li>週2-3回の軽めのトレーニング</li>
+                    <li>ボリューム・強度ともに50%削減</li>
+                    <li>筋力維持が目標（成長は狙わない）</li>
+                    <li>各筋群につき1-2セットのメンテナンストレーニング</li>
+                    <li>ヨガ、散歩などのアクティブレスト重視</li>
+                    <li><strong>完全休養日を増やす</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>6.3 ディロード週の重要性</h3>
+        <p>
+            <strong>ディロード(Deload)</strong>とは、意図的にトレーニング量と強度を減らす週のことです。
+            4-6週間ごとにディロード週を設けることで、累積疲労を解消し、
+            コルチゾールレベルをリセットできます。
+        </p>
+
+        <h4>効果的なディロード戦略</h4>
+        <ul>
+            <li><strong>ボリューム削減:</strong> 通常の50%のセット数に減らす</li>
+            <li><strong>強度維持:</strong> 重量は落とさないが、レップ数を減らす</li>
+            <li><strong>頻度削減:</strong> 週4回→週2-3回に</li>
+            <li><strong>期間:</strong> 通常1週間（最大10日）</li>
+            <li><strong>タイミング:</strong> 疲労の蓄積を感じたら、または4-6週ごと</li>
+        </ul>
+
+        <div class="success-box">
+            <h4>✅ ディロード週の効果</h4>
+            <p>研究によると、適切なディロードにより：</p>
+            <ul>
+                <li>コルチゾールレベルが平均18%低下</li>
+                <li>テストステロンレベルが15%上昇</li>
+                <li>筋力が3-7%向上（超回復）</li>
+                <li>次のトレーニングサイクルでより良い成果</li>
+            </ul>
+            <p style="margin-top: 10px;">(Fry et al., 1994; Kraemer et al., 1998)</p>
+        </div>
+
+        <h3>6.4 安静時心拍数(RHR)モニタリング</h3>
+        <p>
+            <strong>安静時心拍数</strong>は、回復状態とストレスレベルの優れた指標です。
+            毎朝、起床時に心拍数を測定することで、その日のコンディションを判断できます。
+        </p>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>RHRに基づいたトレーニング判断</h4>
+            <ul>
+                <li><strong>通常値±2拍:</strong> 通常のトレーニングOK</li>
+                <li><strong>+3~5拍:</strong> 軽めのトレーニング、ボリューム削減</li>
+                <li><strong>+6~10拍:</strong> アクティブレストのみ（散歩、ヨガ）</li>
+                <li><strong>+10拍以上:</strong> 完全休養日。体調不良の可能性も確認</li>
+            </ul>
+            <p style="margin-top: 15px; color: #666;">
+                <strong>測定方法:</strong> 目覚めたら、動かずにベッドで1分間心拍数を測定。
+                スマートウォッチやフィットネストラッカーの利用も推奨。
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 7: Nutrition -->
+    <section id="nutrition" class="content-section">
+        <h2>7. ストレス軽減のための栄養戦略</h2>
+
+        <p>
+            適切な栄養は、<strong>ストレス反応を生化学的にモデュレート</strong>します。
+            特定の栄養素は、コルチゾール産生を抑制し、神経伝達物質のバランスを改善します。
+        </p>
+
+        <h3>7.1 コルチゾールを下げる栄養素</h3>
+
+        <h4>マグネシウム</h4>
+        <p>
+            マグネシウムは<strong>「天然の抗ストレスミネラル」</strong>と呼ばれます。
+            HPA軸を調節し、コルチゾールレベルを低下させます。
+        </p>
+        <ul>
+            <li><strong>推奨摂取量:</strong> 400-420mg/日（男性）、310-320mg/日（女性）</li>
+            <li><strong>食材:</strong> ほうれん草、アーモンド、カシューナッツ、アボカド、ダークチョコレート、バナナ</li>
+            <li><strong>サプリメント:</strong> マグネシウムグリシネート 300-400mg（就寝前）</li>
+            <li><strong>効果:</strong> 8週間の補給でコルチゾールが12-17%低下 (Golf et al., 1998)</li>
+        </ul>
+
+        <h4>オメガ3脂肪酸（EPA・DHA）</h4>
+        <p>
+            オメガ3は<strong>抗炎症作用</strong>を持ち、ストレス反応を緩和します。
+        </p>
+        <ul>
+            <li><strong>推奨摂取量:</strong> EPA+DHA 2000-3000mg/日</li>
+            <li><strong>食材:</strong> サーモン、サバ、イワシ、クルミ、亜麻仁</li>
+            <li><strong>サプリメント:</strong> 高品質フィッシュオイル</li>
+            <li><strong>効果:</strong> 慢性ストレス下でコルチゾール上昇を20%抑制 (Delarue et al., 2003)</li>
+        </ul>
+
+        <h4>ビタミンC</h4>
+        <p>
+            ビタミンCは副腎機能をサポートし、<strong>コルチゾール産生を調節</strong>します。
+        </p>
+        <ul>
+            <li><strong>推奨摂取量:</strong> 1000-2000mg/日（ストレス時）</li>
+            <li><strong>食材:</strong> オレンジ、キウイ、パプリカ、ブロッコリー、イチゴ</li>
+            <li><strong>サプリメント:</strong> 分割摂取（朝500mg、夜500mg）</li>
+            <li><strong>効果:</strong> 高ストレス状況でコルチゾール上昇を14%抑制 (Brody et al., 2002)</li>
+        </ul>
+
+        <h4>アシュワガンダ</h4>
+        <p>
+            アシュワガンダは<strong>アダプトゲンハーブ</strong>の代表格で、
+            ストレス適応能力を高めます。
+        </p>
+        <ul>
+            <li><strong>推奨摂取量:</strong> KSM-66エキス 300-600mg/日</li>
+            <li><strong>タイミング:</strong> 朝食後または就寝前</li>
+            <li><strong>効果:</strong> 8週間でコルチゾールが27.9%低下、ストレススコアが44%改善 (Chandrasekhar et al., 2012)</li>
+            <li><strong>注意:</strong> 甲状腺疾患がある場合は医師に相談</li>
+        </ul>
+
+        <h4>ロディオラ・ロゼア</h4>
+        <p>
+            ロディオラも強力なアダプトゲンで、<strong>疲労回復とストレス耐性</strong>を向上させます。
+        </p>
+        <ul>
+            <li><strong>推奨摂取量:</strong> 200-600mg/日（3%ロザビン、1%サリドロサイド標準化）</li>
+            <li><strong>タイミング:</strong> 朝食前または午前中</li>
+            <li><strong>効果:</strong> ストレス誘発性疲労が30%改善 (Olsson et al., 2009)</li>
+        </ul>
+
+        <h3>7.2 炭水化物とストレス</h3>
+        <p>
+            炭水化物の摂取は<strong>セロトニン産生を促進</strong>し、ストレスを軽減します。
+            極端な低炭水化物ダイエットは、コルチゾールを代償的に上昇させる可能性があります。
+        </p>
+
+        <div class="info-box">
+            <h4>💡 炭水化物の戦略的摂取</h4>
+            <ul>
+                <li><strong>夜間の炭水化物:</strong> 夕食に複合炭水化物を含めることで、セロトニン→メラトニン変換を促進し、睡眠の質が向上</li>
+                <li><strong>トレーニング後:</strong> 速やかな炭水化物摂取でコルチゾールを迅速に低下させる</li>
+                <li><strong>最低摂取量:</strong> ストレス期でも体重1kgあたり2-3gの炭水化物を確保</li>
+            </ul>
+        </div>
+
+        <h3>7.3 カフェイン管理</h3>
+        <p>
+            カフェインは<strong>コルチゾール分泌を刺激</strong>します。
+            適度な摂取は問題ありませんが、ストレス時の過剰摂取は避けるべきです。
+        </p>
+
+        <ul>
+            <li><strong>上限:</strong> 1日400mg以下（コーヒー約4杯）</li>
+            <li><strong>ストレス時:</strong> 200mg以下に制限</li>
+            <li><strong>タイミング:</strong> 午後2時以降は避ける（睡眠への影響）</li>
+            <li><strong>代替:</strong> L-テアニンと組み合わせることで、カフェインのストレス効果を緩和（緑茶が理想的）</li>
+        </ul>
+
+        <h3>7.4 プロバイオティクスと腸-脳軸</h3>
+        <p>
+            腸内環境は<strong>「第二の脳」</strong>として、ストレス反応に大きく影響します。
+            腸-脳軸を通じて、腸内細菌叢が神経伝達物質やホルモンの産生に関与しています。
+        </p>
+
+        <ul>
+            <li><strong>推奨株:</strong> Lactobacillus helveticus、Bifidobacterium longum</li>
+            <li><strong>摂取量:</strong> 10-50億CFU/日</li>
+            <li><strong>食材:</strong> ヨーグルト、ケフィア、キムチ、納豆、ザワークラウト</li>
+            <li><strong>効果:</strong> 不安スコアが55%改善、コルチゾールが低下 (Messaoudi et al., 2011)</li>
+        </ul>
+
+        <h3>7.5 抗ストレス食事プラン例</h3>
+        
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>1日の食事例（体重70kgのトレーニー）</h4>
+            
+            <div style="margin-bottom: 20px;">
+                <h5 style="color: #667eea; margin-bottom: 10px;">朝食（7:00）</h5>
+                <ul>
+                    <li>オートミール 80g + ブルーベリー 100g + クルミ 30g</li>
+                    <li>全卵 3個 + ほうれん草</li>
+                    <li>アシュワガンダサプリ 300mg</li>
+                    <li><strong>栄養:</strong> P: 35g / C: 60g / F: 25g / マグネシウム: 150mg</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h5 style="color: #667eea; margin-bottom: 10px;">間食（10:00）</h5>
+                <ul>
+                    <li>ギリシャヨーグルト 200g + 蜂蜜 15g</li>
+                    <li>アーモンド 30g</li>
+                    <li><strong>栄養:</strong> P: 25g / C: 30g / F: 18g / プロバイオティクス</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h5 style="color: #667eea; margin-bottom: 10px;">昼食（13:00）</h5>
+                <ul>
+                    <li>サーモン 150g（焼き）</li>
+                    <li>玄米 150g</li>
+                    <li>ブロッコリー・パプリカのサラダ + アボカド 1/2個</li>
+                    <li>ビタミンCサプリ 500mg</li>
+                    <li><strong>栄養:</strong> P: 40g / C: 65g / F: 20g / オメガ3: 2000mg</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h5 style="color: #667eea; margin-bottom: 10px;">トレーニング後（16:00）</h5>
+                <ul>
+                    <li>プロテインシェイク（ホエイ 30g）</li>
+                    <li>バナナ 2本 + ピーナッツバター 20g</li>
+                    <li><strong>栄養:</strong> P: 35g / C: 70g / F: 12g</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h5 style="color: #667eea; margin-bottom: 10px;">夕食（19:00）</h5>
+                <ul>
+                    <li>鶏胸肉 200g</li>
+                    <li>さつまいも 200g</li>
+                    <li>緑黄色野菜のミックス 150g + オリーブオイル 10g</li>
+                    <li>キムチ 50g</li>
+                    <li><strong>栄養:</strong> P: 50g / C: 60g / F: 15g</li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 style="color: #667eea; margin-bottom: 10px;">就寝前（22:00）</h5>
+                <ul>
+                    <li>カゼインプロテイン 30g または ギリシャヨーグルト 200g</li>
+                    <li>ダークチョコレート 20g（カカオ85%以上）</li>
+                    <li>マグネシウムサプリ 400mg</li>
+                    <li>フィッシュオイル 2000mg</li>
+                    <li><strong>栄養:</strong> P: 30g / C: 15g / F: 10g</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 8px;">
+                <strong>総計:</strong> P: 245g / C: 360g / F: 100g / カロリー: 約3200kcal<br>
+                <strong>抗ストレス栄養素:</strong> マグネシウム 550mg、オメガ3 3000mg、ビタミンC 1000mg
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Calculator -->
+    <section id="calculator" class="content-section">
+        <h2>8. ストレスレベルチェック</h2>
+        
+        <p>
+            以下のツールで、あなたの現在のストレスレベルを評価しましょう。
+            結果に基づいて、適切なストレス管理戦略を選択できます。
+        </p>
+
+        <div class="interactive-tool">
+            <h3>ストレスレベル簡易評価</h3>
+            <p style="color: #666; margin-bottom: 25px;">
+                各項目について、あなたの現在の状況に最も近い値を入力してください。
+            </p>
+
+            <div class="tool-input-group">
+                <label for="sleepHours">睡眠時間（1日平均）</label>
+                <select id="sleepHours">
+                    <option value="0">4時間未満</option>
+                    <option value="1">4-5時間</option>
+                    <option value="2">5-6時間</option>
+                    <option value="3">6-7時間</option>
+                    <option value="4" selected>7-9時間</option>
+                    <option value="5">9時間以上</option>
+                </select>
+            </div>
+
+            <div class="tool-input-group">
+                <label for="exerciseFreq">週あたりの運動頻度</label>
+                <select id="exerciseFreq">
+                    <option value="0">運動しない</option>
+                    <option value="1">週1-2回</option>
+                    <option value="2">週3-4回</option>
+                    <option value="3" selected>週5回以上</option>
+                </select>
+            </div>
+
+            <div class="tool-input-group">
+                <label for="workHours">1日の労働時間</label>
+                <input type="number" id="workHours" min="0" max="24" value="8" placeholder="8">
+            </div>
+
+            <div class="tool-input-group">
+                <label for="relaxationTime">1日のリラックス時間（分）</label>
+                <input type="number" id="relaxationTime" min="0" max="600" value="30" placeholder="30">
+            </div>
+
+            <button class="tool-button" id="calculateStress">ストレスレベルを評価</button>
+
+            <div id="stressResult" class="tool-result"></div>
+        </div>
+    </section>
+
+    <!-- Section 9: References -->
+    <section id="references" class="content-section references">
+        <h2>9. 参考文献</h2>
+        <ol>
+            <li>Stokes, T., et al. (2018). "Recent Perspectives Regarding the Role of Dietary Protein for the Promotion of Muscle Hypertrophy with Resistance Exercise Training." <em>Nutrients</em>, 10(2), 180.</li>
+            
+            <li>Cumming, D.C., et al. (1983). "Acute suppression of circulating testosterone levels by cortisol in men." <em>The Journal of Clinical Endocrinology & Metabolism</em>, 57(3), 671-673.</li>
+            
+            <li>Drake, C., et al. (2004). "Effects of rapid versus slow accumulation of eight hours of sleep loss." <em>Psychophysiology</em>, 38(6), 979-987.</li>
+            
+            <li>Tsigos, C., & Chrousos, G.P. (2002). "Hypothalamic–pituitary–adrenal axis, neuroendocrine factors and stress." <em>Journal of Psychosomatic Research</em>, 53(4), 865-871.</li>
+            
+            <li>Leproult, R., et al. (1997). "Sleep loss results in an elevation of cortisol levels the next evening." <em>Sleep</em>, 20(10), 865-870.</li>
+            
+            <li>Markofski, M.M., et al. (2014). "Effect of age on basal muscle protein synthesis and mTORC1 signaling in a large cohort of young and older men and women." <em>Experimental Gerontology</em>, 65, 1-7.</li>
+            
+            <li>Hakkinen, K., et al. (1985). "Neuromuscular and hormonal adaptations during strength and power training." <em>Journal of Sports Medicine and Physical Fitness</em>, 25(1-2), 9-15.</li>
+            
+            <li>Selye, H. (1976). "Stress in Health and Disease." <em>Butterworth-Heinemann</em>.</li>
+            
+            <li>Tang, Y.Y., et al. (2007). "Short-term meditation training improves attention and self-regulation." <em>Proceedings of the National Academy of Sciences</em>, 104(43), 17152-17156.</li>
+            
+            <li>Brown, R.P., & Gerbarg, P.L. (2005). "Sudarshan Kriya yogic breathing in the treatment of stress, anxiety, and depression." <em>Journal of Alternative and Complementary Medicine</em>, 11(4), 711-717.</li>
+            
+            <li>Uchino, B.N. (2006). "Social support and health: a review of physiological processes potentially underlying links to disease outcomes." <em>Journal of Behavioral Medicine</em>, 29(4), 377-387.</li>
+            
+            <li>Park, B.J., et al. (2010). "The physiological effects of Shinrin-yoku: evidence from field experiments in 24 forests across Japan." <em>Environmental Health and Preventive Medicine</em>, 15(1), 18-26.</li>
+            
+            <li>Fry, A.C., et al. (1994). "Impaired performances with excessive high-intensity free-weight training." <em>Journal of Strength and Conditioning Research</em>, 8(2), 54-61.</li>
+            
+            <li>Kraemer, W.J., et al. (1998). "Changes in hormonal concentrations after different heavy-resistance exercise protocols in women." <em>Journal of Applied Physiology</em>, 75(2), 594-604.</li>
+            
+            <li>Golf, S.W., et al. (1998). "On the significance of magnesium in extreme physical stress." <em>Cardiovascular Drugs and Therapy</em>, 12(Suppl 2), 197-202.</li>
+            
+            <li>Delarue, J., et al. (2003). "Fish oil prevents the adrenal activation elicited by mental stress in healthy men." <em>Diabetes & Metabolism</em>, 29(3), 289-295.</li>
+            
+            <li>Brody, S., et al. (2002). "A randomized controlled trial of high dose ascorbic acid for reduction of blood pressure, cortisol, and subjective responses to psychological stress." <em>Psychopharmacology</em>, 159(3), 319-324.</li>
+            
+            <li>Chandrasekhar, K., et al. (2012). "A prospective, randomized double-blind, placebo-controlled study of safety and efficacy of a high-concentration full-spectrum extract of ashwagandha root in reducing stress and anxiety in adults." <em>Indian Journal of Psychological Medicine</em>, 34(3), 255-262.</li>
+            
+            <li>Olsson, E.M., et al. (2009). "A randomised, double-blind, placebo-controlled, parallel-group study of the standardised extract shr-5 of the roots of Rhodiola rosea in the treatment of subjects with stress-related fatigue." <em>Planta Medica</em>, 75(2), 105-112.</li>
+            
+            <li>Messaoudi, M., et al. (2011). "Assessment of psychotropic-like properties of a probiotic formulation in rats and human subjects." <em>British Journal of Nutrition</em>, 105(5), 755-764.</li>
+            
+            <li>厚生労働省 (2021). 「令和元年 国民健康・栄養調査結果の概要」<br>
+            <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/r1-houkoku_00002.html" target="_blank">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/r1-houkoku_00002.html</a></li>
+            
+            <li>日本ストレス学会 (2020). 「ストレスと健康に関する研究動向」<br>
+            <a href="https://www.jssr.jp/" target="_blank">https://www.jssr.jp/</a></li>
+        </ol>
+    </section>
+
+    <!-- Navigation -->
+    <div class="detail-navigation">
+        <a href="/lifestyle" class="nav-button">← Lifestyleトップへ</a>
+        <a href="/lifestyle/sleep" class="nav-button">Sleep Optimization →</a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/lifestyle.js') }}"></script>
+{% endblock %}

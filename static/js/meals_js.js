@@ -42,7 +42,7 @@ const CATEGORIES = [
   {
     key: 'balance',
     title: 'バランス',
-    subtitle: '美味しさと栄養を両立',
+    subtitle: '',
     subcategories: [
       { key: 'meal', label: '通常の食事' },
       { key: 'dessert', label: 'デザート' }
@@ -51,7 +51,7 @@ const CATEGORIES = [
   {
     key: 'cut',
     title: '減量',
-    subtitle: '低脂質・高タンパク',
+    subtitle: '',
     subcategories: [
       { key: 'meal', label: '通常の食事' },
       { key: 'dessert', label: 'デザート' }
@@ -60,7 +60,7 @@ const CATEGORIES = [
   {
     key: 'bulk',
     title: '増量',
-    subtitle: '高タンパク・高カロリー',
+    subtitle: '',
     subcategories: [
       { key: 'meal', label: '通常の食事' },
       { key: 'dessert', label: 'デザート' }
