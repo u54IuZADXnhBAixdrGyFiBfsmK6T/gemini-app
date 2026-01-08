@@ -130,7 +130,6 @@ function populateFilters() {
   });
 }
 
-
 // 初期描画：部位ごとのセクション枠を作る
 function initialRender() {
   main.innerHTML = '';

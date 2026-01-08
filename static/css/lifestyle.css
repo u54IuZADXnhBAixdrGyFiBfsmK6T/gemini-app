@@ -34,7 +34,7 @@ body {
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     background-color: var(--bg-body);
     color: var(--text-body);
-    line-height: 2.0; /* 行間をかなり広く取る（読みやすさ最優先） */
+    line-height: 1.8; /* 行間をかなり広く取る（読みやすさ最優先） */
     letter-spacing: 0.04em; /* 文字間を少し開ける */
     -webkit-font-smoothing: antialiased;
 }
@@ -188,8 +188,8 @@ strong {
 ======================================== */
 .content-section p {
     margin-bottom: 32px; /* 段落間を広く */
-    font-size: 1.05rem;
-    text-align: justify; /* 両端揃えで美しく */
+    font-size: 1.0rem;
+    text-align: left; /* 両端揃えで美しく */
 }
 
 /* リスト: 箇条書き記号をシンプルに */

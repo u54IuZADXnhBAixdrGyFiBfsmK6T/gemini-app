@@ -4,8 +4,8 @@
   --card-bg: #ffffff;
   --text-main: #0b1220;
   --text-muted: #6b7280;
-  --accent: #2563eb;       
-  --accent-hover: #1d4ed8;
+  --accent: #ff0000;       
+  --accent-hover: #cc0000;
   --radius: 16px;         
   --container-width: 1250px;
   --sidebar-width: 280px;
@@ -22,7 +22,7 @@ html, body {
 body {
   padding-top: 72px;
   margin: 0;
-  background: linear-gradient(180deg, #eef2f9 0%, #fcfdff 100%);
+  background: linear-gradient(180deg, #ffebee 0%, #fcfdff 100%);
   background-attachment: fixed;
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
@@ -118,7 +118,7 @@ body {
 
 #partJumpList a:active {
   transform: translateY(0);
-  background-color: #dbeafe;
+  background-color: #ffcdd2;
   box-shadow: none;
 }
 
@@ -143,7 +143,7 @@ body {
 .search:focus, .select:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.15);
 }
 
 /* ボタン（お気に入り表示など） */
@@ -208,7 +208,7 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 20px;
-  border-bottom: 2px solid #eef2ff;
+  border-bottom: 2px solid #ffebee;
   padding-bottom: 10px;
 }
 
@@ -228,7 +228,7 @@ body {
 .part-count {
   font-weight: bold;
   color: var(--accent);
-  background: #eff6ff;
+  background: #ffebee;
   padding: 4px 10px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -455,8 +455,8 @@ body {
 }
 
 .form-block {
-  background: #f0f9ff; 
-  border: 1px solid #e0f2fe; 
+  background: #ffebee; 
+  border: 1px solid #ffcdd2; 
 }
 
 .caution-block {
@@ -479,7 +479,7 @@ body {
   margin: 0 0 16px 0;
 }
 
-.key-highlight-form { color: #0369a1; }     
+.key-highlight-form { color: #c62828; }     
 .key-highlight-caution { color: #a16207; }   
 .practice-heading { color: #15803d; }      
 
