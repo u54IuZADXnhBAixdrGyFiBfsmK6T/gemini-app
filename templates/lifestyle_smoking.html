@@ -1,0 +1,936 @@
+{% block title %}Smoking Impact - 喫煙と筋肥大の科学{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/lifestyle.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="lifestyle-detail">
+    <div class="detail-hero">
+        <h1>🚬 Smoking Impact</h1>
+        <p class="subtitle">喫煙が筋肉を破壊する - 禁煙で筋肥大を加速させる</p>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc">
+        <h2>📑 目次</h2>
+        <ul>
+            <li><a href="#reality">1. 厳しい現実：喫煙と筋肥大の関係</a></li>
+            <li><a href="#oxygen">2. 酸素供給の破壊</a></li>
+            <li><a href="#protein-synthesis">3. 筋タンパク質合成への影響</a></li>
+            <li><a href="#hormones">4. ホルモンバランスの崩壊</a></li>
+            <li><a href="#recovery">5. 回復能力の低下</a></li>
+            <li><a href="#performance">6. トレーニングパフォーマンスへの影響</a></li>
+            <li><a href="#body-composition">7. 体組成への悪影響</a></li>
+            <li><a href="#inflammation">8. 慢性炎症と免疫抑制</a></li>
+            <li><a href="#quitting">9. 禁煙のメリットとタイムライン</a></li>
+            <li><a href="#strategies">10. 禁煙成功戦略</a></li>
+            <li><a href="#calculator">11. 喫煙影響計算ツール</a></li>
+            <li><a href="#references">12. 参考文献</a></li>
+        </ul>
+    </div>
+
+    <!-- Section 1: Reality -->
+    <section id="reality" class="content-section">
+        <h2>1. 厳しい現実：喫煙と筋肥大の関係</h2>
+        
+        <p>
+            アルコールと異なり、喫煙には<strong>「適量」も「安全な摂取法」も存在しません</strong>。
+            喫煙は筋肥大にとって<strong>百害あって一利なし</strong>です。
+            しかし、希望もあります。<strong>禁煙すれば驚くほど速く回復</strong>します。
+        </p>
+
+        <div class="warning-box">
+            <h4>⚠️ 衝撃的な事実</h4>
+            <ul>
+                <li>喫煙者の筋タンパク質合成率は非喫煙者より<strong>18-25%低い</strong> (Petersen et al., 2007)</li>
+                <li>1日1箱の喫煙で、筋力増加率が<strong>30-40%低下</strong> (Hollings et al., 2012)</li>
+                <li>喫煙は最大酸素摂取量（VO2max）を<strong>10-25%低下</strong>させる (Bernaards et al., 2003)</li>
+                <li>筋肉の毛細血管密度が<strong>20-30%減少</strong> (Pärssinen et al., 2000)</li>
+                <li>喫煙者の筋肉回復時間は非喫煙者の<strong>1.5-2倍</strong> (Nawrot et al., 2007)</li>
+                <li>テストステロンレベルが<strong>10-15%低下</strong> (Halmenschlager et al., 2009)</li>
+                <li>喫煙による筋肉への悪影響は<strong>運動では相殺できない</strong></li>
+            </ul>
+        </div>
+
+        <div class="stats-grid" style="margin: 30px 0;">
+            <div class="stat-card">
+                <div class="stat-number">-25%</div>
+                <div class="stat-label">筋タンパク質<br>合成率</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">-40%</div>
+                <div class="stat-label">筋力増加率<br>(1日1箱)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">-25%</div>
+                <div class="stat-label">最大酸素<br>摂取量</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">×2</div>
+                <div class="stat-label">回復時間<br>(非喫煙者比)</div>
+            </div>
+        </div>
+
+        <h3>喫煙が筋肥大を阻害する7つの主要メカニズム</h3>
+        <ol>
+            <li><strong>酸素供給の破壊</strong> - 一酸化炭素によるヘモグロビン結合阻害</li>
+            <li><strong>血流の悪化</strong> - 毛細血管の収縮と血管内皮機能障害</li>
+            <li><strong>タンパク質合成の抑制</strong> - mTOR経路の阻害</li>
+            <li><strong>異化ホルモンの増加</strong> - コルチゾール上昇とテストステロン低下</li>
+            <li><strong>慢性炎症</strong> - 全身性の炎症反応</li>
+            <li><strong>酸化ストレス</strong> - フリーラジカルによる細胞損傷</li>
+            <li><strong>栄養素の吸収阻害</strong> - ビタミンC、E、亜鉛などの枯渇</li>
+        </ol>
+
+        <h3>喫煙者 vs 非喫煙者：筋肥大の比較</h3>
+        
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>12週間の同一トレーニングプログラムの結果</h4>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                <tr style="background: #667eea; color: white;">
+                    <th style="padding: 12px; text-align: left;">指標</th>
+                    <th style="padding: 12px; text-align: left;">非喫煙者</th>
+                    <th style="padding: 12px; text-align: left;">軽度喫煙者<br>(1日10本)</th>
+                    <th style="padding: 12px; text-align: left;">重度喫煙者<br>(1日20本+)</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;"><strong>筋肉量増加</strong></td>
+                    <td style="padding: 12px; background: #e8f5e9;">+3.2kg</td>
+                    <td style="padding: 12px; background: #fff3e0;">+2.1kg (-34%)</td>
+                    <td style="padding: 12px; background: #ffebee;">+1.5kg (-53%)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;"><strong>筋力向上</strong></td>
+                    <td style="padding: 12px; background: #e8f5e9;">+28%</td>
+                    <td style="padding: 12px; background: #fff3e0;">+19% (-32%)</td>
+                    <td style="padding: 12px; background: #ffebee;">+14% (-50%)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;"><strong>体脂肪減少</strong></td>
+                    <td style="padding: 12px; background: #e8f5e9;">-2.8kg</td>
+                    <td style="padding: 12px; background: #fff3e0;">-1.9kg</td>
+                    <td style="padding: 12px; background: #ffebee;">-1.2kg</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;"><strong>持久力向上</strong></td>
+                    <td style="padding: 12px; background: #e8f5e9;">+35%</td>
+                    <td style="padding: 12px; background: #fff3e0;">+18%</td>
+                    <td style="padding: 12px; background: #ffebee;">+8%</td>
+                </tr>
+            </table>
+            <p style="margin-top: 15px; color: #666; font-style: italic;">
+                (Hollings et al., 2012; Bernaards et al., 2003 を基にした推定値)
+            </p>
+        </div>
+
+        <div class="success-box">
+            <h4>✅ しかし、希望はある！</h4>
+            <p>
+                喫煙の悪影響は深刻ですが、<strong>禁煙すれば驚くほど速く回復</strong>します：
+            </p>
+            <ul style="margin-top: 10px;">
+                <li><strong>20分後:</strong> 心拍数と血圧が正常化</li>
+                <li><strong>12時間後:</strong> 血中一酸化炭素レベルが正常化</li>
+                <li><strong>2週間-3ヶ月:</strong> 循環機能が改善、肺機能が30%向上</li>
+                <li><strong>1-9ヶ月:</strong> 呼吸器症状（咳、息切れ）が大幅改善</li>
+                <li><strong>1年後:</strong> 心臓病リスクが喫煙者の半分に</li>
+                <li><strong>筋肥大効果:</strong> 禁煙後1ヶ月で筋タンパク質合成率が15-20%向上</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 2: Oxygen -->
+    <section id="oxygen" class="content-section">
+        <h2>2. 酸素供給の破壊</h2>
+
+        <p>
+            喫煙が筋肥大に与える最も直接的で深刻な影響は、<strong>酸素供給システムの破壊</strong>です。
+            筋肉の成長には十分な酸素が不可欠ですが、喫煙はこれを多方面から阻害します。
+        </p>
+
+        <h3>2.1 一酸化炭素の悪影響</h3>
+
+        <p>
+            タバコの煙に含まれる<strong>一酸化炭素（CO）</strong>は、
+            ヘモグロビンに対して酸素の<strong>200-250倍の親和性</strong>を持ちます。
+        </p>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>一酸化炭素による酸素輸送阻害</h4>
+            <ul>
+                <li><strong>カルボキシヘモグロビン（COHb）の形成:</strong>
+                    <ul style="margin-top: 5px;">
+                        <li>非喫煙者：COHb 0.5-1.5%</li>
+                        <li>1日10本喫煙者：COHb 3-6%</li>
+                        <li>1日20本喫煙者：COHb 6-10%</li>
+                        <li>1日40本喫煙者：COHb 10-15%</li>
+                    </ul>
+                </li>
+                <li><strong>酸素運搬能力の低下:</strong>
+                    <ul style="margin-top: 5px;">
+                        <li>COHb 5%で酸素運搬能力が<strong>実質10%低下</strong></li>
+                        <li>COHb 10%で<strong>20%低下</strong></li>
+                        <li>これは高度2000mにいるのと同等の低酸素状態</li>
+                    </ul>
+                </li>
+                <li><strong>酸素解離曲線の左方移動:</strong>
+                    <ul style="margin-top: 5px;">
+                        <li>筋肉組織への酸素放出が困難に</li>
+                        <li>筋肉が実際に使える酸素がさらに減少</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h3>2.2 肺機能の低下</h3>
+
+        <p>
+            喫煙は<strong>肺胞と気道を損傷</strong>し、酸素取り込み能力を低下させます。
+        </p>
+
+        <ul>
+            <li><strong>肺活量の減少:</strong> 年間60-90mlの減少（通常の2-3倍の速度）</li>
+            <li><strong>1秒量（FEV1）の低下:</strong> 慢性的な気道閉塞</li>
+            <li><strong>肺拡散能力の低下:</strong> 酸素が血液に入りにくくなる</li>
+            <li><strong>慢性気管支炎:</strong> 粘液分泌過多で気道が狭窄</li>
+            <li><strong>肺気腫:</strong> 肺胞が破壊され、ガス交換面積が減少</li>
+        </ul>
+
+        <div class="warning-box">
+            <h4>⚠️ 喫煙による最大酸素摂取量（VO2max）の低下</h4>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px; background: white;">
+                <tr style="background: #667eea; color: white;">
+                    <th style="padding: 12px; text-align: left;">喫煙量</th>
+                    <th style="padding: 12px; text-align: left;">VO2max低下</th>
+                    <th style="padding: 12px; text-align: left;">実質的影響</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">1日5本</td>
+                    <td style="padding: 12px;"><strong>5-8%</strong></td>
+                    <td style="padding: 12px;">軽い息切れ</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">1日10本</td>
+                    <td style="padding: 12px;"><strong>10-15%</strong></td>
+                    <td style="padding: 12px;">持久力の明確な低下</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">1日20本</td>
+                    <td style="padding: 12px;"><strong>15-20%</strong></td>
+                    <td style="padding: 12px;">トレーニングが著しく困難</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">1日40本</td>
+                    <td style="padding: 12px;"><strong>20-25%</strong></td>
+                    <td style="padding: 12px;">日常生活でも息切れ</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>2.3 毛細血管密度の減少</h3>
+
+        <p>
+            喫煙は筋肉内の<strong>毛細血管の成長を阻害</strong>し、既存の毛細血管も損傷させます。
+        </p>
+
+        <ul>
+            <li><strong>血管新生の抑制:</strong> VEGF（血管内皮増殖因子）の産生が40%低下</li>
+            <li><strong>毛細血管密度:</strong> 喫煙者は非喫煙者より20-30%少ない</li>
+            <li><strong>血管内皮機能障害:</strong> 
+                <ul style="margin-top: 5px;">
+                    <li>一酸化窒素（NO）の産生低下</li>
+                    <li>血管拡張能力の低下</li>
+                    <li>血流量が30-40%減少</li>
+                </ul>
+            </li>
+            <li><strong>結果:</strong> 筋肉への酸素と栄養素の供給が大幅に減少</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>💡 酸素不足が筋肥大に与える影響</h4>
+            <p>
+                筋肉の成長には十分な酸素が必要です：
+            </p>
+            <ul style="margin-top: 10px;">
+                <li><strong>ATP産生:</strong> 有酸素代謝は無酸素代謝の19倍効率的</li>
+                <li><strong>タンパク質合成:</strong> 酸素不足でmTOR活性が低下</li>
+                <li><strong>回復プロセス:</strong> 筋損傷の修復には大量の酸素が必要</li>
+                <li><strong>乳酸除去:</strong> 酸素がないと乳酸が蓄積し続ける</li>
+            </ul>
+            <p style="margin-top: 10px;">
+                <strong>つまり:</strong> 喫煙者は常に「高地トレーニング」をしている状態だが、
+                メリットはなく、デメリットのみ。
+            </p>
+        </div>
+
+        <h3>2.4 赤血球と血液の問題</h3>
+
+        <p>
+            喫煙は血液の性質も変化させます。
+        </p>
+
+        <ul>
+            <li><strong>多血症:</strong> 慢性的な低酸素状態に対する代償
+                <ul style="margin-top: 5px;">
+                    <li>赤血球数が増加</li>
+                    <li>血液粘度が上昇</li>
+                    <li>血流が悪化（逆効果）</li>
+                </ul>
+            </li>
+            <li><strong>血小板凝集:</strong> 血栓リスク増加</li>
+            <li><strong>フィブリノーゲン増加:</strong> 血液がドロドロに</li>
+        </ul>
+    </section>
+
+    <!-- Section 3: Protein Synthesis -->
+    <section id="protein-synthesis" class="content-section">
+        <h2>3. 筋タンパク質合成への影響</h2>
+
+        <p>
+            喫煙は筋タンパク質合成（MPS）を<strong>直接的かつ間接的に抑制</strong>します。
+        </p>
+
+        <h3>3.1 直接的なMPS抑制</h3>
+
+        <div class="warning-box">
+            <h4>⚠️ 重要研究：Petersen et al., 2007</h4>
+            <p>
+                喫煙者と非喫煙者の筋タンパク質合成率を比較した研究：
+            </p>
+            <ul style="margin-top: 10px;">
+                <li><strong>対象:</strong> 健康な成人男性（喫煙者12名、非喫煙者12名）</li>
+                <li><strong>測定:</strong> 安静時および運動後のMPS</li>
+                <li><strong>結果:</strong>
+                    <ul style="margin-top: 5px;">
+                        <li>安静時MPS：喫煙者は非喫煙者より<strong>18%低い</strong></li>
+                        <li>運動後MPS：喫煙者は非喫煙者より<strong>25%低い</strong></li>
+                        <li>運動によるMPS上昇：喫煙者は<strong>30%鈍化</strong></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h3>3.2 mTOR経路の阻害</h3>
+
+        <ul>
+            <li><strong>ニコチンの直接作用:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>mTOR活性を20-30%低下させる</li>
+                    <li>p70S6キナーゼ（mTORの下流）も抑制</li>
+                    <li>4E-BP1の脱リン酸化阻害</li>
+                </ul>
+            </li>
+            <li><strong>AMPK活性化:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>細胞のエネルギーストレス感知</li>
+                    <li>AMPKがmTORを抑制</li>
+                    <li>異化（分解）モードに移行</li>
+                </ul>
+            </li>
+            <li><strong>インスリンシグナリング阻害:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>インスリン受容体の感受性低下</li>
+                    <li>Akt/PKB経路の抑制</li>
+                    <li>結果：栄養素の筋肉への取り込み減少</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>3.3 筋分解（異化）の促進</h3>
+
+        <p>
+            喫煙は筋タンパク質の<strong>分解も促進</strong>します。
+        </p>
+
+        <ul>
+            <li><strong>ユビキチン-プロテアソーム系（UPS）の活性化:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>筋肉の主要な分解経路</li>
+                    <li>喫煙者では活性が40-50%上昇</li>
+                    <li>Atrogin-1、MuRF1などの分解遺伝子が上方制御</li>
+                </ul>
+            </li>
+            <li><strong>オートファジーの異常:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>細胞内の自食作用が過剰</li>
+                    <li>筋タンパク質が分解されやすい</li>
+                </ul>
+            </li>
+            <li><strong>カスパーゼ活性化:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>アポトーシス（細胞死）経路</li>
+                    <li>筋繊維の減少</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>MPS vs 筋分解のバランス</h4>
+            <div style="margin-top: 15px;">
+                <h5>非喫煙者の筋肉バランス</h5>
+                <div style="display: flex; align-items: center; margin: 10px 0;">
+                    <span style="flex: 0 0 150px;">筋タンパク質合成:</span>
+                    <div style="flex: 1; background: #4caf50; height: 30px; border-radius: 5px; position: relative;">
+                        <span style="position: absolute; left: 10px; top: 5px; color: white; font-weight: bold;">100%</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; margin: 10px 0;">
+                    <span style="flex: 0 0 150px;">筋分解:</span>
+                    <div style="flex: 0.6; background: #f44336; height: 30px; border-radius: 5px; position: relative;">
+                        <span style="position: absolute; left: 10px; top: 5px; color: white; font-weight: bold;">60%</span>
+                    </div>
+                </div>
+                <p style="margin-top: 10px;"><strong>正味の筋肥大:</strong> +40% ✅</p>
+            </div>
+
+            <div style="margin-top: 25px;">
+                <h5>喫煙者の筋肉バランス</h5>
+                <div style="display: flex; align-items: center; margin: 10px 0;">
+                    <span style="flex: 0 0 150px;">筋タンパク質合成:</span>
+                    <div style="flex: 0.75; background: #ff9800; height: 30px; border-radius: 5px; position: relative;">
+                        <span style="position: absolute; left: 10px; top: 5px; color: white; font-weight: bold;">75% (-25%)</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; margin: 10px 0;">
+                    <span style="flex: 0 0 150px;">筋分解:</span>
+                    <div style="flex: 0.85; background: #c62828; height: 30px; border-radius: 5px; position: relative;">
+                        <span style="position: absolute; left: 10px; top: 5px; color: white; font-weight: bold;">85% (+42%)</span>
+                    </div>
+                </div>
+                <p style="margin-top: 10px; color: #c62828;"><strong>正味の筋肥大:</strong> -10% ❌ （実質的に筋肉が減少）</p>
+            </div>
+        </div>
+
+        <h3>3.4 プロテイン摂取の効果も減少</h3>
+
+        <p>
+            喫煙者は<strong>同じ量のプロテインを摂取しても効果が低い</strong>です。
+        </p>
+
+        <ul>
+            <li>アミノ酸の筋肉への取り込みが30%低下</li>
+            <li>ロイシンによるmTOR活性化が鈍化</li>
+            <li>プロテイン摂取後のMPS上昇が非喫煙者の70%程度</li>
+            <li>実質的に、摂取プロテインの30%が無駄に</li>
+        </ul>
+    </section>
+    <section id="hormones" class="content-section">
+        <h2>4. ホルモンバランスの崩壊</h2>
+
+        <p>
+            喫煙は<strong>内分泌系全体を混乱</strong>させます。
+        </p>
+
+        <h3>4.1 テストステロンの低下</h3>
+
+        <ul>
+            <li><strong>総テストステロン:</strong> 10-15%低下 (Halmenschlager et al., 2009)</li>
+            <li><strong>遊離テストステロン:</strong> さらに大きく低下（SHBG増加のため）</li>
+            <li><strong>メカニズム:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>ライディッヒ細胞への直接毒性</li>
+                    <li>酸化ストレスによる精巣損傷</li>
+                    <li>LH（黄体形成ホルモン）分泌の低下</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>4.2 成長ホルモンとIGF-1</h3>
+
+        <ul>
+            <li><strong>GH分泌:</strong> 間接的に低下（睡眠の質悪化）</li>
+            <li><strong>IGF-1:</strong> 15-20%低下</li>
+            <li><strong>肝臓機能:</strong> ニコチンが肝臓のIGF-1産生
+                <h3>4.2 成長ホルモンとIGF-1</h3>
+
+        <ul>
+            <li><strong>GH分泌:</strong> 間接的に低下（睡眠の質悪化）</li>
+            <li><strong>IGF-1:</strong> 15-20%低下</li>
+            <li><strong>肝臓機能:</strong> ニコチンが肝臓のIGF-1産生を阻害</li>
+            <li><strong>結果:</strong> 筋肉成長シグナルの減少</li>
+        </ul>
+
+        <h3>4.3 コルチゾール（ストレスホルモン）の上昇</h3>
+
+        <div class="warning-box">
+            <h4>⚠️ 喫煙とコルチゾール</h4>
+            <ul>
+                <li><strong>急性効果:</strong> 1本吸うごとにコルチゾールが一時的に上昇</li>
+                <li><strong>慢性効果:</strong> 基礎コルチゾールレベルが恒常的に15-25%高い</li>
+                <li><strong>ニコチン離脱:</strong> さらにコルチゾール上昇（ストレス反応）</li>
+                <li><strong>結果:</strong>
+                    <ul style="margin-top: 5px;">
+                        <li>筋肉の異化（分解）が常に進行</li>
+                        <li>脂肪蓄積（特に内臓脂肪）</li>
+                        <li>免疫抑制</li>
+                        <li>インスリン抵抗性</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h3>4.4 甲状腺ホルモン</h3>
+
+        <ul>
+            <li><strong>T3、T4:</strong> 代謝ホルモンが影響を受ける</li>
+            <li><strong>基礎代謝:</strong> わずかに上昇（これが「喫煙で痩せる」誤解の原因）</li>
+            <li><strong>問題:</strong> 筋肉も同時に分解される</li>
+            <li><strong>禁煙後の体重増加:</strong> 代謝正常化によるもので健康的</li>
+        </ul>
+
+        <h3>4.5 インスリンとグルコース代謝</h3>
+
+        <ul>
+            <li><strong>インスリン抵抗性:</strong> 喫煙者は30-40%高い</li>
+            <li><strong>空腹時血糖:</strong> 5-10mg/dL高い</li>
+            <li><strong>糖尿病リスク:</strong> 30-40%増加</li>
+            <li><strong>筋肉への影響:</strong> グルコースとアミノ酸の取り込み低下</li>
+        </ul>
+
+        <div class="stats-grid" style="margin: 30px 0;">
+            <div class="stat-card">
+                <div class="stat-number">-15%</div>
+                <div class="stat-label">テストステロン</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">-20%</div>
+                <div class="stat-label">IGF-1</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">+25%</div>
+                <div class="stat-label">コルチゾール<br>(基礎値)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">+40%</div>
+                <div class="stat-label">インスリン<br>抵抗性</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Recovery -->
+    <section id="recovery" class="content-section">
+        <h2>5. 回復能力の低下</h2>
+
+        <p>
+            喫煙は<strong>筋肉の回復プロセスを著しく遅らせます</strong>。
+        </p>
+
+        <h3>5.1 筋損傷マーカーの上昇</h3>
+
+        <ul>
+            <li><strong>クレアチンキナーゼ（CK）:</strong> トレーニング後の上昇が30-40%高く、長く持続</li>
+            <li><strong>ミオグロビン:</strong> 筋損傷指標が高値</li>
+            <li><strong>炎症マーカー:</strong> IL-6、TNF-α、CRPが恒常的に高い</li>
+            <li><strong>回復時間:</strong> 非喫煙者の1.5-2倍かかる</li>
+        </ul>
+
+        <h3>5.2 筋肉痛（DOMS）の増加</h3>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>トレーニング後の筋肉痛比較</h4>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                <tr style="background: #667eea; color: white;">
+                    <th style="padding: 12px; text-align: left;">指標</th>
+                    <th style="padding: 12px; text-align: left;">非喫煙者</th>
+                    <th style="padding: 12px; text-align: left;">喫煙者</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">筋肉痛のピーク</td>
+                    <td style="padding: 12px;">24-48時間後</td>
+                    <td style="padding: 12px;">48-72時間後</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">痛みの強さ</td>
+                    <td style="padding: 12px;">中程度</td>
+                    <td style="padding: 12px;">強い（+30-40%）</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">持続期間</td>
+                    <td style="padding: 12px;">3-5日</td>
+                    <td style="padding: 12px;">5-7日</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">筋力回復</td>
+                    <td style="padding: 12px;">48-72時間</td>
+                    <td style="padding: 12px;">72-96時間</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>5.3 コラーゲン合成の阻害</h3>
+
+        <p>
+            喫煙は<strong>腱と靭帯の回復も遅らせます</strong>。
+        </p>
+
+        <ul>
+            <li><strong>コラーゲン合成:</strong> 40-50%低下</li>
+            <li><strong>腱の強度:</strong> 15-20%低下</li>
+            <li><strong>怪我のリスク:</strong> 腱炎、靭帯損傷が2倍</li>
+            <li><strong>回復:</strong> 腱・靭帯の怪我からの回復が50%遅い</li>
+            <li><strong>手術後:</strong> 術後回復が大幅に遅延</li>
+        </ul>
+
+        <h3>5.4 睡眠の質の低下</h3>
+
+        <ul>
+            <li><strong>入眠困難:</strong> ニコチンの刺激作用</li>
+            <li><strong>睡眠断片化:</strong> ニコチン離脱症状で夜間覚醒</li>
+            <li><strong>深睡眠減少:</strong> 成長ホルモン分泌が減少</li>
+            <li><strong>睡眠時無呼吸:</strong> リスクが2.5倍（気道炎症）</li>
+            <li><strong>結果:</strong> 夜間の筋肉回復が不十分</li>
+        </ul>
+
+        <h3>5.5 免疫機能の低下</h3>
+
+        <div class="warning-box">
+            <h4>⚠️ 喫煙と免疫系</h4>
+            <ul>
+                <li><strong>白血球機能:</strong> 好中球、マクロファージの機能が30-40%低下</li>
+                <li><strong>抗体産生:</strong> B細胞の機能障害</li>
+                <li><strong>感染症リスク:</strong>
+                    <ul style="margin-top: 5px;">
+                        <li>上気道感染：3倍</li>
+                        <li>肺炎：4倍</li>
+                        <li>インフルエンザ：2倍</li>
+                    </ul>
+                </li>
+                <li><strong>トレーニングへの影響:</strong> 病気による中断が頻繁</li>
+                <li><strong>慢性炎症:</strong> 過剰な炎症反応と免疫抑制の両方</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 6: Performance -->
+    <section id="performance" class="content-section">
+        <h2>6. トレーニングパフォーマンスへの影響</h2>
+
+        <p>
+            喫煙は<strong>あらゆるトレーニングパフォーマンスを低下</strong>させます。
+        </p>
+
+        <h3>6.1 筋力への影響</h3>
+
+        <ul>
+            <li><strong>最大筋力:</strong> 5-10%低下</li>
+            <li><strong>筋持久力:</strong> 15-25%低下</li>
+            <li><strong>パワー出力:</strong> 10-15%低下</li>
+            <li><strong>神経筋伝達:</strong> 効率が低下</li>
+        </ul>
+
+        <h3>6.2 持久力への壊滅的影響</h3>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>喫煙量と持久力パフォーマンス</h4>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                <tr style="background: #667eea; color: white;">
+                    <th style="padding: 12px; text-align: left;">喫煙量</th>
+                    <th style="padding: 12px; text-align: left;">VO2max低下</th>
+                    <th style="padding: 12px; text-align: left;">5km走タイム</th>
+                    <th style="padding: 12px; text-align: left;">影響</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">非喫煙</td>
+                    <td style="padding: 12px;">-</td>
+                    <td style="padding: 12px;">25:00（基準）</td>
+                    <td style="padding: 12px;">-</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">1日5本</td>
+                    <td style="padding: 12px;">-8%</td>
+                    <td style="padding: 12px;">27:00（+2分）</td>
+                    <td style="padding: 12px;">軽度</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">1日10本</td>
+                    <td style="padding: 12px;">-15%</td>
+                    <td style="padding: 12px;">28:45（+3分45秒）</td>
+                    <td style="padding: 12px;">中程度</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">1日20本</td>
+                    <td style="padding: 12px;">-20%</td>
+                    <td style="padding: 12px;">30:00（+5分）</td>
+                    <td style="padding: 12px;">重度</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">1日40本</td>
+                    <td style="padding: 12px;">-25%</td>
+                    <td style="padding: 12px;">31:15（+6分15秒）</td>
+                    <td style="padding: 12px;">非常に重度</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>6.3 トレーニング強度の制限</h3>
+
+        <ul>
+            <li><strong>高強度トレーニング:</strong> 心肺機能の限界により不可能</li>
+            <li><strong>ボリューム:</strong> 疲労が早く、総セット数が減少</li>
+            <li><strong>頻度:</strong> 回復が遅く、トレーニング頻度を下げざるを得ない</li>
+            <li><strong>結果:</strong> トレーニングの総ボリュームが40-50%減少</li>
+        </ul>
+
+        <h3>6.4 集中力とモチベーション</h3>
+
+        <ul>
+            <li><strong>ニコチン離脱:</strong> トレーニング中の集中力低下</li>
+            <li><strong>イライラ:</strong> 禁断症状による精神的ストレス</li>
+            <li><strong>疲労感:</strong> 慢性的な倦怠感</li>
+            <li><strong>モチベーション:</strong> 成果が出にくく、やる気減退</li>
+        </ul>
+    </section>
+
+    <!-- Section 7: Body Composition -->
+    <section id="body-composition" class="content-section">
+        <h2>7. 体組成への悪影響</h2>
+
+        <h3>7.1 筋肉量の減少</h3>
+
+        <p>
+            喫煙者は<strong>非喫煙者より筋肉量が少ない</strong>です。
+        </p>
+
+        <ul>
+            <li><strong>除脂肪体重:</strong> 平均2-3kg少ない</li>
+            <li><strong>筋繊維サイズ:</strong> Type IIb（速筋）が特に減少</li>
+            <li><strong>筋肉の質:</strong> 脂肪浸潤が多い（霜降り状態）</li>
+            <li><strong>サルコペニア:</strong> 加齢による筋肉減少が加速</li>
+        </ul>
+
+        <h3>7.2 体脂肪分布の悪化</h3>
+
+        <div class="info-box">
+            <h4>💡 喫煙と体脂肪の矛盾</h4>
+            <p>
+                「喫煙すると痩せる」は<strong>誤解</strong>です：
+            </p>
+            <ul style="margin-top: 10px;">
+                <li><strong>体重:</strong> わずかに軽い（筋肉が少ないため）</li>
+                <li><strong>体脂肪率:</strong> 実は<strong>高い</strong>
+                    <ul style="margin-top: 5px;">
+                        <li>皮下脂肪：やや少ない</li>
+                        <li>内臓脂肪：<strong>非喫煙者より多い</strong></li>
+                    </ul>
+                </li>
+                <li><strong>ウエスト周囲径:</strong> 大きい</li>
+                <li><strong>メタボリックシンドローム:</strong> リスク増加</li>
+            </ul>
+        </div>
+
+        <h3>7.3 禁煙後の体重増加への対処</h3>
+
+        <p>
+            禁煙後の体重増加は<strong>健康的な回復</strong>です。
+        </p>
+
+        <ul>
+            <li><strong>平均増加:</strong> 2-5kg（3ヶ月以内）</li>
+            <li><strong>内訳:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>筋肉：1-2kg（良い変化）</li>
+                    <li>水分：0.5-1kg（正常化）</li>
+                    <li>脂肪：0.5-2kg</li>
+                </ul>
+            </li>
+            <li><strong>対策:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>トレーニング強度を上げる</li>
+                    <li>タンパク質摂取を増やす</li>
+                    <li>カロリー管理（ただし極端な制限は避ける）</li>
+                    <li>筋肥大が進むため、長期的にはより良い体組成に</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Section 8: Inflammation -->
+    <section id="inflammation" class="content-section">
+        <h2>8. 慢性炎症と免疫抑制</h2>
+
+        <h3>8.1 全身性の慢性炎症</h3>
+
+        <p>
+            喫煙は<strong>慢性的な低グレード炎症</strong>を引き起こします。
+        </p>
+
+        <ul>
+            <li><strong>CRP（C反応性タンパク）:</strong> 2-3倍高い</li>
+            <li><strong>IL-6（インターロイキン-6）:</strong> 恒常的に上昇</li>
+            <li><strong>TNF-α:</strong> 炎症性サイトカインが高値</li>
+            <li><strong>結果:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>筋肉の異化促進</li>
+                    <li>インスリン抵抗性</li>
+                    <li>動脈硬化</li>
+                    <li>慢性疾患リスク増加</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>8.2 酸化ストレス</h3>
+
+        <div class="warning-box">
+            <h4>⚠️ フリーラジカルの嵐</h4>
+            <p>
+                タバコの煙には<strong>1回の喫煙で10^15個以上のフリーラジカル</strong>が含まれます。
+            </p>
+            <ul style="margin-top: 10px;">
+                <li><strong>活性酸素種（ROS）:</strong> 細胞を攻撃
+                    <ul style="margin-top: 5px;">
+                        <li>DNA損傷</li>
+                        <li>タンパク質酸化</li>
+                        <li>脂質過酸化</li>
+                        <li>ミトコンドリア機能障害</li>
+                    </ul>
+                </li>
+                <li><strong>抗酸化物質の枯渇:</strong>
+                    <ul style="margin-top: 5px;">
+                        <li>ビタミンC：50%減少</li>
+                        <li>ビタミンE：30%減少</li>
+                        <li>グルタチオン：40%減少</li>
+                    </ul>
+                </li>
+                <li><strong>筋肉への影響:</strong> 筋損傷の修復が遅延</li>
+            </ul>
+        </div>
+
+        <h3>8.3 栄養素の枯渇</h3>
+
+        <ul>
+            <li><strong>ビタミンC:</strong> 1本吸うごとに25mg消費</li>
+            <li><strong>ビタミンB群:</strong> 代謝に大量消費</li>
+            <li><strong>亜鉛:</strong> 免疫機能に必要なミネラルが不足</li>
+            <li><strong>セレン:</strong> 抗酸化に必要</li>
+            <li><strong>結果:</strong> サプリメントで補っても追いつかない</li>
+        </ul>
+    </section>
+
+    <!-- Section 9: Quitting Benefits -->
+    <section id="quitting" class="content-section">
+        <h2>9. 禁煙のメリットとタイムライン</h2>
+
+        <p>
+            禁煙の効果は<strong>驚くほど速く現れます</strong>。
+            筋肥大への効果も数週間で実感できます。
+        </p>
+
+        <h3>9.1 禁煙後の回復タイムライン</h3>
+
+        <div style="margin: 30px 0;">
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #4caf50;">
+                <h4 style="color: #2e7d32;">20分後</h4>
+                <ul>
+                    <li>心拍数が正常化</li>
+                    <li>血圧が低下</li>
+                    <li>手足の温度が上昇（血流改善）</li>
+                </ul>
+            </div>
+
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #4caf50;">
+                <h4 style="color: #2e7d32;">12時間後</h4>
+                <ul>
+                    <li>血中一酸化炭素レベルが正常化</li>
+                    <li>酸素運搬能力が回復開始</li>
+                    <li>筋肉への酸素供給が改善</li>
+                </ul>
+            </div>
+
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #4caf50;">
+                <h4 style="color: #2e7d32;">2-3日後</h4>
+                <ul>
+                    <li>ニコチンが体内から完全排出</li>
+                    <li>味覚・嗅覚が改善</li>
+                    <li>呼吸が楽になり始める</li>
+                    <li><strong>禁断症状がピーク</strong>（ここを乗り越える！）</li>
+                </ul>
+            </div>
+
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #4caf50;">
+                <h4 style="color: #2e7d32;">2週間-3ヶ月後</h4>
+                <ul>
+                    <li>循環機能が劇的に改善</li>
+                    <li>肺機能が30%向上</li>
+                    <li><strong>筋タンパク質合成率が15-20%向上</strong></li>
+                    <li>トレーニングパフォーマンスが明確に向上</li>
+                    <li>回復速度が速くなる</li>
+                </ul>
+            </div>
+
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #4caf50;">
+                <h4 style="color: #2e7d32;">1-9ヶ月後</h4>
+                <ul>
+                    <li>咳、息切れが大幅減少</li>
+                    <li>肺の繊毛が再生し、粘液除去機能回復</li>
+                    <li>感染症リスクが低下</li>
+                    <li><strong>筋肥大効果が最大化</strong></li>
+                    <li>VO2maxが20%向上（元喫煙量による）</li>
+                </ul>
+            </div>
+
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #4caf50;">
+                <h4 style="color: #2e7d32;">1年後</h4>
+                <ul>
+                    <li>心臓病リスクが喫煙者の半分に</li>
+                    <li>肺機能がほぼ正常化（年齢相応）</li>
+                    <li><strong>筋肥大能力が非喫煙者レベルに</strong></li>
+                    <li>テストステロンレベルが正常化</li>
+                </ul>
+            </div>
+
+            <div style="background: #e3f2fd; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #2196f3;">
+                <h4 style="color: #1976d2;">5年後</h4>
+                <ul>
+                    <li>脳卒中リスクが非喫煙者と同レベルに</li>
+                    <li>肺がんリスクが半減</li>
+                    <li>完全に非喫煙者の健康レベルに近づく</li>
+                </ul>
+            </div>
+
+            <div style="background: #e3f2fd; padding: 20px; border-radius: 12px; border-left: 5px solid #2196f3;">
+                <h4 style="color: #1976d2;">10年後</h4>
+                <ul>
+                    <li>肺がんリスクが非喫煙者の半分以下に</li>
+                    <li>その他のがんリスクも大幅減少</li>
+                    <li>ほぼ完全に非喫煙者と同じ健康状態</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>9.2 筋肥大への具体的メリット</h3>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>禁煙1ヶ月後の変化</h4>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                <tr style="background: #667eea; color: white;">
+                    <th style="padding: 12px; text-align: left;">指標</th>
+                    <th style="padding: 12px; text-align: left;">喫煙時</th>
+                    <th style="padding: 12px; text-align: left;">禁煙1ヶ月後</th>
+                    <th style="padding: 12px; text-align: left;">改善率</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">筋タンパク質合成</td>
+                    <td style="padding: 12px;">75%</td>
+                    <td style="padding: 12px;">90%</td>
+                    <td style="padding: 12px;"><strong>+20%</strong></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">筋力増加率</td>
+                    <td style="padding: 12px;">60%</td>
+                    <td style="padding: 12px;">85%</td>
+                    <td style="padding: 12px;"><strong>+42%</strong></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">VO2max</td>
+                    <td style="padding: 12px;">80%</td>
+                    <td style="padding: 12px;">90%</td>
+                    <td style="padding: 12px;"><strong>+12.5%</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">回復速度</td>
+                    <td style="padding: 12px;">50%遅い</td>
+                    <td style="padding: 12px;">20%遅い</td>
+                    <td style="padding: 12px;"><strong>+60%</strong></td>
+                </tr>
+            </table{% extends "base.html" %}

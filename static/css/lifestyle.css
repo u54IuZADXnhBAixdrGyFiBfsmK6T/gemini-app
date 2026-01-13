@@ -1,45 +1,30 @@
-/* ========================================
-   Lifestyle Page: "Editorial / Personal Blog" Style
-   Focus: Readability, Warmth, Analog-feel
-   Author: Gemini
-======================================== */
-
 :root {
-    /* --- Color Palette: Natural & Warm --- */
-    --bg-body: #f9f9f7;       /* 和紙のようなごく薄い生成り色 */
-    --bg-paper: #ffffff;      /* 記事部分の白 */
+    --bg-body: #f9f9f7;
+    --bg-paper: #ffffff;
     
-    /* Text Colors */
-    --text-main: #2c2c2c;     /* 真っ黒ではない、濃いグレー（墨色） */
-    --text-body: #464646;     /* 読みやすい本文色 */
-    --text-muted: #787878;    /* 補足情報 */
+    --text-main: #2c2c2c;
+    --text-body: #464646;
+    --text-muted: #787878;
     
-    /* Accents (Nature derived) */
-    --accent-primary: #2e5c55;  /* 深い緑（落ち着いた知性） */
-    --accent-secondary: #d4a373; /* 枯葉色、木の色（温かみ） */
-    --accent-highlight: rgba(255, 225, 0, 0.4); /* 蛍光マーカー */
+    --accent-primary: #2e5c55;
+    --accent-secondary: #d4a373;
+    --accent-highlight: rgba(255, 225, 0, 0.4);
     
-    /* Borders & Lines */
     --border-light: #e0e0e0;
-    --border-strong: #2c2c2c; /* アクセントとしての強い線 */
+    --border-strong: #2c2c2c;
     
-    /* Spacing */
-    --radius-sm: 4px; /* 角丸は最小限に（キリッとした印象） */
+    --radius-sm: 4px;
 }
 
-/* ========================================
-   1. Typography & Base Reset
-======================================== */
 body {
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     background-color: var(--bg-body);
     color: var(--text-body);
-    line-height: 1.8; /* 行間をかなり広く取る（読みやすさ最優先） */
-    letter-spacing: 0.04em; /* 文字間を少し開ける */
+    line-height: 1.8;
+    letter-spacing: 0.04em; 
     -webkit-font-smoothing: antialiased;
 }
 
-/* リンク: 本文に馴染ませつつ、下線で主張 */
 a {
     color: var(--accent-primary);
     text-decoration: underline;
@@ -53,7 +38,6 @@ a:hover {
     text-decoration: none;
 }
 
-/* 強調: 蛍光ペン風 */
 strong {
     background: linear-gradient(transparent 70%, var(--accent-highlight) 70%);
     font-weight: 700;
@@ -61,27 +45,19 @@ strong {
     padding: 0 2px;
 }
 
-/* ========================================
-   2. Layout (Reading Focused)
-======================================== */
 .lifestyle-detail {
-    max-width: 740px; /* 読むのに最適な「狭め」の幅 */
+    max-width: 740px; 
     margin: 60px auto 100px;
     padding: 0 20px;
 }
 
-/* 記事コンテナ: 余計な影を排除し、シンプルに */
 .lifestyle-detail {
-    /* NoteやMediumのように、背景との境界をあえて曖昧にするスタイルも可ですが、
-       今回は「紙」感を出すために微かな枠線をつけます */
+
     background: transparent; 
 }
 
-/* ========================================
-   3. Hero Section (Title)
-======================================== */
 .detail-hero {
-    text-align: left; /* 左寄せにして「記事」っぽく */
+    text-align: left;
     margin-bottom: 80px;
     padding-bottom: 40px;
     border-bottom: 1px solid var(--border-light);
@@ -99,17 +75,15 @@ strong {
 .detail-hero .subtitle {
     font-size: 1.1rem;
     color: var(--text-muted);
-    font-family: serif; /* サブタイトルだけ明朝体にして情緒を出す */
+    font-family: serif; 
     font-style: italic;
 }
 
-/* ========================================
-   4. Table of Contents (Analog Note Style)
-======================================== */
+
 .toc {
     background: #fdfdfd;
     border: 1px solid var(--border-light);
-    border-left: 4px solid var(--text-main); /* 左に太い線（手帳のような） */
+    border-left: 4px solid var(--text-main); 
     padding: 30px;
     margin-bottom: 80px;
     border-radius: var(--radius-sm);
@@ -122,7 +96,7 @@ strong {
     border: none;
     padding: 0;
     color: var(--text-main);
-    font-family: sans-serif; /* 見出しはゴシックで視認性確保 */
+    font-family: sans-serif; 
 }
 
 .toc ul {
@@ -133,7 +107,7 @@ strong {
 .toc li {
     margin-bottom: 12px;
     font-size: 0.95rem;
-    border-bottom: 1px dashed var(--border-light); /* 点線の下線 */
+    border-bottom: 1px dashed var(--border-light);
     padding-bottom: 4px;
 }
 .toc li:last-child {
@@ -148,55 +122,44 @@ strong {
 .toc a:hover {
     background: none;
     color: var(--accent-primary);
-    padding-left: 5px; /* ホバーで少し右に動く */
+    padding-left: 5px; 
 }
 
-/* ========================================
-   5. Headings (Editorial Design)
-======================================== */
-
-/* H2: 雑誌の見出しのように */
 .content-section h2 {
     font-size: 1.8rem;
     color: var(--text-main);
     margin: 80px 0 30px;
     padding-bottom: 15px;
-    border-bottom: 2px solid var(--text-main); /* 黒い実線でキリッと */
+    border-bottom: 2px solid var(--text-main);
     font-weight: 800;
     line-height: 1.4;
 }
 
-/* H3: 控えめなアクセント */
 .content-section h3 {
     font-size: 1.4rem;
     margin: 50px 0 25px;
     padding-left: 15px;
-    border-left: 4px solid var(--accent-secondary); /* 枯葉色のアクセント */
+    border-left: 4px solid var(--accent-secondary); 
     color: var(--text-main);
     font-weight: 700;
 }
 
-/* H4: シンプルに太字 */
 .content-section h4 {
     font-size: 1.15rem;
     margin: 30px 0 15px;
     color: var(--text-main);
 }
 
-/* ========================================
-   6. Content Elements
-======================================== */
 .content-section p {
-    margin-bottom: 32px; /* 段落間を広く */
+    margin-bottom: 32px; 
     font-size: 1.0rem;
-    text-align: left; /* 両端揃えで美しく */
+    text-align: left;
 }
 
-/* リスト: 箇条書き記号をシンプルに */
 .content-section ul, .content-section ol {
     margin-bottom: 40px;
     padding: 20px 30px;
-    background: #f4f4f4; /* 薄いグレーの背景 */
+    background: #f4f4f4; 
     border-radius: var(--radius-sm);
 }
 
@@ -204,27 +167,20 @@ strong {
     margin-bottom: 10px;
 }
 
-/* ========================================
-   7. Featured Boxes (Column / Memo)
-======================================== */
-
-/* 共通: 角ばったデザインで「コラム」感を出す */
 .info-box, .warning-box, .success-box {
     padding: 30px;
     margin: 50px 0;
     border: 1px solid var(--text-main);
     background: white;
-    box-shadow: 4px 4px 0px rgba(0,0,0,0.1); /* 影を「ドロップシャドウ」ではなく「ズレた面」にする */
-    border-radius: 0; /* 完全な四角 */
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.1); 
+    border-radius: 0; 
 }
 
-/* Info: 知的なコラム */
 .info-box {
-    border-top: 4px solid var(--accent-primary); /* 上部だけ色を変える */
+    border-top: 4px solid var(--accent-primary);
 }
 .info-box h4 { margin-top: 0; color: var(--accent-primary); }
 
-/* Warning: 注意書き */
 .warning-box {
     border: 2px solid #e74c3c;
     background: #fffdfd;
@@ -233,17 +189,12 @@ strong {
 .warning-box h4 { margin-top: 0; color: #c0392b; display: flex; align-items: center; }
 .warning-box h4::before { content: '!'; display: inline-block; width: 24px; height: 24px; background: #c0392b; color: white; text-align: center; line-height: 24px; border-radius: 50%; margin-right: 10px; font-size: 14px;}
 
-/* Success: まとめ */
 .success-box {
     background-color: #f7fcf5;
     border: 1px dashed var(--accent-primary);
     box-shadow: none;
 }
 
-/* ========================================
-   8. Interactive Tools (Widget Style)
-======================================== */
-/* 計算機を「アプリ」ではなく「埋め込みウィジェット」のように見せる */
 .interactive-tool {
     background: #ffffff;
     border: 1px solid var(--border-light);
@@ -259,7 +210,7 @@ strong {
     margin-top: 0;
     padding: 0;
 }
-.interactive-tool h3::after { display: none; } /* H3の下線を消す */
+.interactive-tool h3::after { display: none; } 
 
 .tool-input-group label {
     display: block;
@@ -275,7 +226,7 @@ strong {
     padding: 12px;
     font-size: 1rem;
     border: 1px solid #ccc;
-    border-radius: 2px; /* ほぼ四角 */
+    border-radius: 2px;
     background: #fafafa;
     box-sizing: border-box;
 }
@@ -286,12 +237,10 @@ strong {
     background: white;
 }
 
-/* ボタン: 物理的なボタンのようなデザイン */
 .tool-button {
     width: 100%;
     padding: 15px;
-    background: var(--text-main); /* 黒背景 */
-    color: white;
+    background: var(--text-main); 
     font-weight: bold;
     border: none;
     border-radius: 2px;
@@ -302,7 +251,7 @@ strong {
 }
 
 .tool-button:hover {
-    background: #444; /* 少し明るく */
+    background: #444;
     transform: translateY(-2px);
 }
 
@@ -313,9 +262,6 @@ strong {
     border-left: 4px solid var(--text-main);
 }
 
-/* ========================================
-   9. Stats Grid (Simple Data)
-======================================== */
 .stats-grid {
     display: flex;
     flex-wrap: wrap;
@@ -336,8 +282,8 @@ strong {
     display: block;
     font-size: 2.2rem;
     font-weight: 700;
-    color: var(--text-main); /* 色ではなく太さと大きさで強調 */
-    font-family: 'Georgia', serif; /* 数字だけセリフ体にして「データ」っぽさを出す */
+    color: var(--text-main); 
+    font-family: 'Georgia', serif; 
 }
 
 .stat-label {
@@ -348,9 +294,6 @@ strong {
     margin-top: 5px;
 }
 
-/* ========================================
-   10. References & Navigation
-======================================== */
 .references {
     margin-top: 100px;
     padding-top: 40px;
@@ -379,7 +322,7 @@ strong {
     color: var(--text-main);
     border: 1px solid var(--border-light);
     padding: 15px 30px;
-    border-radius: 30px; /* ここだけ少し丸くして「ボタン」と認識させる */
+    border-radius: 30px;
     font-size: 0.9rem;
     transition: all 0.2s;
 }
@@ -389,9 +332,6 @@ strong {
     background: white;
 }
 
-/* ========================================
-   11. Top Page Categories (If used)
-======================================== */
 .categories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -409,7 +349,7 @@ strong {
 
 .category-card:hover {
     border-color: var(--text-main);
-    box-shadow: 8px 8px 0 rgba(0,0,0,0.1); /* ズレた影 */
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.1);
     transform: translate(-2px, -2px);
 }
 
@@ -419,9 +359,6 @@ strong {
     color: var(--text-main);
 }
 
-/* ========================================
-   Mobile Optimization
-======================================== */
 @media (max-width: 768px) {
     .lifestyle-detail {
         margin-top: 30px;
@@ -446,7 +383,6 @@ strong {
         text-align: center;
     }
     
-    /* スマホでは2カラムのデータを1カラムにせず、2カラムのまま縮小して見せるなど微調整 */
     .stat-card {
         padding: 15px;
     }
