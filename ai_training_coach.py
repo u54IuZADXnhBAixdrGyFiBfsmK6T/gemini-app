@@ -67,6 +67,67 @@ class TrainingCoach:
         except Exception as e:
             raise RuntimeError(f"AI生成エラー: {str(e)}")
 
+    def analyze_workout_history(self, *, workout_data, period_days):
+        """運動記録分析機能"""
+        if self.client is None:
+            raise RuntimeError("Gemini APIクライアントが初期化されていません")
+
+        prompt = f"""
+あなたはプロのストレングスコーチです。以下のユーザーの過去{period_days}日間のトレーニング記録を分析し、**詳細なフィードバック**を提供してください。
+
+【トレーニング記録】
+{workout_data}
+
+【出力形式】
+## 📊 トレーニング分析レポート（過去{period_days}日間）
+
+### 🎯 総合評価
+（全体的なトレーニングの質を5段階で評価し、一言コメント）
+
+### 📈 部位別の分析
+
+#### 頻度が高い部位
+- **部位名**: X回実施
+  - 良い点: 〜
+  - 改善点: 〜
+
+#### 頻度が低い部位
+- **部位名**: X回実施
+  - リスク: 筋バランスの崩れなど
+  - 推奨: 〜を追加
+
+### 💪 重量・ボリュームの推移
+（主要種目の重量変化、総ボリュームの傾向）
+
+### ⚠️ 改善が必要な点
+1. **バランスの偏り**: 〜
+2. **オーバートレーニングのリスク**: 〜
+3. **種目の偏り**: 〜
+
+### ✅ 今後の推奨アクション
+1. **短期（今週）**: 〜
+2. **中期（今月）**: 〜
+3. **長期（3ヶ月）**: 〜
+
+### 💡 モチベーションメッセージ
+（ポジティブな励ましの言葉）
+
+【制約】
+- データに基づく客観的分析
+- 具体的な数値を使用
+- 実行可能な提案
+- 前説不要、いきなり本題から
+"""
+
+        try:
+            response = self.client.models.generate_content(
+                model="gemini-2.5-flash-lite",
+                contents=prompt
+            )
+            return response.text
+        except Exception as e:
+            raise RuntimeError(f"AI生成エラー: {str(e)}")
+
     def improve_form(self, *, exercise_name, issue, experience):
         """フォーム改善機能"""
         if self.client is None:
@@ -113,7 +174,7 @@ class TrainingCoach:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-2.5-flash-lite",
+                model="gemini-2.0-flash-exp",
                 contents=prompt
             )
             return response.text
@@ -181,7 +242,7 @@ class TrainingCoach:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-2.5-flash-lite",
+                model="gemini-2.0-flash-exp",
                 contents=prompt
             )
             return response.text
@@ -247,7 +308,7 @@ class TrainingCoach:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-2.5-flash-lite",
+                model="gemini-2.0-flash-exp",
                 contents=prompt
             )
             return response.text

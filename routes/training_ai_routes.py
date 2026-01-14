@@ -92,3 +92,56 @@ def design_program():
         print(f"design_program エラー: {e}")
         traceback.print_exc()
         return jsonify({"error": str(e)}), 500
+
+@training_ai_bp.route("/api/training/analyze-history", methods=["POST"])
+def analyze_history():
+    """運動記録分析API"""
+    if training_coach is None:
+        return jsonify({"error": "TrainingCoach が初期化されていません"}), 500
+    
+    try:
+        from models import WorkoutLog, Exercise, Category
+        from extensions import db
+        from datetime import datetime, timedelta
+        
+        data = request.json
+        period_days = int(data.get("period_days", 7))
+        user_id = data.get("user_id", 1)  # デフォルトユーザーID=1
+        
+        # 期間の計算
+        end_date = datetime.now().date()
+        start_date = end_date - timedelta(days=period_days)
+        
+        # ワークアウトログを取得
+        logs = WorkoutLog.query.filter(
+            WorkoutLog.user_id == user_id,
+            WorkoutLog.date >= start_date,
+            WorkoutLog.date <= end_date
+        ).join(Exercise).join(Category).all()
+        
+        if not logs:
+            return jsonify({
+                "result": f"## 📊 記録なし\n\n過去{period_days}日間のトレーニング記録が見つかりませんでした。\n\nまずは記録をつけてみましょう！"
+            })
+        
+        # データを整形
+        workout_summary = []
+        for log in logs:
+            workout_summary.append(
+                f"- {log.date.strftime('%Y/%m/%d')}: "
+                f"{log.exercise.category.name} > {log.exercise.name} "
+                f"{log.weight}kg × {log.reps}回 (第{log.set_number}セット)"
+            )
+        
+        workout_data = "\n".join(workout_summary)
+        
+        # AIに分析させる
+        result = training_coach.analyze_workout_history(
+            workout_data=workout_data,
+            period_days=period_days
+        )
+        return jsonify({"result": result})
+    except Exception as e:
+        print(f"analyze_history エラー: {e}")
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500

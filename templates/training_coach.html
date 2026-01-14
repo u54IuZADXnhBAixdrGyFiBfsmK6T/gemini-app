@@ -17,6 +17,7 @@
         <button class="tab-btn" data-tab="form">🔧 フォーム改善</button>
         <button class="tab-btn" data-tab="injury">🩹 怪我対応</button>
         <button class="tab-btn" data-tab="program">📅 プログラム設計</button>
+        <button class="tab-btn special" data-tab="analysis">⭐ 記録分析</button>
     </div>
 
     <!-- メニュー提案タブ -->
@@ -163,6 +164,23 @@
             <textarea id="limitations" rows="3" placeholder="例: 古傷がある、特定の種目ができない、自宅トレーニングのみ など"></textarea>
         </div>
         <button class="submit-btn" id="design-program-btn">📅 プログラムを作成してもらう</button>
+    </div>
+
+    <!-- 記録分析タブ -->
+    <div class="tab-content" id="analysis-tab">
+        <div class="info-box">
+            📊 あなたの過去のトレーニング記録をAIが分析し、改善点や強化すべきポイントを提案します
+        </div>
+        <div class="form-group">
+            <label for="analysis-period">分析期間</label>
+            <div class="period-buttons">
+                <button class="period-btn active" data-days="7">過去7日</button>
+                <button class="period-btn" data-days="14">過去14日</button>
+                <button class="period-btn" data-days="30">過去30日</button>
+                <button class="period-btn" data-days="365">全期間</button>
+            </div>
+        </div>
+        <button class="submit-btn special-btn" id="analyze-history-btn">📊 記録を分析する</button>
     </div>
 
     <!-- 結果表示エリア -->

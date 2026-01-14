@@ -42,6 +42,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // プログラム設計ボタン
     document.getElementById('design-program-btn').addEventListener('click', designProgram);
+
+    // 記録分析ボタン
+    document.getElementById('analyze-history-btn').addEventListener('click', analyzeHistory);
+
+    // 期間選択ボタン
+    const periodBtns = document.querySelectorAll('.period-btn');
+    periodBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            periodBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        });
+    });
 });
 
 // メニュー提案機能
@@ -74,6 +86,44 @@ async function suggestExercises() {
                 training_level: trainingLevel,
                 equipment: equipment,
                 goals: goals
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            output.innerHTML = marked.parse(data.result);
+        } else {
+            output.innerHTML = `❌ エラーが発生しました: ${data.error || '不明なエラー'}`;
+        }
+    } catch (error) {
+        console.error('Fetch Error:', error);
+        output.innerHTML = `❌ 通信エラーが発生しました: ${error.message}`;
+    } finally {
+        btn.disabled = false;
+    }
+}
+
+// 記録分析機能
+async function analyzeHistory() {
+    const activePeriodBtn = document.querySelector('.period-btn.active');
+    const periodDays = activePeriodBtn ? activePeriodBtn.dataset.days : '7';
+    const output = document.getElementById('output');
+    const btn = document.getElementById('analyze-history-btn');
+
+    // ローディング表示
+    output.innerHTML = '<p class="loading">📊 AIが記録を分析しています...</p>';
+    btn.disabled = true;
+
+    try {
+        const response = await fetch('/api/training/analyze-history', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                period_days: periodDays,
+                user_id: 1  // 固定（将来的にログイン機能で変更可能）
             })
         });
 
