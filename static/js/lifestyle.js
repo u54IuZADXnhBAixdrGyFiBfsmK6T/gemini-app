@@ -1,12 +1,5 @@
-// ========================================
-// Lifestyle Page Interactive Functions
-// ========================================
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for TOC links
     initSmoothScrolling();
-    
-    // Initialize all interactive tools
     initStressCalculator();
     initSleepCalculator();
     initAlcoholCalculator();
@@ -14,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initHydrationCalculator();
 });
 
-// Smooth Scrolling
 function initSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -30,9 +22,6 @@ function initSmoothScrolling() {
     });
 }
 
-// ========================================
-// Stress Calculator
-// ========================================
 function initStressCalculator() {
     const calculateBtn = document.getElementById('calculateStress');
     if (!calculateBtn) return;
@@ -43,10 +32,8 @@ function initStressCalculator() {
         const work = parseInt(document.getElementById('workHours').value) || 0;
         const relaxation = parseInt(document.getElementById('relaxationTime').value) || 0;
         
-        // Simple stress level calculation
         let stressScore = 0;
         
-        // Sleep factor (optimal: 7-9 hours)
         if (sleep < 6) stressScore += 3;
         else if (sleep < 7) stressScore += 2;
         else if (sleep <= 9) stressScore += 0;
@@ -101,9 +88,7 @@ function initStressCalculator() {
     });
 }
 
-// ========================================
 // Sleep Calculator
-// ========================================
 function initSleepCalculator() {
     const calculateBtn = document.getElementById('calculateSleep');
     if (!calculateBtn) return;
@@ -216,9 +201,7 @@ function initAlcoholCalculator() {
     });
 }
 
-// ========================================
 // Smoking Impact Calculator
-// ========================================
 function initSmokingCalculator() {
     const calculateBtn = document.getElementById('calculateSmoking');
     if (!calculateBtn) return;
@@ -329,9 +312,7 @@ function initSmokingCalculator() {
     });
 }
 
-// ========================================
 // Hydration Calculator
-// ========================================
 function initHydrationCalculator() {
     const calculateBtn = document.getElementById('calculateHydration');
     if (!calculateBtn) return;
@@ -362,7 +343,7 @@ function initHydrationCalculator() {
         baseWater += climateAdjustment[climate];
         
         // Calculate for different times
-        const perHour = Math.round(baseWater / 16); // Assuming 16 waking hours
+        const perHour = Math.round(baseWater / 16);
         const perMeal = Math.round(baseWater / 3);
         const preWorkout = 500;
         const duringWorkout = exerciseIntensity === 'intense' ? 1000 : 500;

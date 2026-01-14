@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block title %}Training Coach AI{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/training_coach.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>💪 Training Coach AI</h1>
+    <p class="subtitle">あなた専属のパーソナルトレーナー</p>
+
+    <!-- タブナビゲーション -->
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="exercises">💪 メニュー提案</button>
+        <button class="tab-btn" data-tab="form">🔧 フォーム改善</button>
+        <button class="tab-btn" data-tab="injury">🩹 怪我対応</button>
+        <button class="tab-btn" data-tab="program">📅 プログラム設計</button>
+    </div>
+
+    <!-- メニュー提案タブ -->
+    <div class="tab-content active" id="exercises-tab">
+        <div class="form-group">
+            <label for="target-muscle">鍛えたい筋肉</label>
+            <select id="target-muscle">
+                <option value="大胸筋">大胸筋（胸）</option>
+                <option value="広背筋">広背筋（背中）</option>
+                <option value="三角筋">三角筋（肩）</option>
+                <option value="上腕二頭筋">上腕二頭筋（力こぶ）</option>
+                <option value="上腕三頭筋">上腕三頭筋（二の腕）</option>
+                <option value="大腿四頭筋">大腿四頭筋（太もも前）</option>
+                <option value="ハムストリングス">ハムストリングス（太もも裏）</option>
+                <option value="大臀筋">大臀筋（お尻）</option>
+                <option value="腹直筋">腹直筋（腹筋）</option>
+                <option value="腹斜筋">腹斜筋（脇腹）</option>
+                <option value="下腿三頭筋">下腿三頭筋（ふくらはぎ）</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="training-level">トレーニングレベル</label>
+            <select id="training-level">
+                <option value="初心者（3ヶ月未満）">初心者（3ヶ月未満）</option>
+                <option value="初級者（3ヶ月〜1年）">初級者（3ヶ月〜1年）</option>
+                <option value="中級者（1年〜3年）">中級者（1年〜3年）</option>
+                <option value="上級者（3年以上）">上級者（3年以上）</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="equipment">利用可能な器具</label>
+            <textarea id="equipment" rows="3" placeholder="例: ダンベル、バーベル、ベンチ、ジムのマシン全般">ダンベル、バーベル、ベンチ</textarea>
+        </div>
+        <div class="form-group">
+            <label for="ex-goals">目標</label>
+            <textarea id="ex-goals" rows="3" placeholder="例: 筋肥大、筋力向上、引き締め、筋持久力アップ">筋肥大を目指したい</textarea>
+        </div>
+        <button class="submit-btn" id="suggest-exercises-btn">💪 メニューを提案してもらう</button>
+    </div>
+
+    <!-- フォーム改善タブ -->
+    <div class="tab-content" id="form-tab">
+        <div class="form-group">
+            <label for="exercise-name">種目名</label>
+            <input type="text" id="exercise-name" placeholder="例: ベンチプレス、スクワット、デッドリフト">
+        </div>
+        <div class="form-group">
+            <label for="form-issue">悩み・問題点</label>
+            <textarea id="form-issue" rows="5" placeholder="例: ベンチプレスで肩が痛くなる、スクワットで膝が前に出すぎる、デッドリフトで腰に違和感がある"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="form-experience">その種目の経験</label>
+            <select id="form-experience">
+                <option value="初めて〜数回">初めて〜数回</option>
+                <option value="数ヶ月">数ヶ月</option>
+                <option value="1年以上">1年以上</option>
+                <option value="3年以上">3年以上</option>
+            </select>
+        </div>
+        <button class="submit-btn" id="improve-form-btn">🔧 フォーム改善アドバイスをもらう</button>
+    </div>
+
+    <!-- 怪我対応タブ -->
+    <div class="tab-content" id="injury-tab">
+        <div class="alert">
+            ⚠️ <strong>重要:</strong> 痛みや違和感がある場合は、必ず専門医の診断を受けてください。このツールは一般的な情報提供のみです。
+        </div>
+        <div class="form-group">
+            <label for="injury-location">痛みのある部位</label>
+            <select id="injury-location">
+                <option value="肩">肩</option>
+                <option value="肘">肘</option>
+                <option value="手首">手首</option>
+                <option value="腰">腰</option>
+                <option value="膝">膝</option>
+                <option value="足首">足首</option>
+                <option value="首">首</option>
+                <option value="その他">その他</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="symptoms">症状の詳細</label>
+            <textarea id="symptoms" rows="4" placeholder="例: 動かすと痛い、特定の動作で痛む、常に痛い、腫れている など"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="pain-level">痛みレベル (1-10)</label>
+            <input type="range" id="pain-level" min="1" max="10" value="5">
+            <div class="pain-level-display">現在: <span id="pain-value">5</span> / 10</div>
+        </div>
+        <div class="form-group">
+            <label for="occurrence">いつ・どのように発生したか</label>
+            <textarea id="occurrence" rows="3" placeholder="例: ベンチプレス中に急に痛めた、数週間前から徐々に痛くなった"></textarea>
+        </div>
+        <button class="submit-btn" id="injury-recovery-btn">🩹 リハビリ計画を提案してもらう</button>
+    </div>
+
+    <!-- プログラム設計タブ -->
+    <div class="tab-content" id="program-tab">
+        <div class="form-group">
+            <label for="program-goal">トレーニング目標</label>
+            <select id="program-goal">
+                <option value="筋肥大（筋肉を大きくする）">筋肥大（筋肉を大きくする）</option>
+                <option value="筋力向上（重量を伸ばす）">筋力向上（重量を伸ばす）</option>
+                <option value="減量・引き締め">減量・引き締め</option>
+                <option value="筋持久力アップ">筋持久力アップ</option>
+                <option value="全身のバランス改善">全身のバランス改善</option>
+                <option value="競技パフォーマンス向上">競技パフォーマンス向上</option>
+            </select>
+        </div>
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="frequency">週の頻度</label>
+                <select id="frequency">
+                    <option value="週2回">週2回</option>
+                    <option value="週3回">週3回</option>
+                    <option value="週4回">週4回</option>
+                    <option value="週5回">週5回</option>
+                    <option value="週6回">週6回</option>
+                    <option value="毎日">毎日</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="program-level">現在のレベル</label>
+                <select id="program-level">
+                    <option value="初心者">初心者</option>
+                    <option value="初級者">初級者</option>
+                    <option value="中級者">中級者</option>
+                    <option value="上級者">上級者</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="available-time">1回のトレーニング時間</label>
+            <select id="available-time">
+                <option value="30分以下">30分以下</option>
+                <option value="45分">45分</option>
+                <option value="60分">60分</option>
+                <option value="90分">90分</option>
+                <option value="120分以上">120分以上</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="limitations">制限事項・考慮事項（任意）</label>
+            <textarea id="limitations" rows="3" placeholder="例: 古傷がある、特定の種目ができない、自宅トレーニングのみ など"></textarea>
+        </div>
+        <button class="submit-btn" id="design-program-btn">📅 プログラムを作成してもらう</button>
+    </div>
+
+    <!-- 結果表示エリア -->
+    <div id="output">✨ 情報を入力して、AIに相談してください</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ url_for('static', filename='js/training_coach.js') }}"></script>
+{% endblock %}

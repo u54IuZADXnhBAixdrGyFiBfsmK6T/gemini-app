@@ -11,19 +11,17 @@ from routes.main_routes import main_bp
 from routes.ai_routes import ai_bp
 from routes.api_workout import workout_bp
 from routes.api_meal import meal_bp
+from routes.nutrition_ai_routes import nutrition_ai_bp
+from routes.training_ai_routes import training_ai_bp  # ← この行を追加
 
-# モデルもインポート（create_all用）
-# 注: ここでインポートしないとSQLAlchemyがモデルを認識できない場合があります
 import models 
 
 def create_app():
     app = Flask(__name__)
 
-    # データベース設定
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///fitness.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    # DB初期化
     db.init_app(app)
 
     # Blueprintの登録
@@ -31,8 +29,9 @@ def create_app():
     app.register_blueprint(ai_bp)
     app.register_blueprint(workout_bp)
     app.register_blueprint(meal_bp)
+    app.register_blueprint(nutrition_ai_bp)
+    app.register_blueprint(training_ai_bp) 
 
-    # アプリ起動時にテーブルを作成
     with app.app_context():
         db.create_all()
     

@@ -62,3 +62,11 @@ def lifestyle_mental_health():
 @main_bp.route('/lifestyle/hydration')
 def lifestyle_hydration():
     return render_template('lifestyle_hydration.html')
+
+@main_bp.route("/nutrition_coach")
+def nutrition_coach():
+    return render_template("nutrition_coach.html")
+
+@main_bp.route("/training_coach")
+def training_coach():
+    return render_template("training_coach.html")

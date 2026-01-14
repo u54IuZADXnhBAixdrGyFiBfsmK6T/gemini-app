@@ -106,11 +106,17 @@
                             </div>
                         </div>
                     </li>
-                    <li class="site-header__nav-item">
-                        <a class="site-header__promo site-header__promo--ai-coach" href="{{ url_for('main.gemini_fitness') }}">
-                            <span class="site-header__promo-icon">🤖</span>
-                            <span class="site-header__promo-text">AI-Coach</span>
-                        </a>
+                    <li class="site-header__nav-item has-dropdown">
+                        <a class="site-header__nav-link" href="{{ url_for('main.gemini_fitness') }}"><span class="site-header__nav-icon">🤖</span>AI-Coach</a>
+                        <div class="site-header__dropdown" role="menu" aria-hidden="true">
+                            <div class="site-header__dropdown-content">
+                                <ul class="site-header__dropdown-list">
+                                    <li><a href="{{ url_for('main.gemini_fitness') }}">Generate Plan</a></li>
+                                    <li><a href="{{ url_for('main.nutrition_coach') }}">Meal-AI</a></li>
+                                    <li><a href="{{ url_for('main.training_coach') }}">workout-AI</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                     <li class="site-header__nav-item has-dropdown" id="recordDropdown">
                         <a class="site-header__promo site-header__promo--record" href="#" onclick="return false;">

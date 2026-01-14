@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}Nutrition Coach AI{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/nutrition_coach.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>🥗 Nutrition Coach AI</h1>
+    <p class="subtitle">栄養管理のプロフェッショナルがあなたをサポート</p>
+
+    <!-- タブナビゲーション -->
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="pfc">📊 PFC計算</button>
+        <button class="tab-btn" data-tab="meals">🍽️ 食事提案</button>
+        <button class="tab-btn" data-tab="consultation">💬 栄養相談</button>
+    </div>
+
+    <!-- PFC計算タブ -->
+    <div class="tab-content active" id="pfc-tab">
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="pfc-height">身長 (cm)</label>
+                <input type="number" id="pfc-height" placeholder="例: 170" value="170">
+            </div>
+            <div class="form-group">
+                <label for="pfc-weight">体重 (kg)</label>
+                <input type="number" id="pfc-weight" placeholder="例: 65" value="65">
+            </div>
+            <div class="form-group">
+                <label for="pfc-age">年齢</label>
+                <input type="number" id="pfc-age" placeholder="例: 30" value="30">
+            </div>
+            <div class="form-group">
+                <label for="pfc-gender">性別</label>
+                <select id="pfc-gender">
+                    <option value="男性">男性</option>
+                    <option value="女性">女性</option>
+                    <option value="その他">その他</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pfc-activity">活動量</label>
+            <select id="pfc-activity">
+                <option value="座り仕事中心（運動なし）">座り仕事中心（運動なし）</option>
+                <option value="軽い運動（週1-2回）">軽い運動（週1-2回）</option>
+                <option value="中程度の運動（週3-5回）">中程度の運動（週3-5回）</option>
+                <option value="激しい運動（週6-7回）">激しい運動（週6-7回）</option>
+                <option value="アスリートレベル">アスリートレベル</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="pfc-goal">目的</label>
+            <select id="pfc-goal">
+                <option value="減量（脂肪を落とす）">減量（脂肪を落とす）</option>
+                <option value="増量（筋肉をつける）">増量（筋肉をつける）</option>
+                <option value="維持（現状キープ）">維持（現状キープ）</option>
+                <option value="リコンプ（筋肉増＋脂肪減）">リコンプ（筋肉増＋脂肪減）</option>
+            </select>
+        </div>
+        <button class="submit-btn" id="calc-pfc-btn">💪 PFCを計算する</button>
+    </div>
+
+    <!-- 食事提案タブ -->
+    <div class="tab-content" id="meals-tab">
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="meal-protein">目標タンパク質 (g)</label>
+                <input type="number" id="meal-protein" placeholder="例: 150">
+            </div>
+            <div class="form-group">
+                <label for="meal-fat">目標脂質 (g)</label>
+                <input type="number" id="meal-fat" placeholder="例: 60">
+            </div>
+            <div class="form-group">
+                <label for="meal-carbs">目標炭水化物 (g)</label>
+                <input type="number" id="meal-carbs" placeholder="例: 250">
+            </div>
+            <div class="form-group">
+                <label for="meal-count">食事回数</label>
+                <select id="meal-count">
+                    <option value="3">3回（朝・昼・夜）</option>
+                    <option value="4">4回（＋間食1回）</option>
+                    <option value="5">5回（＋間食2回）</option>
+                    <option value="6">6回（＋間食3回）</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="meal-restrictions">食事制限・アレルギー（任意）</label>
+            <textarea id="meal-restrictions" placeholder="例: 乳製品アレルギー、ベジタリアン、ナッツNG など"></textarea>
+        </div>
+        <button class="submit-btn" id="suggest-meals-btn">🍽️ 献立を提案してもらう</button>
+    </div>
+
+    <!-- 栄養相談タブ -->
+    <div class="tab-content" id="consultation-tab">
+        <div class="form-group">
+            <label for="concern">相談内容</label>
+            <textarea id="concern" rows="6" placeholder="例: 減量中ですが、夜にお菓子を我慢できません。甘いものへの欲求をどうコントロールすればいいですか？"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="user-info">追加情報（任意）</label>
+            <textarea id="user-info" rows="3" placeholder="例: 現在の食事内容、生活習慣、過去の経験など"></textarea>
+        </div>
+        <button class="submit-btn" id="consultation-btn">💬 相談する</button>
+    </div>
+
+    <!-- 結果表示エリア -->
+    <div id="output">✨ 情報を入力して、AIに質問してください</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ url_for('static', filename='js/nutrition_coach.js') }}"></script>
+{% endblock %}
