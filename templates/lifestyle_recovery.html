@@ -1,0 +1,1749 @@
+{% extends "base.html" %}
+
+{% block title %}Recovery - 筋肥大のための回復戦略{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/lifestyle.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="lifestyle-detail">
+    <div class="detail-hero">
+        <h1>💪 Recovery</h1>
+        <p class="subtitle">回復こそが筋肥大の鍵 - 科学的回復戦略で成長を最大化する</p>
+    </div>
+
+    <div class="toc">
+        <h2>📑 目次</h2>
+        <ul>
+            <li><a href="#science">1. 回復の科学</a></li>
+            <li><a href="#mechanisms">2. 筋肉回復のメカニズム</a></li>
+            <li><a href="#doms">3. 筋肉痛(DOMS)の真実</a></li>
+            <li><a href="#sleep-recovery">4. 睡眠と回復</a></li>
+            <li><a href="#active-rest">5. アクティブレスト vs 完全休養</a></li>
+            <li><a href="#stretching">6. ストレッチング戦略</a></li>
+            <li><a href="#massage">7. マッサージ・筋膜リリース</a></li>
+            <li><a href="#bath">8. 入浴・温冷療法</a></li>
+            <li><a href="#nutrition">9. 回復を加速する栄養戦略</a></li>
+            <li><a href="#supplements">10. 回復特化サプリメント</a></li>
+            <li><a href="#overtraining">11. オーバートレーニング症候群</a></li>
+            <li><a href="#monitoring">12. 回復度モニタリング</a></li>
+            <li><a href="#calculator">13. 回復度チェックツール</a></li>
+            <li><a href="#references">14. 参考文献</a></li>
+        </ul>
+    </div>
+
+    <section id="science" class="content-section">
+        <h2>1. 回復の科学</h2>
+        
+        <p>
+            多くのトレーニーが見落としている事実があります。<strong>筋肉はトレーニング中ではなく、回復中に成長する</strong>のです。
+            トレーニングは筋肉に「刺激」を与えるだけで、実際の成長は回復期間中に起こります。
+            つまり、<strong>回復を制する者が筋肥大を制する</strong>のです。
+        </p>
+
+        <div class="info-box">
+            <h4>💡 回復の重要性を示すデータ</h4>
+            <ul>
+                <li><strong>筋タンパク質合成(MPS)のピーク:</strong> トレーニング後24-48時間が最も高い (Burd et al., 2011)</li>
+                <li><strong>不十分な回復:</strong> 筋肥大効果が<strong>最大50%低下</strong> (Schoenfeld et al., 2017)</li>
+                <li><strong>最適な休息:</strong> 同一筋群のトレーニング間隔は<strong>48-72時間</strong>が理想 (Wernbom et al., 2007)</li>
+                <li><strong>睡眠不足:</strong> 1時間の睡眠不足で筋タンパク質合成が<strong>18%低下</strong> (Dattilo et al., 2011)</li>
+                <li><strong>慢性疲労:</strong> オーバートレーニングで筋力が<strong>20-30%低下</strong>し、回復に数週間～数ヶ月 (Kreher & Schwartz, 2012)</li>
+            </ul>
+        </div>
+
+        <h3>回復の3つの主要フェーズ</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; border-left: 5px solid #2196f3;">
+                <h4 style="color: #1976d2; margin-bottom: 10px;">Phase 1: 即時回復</h4>
+                <p style="margin-bottom: 10px;"><strong>0-2時間</strong></p>
+                <ul style="color: #666; margin: 0; font-size: 0.95rem;">
+                    <li>エネルギー貯蔵の回復</li>
+                    <li>代謝廃物の除去</li>
+                    <li>ホルモン環境の正常化</li>
+                    <li>水分・電解質バランス</li>
+                </ul>
+            </div>
+            
+            <div style="background: #e8f5e9; padding: 25px; border-radius: 12px; border-left: 5px solid #4caf50;">
+                <h4 style="color: #2e7d32; margin-bottom: 10px;">Phase 2: 短期回復</h4>
+                <p style="margin-bottom: 10px;"><strong>2-48時間</strong></p>
+                <ul style="color: #666; margin: 0; font-size: 0.95rem;">
+                    <li>筋損傷の修復開始</li>
+                    <li>炎症反応のピーク</li>
+                    <li>タンパク質合成の急増</li>
+                    <li>筋グリコーゲン再補充</li>
+                </ul>
+            </div>
+            
+            <div style="background: #fff3e0; padding: 25px; border-radius: 12px; border-left: 5px solid #ff9800;">
+                <h4 style="color: #ef6c00; margin-bottom: 10px;">Phase 3: 長期適応</h4>
+                <p style="margin-bottom: 10px;"><strong>48-96時間</strong></p>
+                <ul style="color: #666; margin: 0; font-size: 0.95rem;">
+                    <li>筋繊維の肥大</li>
+                    <li>神経適応の強化</li>
+                    <li>結合組織の強化</li>
+                    <li>超回復の完了</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>トレーニング vs 回復のバランス</h3>
+        
+        <p>
+            筋肥大の方程式は単純です：<br>
+            <strong>筋肥大 = トレーニング刺激 × 回復の質</strong>
+        </p>
+
+        <p>
+            どちらか一方だけでは不十分です。100%のトレーニングでも、回復が50%なら、結果は50%です。
+            逆に、適度なトレーニング(80%)でも完璧な回復(100%)なら、結果は80%となり、前者を上回ります。
+        </p>
+
+        <div class="stats-grid" style="margin: 30px 0;">
+            <div class="stat-card">
+                <div class="stat-number">24-48h</div>
+                <div class="stat-label">MPS<br>ピーク期間</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">48-72h</div>
+                <div class="stat-label">最適<br>トレーニング間隔</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">-50%</div>
+                <div class="stat-label">不十分な回復<br>による損失</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">7-9h</div>
+                <div class="stat-label">最適<br>睡眠時間</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mechanisms" class="content-section">
+        <h2>2. 筋肉回復のメカニズム</h2>
+
+        <h3>2.1 筋損傷と修復のプロセス</h3>
+
+        <p>
+            トレーニングは筋繊維に<strong>微細な損傷(マイクロトラウマ)</strong>を与えます。
+            この損傷が適切に修復されることで、筋肉はより強く、大きくなります。
+        </p>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>筋損傷から成長までの6ステップ</h4>
+            
+            <div style="margin-top: 20px;">
+                <div style="padding: 15px; margin-bottom: 10px; background: white; border-left: 4px solid #667eea; border-radius: 5px;">
+                    <strong style="color: #667eea;">Step 1: 機械的損傷 (0-2時間)</strong>
+                    <p style="margin: 5px 0 0 0; color: #666;">トレーニングによる筋繊維の物理的破壊、サルコメア(筋節)の断裂</p>
+                </div>
+                
+                <div style="padding: 15px; margin-bottom: 10px; background: white; border-left: 4px solid #667eea; border-radius: 5px;">
+                    <strong style="color: #667eea;">Step 2: 炎症反応の開始 (2-6時間)</strong>
+                    <p style="margin: 5px 0 0 0; color: #666;">好中球が損傷部位に集まり、損傷した組織を除去開始</p>
+                </div>
+                
+                <div style="padding: 15px; margin-bottom: 10px; background: white; border-left: 4px solid #667eea; border-radius: 5px;">
+                    <strong style="color: #667eea;">Step 3: 炎症のピーク (6-48時間)</strong>
+                    <p style="margin: 5px 0 0 0; color: #666;">マクロファージが到着、サイトカイン(IL-6, TNF-α)放出、筋肉痛のピーク</p>
+                </div>
+                
+                <div style="padding: 15px; margin-bottom: 10px; background: white; border-left: 4px solid #667eea; border-radius: 5px;">
+                    <strong style="color: #667eea;">Step 4: 衛星細胞の活性化 (24-72時間)</strong>
+                    <p style="margin: 5px 0 0 0; color: #666;">筋幹細胞が増殖し、損傷部位に移動、筋芽細胞に分化</p>
+                </div>
+                
+                <div style="padding: 15px; margin-bottom: 10px; background: white; border-left: 4px solid #667eea; border-radius: 5px;">
+                    <strong style="color: #667eea;">Step 5: タンパク質合成の急増 (24-48時間がピーク)</strong>
+                    <p style="margin: 5px 0 0 0; color: #666;">mTOR経路活性化、筋タンパク質合成率が安静時の2-5倍に上昇</p>
+                </div>
+                
+                <div style="padding: 15px; background: white; border-left: 4px solid #667eea; border-radius: 5px;">
+                    <strong style="color: #667eea;">Step 6: リモデリング・肥大 (48-96時間)</strong>
+                    <p style="margin: 5px 0 0 0; color: #666;">新しい筋タンパク質が組み込まれ、筋繊維が太く強くなる(超回復)</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>2.2 筋タンパク質合成(MPS)と分解(MPB)</h3>
+
+        <p>
+            筋肉量は<strong>合成(MPS)と分解(MPB)のバランス</strong>で決まります。
+        </p>
+
+        <ul>
+            <li><strong>筋タンパク質合成(MPS):</strong> 新しい筋タンパク質の生成</li>
+            <li><strong>筋タンパク質分解(MPB):</strong> 既存の筋タンパク質の分解</li>
+            <li><strong>正味のタンパク質バランス = MPS - MPB</strong></li>
+        </ul>
+
+        <div style="background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>トレーニング後のMPS推移</h4>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                <tr style="background: #4caf50; color: white;">
+                    <th style="padding: 12px; text-align: left;">時間</th>
+                    <th style="padding: 12px; text-align: left;">MPS増加率</th>
+                    <th style="padding: 12px; text-align: left;">状態</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">0-4時間後</td>
+                    <td style="padding: 12px;"><strong>+100-150%</strong></td>
+                    <td style="padding: 12px;">急激な上昇開始</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">4-24時間後</td>
+                    <td style="padding: 12px;"><strong>+150-200%</strong></td>
+                    <td style="padding: 12px;">ピーク期間</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">24-36時間後</td>
+                    <td style="padding: 12px;"><strong>+100-150%</strong></td>
+                    <td style="padding: 12px;">高水準維持</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">36-48時間後</td>
+                    <td style="padding: 12px;"><strong>+50-100%</strong></td>
+                    <td style="padding: 12px;">徐々に低下</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">48-72時間後</td>
+                    <td style="padding: 12px;"><strong>+20-50%</strong></td>
+                    <td style="padding: 12px;">ベースライン復帰</td>
+                </tr>
+            </table>
+            <p style="margin-top: 15px; color: #666; font-style: italic;">
+                (Burd et al., 2011; Phillips et al., 2012)
+            </p>
+        </div>
+
+        <h3>2.3 衛星細胞と筋肥大</h3>
+
+        <p>
+            <strong>衛星細胞(筋幹細胞)</strong>は筋肥大の鍵を握る細胞です。
+        </p>
+
+        <ul>
+            <li><strong>通常状態:</strong> 筋繊維の表面で休止状態</li>
+            <li><strong>損傷検知:</strong> トレーニングによる損傷を感知すると活性化</li>
+            <li><strong>増殖:</strong> 分裂して数を増やす</li>
+            <li><strong>分化:</strong> 筋芽細胞に変化</li>
+            <li><strong>融合:</strong> 既存の筋繊維に融合し、新しい核を提供</li>
+            <li><strong>結果:</strong> 筋繊維が太く、強くなる</li>
+        </ul>
+
+        <div class="warning-box">
+            <h4>⚠️ 回復不足が衛星細胞に与える悪影響</h4>
+            <ul>
+                <li><strong>活性化の鈍化:</strong> 慢性的な疲労で衛星細胞の反応が30-40%低下</li>
+                <li><strong>増殖能力の低下:</strong> 睡眠不足で増殖速度が50%減少</li>
+                <li><strong>分化障害:</strong> 炎症が長引くと正常な分化が阻害される</li>
+                <li><strong>枯渇リスク:</strong> オーバートレーニングで衛星細胞プールが枯渇</li>
+            </ul>
+        </div>
+
+        <h3>2.4 炎症と回復のバランス</h3>
+
+        <p>
+            炎症は<strong>「諸刃の剣」</strong>です。適度な炎症は回復に必要ですが、過剰または慢性的な炎症は有害です。
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 10px;">
+                <h5 style="color: #2e7d32;">✅ 急性炎症(良い)</h5>
+                <ul style="margin-top: 10px; color: #666;">
+                    <li>損傷組織の除去</li>
+                    <li>成長因子の放出</li>
+                    <li>衛星細胞の活性化</li>
+                    <li>血流増加</li>
+                    <li><strong>期間:</strong> 24-72時間</li>
+                </ul>
+            </div>
+            
+            <div style="background: #ffebee; padding: 20px; border-radius: 10px;">
+                <h5 style="color: #c62828;">❌ 慢性炎症(悪い)</h5>
+                <ul style="margin-top: 10px; color: #666;">
+                    <li>筋タンパク質分解促進</li>
+                    <li>タンパク質合成阻害</li>
+                    <li>コルチゾール上昇</li>
+                    <li>インスリン抵抗性</li>
+                    <li><strong>期間:</strong> 数週間～数ヶ月</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="doms" class="content-section">
+        <h2>3. 筋肉痛(DOMS)の真実</h2>
+
+        <p>
+            <strong>遅発性筋肉痛(DOMS: Delayed Onset Muscle Soreness)</strong>は、
+            トレーニング後24-72時間にピークを迎える筋肉の痛みです。
+        </p>
+
+        <h3>3.1 DOMSの原因</h3>
+
+        <div class="info-box">
+            <h4>💡 DOMSに関する誤解と真実</h4>
+            
+            <div style="margin-top: 15px;">
+                <p><strong>❌ 誤解:</strong> 乳酸の蓄積が原因</p>
+                <p><strong>✅ 真実:</strong> 乳酸は運動後1-2時間で除去される。DOMSとは無関係。</p>
+            </div>
+            
+            <div style="margin-top: 15px;">
+                <p><strong>❌ 誤解:</strong> 筋肉痛がないと筋肥大しない</p>
+                <p><strong>✅ 真実:</strong> 筋肉痛と筋肥大に直接的な相関はない。痛みなしでも成長は可能。</p>
+            </div>
+            
+            <div style="margin-top: 15px;">
+                <p><strong>❌ 誤解:</strong> 筋肉痛があるうちは次のトレーニングをしてはいけない</p>
+                <p><strong>✅ 真実:</strong> 軽度の筋肉痛なら別の筋群をトレーニング可能。同一筋群は避けるべき。</p>
+            </div>
+        </div>
+
+        <h3>現在の科学的理解</h3>
+
+        <p>DOMSは以下の複合的な要因で発生します:</p>
+
+        <ol>
+            <li><strong>筋繊維の微細損傷:</strong> 特に伸張性収縮(エキセントリック)で顕著</li>
+            <li><strong>結合組織の損傷:</strong> 筋膜、腱、筋内膜などの損傷</li>
+            <li><strong>炎症反応:</strong> 損傷部位への白血球集積と炎症性サイトカイン放出</li>
+            <li><strong>浸透圧変化:</strong> 損傷部位への水分移動による腫れ</li>
+            <li><strong>痛覚受容体の感作:</strong> ブラジキニン、プロスタグランジンなどによる</li>
+        </ol>
+
+        <h3>3.2 DOMSのタイムライン</h3>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr style="background: #667eea; color: white;">
+                    <th style="padding: 12px; text-align: left;">時間</th>
+                    <th style="padding: 12px; text-align: left;">痛みレベル</th>
+                    <th style="padding: 12px; text-align: left;">症状</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">0-6時間</td>
+                    <td style="padding: 12px;">軽度</td>
+                    <td style="padding: 12px;">ほとんど痛みなし、筋肉の張り感</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">6-24時間</td>
+                    <td style="padding: 12px;">中程度</td>
+                    <td style="padding: 12px;">動作時に軽い痛み、硬直感</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">24-48時間</td>
+                    <td style="padding: 12px;"><strong>ピーク</strong></td>
+                    <td style="padding: 12px;">強い痛み、可動域制限、筋力低下(20-50%)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">48-72時間</td>
+                    <td style="padding: 12px;">中程度</td>
+                    <td style="padding: 12px;">痛みは持続するが徐々に軽減</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">72-96時間</td>
+                    <td style="padding: 12px;">軽度</td>
+                    <td style="padding: 12px;">ほぼ回復、わずかな不快感のみ</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>3.3 DOMSへの対処法</h3>
+
+        <h4>✅ 効果が証明されている方法</h4>
+
+        <ul>
+            <li><strong>軽い運動(アクティブレスト):</strong> 最も効果的。血流増加で回復促進 (Cheung et al., 2003)</li>
+            <li><strong>マッサージ:</strong> 痛みを30%軽減、ただし回復速度は変わらない (Herbert et al., 2011)</li>
+            <li><strong>温冷交代浴:</strong> 炎症を15-20%軽減 (Bieuzen et al., 2013)</li>
+            <li><strong>NSAIDs(イブプロフェン等):</strong> 痛みは軽減するが、長期的な筋肥大を阻害する可能性</li>
+        </ul>
+
+        <h4>❌ 効果が限定的または不明な方法</h4>
+
+        <ul>
+            <li><strong>ストレッチ:</strong> 予防・軽減効果はほぼない (Herbert et al., 2011)</li>
+            <li><strong>アイシング:</strong> 炎症を抑えるが、回復を遅らせる可能性 (Takagi et al., 2011)</li>
+            <li><strong>抗酸化サプリ:</strong> 炎症を過度に抑制し、適応を阻害する恐れ</li>
+        </ul>
+
+        <div class="success-box">
+            <h4>✅ DOMSとの付き合い方</h4>
+            <ul>
+                <li><strong>重度のDOMSがある筋群は避ける:</strong> 48-72時間は完全休養</li>
+                <li><strong>別の筋群をトレーニング:</strong> 脚が筋肉痛なら上半身を鍛える</li>
+                <li><strong>アクティブレストを活用:</strong> 軽いウォーキング、サイクリング、水泳</li>
+                <li><strong>痛みを筋肥大の指標にしない:</strong> 痛みがなくても成長は起きている</li>
+                <li><strong>漸進的な負荷増加:</strong> 急激な変化を避け、DOMSを最小化</li>
+            </ul>
+        </div>
+
+        <h3>3.4 繰り返し効果(Repeated Bout Effect)</h3>
+
+        <p>
+            同じトレーニングを繰り返すと、<strong>DOMSが軽減する</strong>現象があります。
+        </p>
+
+        <ul>
+            <li><strong>初回:</strong> 激しいDOMS</li>
+            <li><strong>2回目(1-2週間後):</strong> DOMSが50-80%軽減</li>
+            <li><strong>3回目以降:</strong> ほとんどDOMSなし</li>
+            <li><strong>メカニズム:</strong> 
+                <ul style="margin-top: 5px;">
+                    <li>衛星細胞による筋繊維の補強</li>
+                    <li>結合組織の強化</li>
+                    <li>神経適応(運動単位の動員パターン改善)</li>
+                    <li>炎症反応の適応</li>
+                </ul>
+            </li>
+            <li><strong>持続期間:</strong> 6-9ヶ月間効果が持続</li>
+        </ul>
+
+        <div class="warning-box">
+            <h4>⚠️ 注意: DOMSがなくても筋肥大は起きる</h4>
+            <p>
+                ベテラントレーニーがほとんど筋肉痛を感じなくなるのは、
+                <strong>筋肥大していないからではなく、適応の証拠</strong>です。
+                筋肉痛の有無ではなく、<strong>重量やレップ数の進歩</strong>で判断しましょう。
+            </p>
+        </div>
+    </section>
+
+    <section id="sleep-recovery" class="content-section">
+        <h2>4. 睡眠と回復</h2>
+
+        <p>
+            睡眠は<strong>最も強力な回復ツール</strong>です。詳細は<a href="/lifestyle/sleep">Sleep Optimizationページ</a>を参照してください。
+            ここでは回復に特化した睡眠の役割を解説します。
+        </p>
+
+        <h3>4.1 睡眠中の筋肉回復</h3>
+
+        <ul>
+            <li><strong>成長ホルモン分泌:</strong> 深睡眠(ステージ3-4)で最大量分泌
+                <ul style="margin-top: 5px;">
+                    <li>睡眠前半(最初の3-4時間)が特に重要</li>
+                    <li>分泌量は睡眠不足で50-70%減少</li>
+                </ul>
+            </li>
+            <li><strong>テストステロン回復:</strong> 睡眠中に正常レベルに戻る
+                <ul style="margin-top: 5px;">
+                    <li>睡眠不足(5時間以下)でテストステロンが10-15%低下</li>
+                    <li>1週間の睡眠不足で若者のテストステロンレベルが15歳分老化</li>
+                </ul>
+            </li>
+            <li><strong>コルチゾール低下:</strong> 睡眠中にストレスホルモンが最低値に</li>
+            <li><strong>タンパク質合成:</strong> 睡眠中も継続(特にカゼインプロテイン摂取時)</li>
+        </ul>
+
+        <h3>4.2 睡眠不足と回復</h3>
+
+        <div class="warning-box">
+            <h4>⚠️ 睡眠不足の深刻な影響</h4>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px; background: white;">
+                <tr style="background: #f44336; color: white;">
+                    <th style="padding: 12px; text-align: left;">睡眠時間</th>
+                    <th style="padding: 12px; text-align: left;">筋タンパク質合成</th>
+                    <th style="padding: 12px; text-align: left;">筋力回復</th>
+                    <th style="padding: 12px; text-align: left;">総合影響</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">7-9時間</td>
+                    <td style="padding: 12px;">100%(正常)</td>
+                    <td style="padding: 12px;">100%</td>
+                    <td style="padding: 12px;">最適</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">6時間</td>
+                    <td style="padding: 12px;">-18%</td>
+                    <td style="padding: 12px;">-15%</td>
+                    <td style="padding: 12px;">やや不足</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">5時間</td>
+                    <td style="padding: 12px;">-30%</td>
+                    <td style="padding: 12px;">-25%</td>
+                    <td style="padding: 12px;">不十分</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">4時間以下</td>
+                    <td style="padding: 12px;">-40-50%</td>
+                    <td style="padding: 12px;">-35-40%</td>
+                    <td style="padding: 12px;">極めて有害</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>4.3 昼寝(パワーナップ)の効果</h3>
+
+        <p>
+            短時間の昼寝は回復を<strong>大幅に促進</strong>します。
+        </p>
+
+        <ul>
+            <li><strong>20-30分の昼寝:</strong> 認知機能・集中力が向上、眠気解消</li>
+            <li><strong>60-90分の昼寝:</strong> 成長ホルモン分泌、記憶定着、筋肉回復促進</li>
+            <li><strong>最適タイミング:</strong> 午後1-3時(サーカディアンリズムの谷)</li>
+            <li><strong>注意:</strong> 夕方以降の昼寝は夜の睡眠を妨げる</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>💡 トレーニング後の昼寝</h4>
+            <p>
+                トレーニング後2-3時間以内に60-90分の昼寝をすると、
+                <strong>筋タンパク質合成が追加で15-20%向上</strong>する可能性があります (Dattilo et al., 2011)。
+            </p>
+            <p style="margin-top: 10px;">
+                プロアスリートの多くが午後のトレーニング後に昼寝を取り入れているのは、この効果を狙ったものです。
+            </p>
+        </div>
+    </section>
+
+    <section id="active-rest" class="content-section">
+        <h2>5. アクティブレスト vs 完全休養</h2>
+
+        <h3>5.1 アクティブレストとは</h3>
+
+        <p>
+            <strong>アクティブレスト(積極的休養)</strong>は、完全に休むのではなく、
+            軽度の運動を行うことで回復を促進する方法です。
+        </p>
+
+        <h4>アクティブレストの生理学的メカニズム</h4>
+
+        <ul>
+            <li><strong>血流増加:</strong> 軽い運動で筋肉への血流が2-3倍に
+                <ul style="margin-top: 5px;">
+                    <li>酸素と栄養素の供給増加</li>
+                    <li>代謝廃物(乳酸、アンモニアなど)の除去促進</li>
+                </ul>
+            </li>
+            <li><strong>リンパ循環:</strong> 筋収縮がリンパの流れを促進、腫れ・炎症軽減</li>
+            <li><strong>関節可動域維持:</strong> 軽い動きで硬直を防ぐ</li>
+            <li><strong>神経系のリフレッシュ:</strong> 低強度運動で副交感神経優位に</li>
+        </ul>
+
+        <h3>5.2 アクティブレスト vs 完全休養の比較</h3>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>科学的比較データ</h4>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                <tr style="background: #667eea; color: white;">
+                    <th style="padding: 12px; text-align: left;">指標</th>
+                    <th style="padding: 12px; text-align: left;">アクティブレスト</th>
+                    <th style="padding: 12px; text-align: left;">完全休養</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">筋肉痛軽減</td>
+                    <td style="padding: 12px; background: #e8f5e9;"><strong>優れている</strong><br>30-40%軽減</td>
+                    <td style="padding: 12px;">軽減効果少ない</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">筋力回復速度</td>
+                    <td style="padding: 12px; background: #e8f5e9;"><strong>速い</strong><br>24-36時間</td>
+                    <td style="padding: 12px;">やや遅い<br>36-48時間</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">グリコーゲン再補充</td>
+                    <td style="padding: 12px;">同等</td>
+                    <td style="padding: 12px;">同等</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">筋タンパク質合成</td>
+                    <td style="padding: 12px;">同等</td>
+                    <td style="padding: 12px;">同等</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">精神的回復</td>
+                    <td style="padding: 12px; background: #e8f5e9;"><strong>優れている</strong><br>気分転換効果</td>
+                    <td style="padding: 12px;">可もなく不可もなく</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">神経系回復</td>
+                    <td style="padding: 12px;">やや劣る</td>
+                    <td style="padding: 12px; background: #e8f5e9;"><strong>優れている</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>5.3 最適なアクティブレスト活動</h3>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;">
+            <div style="background: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 4px solid #4caf50;">
+                <h5 style="color: #2e7d32;">🚶 ウォーキング</h5>
+                <ul style="margin-top: 10px; color: #666; font-size: 0.9rem;">
+                    <li><strong>強度:</strong> 心拍数100-120 bpm</li>
+                    <li><strong>時間:</strong> 20-45分</li>
+                    <li><strong>メリット:</strong> 最も安全、関節への負担ゼロ</li>
+                </ul>
+            </div>
+            
+            <div style="background: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 4px solid #2196f3;">
+                <h5 style="color: #1976d2;">🚴 サイクリング</h5>
+                <ul style="margin-top: 10px; color: #666; font-size: 0.9rem;">
+                    <li><strong>強度:</strong> 軽いギア、楽なペース</li>
+                    <li><strong>時間:</strong> 30-60分</li>
+                    <li><strong>メリット:</strong> 下半身の血流促進に最適</li>
+                </ul>
+            </div>
+            
+            <div style="background: #e1f5fe; padding: 20px; border-radius: 10px; border-left: 4px solid #00bcd4;">
+                <h5 style="color: #00838f;">🏊 水泳・水中ウォーキング</h5>
+                <ul style="margin-top: 10px; color: #666; font-size: 0.9rem;">
+                    <li><strong>強度:</strong> ゆっくり泳ぐ</li>
+                    <li><strong>時間:</strong> 20-40分</li>
+                    <li><strong>メリット:</strong> 全身の血流促進、浮力で関節保護</li>
+                </ul>
+            </div>
+            
+            <div style="background: #f3e5f5; padding: 20px; border-radius: 10px; border-left: 4px solid #9c27b0;">
+                <h5 style="color: #6a1b9a;">🧘 ヨガ・ストレッチ</h5>
+                <ul style="margin-top: 10px; color: #666; font-size: 0.9rem;">
+                    <li><strong>強度:</strong> リストラティブヨガ</li>
+                    <li><strong>時間:</strong> 30-60分</li>
+                    <li><strong>メリット:</strong> 柔軟性向上、副交感神経活性化</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>5.4 状況別の推奨</h3>
+
+        <div style="background: #fff3e0; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>いつアクティブレスト、いつ完全休養?</h4>
+            
+            <div style="margin-top: 15px;">
+                <p><strong style="color: #4caf50;">✅ アクティブレストが推奨される状況:</strong></p>
+                <ul style="margin-top: 5px;">
+                    <li>軽度〜中程度の筋肉痛がある時</li>
+                    <li>トレーニング翌日(別の筋群をトレーニングしない日)</li>
+                    <li>ストレスが高い時(気分転換が必要)</li>
+                    <li>持久系トレーニングの回復期</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <p><strong style="color: #f44336;">⚠️ 完全休養が推奨される状況:</strong></p>
+                <ul style="margin-top: 5px;">
+                    <li>重度の筋肉痛・筋損傷がある時</li>
+                    <li>高強度トレーニング直後(CNS回復のため)</li>
+                    <li>睡眠不足が続いている時</li>
+                    <li>病気・体調不良の時</li>
+                    <li>オーバートレーニングの兆候がある時</li>
+                    <li>週に1-2日(完全休養日は必須)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="stretching" class="content-section">
+        <h2>6. ストレッチング戦略</h2>
+
+        <p>
+            ストレッチは回復ツールとして<strong>過大評価されている</strong>側面がありますが、
+            正しく使えば有効です。重要なのは<strong>タイミングと種類</strong>です。
+        </p>
+
+        <h3>6.1 ストレッチの種類と効果</h3>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+            <div style="background: white; padding: 25px; border-radius: 12px; border: 2px solid #667eea;">
+                <h4 style="color: #667eea;">スタティックストレッチ</h4>
+                <p style="margin: 10px 0; color: #666;"><strong>方法:</strong> 静止した状態で筋肉を伸ばす(20-60秒)</p>
+                
+                <p style="margin-top: 15px;"><strong style="color: #4caf50;">✅ メリット:</strong></p>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li>柔軟性向上(長期的)</li>
+                    <li>副交感神経活性化</li>
+                    <li>リラクゼーション効果</li>
+                </ul>
+                
+                <p style="margin-top: 15px;"><strong style="color: #f44336;">❌ デメリット:</strong></p>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li>トレーニング前は筋力を5-15%低下させる</li>
+                    <li>筋肉痛軽減効果はほぼない</li>
+                </ul>
+                
+                <p style="margin-top: 15px; padding: 10px; background: #e8f5e9; border-radius: 5px;">
+                    <strong>推奨:</strong> トレーニング後、就寝前
+                </p>
+            </div>
+            
+            <div style="background: white; padding: 25px; border-radius: 12px; border: 2px solid #ff9800;">
+                <h4 style="color: #ff9800;">ダイナミックストレッチ</h4>
+                <p style="margin: 10px 0; color: #666;"><strong>方法:</strong> 動きながら筋肉を伸ばす</p>
+                
+                <p style="margin-top: 15px;"><strong style="color: #4caf50;">✅ メリット:</strong></p>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li>筋温上昇</li>
+                    <li>可動域向上</li>
+                    <li>神経系の準備</li>
+                    <li>パフォーマンス向上</li>
+                </ul>
+                
+                <p style="margin-top: 15px;"><strong style="color: #f44336;">❌ デメリット:</strong></p>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li>リラクゼーション効果はない</li>
+                    <li>やりすぎると疲労</li>
+                </ul>
+                
+                <p style="margin-top: 15px; padding: 10px; background: #fff3e0; border-radius: 5px;">
+                    <strong>推奨:</strong> トレーニング前のウォームアップ
+                </p>
+            </div>
+        </div>
+
+        <h3>6.2 科学的に証明されていること・いないこと</h3>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <div style="margin-bottom: 20px;">
+                <h4 style="color: #4caf50;">✅ 証明されている効果</h4>
+                <ul style="margin-top: 10px;">
+                    <li>長期的な柔軟性向上(数週間〜数ヶ月)</li>
+                    <li>関節可動域の拡大</li>
+                    <li>リラクゼーション・ストレス軽減</li>
+                    <li>姿勢改善(特定のストレッチ)</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 style="color: #f44336;">❌ 証明されていない・効果が薄い</h4>
+                <ul style="margin-top: 10px;">
+                    <li>筋肉痛(DOMS)の予防・軽減(Herbert et al., 2011)</li>
+                    <li>怪我の予防(エビデンス不十分)</li>
+                    <li>トレーニング後の即時回復促進</li>
+                    <li>筋肥大の促進</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>6.3 回復を促進するストレッチプロトコル</h3>
+
+        <div style="background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>トレーニング後のストレッチルーチン(10-15分)</h4>
+            
+            <p style="margin-bottom: 15px;">目的: リラクゼーション、副交感神経優位、柔軟性維持</p>
+            
+            <ol style="line-height: 1.8;">
+                <li><strong>クールダウン(5分):</strong> 軽いウォーキングや軽いサイクリング</li>
+                <li><strong>主要筋群のスタティックストレッチ(各30-60秒):</strong>
+                    <ul style="margin-top: 5px;">
+                        <li>大腿四頭筋</li>
+                        <li>ハムストリングス</li>
+                        <li>臀筋</li>
+                        <li>大胸筋</li>
+                        <li>広背筋</li>
+                        <li>三角筋</li>
+                    </ul>
+                </li>
+                <li><strong>深呼吸:</strong> 各ストレッチ中、ゆっくりとした腹式呼吸</li>
+                <li><strong>強度:</strong> 「心地よい伸び」程度(痛みを感じるまで伸ばさない)</li>
+            </ol>
+        </div>
+
+        <h3>6.4 PNFストレッチ(上級者向け)</h3>
+
+        <p>
+            <strong>PNF(Proprioceptive Neuromuscular Facilitation)ストレッチ</strong>は、
+            神経筋促通法を利用した高度なストレッチ技術です。
+        </p>
+
+        <ul>
+            <li><strong>方法:</strong> 伸ばす→収縮→さらに伸ばす、のサイクル</li>
+            <li><strong>効果:</strong> 通常のストレッチより柔軟性が20-30%多く向上</li>
+            <li><strong>注意:</strong> 正しいフォームが重要、パートナーが推奨</li>
+            <li><strong>頻度:</strong> 週2-3回</li>
+        </ul>
+    </section>
+
+    <section id="massage" class="content-section">
+        <h2>7. マッサージ・筋膜リリース</h2>
+
+        <h3>7.1 マッサージの科学</h3>
+
+        <p>
+            マッサージは<strong>筋肉痛を軽減</strong>しますが、<strong>回復速度は変わらない</strong>という興味深い特性があります。
+        </p>
+
+        <div class="info-box">
+            <h4>💡 マッサージの効果(科学的根拠)</h4>
+            <ul>
+                <li><strong>痛み軽減:</strong> 30-40%軽減(主観的評価) (Herbert et al., 2011)</li>
+                <li><strong>血流増加:</strong> 一時的に2-3倍</li>
+                <li><strong>炎症マーカー:</strong> IL-6などが10-15%低下 (Crane et al., 2012)</li>
+                <li><strong>筋力回復:</strong> 有意な差はない</li>
+                <li><strong>筋タンパク質合成:</strong> 影響なし</li>
+                <li><strong>心理的効果:</strong> リラクゼーション、ストレス軽減</li>
+            </ul>
+            
+            <p style="margin-top: 15px;">
+                <strong>結論:</strong> マッサージは「気持ち良く、痛みを軽減する」が、
+                「回復を加速する」わけではない。しかし、心理的・主観的な快適さは重要。
+            </p>
+        </div>
+
+        <h3>7.2 フォームローラー(筋膜リリース)</h3>
+
+        <p>
+            <strong>フォームローラー</strong>は、セルフマッサージツールとして非常に人気です。
+        </p>
+
+        <h4>フォームローラーの効果</h4>
+
+        <ul>
+            <li><strong>柔軟性:</strong> 即時効果あり(10-15%向上)、ストレッチと同等 (Cheatham et al., 2015)</li>
+            <li><strong>筋肉痛:</strong> 軽度の軽減効果(10-20%)</li>
+            <li><strong>パフォーマンス:</strong> トレーニング前の使用でパワー低下なし</li>
+            <li><strong>コスト:</strong> マッサージより安価、自宅で可能</li>
+        </ul>
+
+        <h4>効果的なフォームローラー使用法</h4>
+
+        <div style="background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <ol style="line-height: 1.8;">
+                <li><strong>タイミング:</strong> トレーニング前のウォームアップ、または就寝前</li>
+                <li><strong>圧力:</strong> 中程度の圧力、痛みが強すぎる場合は軽く</li>
+                <li><strong>速度:</strong> ゆっくり(1秒に2-3cm程度)</li>
+                <li><strong>時間:</strong> 各筋群30-60秒</li>
+                <li><strong>呼吸:</strong> ゆっくりとした深呼吸を続ける</li>
+                <li><strong>トリガーポイント:</strong> 特に硬い部分で10-15秒静止</li>
+            </ol>
+            
+            <p style="margin-top: 15px;"><strong>推奨筋群:</strong></p>
+            <ul>
+                <li>大腿四頭筋</li>
+                <li>ハムストリングス</li>
+                <li>腸脛靭帯(IT band)</li>
+                <li>ふくらはぎ</li>
+                <li>臀筋</li>
+                <li>広背筋</li>
+            </ul>
+        </div>
+
+        <h3>7.3 マッサージガン(パーカッシブセラピー)</h3>
+
+        <p>
+            <strong>マッサージガン</strong>は近年人気の回復ツールです。
+        </p>
+
+        <h4>マッサージガンの特徴</h4>
+
+        <ul>
+            <li><strong>作用:</strong> 高速振動(毎分2000-3000回)で筋肉を刺激</li>
+            <li><strong>効果:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>即時の柔軟性向上(フォームローラーと同等)</li>
+                    <li>血流増加</li>
+                    <li>筋肉痛の主観的軽減</li>
+                    <li>使用感が心地よい</li>
+                </ul>
+            </li>
+            <li><strong>利点:</strong> ピンポイントで狙える、力が不要</li>
+            <li><strong>欠点:</strong> 高価(1-5万円)、科学的根拠はフォームローラーより少ない</li>
+        </ul>
+
+        <h4>使用ガイドライン</h4>
+
+        <ul>
+            <li><strong>時間:</strong> 各筋群30-120秒</li>
+            <li><strong>圧力:</strong> 軽く当てる程度(強く押し付けない)</li>
+            <li><strong>速度設定:</strong> 低〜中速度</li>
+            <li><strong>避けるべき部位:</strong> 
+                <ul style="margin-top: 5px;">
+                    <li>骨の上</li>
+                    <li>関節</li>
+                    <li>頸動脈</li>
+                    <li>怪我・炎症部位</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="warning-box">
+            <h4>⚠️ マッサージツール使用の注意点</h4>
+            <ul>
+                <li><strong>やりすぎ禁物:</strong> 過度の使用(1箇所5分以上)は逆効果</li>
+                <li><strong>痛みは良いサインではない:</strong> 「痛気持ちいい」程度に留める</li>
+                <li><strong>急性怪我には使わない:</strong> 捻挫、肉離れなどには48時間は避ける</li>
+                <li><strong>骨・神経には当てない:</strong> 筋肉のみに使用</li>
+                <li><strong>炎症を悪化させる可能性:</strong> トレーニング直後(30分以内)は避ける</li>
+            </ul>
+        </div>
+
+        <h3>7.4 プロのマッサージ vs セルフケア</h3>
+
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0; background: white;">
+            <tr style="background: #667eea; color: white;">
+                <th style="padding: 12px; text-align: left;"></th>
+                <th style="padding: 12px; text-align: left;">プロのマッサージ</th>
+                <th style="padding: 12px; text-align: left;">フォームローラー</th>
+                <th style="padding: 12px; text-align: left;">マッサージガン</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 12px;"><strong>コスト</strong></td>
+                <td style="padding: 12px;">高(5000-10000円/回)</td>
+                <td style="padding: 12px;">低(2000-5000円、買い切り)</td>
+                <td style="padding: 12px;">中(10000-50000円、買い切り)</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 12px;"><strong>効果</strong></td>
+                <td style="padding: 12px;">高(専門技術)</td>
+                <td style="padding: 12px;">中</td>
+                <td style="padding: 12px;">中</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 12px;"><strong>利便性</strong></td>
+                <td style="padding: 12px;">低(予約・移動必要)</td>
+                <td style="padding: 12px;">高(自宅でいつでも)</td>
+                <td style="padding: 12px;">高(自宅でいつでも)</td>
+            </tr>
+            <tr>
+                <td style="padding: 12px;"><strong>推奨</strong></td>
+                <td style="padding: 12px;">月1-2回</td>
+                <td style="padding: 12px;">毎日OK</td>
+                <td style="padding: 12px;">毎日OK</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="bath" class="content-section">
+        <h2>8. 入浴・温冷療法</h2>
+
+        <h3>8.1 温浴の効果</h3>
+
+        <p>
+            <strong>温浴(40-42℃)</strong>は古くから回復手段として使われてきました。
+        </p>
+
+        <h4>温浴の生理学的効果</h4>
+
+        <ul>
+            <li><strong>血管拡張:</strong> 血流が2-3倍に増加</li>
+            <li><strong>筋弛緩:</strong> 筋緊張が30-40%低下</li>
+            <li><strong>副交感神経活性化:</strong> リラクゼーション、ストレス軽減</li>
+            <li><strong>体温上昇:</strong> 深部体温が1-2℃上昇→その後の低下で眠気誘発</li>
+            <li><strong>ヒートショックプロテイン:</strong> ストレス耐性向上</li>
+        </ul>
+
+        <h4>科学的根拠</h4>
+
+        <ul>
+            <li><strong>筋肉痛軽減:</strong> 15-25%軽減 (Vaile et al., 2008)</li>
+            <li><strong>筋力回復:</strong> わずかに促進(統計的有意差は小さい)</li>
+            <li><strong>睡眠の質:</strong> 就寝90分前の入浴で睡眠の質が向上 (Haghayegh et al., 2019)</li>
+        </ul>
+
+        <h3>8.2 冷水浴・アイシング</h3>
+
+        <p>
+            <strong>冷水浴(10-15℃)</strong>は論争の的です。痛みは軽減しますが、長期的な筋肥大を阻害する可能性があります。
+        </p>
+
+        <div class="warning-box">
+            <h4>⚠️ アイシング・冷水浴の注意点</h4>
+            
+            <h5 style="margin-top: 15px;">短期的効果</h5>
+            <ul>
+                <li><strong>炎症抑制:</strong> 腫れ・痛みが20-30%軽減</li>
+                <li><strong>血管収縮:</strong> 代謝廃物の除去</li>
+                <li><strong>神経伝達速度低下:</strong> 痛み感覚の鈍化</li>
+            </ul>
+            
+            <h5 style="margin-top: 15px;">長期的リスク</h5>
+            <ul>
+                <li><strong>筋肥大阻害:</strong> 定期的な冷水浴で筋タンパク質合成が20-30%低下の可能性 (Roberts et al., 2015)</li>
+                <li><strong>炎症は必要:</strong> 適度な炎症は筋肥大に不可欠</li>
+                <li><strong>血流制限:</strong> 回復に必要な栄養・酸素の供給が減少</li>
+            </ul>
+            
+            <p style="margin-top: 15px; padding: 15px; background: #fff3e0; border-radius: 5px;">
+                <strong>推奨:</strong> 筋肥大目的のトレーニーは、トレーニング後24時間は冷水浴・アイシングを避けるべき。
+                痛みが激しい場合や急性怪我の場合のみ使用。
+            </p>
+        </div>
+
+        <h3>8.3 温冷交代浴</h3>
+
+        <p>
+            <strong>温冷交代浴(Contrast Water Therapy)</strong>は、温水と冷水を交互に浴びる方法です。
+        </p>
+
+        <h4>プロトコル</h4>
+
+        <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <ol style="line-height: 1.8;">
+                <li><strong>温水(38-40℃):</strong> 3-4分</li>
+                <li><strong>冷水(10-15℃):</strong> 1分</li>
+                <li><strong>繰り返し:</strong> 3-5サイクル</li>
+                <li><strong>終了:</strong> 温水で終わる(リラックス)</li>
+                <li><strong>総時間:</strong> 12-20分</li>
+            </ol>
+        </div>
+
+        <h4>効果</h4>
+
+        <ul>
+            <li><strong>血流のポンプ効果:</strong> 温水で拡張→冷水で収縮を繰り返し、血流促進</li>
+            <li><strong>筋肉痛軽減:</strong> 温浴のみより15-20%効果的 (Bieuzen et al., 2013)</li>
+            <li><strong>筋力回復:</strong> わずかに促進</li>
+            <li><strong>主観的疲労感:</strong> 大幅に改善</li>
+        </ul>
+
+        <div class="success-box">
+            <h4>✅ 入浴・温冷療法の推奨プラン</h4>
+            
+            <h5>筋肥大重視の場合</h5>
+            <ul>
+                <li><strong>トレーニング日:</strong> 温浴のみ(40-42℃、15-20分)</li>
+                <li><strong>就寝90分前:</strong> 温浴で睡眠の質向上</li>
+                <li><strong>避けるべき:</strong> トレーニング後24時間以内の冷水浴・アイシング</li>
+            </ul>
+            
+            <h5>競技パフォーマンス重視の場合</h5>
+            <ul>
+                <li><strong>試合・重要トレーニング後:</strong> 温冷交代浴</li>
+                <li><strong>目的:</strong> 即座の疲労回復、翌日のパフォーマンス維持</li>
+                <li><strong>筋肥大への影響:</strong> 多少の犠牲は許容</li>
+            </ul>
+        </div>
+
+        <h3>8.4 サウナ</h3>
+
+        <p>
+            <strong>サウナ(80-100℃)</strong>も回復ツールとして注目されています。
+        </p>
+
+        <ul>
+            <li><strong>ヒートショックプロテイン:</strong> 筋損傷からの保護</li>
+            <li><strong>成長ホルモン:</strong> 2回のサウナセッション(20分×2)で成長ホルモンが2倍に</li>
+            <li><strong>血流:</strong> 大幅な増加</li>
+            <li><strong>デトックス:</strong> 発汗による代謝産物排出</li>
+            <li><strong>リラクゼーション:</strong> ストレス軽減</li>
+        </ul>
+
+        <h4>推奨プロトコル</h4>
+
+        <ul>
+            <li><strong>温度:</strong> 80-90℃</li>
+            <li><strong>時間:</strong> 15-20分(1-2セット)</li>
+            <li><strong>頻度:</strong> 週2-4回</li>
+            <li><strong>水分補給:</strong> 前後で500ml以上</li>
+            <li><strong>タイミング:</strong> トレーニング2-4時間後、または休養日</li>
+        </ul>
+    </section>
+
+    <section id="nutrition" class="content-section">
+        <h2>9. 回復を加速する栄養戦略</h2>
+
+        <h3>9.1 トレーニング後の栄養タイミング</h3>
+
+        <p>
+            <strong>「アナボリックウィンドウ」</strong>という概念は過大評価されていますが、
+            タイミングは依然として重要です。
+        </p>
+
+        <div style="background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>トレーニング後の栄養摂取タイムライン</h4>
+            
+            <div style="margin-top: 15px;">
+                <p><strong style="color: #f44336;">🔴 最優先: トレーニング後2時間以内</strong></p>
+                <ul style="margin-top: 5px;">
+                    <li>タンパク質: 20-40g(体重1kgあたり0.3-0.5g)</li>
+                    <li>炭水化物: 0.5-1.5g/kg体重</li>
+                    <li>MPS最大化の黄金時間</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <p><strong style="color: #ff9800;">🟠 重要: トレーニング後24時間</strong></p>
+                <ul style="margin-top: 5px;">
+                    <li>総タンパク質: 1.6-2.2g/kg体重</li>
+                    <li>3-5時間ごとにタンパク質摂取</li>
+                    <li>MPSは48時間上昇し続ける</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <p><strong style="color: #4caf50;">🟢 継続: トレーニング後48-72時間</strong></p>
+                <ul style="margin-top: 5px;">
+                    <li>高タンパク質食を継続</li>
+                    <li>十分な炭水化物でグリコーゲン再補充</li>
+                    <li>抗炎症食品の摂取</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>9.2 最適なマクロ栄養素バランス(回復期)</h3>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
+            <div style="background: #ffebee; padding: 20px; border-radius: 12px; border-left: 5px solid #f44336;">
+                <h4 style="color: #c62828;">🥩 タンパク質</h4>
+                <p style="margin: 10px 0;"><strong>目標: 1.6-2.2g/kg体重/日</strong></p>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li>筋修復の材料</li>
+                    <li>3-5時間ごとに20-40g</li>
+                    <li>就寝前: カゼインプロテイン30-40g</li>
+                    <li>高品質ソース: 肉、魚、卵、乳製品</li>
+                </ul>
+            </div>
+            
+            <div style="background: #fff3e0; padding: 20px; border-radius: 12px; border-left: 5px solid #ff9800;">
+                <h4 style="color: #ef6c00;">🍚 炭水化物</h4>
+                <p style="margin: 10px 0;"><strong>目標: 3-7g/kg体重/日</strong></p>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li>グリコーゲン再補充</li>
+                    <li>インスリン分泌→同化促進</li>
+                    <li>トレーニング後24時間で完全回復</li>
+                    <li>複合糖質中心、トレーニング後は単純糖質もOK</li>
+                </ul>
+            </div>
+            
+            <div style="background: #f3e5f5; padding: 20px; border-radius: 12px; border-left: 5px solid #9c27b0;">
+                <h4 style="color: #6a1b9a;">🥑 脂質</h4>
+                <p style="margin: 10px 0;"><strong>目標: 0.5-1.5g/kg体重/日</strong></p>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li>ホルモン合成の材料</li>
+                    <li>抗炎症作用(オメガ3)</li>
+                    <li>脂溶性ビタミン吸収</li>
+                    <li>オメガ3:オメガ6 = 1:4が理想</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>9.3 回復を促進する具体的食品</h3>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>カテゴリー別推奨食品</h4>
+            
+            <div style="margin-top: 15px;">
+                <h5 style="color: #667eea;">抗炎症食品</h5>
+                <ul>
+                    <li><strong>オメガ3豊富:</strong> サーモン、サバ、イワシ、クルミ、亜麻仁</li>
+                    <li><strong>ターメリック(クルクミン):</strong> カレー、ゴールデンミルク</li>
+                    <li><strong>ベリー類:</strong> ブルーベリー、チェリー(アントシアニン豊富)</li>
+                    <li><strong>緑茶:</strong> EGCG(抗酸化物質)</li>
+                    <li><strong>生姜:</strong> ジンゲロール(抗炎症)</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h5 style="color: #667eea;">筋グリコーゲン再補充</h5>
+                <ul>
+                    <li><strong>トレーニング直後:</strong> 白米、バナナ、スポーツドリンク</li>
+                    <li><strong>その後の食事:</strong> さつまいも、オートミール、玄米、パスタ</li>
+                    <li><strong>組み合わせ:</strong> 炭水化物+タンパク質で吸収率向上</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h5 style="color: #667eea;">電解質・水分補給</h5>
+                <ul>
+                    <li><strong>ナトリウム:</strong> 塩、味噌汁</li>
+                    <li><strong>カリウム:</strong> バナナ、アボカド、ほうれん草</li>
+                    <li><strong>マグネシウム:</strong> ナッツ、種子類、ダークチョコレート</li>
+                    <li><strong>水分:</strong> 体重1kgあたり30-40ml/日 + トレーニング中の発汗分</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>9.4 回復特化の食事例</h3>
+
+        <div style="background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>トレーニング後の24時間食事プラン(体重70kgの例)</h4>
+            
+            <div style="margin-top: 15px;">
+                <h5>トレーニング直後(30分以内)</h5>
+                <p><strong>プロテインシェイク + 炭水化物</strong></p>
+                <ul>
+                    <li>ホエイプロテイン 30g</li>
+                    <li>バナナ 2本</li>
+                    <li>蜂蜜 大さじ1</li>
+                    <li>P: 30g / C: 60g / F: 2g</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h5>2時間後(食事1)</h5>
+                <p><strong>高タンパク質 + 炭水化物</strong></p>
+                <ul>
+                    <li>鶏胸肉 200g</li>
+                    <li>白米 200g</li>
+                    <li>ブロッコリー 150g</li>
+                    <li>サーモン(オメガ3)50g</li>
+                    <li>P: 55g / C: 75g / F: 12g</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h5>5時間後(食事2)</h5>
+                <p><strong>バランス食</strong></p>
+                <ul>
+                    <li>牛肉 150g</li>
+                    <li>さつまいも 250g</li>
+                    <li>アボカド 1/2個</li>
+                    <li>ほうれん草サラダ</li>
+                    <li>P: 40g / C: 60g / F: 20g</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h5>8時間後(食事3)</h5>
+                <p><strong>抗炎症重視</strong></p>
+                <ul>
+                    <li>サバ 150g(オメガ3豊富)</li>
+                    <li>玄米 150g</li>
+                    <li>ターメリックスープ</li>
+                    <li>ブルーベリー 100g</li>
+                    <li>P: 35g / C: 55g / F: 18g</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h5>就寝前</h5>
+                <p><strong>カゼインプロテイン</strong></p>
+                <ul>
+                    <li>カゼインプロテイン 40g</li>
+                    <li>またはギリシャヨーグルト 300g</li>
+                    <li>P: 40g / C: 10g / F: 5g</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 15px; background: white; border-radius: 5px;">
+                <p><strong>1日合計:</strong></p>
+                <p>タンパク質: 200g (2.86g/kg) ✅</p>
+                <p>炭水化物: 260g (3.71g/kg) ✅</p>
+                <p>脂質: 57g (0.81g/kg) ✅</p>
+                <p>総カロリー: 約2300kcal</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="supplements" class="content-section">
+        <h2>10. 回復特化サプリメント</h2>
+
+        <p>
+            サプリメントは<strong>「補助」</strong>であり、基本(睡眠・栄養・トレーニング)が最優先です。
+            ここでは科学的根拠のある回復サプリメントのみを紹介します。
+        </p>
+
+        <h3>10.1 エビデンスが強いサプリメント</h3>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+            <div style="background: white; padding: 25px; border-radius: 12px; border: 2px solid #4caf50;">
+                <h4 style="color: #2e7d32;">🥇 クレアチン</h4>
+                <p style="margin: 10px 0; color: #666;"><strong>推奨度: ★★★★★</strong></p>
+                
+                <p style="margin-top: 10px;"><strong>効果:</strong></p>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li>筋グリコーゲン回復促進</li>
+                    <li>筋損傷マーカー低下</li>
+                    <li>筋力回復加速</li>
+                    <li>細胞内水分保持</li>
+                </ul>
+                
+                <p style="margin-top: 15px;"><strong>摂取量:</strong></p>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li>ローディング: 20g/日×5-7日</li>
+                    <li>維持: 3-5g/日</li>
+                    <li>タイミング: いつでもOK</li>
+                </ul>
+                
+                <p style="margin-top: 15px; padding: 10px; background: #e8f5e9; border-radius: 5px; font-size: 0.9rem;">
+                    <strong>根拠:</strong> 数百の研究で効果確認済み、最も研究されたサプリメント
+                </p>
+            </div>
+            
+            <div style="background: white; padding: 25px; border-radius: 12px; border: 2px solid #2196f3;">
+                <h4 style="color: #1976d2;">🥈 プロテイン</h4>
+                <p style="margin: 10px 0; color: #666;"><strong>推奨度: ★★★★★</strong></p>
+                
+                <p style="margin-top: 10px;"><strong>種類と特徴:</strong></p>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li><strong>ホエイ:</strong> 吸収速い、トレーニング後</li>
+                    <li><strong>カゼイン:</strong> 吸収遅い、就寝前</li>
+                    <li><strong>ソイ:</strong> 植物性、女性ホルモン様作用</li>
+                </ul>
+                
+                <p style="margin-top: 15px;"><strong>摂取量:</strong></p>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li>トレーニング後: 20-40g(ホエイ)</li>
+                    <li>就寝前: 30-40g(カゼイン)</li>
+                    <li>食事で不足分を補う</li>
+                </ul>
+                
+                <p style="margin-top: 15px; padding: 10px; background: #e3f2fd; border-radius: 5px; font-size: 0.9rem;">
+                    <strong>根拠:</strong> MPSを20-30%向上させる (Moore et al., 2009)
+                </p>
+            </div>
+            
+            <div style="background: white; padding: 25px; border-radius: 12px; border: 2px solid #ff9800;">
+                <h4 style="color: #ef6c00;">🥉 オメガ3(EPA/DHA)</h4>
+                <p style="margin: 10px 0; color: #666;"><strong>推奨度: ★★★★☆</strong></p>
+                
+                <p style="margin-top: 10px;"><strong>効果:</strong></p>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li>抗炎症作用</li>
+                    <li>筋タンパク質合成促進</li>
+                    <li>筋肉痛軽減(15-20%)</li>
+                    <li>関節保護</li>
+                </ul>
+                
+                <p style="margin-top: 15px;"><strong>摂取量:</strong></p>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li>EPA+DHA: 2-3g/日</li>
+                    <li>高品質フィッシュオイル</li>
+                    <li>食事と一緒に摂取</li>
+                </ul>
+                
+                <p style="margin-top: 15px; padding: 10px; background: #fff3e0; border-radius: 5px; font-size: 0.9rem;">
+                    <strong>根拠:</strong> 慢性炎症を20%軽減 (Calder, 2010)
+                </p>
+            </div>
+        </div>
+
+        <h3>10.2 中程度のエビデンスがあるサプリメント</h3>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>BCAA(分岐鎖アミノ酸)</h4>
+            <ul>
+                <li><strong>成分:</strong> ロイシン、イソロイシン、バリン</li>
+                <li><strong>効果:</strong> 筋タンパク質分解抑制、疲労軽減</li>
+                <li><strong>摂取量:</strong> 5-10g(ロイシン2-3g含む)</li>
+                <li><strong>タイミング:</strong> トレーニング中・直後</li>
+                <li><strong>注意:</strong> 十分なタンパク質を摂取していれば不要な可能性</li>
+                <li><strong>推奨度:</strong> ★★★☆☆</li>
+            </ul>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>グルタミン</h4>
+            <ul>
+                <li><strong>効果:</strong> 免疫機能サポート、腸内環境改善、筋グリコーゲン回復</li>
+                <li><strong>摂取量:</strong> 5-10g/日</li>
+                <li><strong>タイミング:</strong> トレーニング後、就寝前</li>
+                <li><strong>注意:</strong> 筋肥大への直接効果は限定的</li>
+                <li><strong>推奨度:</strong> ★★★☆☆</li>
+            </ul>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>βアラニン</h4>
+            <ul>
+                <li><strong>効果:</strong> 筋カルノシン増加、疲労軽減、高強度運動パフォーマンス向上</li>
+                <li><strong>摂取量:</strong> 3-6g/日</li>
+                <li><strong>効果発現:</strong> 2-4週間の継続摂取が必要</li>
+                <li><strong>副作用:</strong> 顔のチクチク感(無害)</li>
+                <li><strong>推奨度:</strong> ★★★☆☆</li>
+            </ul>
+        </div>
+
+        <h3>10.3 エビデンスが弱い・不要なサプリメント</h3>
+
+        <div class="warning-box">
+            <h4>⚠️ 過大評価されているサプリメント</h4>
+            
+            <ul>
+                <li><strong>高用量ビタミンC・E:</strong> 
+                    <ul style="margin-top: 5px;">
+                        <li>抗酸化作用が炎症を過度に抑制</li>
+                        <li>トレーニング適応を阻害する可能性</li>
+                        <li>食事からの適量摂取で十分</li>
+                    </ul>
+                </li>
+                <li><strong>HMB(β-ヒドロキシ-β-メチル酪酸):</strong>
+                    <ul style="margin-top: 5px;">
+                        <li>初心者や高齢者には効果あり</li>
+                        <li>経験者への効果は限定的</li>
+                        <li>高価</li>
+                    </ul>
+                </li>
+                <li><strong>ZMA(亜鉛・マグネシウム・ビタミンB6):</strong>
+                    <ul style="margin-top: 5px;">
+                        <li>欠乏していれば効果あり</li>
+                        <li>十分な食事を摂っていれば不要</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="overtraining" class="content-section">
+        <h2>11. オーバートレーニング症候群</h2>
+
+        <p>
+            <strong>オーバートレーニング症候群(OTS)</strong>は、回復不足の最悪の結果です。
+            パフォーマンスが長期的に低下し、回復に数週間〜数ヶ月かかります。
+        </p>
+
+        <h3>11.1 オーバートレーニングの段階</h3>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>3つの段階</h4>
+            
+            <div style="margin-top: 15px; padding: 15px; background: #fff3e0; border-left: 4px solid #ff9800; margin-bottom: 15px;">
+                <h5 style="color: #ef6c00;">Stage 1: ファンクショナルオーバーリーチング</h5>
+                <p style="margin: 5px 0; color: #666;"><strong>期間:</strong> 数日〜2週間</p>
+                <p style="margin: 5px 0; color: #666;"><strong>状態:</strong> 計画的な高負荷期間、一時的なパフォーマンス低下</p>
+                <p style="margin: 5px 0; color: #666;"><strong>回復:</strong> 数日の休養で超回復</p>
+                <p style="margin: 5px 0;"><strong style="color: #4caf50;">✅ これは正常で有益</strong></p>
+            </div>
+            
+            <div style="margin-top: 15px; padding: 15px; background: #ffebee; border-left: 4px solid #f44336; margin-bottom: 15px;">
+                <h5 style="color: #c62828;">Stage 2: ノンファンクショナルオーバーリーチング</h5>
+                <p style="margin: 5px 0; color: #666;"><strong>期間:</strong> 2週間〜数ヶ月</p>
+                <p style="margin: 5px 0; color: #666;"><strong>状態:</strong> 回復不足、パフォーマンス停滞・低下</p>
+                <p style="margin: 5px 0; color: #666;"><strong>回復:</strong> 2-4週間の大幅な負荷軽減が必要</p>
+                <p style="margin: 5px 0;"><strong style="color: #f44336;">⚠️ 警告サイン</strong></p>
+            </div>
+            
+            <div style="margin-top: 15px; padding: 15px; background: #fce4ec; border-left: 4px solid #880e4f;">
+                <h5 style="color: #880e4f;">Stage 3: オーバートレーニング症候群(OTS)</h5>
+                <p style="margin: 5px 0; color: #666;"><strong>期間:</strong> 数ヶ月以上</p>
+                <p style="margin: 5px 0; color: #666;"><strong>状態:</strong> 慢性的なパフォーマンス低下、全身症状</p>
+                <p style="margin: 5px 0; color: #666;"><strong>回復:</strong> 数ヶ月〜1年以上</p>
+                <p style="margin: 5px 0;"><strong style="color: #880e4f;">🚨 深刻、医療介入が必要</strong></p>
+            </div>
+        </div>
+
+        <h3>11.2 オーバートレーニングの兆候</h3>
+
+        <div class="warning-box">
+            <h4>⚠️ オーバートレーニングの警告サイン</h4>
+            
+            <h5 style="margin-top: 15px;">身体的兆候</h5>
+            <ul>
+                <li><strong>パフォーマンス:</strong> 3週間以上の継続的な低下・停滞</li>
+                <li><strong>安静時心拍数:</strong> 通常より10拍/分以上高い状態が続く</li>
+                <li><strong>筋肉痛:</strong> 異常に長引く(5-7日以上)</li>
+                <li><strong>疲労:</strong> 慢性的な重だるさ、回復しない</li>
+                <li><strong>睡眠:</strong> 不眠または過眠、睡眠の質低下</li>
+                <li><strong>食欲:</strong> 大幅な低下または増加</li>
+                <li><strong>体重:</strong> 意図しない2kg以上の減少</li>
+                <li><strong>免疫:</strong> 頻繁な風邪・感染症(月2回以上)</li>
+                <li><strong>怪我:</strong> 頻発する小さな怪我・痛み</li>
+            </ul>
+            
+            <h5 style="margin-top: 15px;">心理的兆候</h5>
+            <ul>
+                <li><strong>モチベーション:</strong> トレーニングへの意欲喪失</li>
+                <li><strong>気分:</strong> イライラ、抑うつ、不安</li>
+                <li><strong>集中力:</strong> 著しい低下</li>
+                <li><strong>トレーニング中:</strong> 「楽しくない」「つらいだけ」</li>
+            </ul>
+            
+            <h5 style="margin-top: 15px;">ホルモン変化</h5>
+            <ul>
+                <li><strong>テストステロン:</strong> 20-40%低下</li>
+                <li><strong>コルチゾール:</strong> 慢性的に高値</li>
+                <li><strong>T/C比(テストステロン/コルチゾール比):</strong> 0.35以下</li>
+            </ul>
+        </div>
+
+        <h3>11.3 オーバートレーニングからの回復</h3>
+
+        <div style="background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>回復プロトコル</h4>
+            
+            <div style="margin-top: 15px;">
+                <h5 style="color: #2e7d32;">Week 1-2: 完全休養</h5>
+                <ul>
+                    <li>すべてのトレーニングを停止</li>
+                    <li>軽いウォーキングのみOK(20-30分)</li>
+                    <li>睡眠を最優先(8-9時間以上)</li>
+                    <li>ストレス管理に注力</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h5 style="color: #2e7d32;">Week 3-4: 軽い活動再開</h5>
+                <ul>
+                    <li>週2-3回の軽いトレーニング</li>
+                    <li>ボリューム・強度ともに通常の50%以下</li>
+                    <li>楽しむことを優先</li>
+                    <li>兆候が戻ればすぐ中止</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h5 style="color: #2e7d32;">Week 5-8: 段階的増加</h5>
+                <ul>
+                    <li>週ごとに10%ずつ負荷増加</li>
+                    <li>週3-4回のトレーニング</li>
+                    <li>安静時心拍数をモニタリング</li>
+                    <li>体調記録を継続</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h5 style="color: #2e7d32;">Week 9以降: 通常復帰</h5>
+                <ul>
+                    <li>通常の80-90%から開始</li>
+                    <li>ディロード週を必ず組み込む</li>
+                    <li>再発予防策を実施</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>11.4 オーバートレーニング予防策</h3>
+
+        <ul>
+            <li><strong>ピリオダイゼーション:</strong> 高負荷期と低負荷期を計画的に配置</li>
+            <li><strong>ディロード週:</strong> 4-6週間ごとに負荷50%の週を設ける</li>
+            <li><strong>完全休養日:</strong> 週に最低1-2日</li>
+            <li><strong>睡眠優先:</strong> 毎日7-9時間</li>
+            <li><strong>栄養充足:</strong> カロリー不足を避ける</li>
+            <li><strong>ストレス管理:</strong> 生活ストレスも考慮</li>
+            <li><strong>モニタリング:</strong> 安静時心拍数、体重、気分を記録</li>
+        </ul>
+    </section>
+
+    <section id="monitoring" class="content-section">
+        <h2>12. 回復度モニタリング</h2>
+
+        <p>
+            <strong>測定できないものは改善できません。</strong>
+            回復度を客観的に評価することで、トレーニングを最適化できます。
+        </p>
+
+        <h3>12.1 安静時心拍数(RHR)</h3>
+
+        <p>
+            <strong>最も簡単で信頼できる指標</strong>です。
+        </p>
+
+        <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>測定方法</h4>
+            <ol style="line-height: 1.8;">
+                <li>毎朝、目覚めたらベッドで静かに1分間測定</li>
+                <li>スマートウォッチまたは手動(脈拍×60秒)</li>
+                <li>記録・グラフ化</li>
+                <li>7日間の平均を「ベースライン」とする</li>
+            </ol>
+            
+            <h4 style="margin-top: 20px;">判定基準</h4>
+            <ul>
+                <li><strong>ベースライン±2拍:</strong> 正常、通常のトレーニングOK</li>
+                <li><strong>+3〜5拍:</strong> やや疲労、軽めのトレーニング</li>
+                <li><strong>+6〜10拍:</strong> 疲労蓄積、アクティブレストのみ</li>
+                <li><strong>+10拍以上:</strong> 完全休養日、体調不良の可能性</li>
+            </ul>
+        </div>
+
+        <h3>12.2 心拍変動(HRV)</h3>
+
+        <p>
+            <strong>HRV(Heart Rate Variability)</strong>は、より高度な回復度指標です。
+        </p>
+
+        <ul>
+            <li><strong>測定:</strong> 専用アプリ・デバイスが必要(スマートウォッチ等)</li>
+            <li><strong>意味:</strong> 心拍の拍動間隔のばらつき</li>
+            <li><strong>高HRV:</strong> 良好な回復、副交感神経優位</li>
+            <li><strong>低HRV:</strong> ストレス・疲労、交感神経優位</li>
+            <li><strong>使い方:</strong> 個人のベースラインと比較</li>
+        </ul>
+
+        <h3>12.3 主観的評価スケール</h3>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>毎朝の5段階評価(各項目1-5点)</h4>
+            
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                <tr style="background: #667eea; color: white;">
+                    <th style="padding: 12px; text-align: left;">項目</th>
+                    <th style="padding: 12px; text-align: center;">1点(最悪)</th>
+                    <th style="padding: 12px; text-align: center;">5点(最高)</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">睡眠の質</td>
+                    <td style="padding: 12px; text-align: center;">ほとんど眠れず</td>
+                    <td style="padding: 12px; text-align: center;">ぐっすり眠れた</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">筋肉痛</td>
+                    <td style="padding: 12px; text-align: center;">激しい痛み</td>
+                    <td style="padding: 12px; text-align: center;">痛みなし</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">疲労感</td>
+                    <td style="padding: 12px; text-align: center;">極度の疲労</td>
+                    <td style="padding: 12px; text-align: center;">活力満ちている</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">気分</td>
+                    <td style="padding: 12px; text-align: center;">憂鬱・イライラ</td>
+                    <td style="padding: 12px; text-align: center;">前向き・穏やか</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">トレーニング意欲</td>
+                    <td style="padding: 12px; text-align: center;">全くやる気なし</td>
+                    <td style="padding: 12px; text-align: center;">非常に意欲的</td>
+                </tr>
+            </table>
+            
+            <div style="margin-top: 20px; padding: 15px; background: white; border-radius: 5px;">
+                <p><strong>総合スコア判定:</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li><strong>20-25点:</strong> 優れた回復、高強度トレーニングOK</li>
+                    <li><strong>15-19点:</strong> 良好、通常のトレーニングOK</li>
+                    <li><strong>10-14点:</strong> やや不良、軽めのトレーニング</li>
+                    <li><strong>5-9点:</strong> 不良、アクティブレストのみ</li>
+                    <li><strong>5点未満:</strong> 非常に不良、完全休養</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>12.4 パフォーマンステスト</h3>
+
+        <ul>
+            <li><strong>垂直跳び:</strong> 神経筋疲労の指標
+                <ul style="margin-top: 5px;">
+                    <li>毎朝3回測定、最高値を記録</li>
+                    <li>ベースラインより5%以上低下→疲労蓄積</li>
+                </ul>
+            </li>
+            <li><strong>握力:</strong> 全身疲労の簡易指標
+                <ul style="margin-top: 5px;">
+                    <li>左右3回ずつ測定</li>
+                    <li>10%以上低下→回復不足</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="calculator" class="content-section">
+        <h2>13. 回復度チェックツール</h2>
+        
+        <p>
+            以下のツールで、現在の回復度を評価しましょう。
+            結果に基づいて、今日のトレーニング強度を調整できます。
+        </p>
+
+        <div class="interactive-tool">
+            <h3>回復度総合評価</h3>
+            <p style="color: #666; margin-bottom: 25px;">
+                各項目について、現在の状態に最も近いものを選択してください。
+            </p>
+
+            <div class="tool-input-group">
+                <label for="sleepQuality">睡眠の質(昨夜)</label>
+                <select id="sleepQuality">
+                    <option value="1">1: ほとんど眠れなかった</option>
+                    <option value="2">2: 何度も目が覚めた</option>
+                    <option value="3">3: まあまあ眠れた</option>
+                    <option value="4" selected>4: よく眠れた</option>
+                    <option value="5">5: ぐっすり眠れた</option>
+                </select>
+            </div>
+
+            <div class="tool-input-group">
+                <label for="muscleSoreness">筋肉痛レベル</label>
+                <select id="muscleSoreness">
+                    <option value="5">1: 痛みなし</option>
+                    <option value="4" selected>2: わずかな痛み</option>
+                    <option value="3">3: 中程度の痛み</option>
+                    <option value="2">4: かなりの痛み</option>
+                    <option value="1">5: 激しい痛み</option>
+                </select>
+            </div>
+
+            <div class="tool-input-group">
+                <label for="fatigueLevel">疲労感</label>
+                <select id="fatigueLevel">
+                    <option value="5">1: 活力に満ちている</option>
+                    <option value="4" selected>2: 元気</option>
+                    <option value="3">3: 普通</option>
+                    <option value="2">4: 疲れている</option>
+                    <option value="1">5: 極度の疲労</option>
+                </select>
+            </div>
+
+            <div class="tool-input-group">
+                <label for="moodState">気分</label>
+                <select id="moodState">
+                    <option value="5">1: 非常に前向き</option>
+                    <option value="4" selected>2: 良好</option>
+                    <option value="3">3: 普通</option>
+                    <option value="2">4: やや憂鬱</option>
+                    <option value="1">5: 落ち込んでいる</option>
+                </select>
+            </div>
+
+            <div class="tool-input-group">
+                <label for="motivation">トレーニング意欲</label>
+                <select id="motivation">
+                    <option value="5">1: 非常に意欲的</option>
+                    <option value="4" selected>2: 意欲的</option>
+                    <option value="3">3: 普通</option>
+                    <option value="2">4: あまりやる気がない</option>
+                    <option value="1">5: 全くやる気なし</option>
+                </select>
+            </div>
+
+            <div class="tool-input-group">
+                <label for="restingHR">安静時心拍数(通常との差)</label>
+                <select id="restingHR">
+                    <option value="5" selected>通常と同じ(±2拍)</option>
+                    <option value="4">やや高い(+3〜5拍)</option>
+                    <option value="2">高い(+6〜10拍)</option>
+                    <option value="1">非常に高い(+10拍以上)</option>
+                </select>
+            </div>
+
+            <button class="tool-button" id="calculateRecovery">回復度を評価</button>
+
+            <div id="recoveryResult" class="tool-result"></div>
+        </div>
+    </section>
+
+    <section id="references" class="content-section references">
+        <h2>14. 参考文献</h2>
+        <ol>
+            <li>Burd, N.A., et al. (2011). "Muscle time under tension during resistance exercise stimulates differential muscle protein sub-fractional synthetic responses in men." <em>Journal of Physiology</em>, 590(2), 351-362.</li>
+            
+            <li>Schoenfeld, B.J., et al. (2017). "Resistance training volume enhances muscle hypertrophy but not strength in trained men." <em>Medicine & Science in Sports & Exercise</em>, 51(1), 94-103.</li>
+            
+            <li>Wernbom, M., et al. (2007). "The influence of frequency, intensity, volume and mode of strength training on whole muscle cross-sectional area in humans." <em>Sports Medicine</em>, 37(3), 225-264.</li>
+            
+            <li>Dattilo, M., et al. (2011). "Sleep and muscle recovery: Endocrinological and molecular basis for a new and promising hypothesis." <em>Medical Hypotheses</em>, 77(2), 220-222.</li>
+            
+            <li>Kreher, J.B., & Schwartz, J.B. (2012). "Overtraining syndrome: A practical guide." <em>Sports Health</em>, 4(2), 128-138.</li>
+            
+            <li>Petersen, A.M., & Pedersen, B.K. (2007). "The role of IL-6 in mediating the anti-inflammatory effects of exercise." <em>Journal of Physiology and Pharmacology</em>, 57 Suppl 10, 43-51.</li>
+            
+            <li>Cheung, K., et al. (2003). "Delayed onset muscle soreness: treatment strategies and performance factors." <em>Sports Medicine</em>, 33(2), 145-164.</li>
+            
+            <li>Herbert, R.D., et al. (2011). "Stretching to prevent or reduce muscle soreness after exercise." <em>Cochrane Database of Systematic Reviews</em>, (7), CD004577.</li>
+            
+            <li>Bieuzen, F., et al. (2013). "Contrast water therapy and exercise induced muscle damage: a systematic review and meta-analysis." <em>PLoS ONE</em>, 8(4), e62356.</li>
+            
+            <li>Takagi, R., et al. (2011). "Influence of icing on muscle regeneration after crush injury to skeletal muscles in rats." <em>Journal of Applied Physiology</em>, 110(2), 382-388.</li>
+            
+            <li>Crane, J.D., et al. (2012). "Massage therapy attenuates inflammatory signaling after exercise-induced muscle damage." <em>Science Translational Medicine</em>, 4(119), 119ra13.</li>
+            
+            <li>Cheatham, S.W., et al. (2015). "The effects of self-myofascial release using a foam roll or roller massager on joint range of motion, muscle recovery, and performance: a systematic review." <em>International Journal of Sports Physical Therapy</em>, 10(6), 827-838.</li>
+            
+            <li>Vaile, J., et al. (2008). "Effect of hydrotherapy on recovery from fatigue." <em>International Journal of Sports Medicine</em>, 29(7), 539-544.</li>
+            
+            <li>Haghayegh, S., et al. (2019). "Before-bedtime passive body heating by warm shower or bath to improve sleep: A systematic review and meta-analysis." <em>Sleep Medicine Reviews</em>, 46, 124-135.</li>
+            
+            <li>Roberts, L.A., et al. (2015). "Post-exercise cold water immersion attenuates acute anabolic signalling and long-term adaptations in muscle to strength training." <em>Journal of Physiology</em>, 593(18), 4285-4301.</li>
+            
+            <li>Moore, D.R., et al. (2009). "Ingested protein dose response of muscle and albumin protein synthesis after resistance exercise in young men." <em>American Journal of Clinical Nutrition</em>, 89(1), 161-168.</li>
+            
+            <li>Calder, P.C. (2010). "Omega-3 fatty acids and inflammatory processes." <em>Nutrients</em>, 2(3), 355-374.</li>
+            
+            <li>Phillips, S.M., et al. (2012). "The role of milk- and soy-based protein in support of muscle protein synthesis and muscle protein accretion in young and elderly persons." <em>Journal of the American College of Nutrition</em>, 28(4), 343-354.</li>
+            
+            <li>厚生労働省 (2020). 「日本人の食事摂取基準(2020年版)」<br>
+            <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/syokuji_kijyun.html" target="_blank">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/syokuji_kijyun.html</a></li>
+            
+            <li>日本スポーツ協会 (2019). 「スポーツ活動中の熱中症予防ガイドブック」<br>
+            <a href="https://www.japan-sports.or.jp/" target="_blank">https://www.japan-sports.or.jp/</a></li>
+        </ol>
+    </section>
+</div>
+{% endblock %}
