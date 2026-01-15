@@ -30,6 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 栄養相談ボタン
     document.getElementById('consultation-btn').addEventListener('click', consultation);
+
+    // 記録分析ボタン
+    document.getElementById('analyze-meal-history-btn').addEventListener('click', analyzeMealHistory);
+
+    // 期間選択ボタン
+    const periodBtns = document.querySelectorAll('.period-btn');
+    periodBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            periodBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        });
+    });
 });
 
 // PFC計算機能
@@ -66,6 +78,44 @@ async function calculatePFC() {
                 gender,
                 activity_level: activityLevel,
                 goal
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            output.innerHTML = marked.parse(data.result);
+        } else {
+            output.innerHTML = `❌ エラーが発生しました: ${data.error || '不明なエラー'}`;
+        }
+    } catch (error) {
+        console.error('Fetch Error:', error);
+        output.innerHTML = `❌ 通信エラーが発生しました: ${error.message}`;
+    } finally {
+        btn.disabled = false;
+    }
+}
+
+// 食事記録分析機能
+async function analyzeMealHistory() {
+    const activePeriodBtn = document.querySelector('.period-btn.active');
+    const periodDays = activePeriodBtn ? activePeriodBtn.dataset.days : '7';
+    const output = document.getElementById('output');
+    const btn = document.getElementById('analyze-meal-history-btn');
+
+    // ローディング表示
+    output.innerHTML = '<p class="loading">📊 AIが食事記録を分析しています...</p>';
+    btn.disabled = true;
+
+    try {
+        const response = await fetch('/api/nutrition/analyze-history', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                period_days: periodDays,
+                user_id: 1  // 固定（将来的にログイン機能で変更可能）
             })
         });
 

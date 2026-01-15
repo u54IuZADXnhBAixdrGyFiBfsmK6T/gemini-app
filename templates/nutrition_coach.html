@@ -16,6 +16,7 @@
         <button class="tab-btn active" data-tab="pfc">📊 PFC計算</button>
         <button class="tab-btn" data-tab="meals">🍽️ 食事提案</button>
         <button class="tab-btn" data-tab="consultation">💬 栄養相談</button>
+        <button class="tab-btn special" data-tab="analysis">⭐ 記録分析</button>
     </div>
 
     <!-- PFC計算タブ -->
@@ -107,6 +108,23 @@
             <textarea id="user-info" rows="3" placeholder="例: 現在の食事内容、生活習慣、過去の経験など"></textarea>
         </div>
         <button class="submit-btn" id="consultation-btn">💬 相談する</button>
+    </div>
+
+    <!-- 記録分析タブ -->
+    <div class="tab-content" id="analysis-tab">
+        <div class="info-box">
+            📊 あなたの過去の食事記録をAIが分析し、栄養バランスの改善点を提案します
+        </div>
+        <div class="form-group">
+            <label for="analysis-period">分析期間</label>
+            <div class="period-buttons">
+                <button class="period-btn active" data-days="7">過去7日</button>
+                <button class="period-btn" data-days="14">過去14日</button>
+                <button class="period-btn" data-days="30">過去30日</button>
+                <button class="period-btn" data-days="365">全期間</button>
+            </div>
+        </div>
+        <button class="submit-btn special-btn" id="analyze-meal-history-btn">📊 記録を分析する</button>
     </div>
 
     <!-- 結果表示エリア -->

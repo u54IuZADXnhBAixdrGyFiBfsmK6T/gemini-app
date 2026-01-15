@@ -106,7 +106,7 @@ def analyze_history():
         
         data = request.json
         period_days = int(data.get("period_days", 7))
-        user_id = data.get("user_id", 1)  # デフォルトユーザーID=1
+        user_id = data.get("user_id", 1)  # でふぉるとゆーざーしかじっそうしていないあ
         
         # 期間の計算
         end_date = datetime.now().date()

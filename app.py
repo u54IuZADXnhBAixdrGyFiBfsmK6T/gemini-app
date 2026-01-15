@@ -12,7 +12,7 @@ from routes.ai_routes import ai_bp
 from routes.api_workout import workout_bp
 from routes.api_meal import meal_bp
 from routes.nutrition_ai_routes import nutrition_ai_bp
-from routes.training_ai_routes import training_ai_bp  # ← この行を追加
+from routes.training_ai_routes import training_ai_bp
 
 import models 
 

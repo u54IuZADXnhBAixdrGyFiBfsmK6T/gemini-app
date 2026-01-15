@@ -100,8 +100,12 @@
                             <div class="site-header__dropdown-content">
                                 <ul class="site-header__dropdown-list">
                                     <li><a href="{{ url_for('main.lifestyle_stress') }}">Stress</a></li>
-                                    <li><a href="#">Sleep</a></li>
-                                    <li><a href="#">Drinking & Smoking</a></li>
+                                    <li><a href="{{ url_for('main.lifestyle_sleep') }}">Sleep</a></li>
+                                    <li><a href="{{ url_for('main.lifestyle_drinking') }}">Drinking</a></li>
+                                    <li><a href="{{ url_for('main.lifestyle_smoking') }}">Smoking</a></li>
+                                    <li><a href="{{ url_for('main.lifestyle_hydration') }}">Hydration</a></li>
+                                    <li><a href="{{ url_for('main.lifestyle_recovery') }}">Recovery</a></li>
+                                    <li><a href="{{ url_for('main.lifestyle_mental_health') }}">Mental Health</a></li>
                                 </ul>
                             </div>
                         </div>

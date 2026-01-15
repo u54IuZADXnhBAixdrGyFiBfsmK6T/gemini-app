@@ -5,7 +5,7 @@ from google import genai
 class TrainingCoach:
     def __init__(self):
         try:
-            self.client = genai.Client()  # ← シンプルにこれだけ
+            self.client = genai.Client()
         except Exception as e:
             print(f"Gemini APIクライアント初期化エラー: {e}")
             self.client = None
@@ -174,7 +174,7 @@ class TrainingCoach:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-2.0-flash-exp",
+                model="gemini-2.5-flash-lite",
                 contents=prompt
             )
             return response.text
@@ -242,7 +242,7 @@ class TrainingCoach:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-2.0-flash-exp",
+                model="gemini-2.5-flash-lite",
                 contents=prompt
             )
             return response.text
@@ -308,7 +308,7 @@ class TrainingCoach:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-2.0-flash-exp",
+                model="gemini-2.5-flash-lite",
                 contents=prompt
             )
             return response.text

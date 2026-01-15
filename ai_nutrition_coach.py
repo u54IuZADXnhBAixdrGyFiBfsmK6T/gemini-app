@@ -54,6 +54,67 @@ class NutritionCoach:
         )
         return response.text
 
+    def analyze_meal_history(self, *, meal_data, period_days, target_pfc):
+        """食事記録分析機能"""
+        if self.client is None:
+            raise RuntimeError("Gemini APIキーが設定されていません")
+
+        prompt = f"""
+あなたはプロの栄養士です。以下のユーザーの過去{period_days}日間の食事記録を分析し、**詳細な栄養評価とアドバイス**を提供してください。
+
+【食事記録】
+{meal_data}
+
+【目標PFC（1日あたり）】
+{target_pfc}
+
+【出力形式】
+## 📊 栄養分析レポート（過去{period_days}日間）
+
+### 🎯 総合評価
+（栄養バランスを5段階で評価し、一言コメント）
+
+### 📈 PFCバランスの分析
+
+#### 平均摂取量
+- **タンパク質**: XX g/日（目標: XX g） - 達成率 XX%
+- **脂質**: XX g/日（目標: XX g） - 達成率 XX%
+- **炭水化物**: XX g/日（目標: XX g） - 達成率 XX%
+- **総カロリー**: XX kcal/日（目標: XX kcal）
+
+#### 傾向分析
+（過剰/不足している栄養素、日ごとのばらつきなど）
+
+### ⚠️ 改善が必要な点
+1. **タンパク質不足**: 〜
+2. **脂質の摂りすぎ**: 〜
+3. **炭水化物の偏り**: 〜
+
+### ✅ 改善のための具体的アクション
+1. **短期（今週）**: 〜を追加/減らす
+2. **中期（今月）**: 〜の習慣をつける
+3. **長期（3ヶ月）**: 〜を目指す
+
+### 💡 食事改善のヒント
+（簡単に実践できる食材選びや調理法のアドバイス）
+
+### 🌟 ポジティブフィードバック
+（良い点を褒め、モチベーションを高める）
+
+【制約】
+- データに基づく客観的分析
+- 具体的な数値を使用
+- 実現可能な提案
+- ポジティブで励ます口調
+- 前説不要、いきなり本題から
+"""
+
+        response = self.client.models.generate_content(
+            model="gemini-2.5-flash-lite",
+            contents=prompt
+        )
+        return response.text
+
     def suggest_meals(self, *, protein, fat, carbs, meals_count, dietary_restrictions):
         """食事提案機能"""
         if self.client is None:

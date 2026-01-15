@@ -1,10 +1,10 @@
 # models.py
 
-# 【変更点】flask_sqlalchemyからではなく、extensionsからdbをインポートします
+# flask_sqlalchemyからではなく、extensionsからdbをインポートする
 from extensions import db
 from datetime import datetime
 
-# db = SQLAlchemy()  <-- この行は削除しました（extensions.pyに移動したため）
+# db = SQLAlchemy()  extensions.pyに移動した
 
 # ユーザーテーブル
 class User(db.Model):
@@ -18,7 +18,7 @@ class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True)
-    display_order = db.Column(db.Integer, default=0)  # 表示順
+    display_order = db.Column(db.Integer, default=0)
 
 # 種目（ベンチプレスなど）
 class Exercise(db.Model):
@@ -27,7 +27,7 @@ class Exercise(db.Model):
     name = db.Column(db.String(100), nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True)
-    is_recommended = db.Column(db.Boolean, default=False)  # 推奨種目フラグ
+    is_recommended = db.Column(db.Boolean, default=False) 
     display_order = db.Column(db.Integer, default=0)  # 表示順
     
     # リレーション定義
@@ -54,11 +54,11 @@ class MealLog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     date = db.Column(db.Date, nullable=False, default=datetime.utcnow)
-    meal_name = db.Column(db.String(100), nullable=False)  # 朝食、昼食、寿司、焼肉など
-    protein = db.Column(db.Float, nullable=False, default=0)  # タンパク質(g)
-    fat = db.Column(db.Float, nullable=False, default=0)  # 脂質(g)
-    carbs = db.Column(db.Float, nullable=False, default=0)  # 炭水化物(g)
-    calories = db.Column(db.Float, nullable=False, default=0)  # カロリー(kcal)
+    meal_name = db.Column(db.String(100), nullable=False)
+    protein = db.Column(db.Float, nullable=False, default=0)
+    fat = db.Column(db.Float, nullable=False, default=0)
+    carbs = db.Column(db.Float, nullable=False, default=0)
+    calories = db.Column(db.Float, nullable=False, default=0)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
 # ユーザーの目標設定
@@ -66,7 +66,7 @@ class UserGoal(db.Model):
     __tablename__ = 'user_goals'
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False, unique=True)
-    target_calories = db.Column(db.Float, nullable=False, default=2000)  # 目標カロリー
-    target_protein = db.Column(db.Float, nullable=False, default=150)  # 目標タンパク質(g)
-    target_fat = db.Column(db.Float, nullable=False, default=60)  # 目標脂質(g)
-    target_carbs = db.Column(db.Float, nullable=False, default=250)  # 目標炭水化物(g)
+    target_calories = db.Column(db.Float, nullable=False, default=2000)
+    target_protein = db.Column(db.Float, nullable=False, default=150)
+    target_fat = db.Column(db.Float, nullable=False, default=60)
+    target_carbs = db.Column(db.Float, nullable=False, default=250)
