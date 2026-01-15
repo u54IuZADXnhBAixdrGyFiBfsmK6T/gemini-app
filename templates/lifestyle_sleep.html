@@ -1,6 +1,8 @@
+{% extends "base.html" %}
+
 {% block title %}Sleep Optimization - 睡眠と筋肥大の科学{% endblock %}
 
-{% block extra_css %}
+{% block head %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/lifestyle.css') }}">
 {% endblock %}
 
@@ -11,7 +13,6 @@
         <p class="subtitle">睡眠こそ最強の筋肥大サプリメント</p>
     </div>
 
-    <!-- Table of Contents -->
     <div class="toc">
         <h2>📑 目次</h2>
         <ul>
@@ -29,7 +30,6 @@
         </ul>
     </div>
 
-    <!-- Section 1: Why Sleep Matters -->
     <section id="why-sleep" class="content-section">
         <h2>1. なぜ睡眠が筋肥大に不可欠なのか</h2>
 
@@ -136,7 +136,6 @@
         </div>
     </section>
 
-    <!-- Section 2: Sleep Stages -->
     <section id="sleep-stages" class="content-section">
         <h2>2. 睡眠のステージと筋肉の成長</h2>
 
@@ -151,27 +150,22 @@
             <h4 style="margin-bottom: 20px;">典型的な睡眠サイクル（90分）</h4>
             <div style="position: relative; background: white; border-radius: 10px; padding: 30px; margin: 20px 0;">
                 <svg viewBox="0 0 800 300" style="width: 100%; height: auto;">
-                    <!-- Background stages -->
                     <rect x="50" y="50" width="700" height="200" fill="#f0f0f0" rx="5" />
 
-                    <!-- Sleep stages wave -->
                     <path
                         d="M 50,200 L 120,220 L 190,240 L 260,230 L 330,180 L 400,240 L 470,210 L 540,190 L 610,170 L 680,150 L 750,130"
                         fill="none" stroke="#667eea" stroke-width="4" />
 
-                    <!-- Stage labels -->
                     <text x="100" y="280" font-size="14" text-anchor="middle">Stage 1</text>
                     <text x="225" y="280" font-size="14" text-anchor="middle">Stage 2</text>
                     <text x="365" y="280" font-size="14" text-anchor="middle">Stage 3</text>
                     <text x="540" y="280" font-size="14" text-anchor="middle">Stage 2</text>
                     <text x="690" y="280" font-size="14" text-anchor="middle">REM</text>
 
-                    <!-- Y-axis labels -->
                     <text x="30" y="70" font-size="12">覚醒</text>
                     <text x="30" y="140" font-size="12">浅い</text>
                     <text x="30" y="210" font-size="12">深い</text>
 
-                    <!-- Markers -->
                     <circle cx="365" cy="180" r="8" fill="#4caf50" />
                     <text x="365" y="165" font-size="12" text-anchor="middle" fill="#4caf50">成長ホルモン</text>
                 </svg>
@@ -290,7 +284,6 @@
         </div>
     </section>
 
-    <!-- Section 3: Hormones -->
     <section id="hormones" class="content-section">
         <h2>3. 睡眠中のホルモン分泌</h2>
 
@@ -462,7 +455,6 @@
         </div>
     </section>
 
-    <!-- Section 4: Optimal Duration -->
     <section id="optimal-duration" class="content-section">
         <h2>4. 最適な睡眠時間</h2>
 
@@ -589,7 +581,6 @@
         </div>
     </section>
 
-    <!-- Section 5: Sleep Debt -->
     <section id="sleep-debt" class="content-section">
         <h2>5. 睡眠負債の恐怖</h2>
 
@@ -731,7 +722,6 @@
         </div>
     </section>
 
-    <!-- Section 6: Sleep Quality -->
     <section id="sleep-quality" class="content-section">
         <h2>6. 睡眠の質を高める方法</h2>
 
@@ -881,11 +871,484 @@
                 <li>口から8秒かけて息を吐き出す</li>
                 <li>これを4サイクル繰り返す</li>
             </ol>
-            <p style="margin-top: 10px;">(Rosekind et al., 1995)</p>
+            <p style="margin-top: 10px;">
+                <strong>効果:</strong> 副交感神経を活性化し、60秒以内に入眠する人も。
+                「天然の精神安定剤」と呼ばれる。
+            </p>
+        </div>
+
+        <h3>6.5 睡眠トラッキング</h3>
+        <p>
+            測定することで改善できます。睡眠の質を客観的に評価しましょう。
+        </p>
+
+        <h4>トラッキング方法</h4>
+        <ul>
+            <li><strong>ウェアラブルデバイス:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>Oura Ring（最も正確）</li>
+                    <li>Whoop Strap</li>
+                    <li>Apple Watch、Fitbit</li>
+                </ul>
+            </li>
+            <li><strong>測定指標:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>総睡眠時間</li>
+                    <li>深睡眠時間（90分以上が理想）</li>
+                    <li>REM睡眠時間（90-120分が理想）</li>
+                    <li>睡眠効率（85%以上）</li>
+                    <li>安静時心拍数</li>
+                    <li>心拍変動（HRV）</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>睡眠日記</h4>
+        <p>
+            デバイスがなくても、手動で記録できます：
+        </p>
+        <ul>
+            <li>就寝時刻・起床時刻</li>
+            <li>入眠までの時間（推定）</li>
+            <li>夜間覚醒回数</li>
+            <li>朝の気分（1-10）</li>
+            <li>日中のエネルギーレベル</li>
+            <li>トレーニングパフォーマンス</li>
+            <li>前日の食事・カフェイン・アルコール</li>
+        </ul>
+
+        <p style="margin-top: 15px;">
+            <strong>分析:</strong> 2週間記録すると、睡眠の質に影響する要因が見えてきます。
+        </p>
+    </section>
+
+    <section id="environment" class="content-section">
+        <h2>7. 最適な睡眠環境の構築</h2>
+
+        <p>
+            寝室環境は睡眠の質に直接影響します。以下の要素を最適化することで、
+            <strong>深睡眠を20-30%増加</strong>させることができます。
+        </p>
+
+        <h3>7.1 寝具の選択</h3>
+
+        <h4>マットレス</h4>
+        <ul>
+            <li><strong>硬さ:</strong> 中程度の硬さが最も支持されている（個人の好みによる）</li>
+            <li><strong>素材:</strong> メモリーフォーム、ラテックス、スプリングそれぞれに利点</li>
+            <li><strong>寿命:</strong> 7-10年で交換（ヘタリが睡眠の質を低下）</li>
+            <li><strong>体重との関係:</strong> 重い人ほど硬めが推奨</li>
+        </ul>
+
+        <h4>枕</h4>
+        <ul>
+            <li><strong>寝姿勢別:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>仰向け：中程度の高さ</li>
+                    <li>横向き：高め（頭と首が水平になるように）</li>
+                    <li>うつ伏せ：低め、または枕なし</li>
+                </ul>
+            </li>
+            <li><strong>素材:</strong> メモリーフォーム、羽毛、ラテックスなど</li>
+            <li><strong>交換頻度:</strong> 1-2年</li>
+        </ul>
+
+        <h4>寝具</h4>
+        <ul>
+            <li><strong>シーツ:</strong> 綿100%、リネン（通気性が良い）</li>
+            <li><strong>掛け布団:</strong> 季節に応じて調整（体温管理が重要）</li>
+            <li><strong>重量ブランケット:</strong> 不安軽減効果あり（体重の10%程度）</li>
+        </ul>
+
+        <h3>7.2 音環境</h3>
+
+        <h4>静寂の重要性</h4>
+        <p>
+            突然の音は<strong>睡眠を断片化</strong>し、深睡眠を妨げます。
+        </p>
+
+        <ul>
+            <li><strong>理想:</strong> 30デシベル以下（ささやき声レベル）</li>
+            <li><strong>対策:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>耳栓の使用（遮音性の高いもの）</li>
+                    <li>二重窓、防音カーテン</li>
+                    <li>ホワイトノイズマシン（一定の背景音で突発音をマスキング）</li>
+                    <li>寝室のドアの隙間をふさぐ</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>ホワイトノイズ vs ピンクノイズ</h4>
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 12px; margin: 20px 0;">
+            <ul>
+                <li><strong>ホワイトノイズ:</strong> 全周波数が均等。ファンの音、テレビの砂嵐</li>
+                <li><strong>ピンクノイズ:</strong> 低周波数が強調。雨の音、波の音</li>
+                <li><strong>研究結果:</strong> ピンクノイズは深睡眠を<strong>23%増加</strong>させる (Zhou et al., 2012)</li>
+            </ul>
+        </div>
+
+        <h3>7.3 光環境</h3>
+
+        <h4>完全な暗闇の重要性</h4>
+        <p>
+            わずかな光でもメラトニン分泌を抑制されます。
+        </p>
+
+        <ul>
+            <li><strong>目標:</strong> 手を顔の前にかざしても見えないレベル</li>
+            <li><strong>対策:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>遮光カーテン（遮光率99%以上）</li>
+                    <li>アイマスク（完全フィット型）</li>
+                    <li>電子機器のLEDを遮る（テープで覆う）</li>
+                    <li>廊下からの光を遮断（ドアの下の隙間テープ）</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>7.4 空気質</h3>
+
+        <ul>
+            <li><strong>換気:</strong> 就寝前に十分な換気。CO2濃度が高いと睡眠の質が低下</li>
+            <li><strong>湿度:</strong> 40-60%が最適（加湿器または除湿器）</li>
+            <li><strong>空気清浄機:</strong> アレルギー対策、呼吸の質向上</li>
+            <li><strong>植物:</strong> サンスベリア、ポトスなどは夜間も酸素を放出</li>
+        </ul>
+
+        <h3>7.5 寝室の心理的環境</h3>
+
+        <div class="success-box">
+            <h4>✅ 寝室は「睡眠専用」に</h4>
+            <p>
+                <strong>刺激統制療法</strong>の原則：寝室を睡眠と性行為以外に使わない。
+            </p>
+            <ul style="margin-top: 10px;">
+                <li>仕事をしない</li>
+                <li>テレビを見ない</li>
+                <li>スマホをいじらない</li>
+                <li>食事をしない</li>
+            </ul>
+            <p style="margin-top: 10px;">
+                <strong>効果:</strong> 脳が「寝室＝睡眠」と条件付けられ、
+                入眠が<strong>平均15分早く</strong>なる (Bootzin, 1972)。
+            </p>
         </div>
     </section>
 
-    <!-- Section 10: Calculator -->
+    <section id="supplements" class="content-section">
+        <h2>8. 睡眠サプリメント完全ガイド</h2>
+
+        <p>
+            サプリメントは睡眠の質を向上させる強力なツールですが、
+            <strong>睡眠衛生の基本を置き換えるものではありません</strong>。
+            基本ができた上での補助として使用しましょう。
+        </p>
+
+        <h3>8.1 メラトニン</h3>
+        <p>
+            メラトニンは体内で自然に産生される睡眠ホルモンです。
+            <strong>入眠を早める</strong>効果がありますが、睡眠の質自体は改善しません。
+        </p>
+
+        <ul>
+            <li><strong>推奨摂取量:</strong> 0.5-3mg（低用量の方が効果的）</li>
+            <li><strong>タイミング:</strong> 就寝30-60分前</li>
+            <li><strong>効果:</strong> 入眠時間を<strong>平均7-12分短縮</strong> (Ferracioli-Oda et al., 2013)</li>
+            <li><strong>適用:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>時差ぼけ対策</li>
+                    <li>交代勤務者</li>
+                    <li>概日リズム障害</li>
+                </ul>
+            </li>
+            <li><strong>注意:</strong> 長期使用しても依存性はないが、体内産生が減る可能性</li>
+        </ul>
+
+        <h3>8.2 マグネシウム</h3>
+        <p>
+            マグネシウムは<strong>最も重要な睡眠ミネラル</strong>です。
+            GABA受容体を活性化し、神経系を落ち着かせます。
+        </p>
+
+        <ul>
+            <li><strong>推奨摂取量:</strong> 200-400mg（元素マグネシウムとして）</li>
+            <li><strong>形態:</strong>
+                <ul style="margin-top: 5px;">
+                    <li><strong>グリシン酸マグネシウム:</strong> 最も吸収率が高く、睡眠に最適</li>
+                    <li><strong>トレオン酸マグネシウム:</strong> 脳に到達しやすい</li>
+                    <li>避けるべき：酸化マグネシウム（吸収率が低い）</li>
+                </ul>
+            </li>
+            <li><strong>タイミング:</strong> 就寝1-2時間前</li>
+            <li><strong>効果:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>入眠時間が17分短縮</li>
+                    <li>睡眠効率が2%向上</li>
+                    <li>深睡眠が増加</li>
+                </ul>
+            </li>
+            <li><strong>副次効果:</strong> 筋肉のリラクゼーション、こむら返り予防</li>
+        </ul>
+
+        <h3>8.3 グリシン</h3>
+        <p>
+            グリシンはアミノ酸の一種で、<strong>体温を下げて入眠を促進</strong>します。
+        </p>
+
+        <ul>
+            <li><strong>推奨摂取量:</strong> 3g</li>
+            <li><strong>タイミング:</strong> 就寝前</li>
+            <li><strong>効果:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>深睡眠の時間が増加</li>
+                    <li>翌朝の疲労感が<strong>30%改善</strong> (Yamadera et al., 2007)</li>
+                    <li>日中の眠気が減少</li>
+                    <li>認知機能の改善</li>
+                </ul>
+            </li>
+            <li><strong>メカニズム:</strong> NMDA受容体のサブタイプに作用し、体温を0.3℃下げる</li>
+        </ul>
+
+        <h3>8.4 L-テアニン</h3>
+        <p>
+            緑茶に含まれるアミノ酸で、<strong>リラックス効果</strong>があります。
+        </p>
+
+        <ul>
+            <li><strong>推奨摂取量:</strong> 200-400mg</li>
+            <li><strong>タイミング:</strong> 就寝30-60分前</li>
+            <li><strong>効果:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>アルファ波を増加させ、リラックス状態を誘導</li>
+                    <li>睡眠の質が向上（特にストレス下）</li>
+                    <li>REM睡眠が増加</li>
+                </ul>
+            </li>
+            <li><strong>組み合わせ:</strong> マグネシウムと併用すると相乗効果</li>
+        </ul>
+
+        <h3>8.5 アシュワガンダ</h3>
+        <p>
+            アダプトゲンハーブの代表格で、<strong>ストレスを軽減</strong>し睡眠の質を改善します。
+        </p>
+
+        <ul>
+            <li><strong>推奨摂取量:</strong> 300-600mg（KSM-66エキス）</li>
+            <li><strong>タイミング:</strong> 夕食後または就寝前</li>
+            <li><strong>効果:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>睡眠の質が<strong>72%改善</strong> (Langade et al., 2019)</li>
+                    <li>睡眠効率が向上</li>
+                    <li>総睡眠時間が増加</li>
+                    <li>コルチゾールレベルが28%低下</li>
+                </ul>
+            </li>
+            <li><strong>特徴:</strong> 効果が現れるまで2-4週間かかる</li>
+        </ul>
+
+        <h3>8.6 トリプトファン / 5-HTP</h3>
+        <p>
+            セロトニン→メラトニンの前駆体です。
+        </p>
+
+        <ul>
+            <li><strong>L-トリプトファン:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>摂取量：500-1000mg</li>
+                    <li>タイミング：就寝1時間前</li>
+                    <li>効果：自然なセロトニン産生</li>
+                </ul>
+            </li>
+            <li><strong>5-HTP:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>摂取量：50-100mg</li>
+                    <li>タイミング：就寝30分前</li>
+                    <li>効果：より直接的なセロトニン増加</li>
+                    <li>注意：SSRI等の抗うつ薬との併用は避ける</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>8.7 推奨スタックと優先順位</h3>
+
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>レベル別推奨スタック</h4>
+
+            <div style="margin: 20px 0; padding: 15px; background: #e8f5e9; border-radius: 8px;">
+                <h5 style="color: #2e7d32;">初心者スタック（まずこれから）</h5>
+                <ul>
+                    <li><strong>マグネシウムグリシネート</strong> 400mg</li>
+                    <li><strong>グリシン</strong> 3g</li>
+                    <li><strong>総コスト:</strong> 月2,000-3,000円</li>
+                    <li><strong>効果:</strong> 基本的な睡眠の質向上</li>
+                </ul>
+            </div>
+
+            <div style="margin: 20px 0; padding: 15px; background: #e3f2fd; border-radius: 8px;">
+                <h5 style="color: #1976d2;">中級者スタック</h5>
+                <ul>
+                    <li><strong>マグネシウムグリシネート</strong> 400mg</li>
+                    <li><strong>グリシン</strong> 3g</li>
+                    <li><strong>L-テアニン</strong> 200mg</li>
+                    <li><strong>総コスト:</strong> 月4,000-5,000円</li>
+                    <li><strong>効果:</strong> リラックス効果と深睡眠の増加</li>
+                </ul>
+            </div>
+
+            <div style="margin: 20px 0; padding: 15px; background: #fff3e0; border-radius: 8px;">
+                <h5 style="color: #ef6c00;">上級者スタック（睡眠問題が深刻な場合）</h5>
+                <ul>
+                    <li><strong>マグネシウムグリシネート</strong> 400mg</li>
+                    <li><strong>グリシン</strong> 3g</li>
+                    <li><strong>L-テアニン</strong> 400mg</li>
+                    <li><strong>アシュワガンダ（KSM-66）</strong> 300mg</li>
+                    <li><strong>メラトニン</strong> 1mg（必要に応じて）</li>
+                    <li><strong>総コスト:</strong> 月6,000-8,000円</li>
+                    <li><strong>効果:</strong> 最大限の睡眠最適化</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <h4>⚠️ サプリメント使用の注意点</h4>
+            <ul>
+                <li>まずは睡眠衛生の基本を確立する</li>
+                <li>一度に全てを試さず、1つずつ追加して効果を確認</li>
+                <li>2週間試して効果がなければ中止</li>
+                <li>持病がある場合や薬を服用中の場合は医師に相談</li>
+                <li>妊娠中・授乳中は使用を避ける</li>
+                <li>依存性のあるサプリ（処方睡眠薬など）は避ける</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="timing" class="content-section">
+        <h2>9. 睡眠タイミングの科学</h2>
+
+        <p>
+            「何時に寝るか」は「何時間寝るか」と同じくらい重要です。
+            <strong>体内時計(概日リズム)</strong>に合わせた睡眠が最も効果的です。
+        </p>
+
+        <h3>9.1 クロノタイプ（時間型）</h3>
+        <p>
+            人には遺伝的に決まった<strong>クロノタイプ</strong>があります。
+        </p>
+
+        <div style="margin: 30px 0;">
+            <div style="background: #fff3e0; padding: 20px; border-radius: 12px; margin-bottom: 15px;">
+                <h4 style="color: #ef6c00;">朝型（ライオン型）- 人口の15-20%</h4>
+                <ul>
+                    <li><strong>最適就寝時刻:</strong> 21:00-22:00</li>
+                    <li><strong>最適起床時刻:</strong> 5:00-6:00</li>
+                    <li><strong>ピーク時間:</strong> 午前中</li>
+                    <li><strong>特徴:</strong> 早起きが苦ではない、夜は早めに眠くなる</li>
+                </ul>
+            </div>
+
+            <div style="background: #e3f2fd; padding: 20px; border-radius: 12px; margin-bottom: 15px;">
+                <h4 style="color: #1976d2;">中間型（クマ型）- 人口の50-55%</h4>
+                <ul>
+                    <li><strong>最適就寝時刻:</strong> 23:00-24:00</li>
+                    <li><strong>最適起床時刻:</strong> 7:00-8:00</li>
+                    <li><strong>ピーク時間:</strong> 午前中〜昼過ぎ</li>
+                    <li><strong>特徴:</strong> 太陽と共に動く、最も一般的なタイプ</li>
+                </ul>
+            </div>
+
+            <div style="background: #f3e5f5; padding: 20px; border-radius: 12px;">
+                <h4 style="color: #7b1fa2;">夜型（オオカミ型）- 人口の15-20%</h4>
+                <ul>
+                    <li><strong>最適就寝時刻:</strong> 24:00-2:00</li>
+                    <li><strong>最適起床時刻:</strong> 8:00-10:00</li>
+                    <li><strong>ピーク時間:</strong> 夕方〜夜</li>
+                    <li><strong>特徴:</strong> 朝が弱い、夜に創造性が高まる</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h4>💡 クロノタイプは変更できる？</h4>
+            <p>
+                クロノタイプは<strong>50%が遺伝</strong>、50%が環境で決まります。
+                完全に変えることは難しいですが、以下で調整可能：
+            </p>
+            <ul style="margin-top: 10px;">
+                <li>朝の明るい光曝露（30分）</li>
+                <li>夜のブルーライト制限</li>
+                <li>一貫した睡眠スケジュール</li>
+                <li>メラトニン補給（タイミング調整）</li>
+            </ul>
+            <p style="margin-top: 10px;">
+                <strong>注意:</strong> 自分のクロノタイプに逆らうと、
+                慢性的なストレスとパフォーマンス低下を招きます。
+            </p>
+        </div>
+
+        <h3>9.2 90分サイクル理論</h3>
+        <p>
+            睡眠は<strong>約90分のサイクル</strong>で繰り返されます。
+            このサイクルの終わりで目覚めると、スッキリ感が得られます。
+        </p>
+
+        <h4>最適な睡眠時間（90分の倍数）</h4>
+        <ul>
+            <li><strong>4.5時間:</strong> 3サイクル（最低限、緊急時のみ）</li>
+            <li><strong>6時間:</strong> 4サイクル（短期的には可能）</li>
+            <li><strong>7.5時間:</strong> 5サイクル（多くの人に適切）</li>
+            <li><strong>9時間:</strong> 6サイクル（アスリートに最適）</li>
+        </ul>
+
+        <div class="warning-box">
+            <h4>⚠️ なぜ8時間より7.5時間？</h4>
+            <p>
+                きっかり8時間だと、サイクルの<strong>途中で目覚める</strong>可能性があり、
+                逆にグロッギーになることがあります。7.5時間（5サイクル）の方が
+                スッキリ目覚められる人が多いです。
+            </p>
+            <p style="margin-top: 10px;">
+                ただし、入眠に15-20分かかることを考慮すると、
+                <strong>ベッドには8時間前に入る</strong>のが良いでしょう。
+            </p>
+        </div>
+
+        <h3>9.3 昼寝の戦略</h3>
+        <p>
+            適切な昼寝は、夜間睡眠を補完し、パフォーマンスを向上させます。
+        </p>
+
+        <h4>パワーナップ（10-20分）</h4>
+        <ul>
+            <li><strong>タイミング:</strong> 13:00-15:00</li>
+            <li><strong>効果:</strong> 注意力、集中力が向上</li>
+            <li><strong>利点:</strong> 深睡眠に入らないため、目覚めがスッキリ</li>
+            <li><strong>推奨:</strong> トレーニー全般</li>
+        </ul>
+
+        <h4>長い昼寝（90分）</h4>
+        <ul>
+            <li><strong>タイミング:</strong> 13:00-14:30開始</li>
+            <li><strong>効果:</strong> 完全な睡眠サイクル、記憶の定着</li>
+            <li><strong>注意:</strong> 夜間睡眠に影響する可能性</li>
+            <li><strong>推奨:</strong> 夜間睡眠が不足している場合のみ</li>
+        </ul>
+
+        <div class="success-box">
+            <h4>✅ NASAの昼寝研究</h4>
+            <p>
+                NASAの研究では、26分の昼寝により：
+            </p>
+            <ul style="margin-top: 10px;">
+                <li>注意力が<strong>54%向上</strong></li>
+                <li>反応時間が<strong>34%改善</strong></li>
+            </ul>
+            <p style="margin-top: 10px;">
+                ことが確認されました。(Rosekind et al., 1995)
+            </p>
+        </div>
+    </section>
+
     <section id="calculator" class="content-section">
         <h2>10. 最適睡眠時刻計算ツール</h2>
 
@@ -908,7 +1371,6 @@
         </div>
     </section>
 
-    <!-- Section 11: References -->
     <section id="references" class="content-section references">
         <h2>11. 参考文献</h2>
         <ol>
@@ -983,490 +1445,13 @@
         </ol>
     </section>
 
-    <!-- Navigation -->
     <div class="detail-navigation">
         <a href="/lifestyle/stress" class="nav-button">← Stress Management</a>
         <a href="/lifestyle/drinking" class="nav-button">Alcohol & Muscle →</a>
     </div>
 </div>
-
 {% endblock %}
 
-{% block extra_js %}
-<script src="{{ url_for('static', filename='js/lifestyle.js') }}"></script>
-{% endblock %} style="margin-top: 10px;">
-<strong>効果:</strong> 副交感神経を活性化し、60秒以内に入眠する人も。
-「天然の精神安定剤」と呼ばれる。
-</p>
-</div>
-
-<h3>6.5 睡眠トラッキング</h3>
-<p>
-    測定することで改善できます。睡眠の質を客観的に評価しましょう。
-</p>
-
-<h4>トラッキング方法</h4>
-<ul>
-    <li><strong>ウェアラブルデバイス:</strong>
-        <ul style="margin-top: 5px;">
-            <li>Oura Ring（最も正確）</li>
-            <li>Whoop Strap</li>
-            <li>Apple Watch、Fitbit</li>
-        </ul>
-    </li>
-    <li><strong>測定指標:</strong>
-        <ul style="margin-top: 5px;">
-            <li>総睡眠時間</li>
-            <li>深睡眠時間（90分以上が理想）</li>
-            <li>REM睡眠時間（90-120分が理想）</li>
-            <li>睡眠効率（85%以上）</li>
-            <li>安静時心拍数</li>
-            <li>心拍変動（HRV）</li>
-        </ul>
-    </li>
-</ul>
-
-<h4>睡眠日記</h4>
-<p>
-    デバイスがなくても、手動で記録できます：
-</p>
-<ul>
-    <li>就寝時刻・起床時刻</li>
-    <li>入眠までの時間（推定）</li>
-    <li>夜間覚醒回数</li>
-    <li>朝の気分（1-10）</li>
-    <li>日中のエネルギーレベル</li>
-    <li>トレーニングパフォーマンス</li>
-    <li>前日の食事・カフェイン・アルコール</li>
-</ul>
-
-<p style="margin-top: 15px;">
-    <strong>分析:</strong> 2週間記録すると、睡眠の質に影響する要因が見えてきます。
-</p>
-</section>
-
-<!-- Section 7: Environment -->
-<section id="environment" class="content-section">
-    <h2>7. 最適な睡眠環境の構築</h2>
-
-    <p>
-        寝室環境は睡眠の質に直接影響します。以下の要素を最適化することで、
-        <strong>深睡眠を20-30%増加</strong>させることができます。
-    </p>
-
-    <h3>7.1 寝具の選択</h3>
-
-    <h4>マットレス</h4>
-    <ul>
-        <li><strong>硬さ:</strong> 中程度の硬さが最も支持されている（個人の好みによる）</li>
-        <li><strong>素材:</strong> メモリーフォーム、ラテックス、スプリングそれぞれに利点</li>
-        <li><strong>寿命:</strong> 7-10年で交換（ヘタリが睡眠の質を低下）</li>
-        <li><strong>体重との関係:</strong> 重い人ほど硬めが推奨</li>
-    </ul>
-
-    <h4>枕</h4>
-    <ul>
-        <li><strong>寝姿勢別:</strong>
-            <ul style="margin-top: 5px;">
-                <li>仰向け：中程度の高さ</li>
-                <li>横向き：高め（頭と首が水平になるように）</li>
-                <li>うつ伏せ：低め、または枕なし</li>
-            </ul>
-        </li>
-        <li><strong>素材:</strong> メモリーフォーム、羽毛、ラテックスなど</li>
-        <li><strong>交換頻度:</strong> 1-2年</li>
-    </ul>
-
-    <h4>寝具</h4>
-    <ul>
-        <li><strong>シーツ:</strong> 綿100%、リネン（通気性が良い）</li>
-        <li><strong>掛け布団:</strong> 季節に応じて調整（体温管理が重要）</li>
-        <li><strong>重量ブランケット:</strong> 不安軽減効果あり（体重の10%程度）</li>
-    </ul>
-
-    <h3>7.2 音環境</h3>
-
-    <h4>静寂の重要性</h4>
-    <p>
-        突然の音は<strong>睡眠を断片化</strong>し、深睡眠を妨げます。
-    </p>
-
-    <ul>
-        <li><strong>理想:</strong> 30デシベル以下（ささやき声レベル）</li>
-        <li><strong>対策:</strong>
-            <ul style="margin-top: 5px;">
-                <li>耳栓の使用（遮音性の高いもの）</li>
-                <li>二重窓、防音カーテン</li>
-                <li>ホワイトノイズマシン（一定の背景音で突発音をマスキング）</li>
-                <li>寝室のドアの隙間をふさぐ</li>
-            </ul>
-        </li>
-    </ul>
-
-    <h4>ホワイトノイズ vs ピンクノイズ</h4>
-    <div style="background: #f8f9fa; padding: 20px; border-radius: 12px; margin: 20px 0;">
-        <ul>
-            <li><strong>ホワイトノイズ:</strong> 全周波数が均等。ファンの音、テレビの砂嵐</li>
-            <li><strong>ピンクノイズ:</strong> 低周波数が強調。雨の音、波の音</li>
-            <li><strong>研究結果:</strong> ピンクノイズは深睡眠を<strong>23%増加</strong>させる (Zhou et al., 2012)</li>
-        </ul>
-    </div>
-
-    <h3>7.3 光環境</h3>
-
-    <h4>完全な暗闇の重要性</h4>
-    <p>
-        わずかな光でもメラトニン分泌が抑制されます。
-    </p>
-
-    <ul>
-        <li><strong>目標:</strong> 手を顔の前にかざしても見えないレベル</li>
-        <li><strong>対策:</strong>
-            <ul style="margin-top: 5px;">
-                <li>遮光カーテン（遮光率99%以上）</li>
-                <li>アイマスク（完全フィット型）</li>
-                <li>電子機器のLEDを遮る（テープで覆う）</li>
-                <li>廊下からの光を遮断（ドアの下の隙間テープ）</li>
-            </ul>
-        </li>
-    </ul>
-
-    <h3>7.4 空気質</h3>
-
-    <ul>
-        <li><strong>換気:</strong> 就寝前に十分な換気。CO2濃度が高いと睡眠の質が低下</li>
-        <li><strong>湿度:</strong> 40-60%が最適（加湿器または除湿器）</li>
-        <li><strong>空気清浄機:</strong> アレルギー対策、呼吸の質向上</li>
-        <li><strong>植物:</strong> サンスベリア、ポトスなどは夜間も酸素を放出</li>
-    </ul>
-
-    <h3>7.5 寝室の心理的環境</h3>
-
-    <div class="success-box">
-        <h4>✅ 寝室は「睡眠専用」に</h4>
-        <p>
-            <strong>刺激統制療法</strong>の原則：寝室を睡眠と性行為以外に使わない。
-        </p>
-        <ul style="margin-top: 10px;">
-            <li>仕事をしない</li>
-            <li>テレビを見ない</li>
-            <li>スマホをいじらない</li>
-            <li>食事をしない</li>
-        </ul>
-        <p style="margin-top: 10px;">
-            <strong>効果:</strong> 脳が「寝室＝睡眠」と条件付けられ、
-            入眠が<strong>平均15分早く</strong>なる (Bootzin, 1972)。
-        </p>
-    </div>
-</section>
-
-<!-- Section 8: Supplements -->
-<section id="supplements" class="content-section">
-    <h2>8. 睡眠サプリメント完全ガイド</h2>
-
-    <p>
-        サプリメントは睡眠の質を向上させる強力なツールですが、
-        <strong>睡眠衛生の基本を置き換えるものではありません</strong>。
-        基本ができた上での補助として使用しましょう。
-    </p>
-
-    <h3>8.1 メラトニン</h3>
-    <p>
-        メラトニンは体内で自然に産生される睡眠ホルモンです。
-        <strong>入眠を早める</strong>効果がありますが、睡眠の質自体は改善しません。
-    </p>
-
-    <ul>
-        <li><strong>推奨摂取量:</strong> 0.5-3mg（低用量の方が効果的）</li>
-        <li><strong>タイミング:</strong> 就寝30-60分前</li>
-        <li><strong>効果:</strong> 入眠時間を<strong>平均7-12分短縮</strong> (Ferracioli-Oda et al., 2013)</li>
-        <li><strong>適用:</strong>
-            <ul style="margin-top: 5px;">
-                <li>時差ぼけ対策</li>
-                <li>交代勤務者</li>
-                <li>概日リズム障害</li>
-            </ul>
-        </li>
-        <li><strong>注意:</strong> 長期使用しても依存性はないが、体内産生が減る可能性</li>
-    </ul>
-
-    <h3>8.2 マグネシウム</h3>
-    <p>
-        マグネシウムは<strong>最も重要な睡眠ミネラル</strong>です。
-        GABA受容体を活性化し、神経系を落ち着かせます。
-    </p>
-
-    <ul>
-        <li><strong>推奨摂取量:</strong> 200-400mg（元素マグネシウムとして）</li>
-        <li><strong>形態:</strong>
-            <ul style="margin-top: 5px;">
-                <li><strong>グリシン酸マグネシウム:</strong> 最も吸収率が高く、睡眠に最適</li>
-                <li><strong>トレオン酸マグネシウム:</strong> 脳に到達しやすい</li>
-                <li>避けるべき：酸化マグネシウム（吸収率が低い）</li>
-            </ul>
-        </li>
-        <li><strong>タイミング:</strong> 就寝1-2時間前</li>
-        <li><strong>効果:</strong>
-            <ul style="margin-top: 5px;">
-                <li>入眠時間が17分短縮</li>
-                <li>睡眠効率が2%向上</li>
-                <li>深睡眠が増加</li>
-            </ul>
-        </li>
-        <li><strong>副次効果:</strong> 筋肉のリラクゼーション、こむら返り予防</li>
-    </ul>
-
-    <h3>8.3 グリシン</h3>
-    <p>
-        グリシンはアミノ酸の一種で、<strong>体温を下げて入眠を促進</strong>します。
-    </p>
-
-    <ul>
-        <li><strong>推奨摂取量:</strong> 3g</li>
-        <li><strong>タイミング:</strong> 就寝前</li>
-        <li><strong>効果:</strong>
-            <ul style="margin-top: 5px;">
-                <li>深睡眠の時間が増加</li>
-                <li>翌朝の疲労感が<strong>30%改善</strong> (Yamadera et al., 2007)</li>
-                <li>日中の眠気が減少</li>
-                <li>認知機能の改善</li>
-            </ul>
-        </li>
-        <li><strong>メカニズム:</strong> NMDA受容体のサブタイプに作用し、体温を0.3℃下げる</li>
-    </ul>
-
-    <h3>8.4 L-テアニン</h3>
-    <p>
-        緑茶に含まれるアミノ酸で、<strong>リラックス効果</strong>があります。
-    </p>
-
-    <ul>
-        <li><strong>推奨摂取量:</strong> 200-400mg</li>
-        <li><strong>タイミング:</strong> 就寝30-60分前</li>
-        <li><strong>効果:</strong>
-            <ul style="margin-top: 5px;">
-                <li>アルファ波を増加させ、リラックス状態を誘導</li>
-                <li>睡眠の質が向上（特にストレス下）</li>
-                <li>REM睡眠が増加</li>
-            </ul>
-        </li>
-        <li><strong>組み合わせ:</strong> マグネシウムと併用すると相乗効果</li>
-    </ul>
-
-    <h3>8.5 アシュワガンダ</h3>
-    <p>
-        アダプトゲンハーブの代表格で、<strong>ストレスを軽減</strong>し睡眠の質を改善します。
-    </p>
-
-    <ul>
-        <li><strong>推奨摂取量:</strong> 300-600mg（KSM-66エキス）</li>
-        <li><strong>タイミング:</strong> 夕食後または就寝前</li>
-        <li><strong>効果:</strong>
-            <ul style="margin-top: 5px;">
-                <li>睡眠の質が<strong>72%改善</strong> (Langade et al., 2019)</li>
-                <li>睡眠効率が向上</li>
-                <li>総睡眠時間が増加</li>
-                <li>コルチゾールレベルが28%低下</li>
-            </ul>
-        </li>
-        <li><strong>特徴:</strong> 効果が現れるまで2-4週間かかる</li>
-    </ul>
-
-    <h3>8.6 トリプトファン / 5-HTP</h3>
-    <p>
-        セロトニン→メラトニンの前駆体です。
-    </p>
-
-    <ul>
-        <li><strong>L-トリプトファン:</strong>
-            <ul style="margin-top: 5px;">
-                <li>摂取量：500-1000mg</li>
-                <li>タイミング：就寝1時間前</li>
-                <li>効果：自然なセロトニン産生</li>
-            </ul>
-        </li>
-        <li><strong>5-HTP:</strong>
-            <ul style="margin-top: 5px;">
-                <li>摂取量：50-100mg</li>
-                <li>タイミング：就寝30分前</li>
-                <li>効果：より直接的なセロトニン増加</li>
-                <li>注意：SSRI等の抗うつ薬との併用は避ける</li>
-            </ul>
-        </li>
-    </ul>
-
-    <h3>8.7 推奨スタックと優先順位</h3>
-
-    <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
-        <h4>レベル別推奨スタック</h4>
-
-        <div style="margin: 20px 0; padding: 15px; background: #e8f5e9; border-radius: 8px;">
-            <h5 style="color: #2e7d32;">初心者スタック（まずこれから）</h5>
-            <ul>
-                <li><strong>マグネシウムグリシネート</strong> 400mg</li>
-                <li><strong>グリシン</strong> 3g</li>
-                <li><strong>総コスト:</strong> 月2,000-3,000円</li>
-                <li><strong>効果:</strong> 基本的な睡眠の質向上</li>
-            </ul>
-        </div>
-
-        <div style="margin: 20px 0; padding: 15px; background: #e3f2fd; border-radius: 8px;">
-            <h5 style="color: #1976d2;">中級者スタック</h5>
-            <ul>
-                <li><strong>マグネシウムグリシネート</strong> 400mg</li>
-                <li><strong>グリシン</strong> 3g</li>
-                <li><strong>L-テアニン</strong> 200mg</li>
-                <li><strong>総コスト:</strong> 月4,000-5,000円</li>
-                <li><strong>効果:</strong> リラックス効果と深睡眠の増加</li>
-            </ul>
-        </div>
-
-        <div style="margin: 20px 0; padding: 15px; background: #fff3e0; border-radius: 8px;">
-            <h5 style="color: #ef6c00;">上級者スタック（睡眠問題が深刻な場合）</h5>
-            <ul>
-                <li><strong>マグネシウムグリシネート</strong> 400mg</li>
-                <li><strong>グリシン</strong> 3g</li>
-                <li><strong>L-テアニン</strong> 400mg</li>
-                <li><strong>アシュワガンダ（KSM-66）</strong> 300mg</li>
-                <li><strong>メラトニン</strong> 1mg（必要に応じて）</li>
-                <li><strong>総コスト:</strong> 月6,000-8,000円</li>
-                <li><strong>効果:</strong> 最大限の睡眠最適化</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="warning-box">
-        <h4>⚠️ サプリメント使用の注意点</h4>
-        <ul>
-            <li>まずは睡眠衛生の基本を確立する</li>
-            <li>一度に全てを試さず、1つずつ追加して効果を確認</li>
-            <li>2週間試して効果がなければ中止</li>
-            <li>持病がある場合や薬を服用中の場合は医師に相談</li>
-            <li>妊娠中・授乳中は使用を避ける</li>
-            <li>依存性のあるサプリ（処方睡眠薬など）は避ける</li>
-        </ul>
-    </div>
-</section>
-
-<!-- Section 9: Timing -->
-<section id="timing" class="content-section">
-    <h2>9. 睡眠タイミングの科学</h2>
-
-    <p>
-        「何時に寝るか」は「何時間寝るか」と同じくらい重要です。
-        <strong>体内時計(概日リズム)</strong>に合わせた睡眠が最も効果的です。
-    </p>
-
-    <h3>9.1 クロノタイプ（時間型）</h3>
-    <p>
-        人には遺伝的に決まった<strong>クロノタイプ</strong>があります。
-    </p>
-
-    <div style="margin: 30px 0;">
-        <div style="background: #fff3e0; padding: 20px; border-radius: 12px; margin-bottom: 15px;">
-            <h4 style="color: #ef6c00;">朝型（ライオン型）- 人口の15-20%</h4>
-            <ul>
-                <li><strong>最適就寝時刻:</strong> 21:00-22:00</li>
-                <li><strong>最適起床時刻:</strong> 5:00-6:00</li>
-                <li><strong>ピーク時間:</strong> 午前中</li>
-                <li><strong>特徴:</strong> 早起きが苦ではない、夜は早めに眠くなる</li>
-            </ul>
-        </div>
-
-        <div style="background: #e3f2fd; padding: 20px; border-radius: 12px; margin-bottom: 15px;">
-            <h4 style="color: #1976d2;">中間型（クマ型）- 人口の50-55%</h4>
-            <ul>
-                <li><strong>最適就寝時刻:</strong> 23:00-24:00</li>
-                <li><strong>最適起床時刻:</strong> 7:00-8:00</li>
-                <li><strong>ピーク時間:</strong> 午前中〜昼過ぎ</li>
-                <li><strong>特徴:</strong> 太陽と共に動く、最も一般的なタイプ</li>
-            </ul>
-        </div>
-
-        <div style="background: #f3e5f5; padding: 20px; border-radius: 12px;">
-            <h4 style="color: #7b1fa2;">夜型（オオカミ型）- 人口の15-20%</h4>
-            <ul>
-                <li><strong>最適就寝時刻:</strong> 24:00-2:00</li>
-                <li><strong>最適起床時刻:</strong> 8:00-10:00</li>
-                <li><strong>ピーク時間:</strong> 夕方〜夜</li>
-                <li><strong>特徴:</strong> 朝が弱い、夜に創造性が高まる</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="info-box">
-        <h4>💡 クロノタイプは変更できる？</h4>
-        <p>
-            クロノタイプは<strong>50%が遺伝</strong>、50%が環境で決まります。
-            完全に変えることは難しいですが、以下で調整可能：
-        </p>
-        <ul style="margin-top: 10px;">
-            <li>朝の明るい光曝露（30分）</li>
-            <li>夜のブルーライト制限</li>
-            <li>一貫した睡眠スケジュール</li>
-            <li>メラトニン補給（タイミング調整）</li>
-        </ul>
-        <p style="margin-top: 10px;">
-            <strong>注意:</strong> 自分のクロノタイプに逆らうと、
-            慢性的なストレスとパフォーマンス低下を招きます。
-        </p>
-    </div>
-
-    <h3>9.2 90分サイクル理論</h3>
-    <p>
-        睡眠は<strong>約90分のサイクル</strong>で繰り返されます。
-        このサイクルの終わりで目覚めると、スッキリ感が得られます。
-    </p>
-
-    <h4>最適な睡眠時間（90分の倍数）</h4>
-    <ul>
-        <li><strong>4.5時間:</strong> 3サイクル（最低限、緊急時のみ）</li>
-        <li><strong>6時間:</strong> 4サイクル（短期的には可能）</li>
-        <li><strong>7.5時間:</strong> 5サイクル（多くの人に適切）</li>
-        <li><strong>9時間:</strong> 6サイクル（アスリートに最適）</li>
-    </ul>
-
-    <div class="warning-box">
-        <h4>⚠️ なぜ8時間より7.5時間？</h4>
-        <p>
-            きっかり8時間だと、サイクルの<strong>途中で目覚める</strong>可能性があり、
-            逆にグロッギーになることがあります。7.5時間（5サイクル）の方が
-            スッキリ目覚められる人が多いです。
-        </p>
-        <p style="margin-top: 10px;">
-            ただし、入眠に15-20分かかることを考慮すると、
-            <strong>ベッドには8時間前に入る</strong>のが良いでしょう。
-        </p>
-    </div>
-
-    <h3>9.3 昼寝の戦略</h3>
-    <p>
-        適切な昼寝は、夜間睡眠を補完し、パフォーマンスを向上させます。
-    </p>
-
-    <h4>パワーナップ（10-20分）</h4>
-    <ul>
-        <li><strong>タイミング:</strong> 13:00-15:00</li>
-        <li><strong>効果:</strong> 注意力、集中力が向上</li>
-        <li><strong>利点:</strong> 深睡眠に入らないため、目覚めがスッキリ</li>
-        <li><strong>推奨:</strong> トレーニー全般</li>
-    </ul>
-
-    <h4>長い昼寝（90分）</h4>
-    <ul>
-        <li><strong>タイミング:</strong> 13:00-14:30開始</li>
-        <li><strong>効果:</strong> 完全な睡眠サイクル、記憶の定着</li>
-        <li><strong>注意:</strong> 夜間睡眠に影響する可能性</li>
-        <li><strong>推奨:</strong> 夜間睡眠が不足している場合のみ</li>
-    </ul>
-
-    <div class="success-box">
-        <h4>✅ NASAの昼寝研究</h4>
-        <p>
-            NASAの研究では、26分の昼寝により：
-        </p>
-        <ul style="margin-top: 10px;">
-            <li>注意力が<strong>54%向上</strong></li>
-            <li>反応時間が<strong>34%改善</strong></li>
-        </ul>
-        <p{% extends "base.html" %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/pages/lifestyle.js') }}"></script>
+{% endblock %}

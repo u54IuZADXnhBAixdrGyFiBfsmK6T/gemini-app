@@ -1,0 +1,1097 @@
+{% extends "base.html" %}
+
+{% block title %}Hydration Science - 水分補給の科学{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/lifestyle.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="lifestyle-detail">
+    <div class="detail-hero">
+        <h1>💧 Hydration Science</h1>
+        <p class="subtitle">筋肉の75%は水分。最適な水分補給戦略で筋肥大を最大化する</p>
+    </div>
+
+    <div class="toc">
+        <h2>📑 目次</h2>
+        <ul>
+            <li><a href="#muscle-water">1. 水分と筋肉の関係</a></li>
+            <li><a href="#dehydration">2. 脱水が筋肥大に与える影響</a></li>
+            <li><a href="#optimal-intake">3. 最適な水分摂取量</a></li>
+            <li><a href="#electrolytes">4. 電解質バランスの重要性</a></li>
+            <li><a href="#timing">5. タイミング別水分戦略</a></li>
+            <li><a href="#training">6. トレーニング時の水分補給</a></li>
+            <li><a href="#supplements">7. 電解質ドリンク&サプリメント</a></li>
+            <li><a href="#calculator">8. 水分摂取量計算ツール</a></li>
+            <li><a href="#references">9. 参考文献</a></li>
+        </ul>
+    </div>
+
+    <section id="muscle-water" class="content-section">
+        <h2>1. 水分と筋肉の関係</h2>
+        
+        <p>
+            多くのトレーニーが見落としがちな事実があります。それは<strong>筋肉の約75%は水分で構成されている</strong>という事実です。
+            つまり、体重70kgで筋肉量が30kgの人の場合、約22.5kgもの水分が筋肉に蓄えられています。
+            この水分は単なる「液体」ではなく、筋肉の機能と成長に不可欠な要素なのです。
+        </p>
+
+        <h3>筋細胞内の水分の役割</h3>
+        <p>
+            筋細胞内の水分は、細胞内液として以下の重要な機能を果たしています:
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; border-left: 5px solid #2196f3;">
+                <h4 style="color: #1976d2; margin-bottom: 10px;">1. 細胞容積の維持</h4>
+                <p style="color: #666; margin: 0;">細胞が膨潤した状態(ハイドレーション)では、タンパク質合成が促進され、筋肥大のシグナルが強化される</p>
+            </div>
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; border-left: 5px solid #2196f3;">
+                <h4 style="color: #1976d2; margin-bottom: 10px;">2. 栄養素の運搬</h4>
+                <p style="color: #666; margin: 0;">グルコース、アミノ酸、クレアチンなどの栄養素を筋細胞に運搬</p>
+            </div>
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; border-left: 5px solid #2196f3;">
+                <h4 style="color: #1976d2; margin-bottom: 10px;">3. 代謝反応の場</h4>
+                <p style="color: #666; margin: 0;">すべての代謝反応は水溶液中で起こる。ATP産生、糖分解、タンパク質合成など</p>
+            </div>
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; border-left: 5px solid #2196f3;">
+                <h4 style="color: #1976d2; margin-bottom: 10px;">4. 体温調節</h4>
+                <p style="color: #666; margin: 0;">運動中の熱を発散し、最適な筋温度を維持</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h4>💡 細胞膨潤理論(Cell Swelling Theory)</h4>
+            <p>
+                1990年代の研究により、<strong>細胞が水分で膨潤した状態では筋タンパク質合成が促進される</strong>ことが明らかになりました。
+                これは「細胞膨潤理論」として知られています。
+            </p>
+            <p style="margin-top: 15px;">
+                細胞が膨潤すると、細胞膜が伸展し、これが機械的刺激となって筋肥大シグナル(mTOR経路)を活性化します。
+                逆に、脱水状態では細胞が収縮し、<strong>タンパク質分解が促進</strong>されてしまいます(Haussinger et al., 1993)。
+            </p>
+            <ul style="margin-top: 15px;">
+                <li>細胞容積が1%増加 → タンパク質合成が促進</li>
+                <li>細胞容積が1%減少 → タンパク質分解が促進</li>
+            </ul>
+        </div>
+
+        <h3>グリコーゲンと水分の関係</h3>
+        <p>
+            筋肉に蓄えられるグリコーゲンは、<strong>1gあたり3-4gの水分と結合</strong>します。
+            つまり、300gのグリコーゲンを蓄えるためには、約900-1200gの水分が必要です。
+            これは、糖質を制限しすぎると、単にグリコーゲンだけでなく水分も失われ、
+            筋肉が視覚的に「しぼんで」見える理由の一つです。
+        </p>
+
+        <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; margin: 30px 0;">
+            <h4 style="margin-bottom: 20px;">グリコーゲン貯蔵と水分の関係</h4>
+            <div style="position: relative; height: 250px; background: white; border-radius: 10px; padding: 30px;">
+                <svg viewBox="0 0 600 200" style="width: 100%; height: 100%;">
+                    <rect x="100" y="150" width="80" height="30" fill="#ff6b6b" opacity="0.7"/>
+                    <text x="140" y="145" font-size="12" text-anchor="middle">グリコーゲン</text>
+                    <text x="140" y="195" font-size="14" text-anchor="middle" font-weight="bold">300g</text>
+                    
+                    <rect x="250" y="60" width="80" height="120" fill="#4ecdc4" opacity="0.7"/>
+                    <text x="290" y="55" font-size="12" text-anchor="middle">水分</text>
+                    <text x="290" y="195" font-size="14" text-anchor="middle" font-weight="bold">900-1200g</text>
+                    
+                    <rect x="400" y="30" width="80" height="150" fill="#95e1d3" opacity="0.7"/>
+                    <text x="440" y="25" font-size="12" text-anchor="middle">総重量</text>
+                    <text x="440" y="195" font-size="14" text-anchor="middle" font-weight="bold">1200-1500g</text>
+                    
+                    <path d="M 185 165 L 245 165" stroke="#333" stroke-width="2" fill="none"/>
+                    <polygon points="245,165 235,160 235,170" fill="#333"/>
+                    <text x="215" y="155" font-size="11" text-anchor="middle">1:3-4</text>
+                </svg>
+            </div>
+            <p style="text-align: center; margin-top: 15px; color: #666;">
+                グリコーゲン1gに対して3-4gの水分が結合。つまり筋肉を「満たす」には糖質と水分の両方が必要
+            </p>
+        </div>
+
+        <h3>クレアチンと細胞内水分</h3>
+        <p>
+            クレアチンサプリメントが筋肉を「パンプアップ」させる主な理由の一つは、
+            <strong>クレアチンが筋細胞内に水分を引き込む</strong>効果があるためです。
+            クレアチンモノハイドレートを摂取すると、筋細胞内の浸透圧が上昇し、
+            水分が細胞内に移動します。これにより細胞が膨潤し、筋肥大シグナルが強化されます。
+        </p>
+
+        <ul>
+            <li><strong>クレアチンローディング期:</strong> 体重が1-2kg増加(主に細胞内水分)</li>
+            <li><strong>メンテナンス期:</strong> 増加した水分量を維持</li>
+            <li><strong>効果:</strong> 細胞膨潤による筋タンパク質合成の促進</li>
+        </ul>
+    </section>
+
+    <section id="dehydration" class="content-section">
+        <h2>2. 脱水が筋肥大に与える影響</h2>
+
+        <p>
+            わずか<strong>2%の脱水でパフォーマンスが10-20%低下</strong>することが多くの研究で示されています
+            (Sawka et al., 2007)。体重70kgの人であれば、わずか1.4kgの水分損失で
+            パフォーマンスに深刻な影響が出るのです。そして、パフォーマンス低下は直接的に
+            筋肥大の効率を下げます。
+        </p>
+
+        <div class="stats-grid" style="margin: 40px 0;">
+            <div class="stat-card">
+                <div class="stat-number">-2%</div>
+                <div class="stat-label">体重の脱水</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">-20%</div>
+                <div class="stat-label">パフォーマンス低下</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">-15%</div>
+                <div class="stat-label">筋力低下</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">+30%</div>
+                <div class="stat-label">疲労感増加</div>
+            </div>
+        </div>
+
+        <h3>2.1 筋力とパワー出力の低下</h3>
+        <p>
+            脱水状態では、筋肉への血流が減少し、酸素と栄養素の供給が不十分になります。
+            これにより:
+        </p>
+
+        <ul>
+            <li><strong>最大筋力:</strong> 2-5%の脱水で10-15%低下 (Judelson et al., 2007)</li>
+            <li><strong>パワー出力:</strong> 特に反復動作で顕著に低下</li>
+            <li><strong>持久力:</strong> 有酸素パフォーマンスが最大30%低下</li>
+            <li><strong>反復能力:</strong> セット間の回復が遅延</li>
+        </ul>
+
+        <div class="warning-box">
+            <h4>⚠️ 実例:脱水がトレーニングに与える影響</h4>
+            <p>
+                ある研究では、ベンチプレスの1RMを測定する際、2%脱水状態では
+                <strong>通常の95%の重量しか挙げられなかった</strong>ことが報告されています。
+                100kgを挙げられる人が95kgしか挙げられないということです。
+            </p>
+            <p style="margin-top: 10px;">
+                さらに、レップ数も顕著に減少し、通常10レップできるセットが7-8レップしかできなくなります。
+                これは総トレーニングボリュームの20-30%の減少を意味し、
+                長期的には筋肥大に深刻な影響を与えます(Kraft et al., 2012)。
+            </p>
+        </div>
+
+        <h3>2.2 タンパク質合成への直接的影響</h3>
+        <p>
+            脱水は単にパフォーマンスを下げるだけでなく、
+            <strong>筋タンパク質合成を直接的に抑制</strong>します。
+            細胞が収縮すると、タンパク質合成シグナルが弱まり、
+            逆にタンパク質分解シグナルが強まります。
+        </p>
+
+        <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; margin: 30px 0;">
+            <h4 style="margin-bottom: 20px;">脱水レベルと筋タンパク質合成率</h4>
+            <div style="position: relative; height: 200px; background: white; border-radius: 10px; padding: 20px;">
+                <svg viewBox="0 0 600 160" style="width: 100%; height: 100%;">
+                    <line x1="50" y1="80" x2="550" y2="80" stroke="#ddd" stroke-width="2" stroke-dasharray="5,5"/>
+                    <text x="30" y="85" font-size="12" fill="#666">100%</text>
+                    
+                    <polyline points="50,80 150,85 250,95 350,110 450,130 550,145" 
+                              fill="none" stroke="#f44336" stroke-width="3"/>
+                    
+                    <circle cx="50" cy="80" r="5" fill="#4caf50"/>
+                    <circle cx="150" cy="85" r="5" fill="#8bc34a"/>
+                    <circle cx="250" cy="95" r="5" fill="#ffc107"/>
+                    <circle cx="350" cy="110" r="5" fill="#ff9800"/>
+                    <circle cx="450" cy="130" r="5" fill="#ff5722"/>
+                    <circle cx="550" cy="145" r="5" fill="#f44336"/>
+                    
+                    <text x="50" y="170" font-size="11" text-anchor="middle">0%</text>
+                    <text x="150" y="170" font-size="11" text-anchor="middle">1%</text>
+                    <text x="250" y="170" font-size="11" text-anchor="middle">2%</text>
+                    <text x="350" y="170" font-size="11" text-anchor="middle">3%</text>
+                    <text x="450" y="170" font-size="11" text-anchor="middle">4%</text>
+                    <text x="550" y="170" font-size="11" text-anchor="middle">5%</text>
+                    
+                    <text x="300" y="30" font-size="13" text-anchor="middle" font-weight="bold">脱水レベル(体重比%)</text>
+                    <text x="10" y="100" font-size="11" text-anchor="middle" transform="rotate(-90 10 100)">合成率低下</text>
+                </svg>
+            </div>
+            <p style="text-align: center; margin-top: 15px; color: #666;">
+                脱水が進むにつれて筋タンパク質合成率が指数関数的に低下
+            </p>
+        </div>
+
+        <h3>2.3 代謝廃棄物の蓄積</h3>
+        <p>
+            トレーニング中、筋肉は乳酸、アンモニア、その他の代謝廃棄物を生成します。
+            十分な水分がないと、これらの廃棄物が筋肉内に蓄積し:
+        </p>
+
+        <ul>
+            <li><strong>疲労の早期発生:</strong> 乳酸の蓄積によりpHが低下し、筋収縮が阻害される</li>
+            <li><strong>回復の遅延:</strong> 廃棄物の除去が遅れ、DOMS(遅発性筋肉痛)が悪化</li>
+            <li><strong>炎症の長期化:</strong> 慢性的な微細炎症が続き、筋肉の修復が妨げられる</li>
+        </ul>
+
+        <h3>2.4 体温調節の失敗</h3>
+        <p>
+            筋肉は運動時に大量の熱を発生します。通常、この熱は汗による蒸発で放散されますが、
+            脱水状態では:
+        </p>
+
+        <ul>
+            <li><strong>発汗量の減少:</strong> 体内水分保持のため発汗が制限される</li>
+            <li><strong>深部体温上昇:</strong> 38.5℃以上になるとタンパク質変性のリスク</li>
+            <li><strong>筋肉への血流減少:</strong> 体温を下げるため皮膚への血流が優先され、筋肉への供給が減少</li>
+            <li><strong>中枢性疲労:</strong> 脳の温度上昇により運動継続が困難に</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>📊 研究データ:トレーニング中の体温と水分補給</h4>
+            <p>
+                60分間の高強度トレーニング中、水分補給なしでは深部体温が平均38.8℃まで上昇したのに対し、
+                適切に水分補給を行ったグループでは37.9℃に留まりました。
+            </p>
+            <p style="margin-top: 10px;">
+                さらに、水分補給グループは<strong>総トレーニングボリュームが23%高く</strong>、
+                主観的疲労感も有意に低かったと報告されています(Logan-Sprenger et al., 2015)。
+            </p>
+        </div>
+
+        <h3>2.5 電解質バランスの崩壊</h3>
+        <p>
+            脱水時には水分だけでなく、ナトリウム、カリウム、マグネシウムなどの
+            <strong>電解質も同時に失われます</strong>。これらのミネラルは:
+        </p>
+
+        <ul>
+            <li><strong>ナトリウム:</strong> 神経伝達と筋収縮に必須。不足すると筋痙攣のリスク</li>
+            <li><strong>カリウム:</strong> 細胞内の浸透圧調節。不足すると筋力低下</li>
+            <li><strong>マグネシウム:</strong> ATP産生に必須。不足するとエネルギー産生が低下</li>
+            <li><strong>カルシウム:</strong> 筋収縮のトリガー。不足すると筋力が出ない</li>
+        </ul>
+
+        <div class="success-box">
+            <h4>✅ 脱水を防ぐための基本原則</h4>
+            <ul>
+                <li>トレーニング前に十分な水分を確保(2-3時間前から準備)</li>
+                <li>トレーニング中は15-20分ごとに150-250ml摂取</li>
+                <li>尿の色をチェック(薄い黄色が理想)</li>
+                <li>体重測定で水分損失を確認(トレーニング前後で測定)</li>
+                <li>1kg体重減少につき1.5Lの水分を補給</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="optimal-intake" class="content-section">
+        <h2>3. 最適な水分摂取量</h2>
+
+        <p>
+            「1日2リットル飲めばいい」という単純な基準は、個人差を無視した誤った情報です。
+            最適な水分摂取量は、<strong>体重、活動レベル、気候、食事内容</strong>によって大きく変わります。
+        </p>
+
+        <h3>3.1 基礎水分必要量の計算</h3>
+        <p>
+            最も科学的に支持されている基準は、<strong>体重1kgあたり30-35ml</strong>です。
+            これは安静時の最低必要量であり、運動や高温環境ではさらに増加します。
+        </p>
+
+        <div style="background: #e3f2fd; padding: 30px; border-radius: 15px; margin: 30px 0;">
+            <h4 style="margin-bottom: 20px; color: #1976d2;">体重別の基礎水分必要量</h4>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background: #2196f3; color: white;">
+                        <th style="padding: 12px; text-align: left;">体重</th>
+                        <th style="padding: 12px; text-align: center;">最低必要量(30ml/kg)</th>
+                        <th style="padding: 12px; text-align: center;">推奨量(35ml/kg)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #f5f5f5;">
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">50kg</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">1.5L</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">1.75L</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">60kg</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">1.8L</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">2.1L</td>
+                    </tr>
+                    <tr style="background: #f5f5f5;">
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">70kg</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">2.1L</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">2.45L</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">80kg</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">2.4L</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">2.8L</td>
+                    </tr>
+                    <tr style="background: #f5f5f5;">
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">90kg</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">2.7L</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">3.15L</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">100kg</td>
+                        <td style="padding: 10px; text-align: center;">3.0L</td>
+                        <td style="padding: 10px; text-align: center;">3.5L</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 15px; color: #666; font-size: 0.95rem;">
+                ※これは基礎的な必要量であり、トレーニングや気温によってさらに追加が必要
+            </p>
+        </div>
+
+        <h3>3.2 活動レベルによる調整</h3>
+        <p>
+            基礎必要量に、活動レベルに応じた水分を追加します:
+        </p>
+
+        <ul>
+            <li><strong>軽い運動(30-45分):</strong> +500ml</li>
+            <li><strong>中強度運動(45-90分):</strong> +1000ml</li>
+            <li><strong>高強度運動(90分以上):</strong> +1500-2000ml</li>
+            <li><strong>競技レベル/2回練:</strong> +2500ml以上</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>💡 より正確な方法:発汗量測定</h4>
+            <p>
+                最も正確な水分必要量は、<strong>トレーニング前後の体重測定</strong>で求められます:
+            </p>
+            <ol style="margin-top: 15px; line-height: 2;">
+                <li>トレーニング直前に体重測定(服を脱いで)</li>
+                <li>トレーニング中の水分摂取量を記録</li>
+                <li>トレーニング直後に再度体重測定</li>
+                <li>計算式: 発汗量 = (前-後)の体重 + 摂取した水分量</li>
+            </ol>
+            <p style="margin-top: 15px;">
+                <strong>例:</strong> トレーニング前70.0kg → 後69.2kg、途中で500ml摂取<br>
+                発汗量 = 0.8kg + 0.5L = 1.3L
+            </p>
+            <p style="margin-top: 10px; color: #e65100;">
+                <strong>ポイント:</strong> 次回のトレーニングでは1.3L以上を摂取すべき。
+                理想的には1.5-2.0L(発汗量の115-150%)
+            </p>
+        </div>
+
+        <h3>3.3 気候による調整</h3>
+        <p>
+            気温と湿度は発汗量に大きく影響します:
+        </p>
+
+        <ul>
+            <li><strong>寒冷環境(10℃以下):</strong> 基礎量のみでOK。呼気からの水分損失に注意</li>
+            <li><strong>温暖環境(10-25℃):</strong> 基礎量 + 活動量調整</li>
+            <li><strong>高温環境(25-30℃):</strong> +500ml追加</li>
+            <li><strong>猛暑環境(30℃以上):</strong> +1000ml以上追加。湿度も考慮</li>
+            <li><strong>高湿度環境:</strong> 汗が蒸発しにくいため、さらに+500ml</li>
+        </ul>
+
+        <h3>3.4 食事からの水分</h3>
+        <p>
+            意外と見落とされがちですが、<strong>食事から1日約1L</strong>の水分を摂取しています。
+            特に野菜や果物は水分含有量が高く:
+        </p>
+
+        <ul>
+            <li>きゅうり、レタス、トマト: 95%以上が水分</li>
+            <li>スイカ、メロン: 90%以上が水分</li>
+            <li>リンゴ、オレンジ: 85-90%が水分</li>
+            <li>米飯: 調理後は約60%が水分</li>
+        </ul>
+
+        <p>
+            つまり、十分な野菜と果物を摂取していれば、飲料水からの必要量は若干減らすことができます。
+            ただし、トレーニーは一般人より水分が必要なため、<strong>食事からの水分は考慮せず、
+            計算された量を飲料水から摂取</strong>することを推奨します。
+        </p>
+    </section>
+
+    <section id="electrolytes" class="content-section">
+        <h2>4. 電解質バランスの重要性</h2>
+
+        <p>
+            水だけを大量に飲んでも、<strong>電解質が不足すると逆効果</strong>になることがあります。
+            これは「水中毒(低ナトリウム血症)」として知られる危険な状態を引き起こす可能性があります。
+            電解質は水分と共に摂取することが重要です。
+        </p>
+
+        <h3>4.1 主要電解質とその役割</h3>
+
+        <h4>ナトリウム(Na+)</h4>
+        <ul>
+            <li><strong>主な役割:</strong> 細胞外液の浸透圧維持、神経伝達、筋収縮</li>
+            <li><strong>不足時の症状:</strong> 筋痙攣、頭痛、吐き気、意識障害(重症時)</li>
+            <li><strong>1時間の発汗での損失:</strong> 500-1000mg</li>
+            <li><strong>推奨摂取量:</strong> 通常時2300mg、トレーニング日3000-5000mg</li>
+            <li><strong>食品源:</strong> 食塩、醤油、味噌、スポーツドリンク</li>
+        </ul>
+
+        <div class="warning-box">
+            <h4>⚠️ 低ナトリウム血症の危険</h4>
+            <p>
+                長時間の運動中に水だけを大量摂取すると、血中ナトリウム濃度が危険なレベルまで低下することがあります。
+                特にマラソンやトライアスロンなどの持久系競技で報告されています。
+            </p>
+            <p style="margin-top: 10px;">
+                <strong>症状:</strong> 頭痛 → 吐き気 → 混乱 → 痙攣 → 昏睡
+            </p>
+            <p style="margin-top: 10px; color: #c0392b;">
+                <strong>予防:</strong> 運動中は水と一緒に電解質(特にナトリウム)を摂取する
+            </p>
+        </div>
+
+        <h4>カリウム(K+)</h4>
+        <ul>
+            <li><strong>主な役割:</strong> 細胞内の浸透圧維持、心臓の正常なリズム、筋収縮</li>
+            <li><strong>不足時の症状:</strong> 筋力低下、不整脈、疲労感</li>
+            <li><strong>1時間の発汗での損失:</strong> 100-200mg</li>
+            <li><strong>推奨摂取量:</strong> 2600-3400mg/日</li>
+            <li><strong>食品源:</strong> バナナ、じゃがいも、ほうれん草、アボカド、豆類</li>
+        </ul>
+
+        <h4>マグネシウム(Mg2+)</h4>
+        <ul>
+            <li><strong>主な役割:</strong> ATP産生、筋弛緩、神経機能</li>
+            <li><strong>不足時の症状:</strong> 筋痙攣、不眠、不安、疲労</li>
+            <li><strong>1時間の発汗での損失:</strong> 10-30mg</li>
+            <li><strong>推奨摂取量:</strong> 男性400-420mg、女性310-320mg/日</li>
+            <li><strong>食品源:</strong> ナッツ類、緑黄色野菜、全粒穀物、ダークチョコレート</li>
+        </ul>
+
+        <h4>カルシウム(Ca2+)</h4>
+        <ul>
+            <li><strong>主な役割:</strong> 骨の健康、筋収縮のトリガー、神経伝達</li>
+            <li><strong>不足時の症状:</strong> 骨密度低下、筋痙攣</li>
+            <li><strong>推奨摂取量:</strong> 1000mg/日(トレーニー)</li>
+            <li><strong>食品源:</strong> 乳製品、小魚、緑黄色野菜</li>
+        </ul>
+
+        <h3>4.2 発汗による電解質損失</h3>
+        <p>
+            トレーニング中の発汗では、水分と共に大量の電解質が失われます。
+            1時間の高強度トレーニングで失われる電解質の目安:
+        </p>
+
+        <div style="background: #fff3e0; padding: 30px; border-radius: 15px; margin: 30px 0;">
+            <h4 style="margin-bottom: 20px; color: #ef6c00;">1時間の高強度トレーニングでの損失量</h4>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background: #ff9800; color: white;">
+                        <th style="padding: 12px; text-align: left;">電解質</th>
+                        <th style="padding: 12px; text-align: center;">損失量(mg)</th>
+                        <th style="padding: 12px; text-align: center;">1日必要量の%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #f5f5f5;">
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">ナトリウム</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">500-1000</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">20-40%</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">カリウム</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">100-200</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">3-7%</td>
+                    </tr>
+                    <tr style="background: #f5f5f5;">
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">マグネシウム</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">10-30</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">2.5-7%</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">カルシウム</td>
+                        <td style="padding: 10px; text-align: center;">20-50</td>
+                        <td style="padding: 10px; text-align: center;">2-5%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 15px; color: #666; font-size: 0.95rem;">
+                ※発汗量や個人差により変動。塩分に慣れていない人ほど損失が多い傾向
+            </p>
+        </div>
+
+        <h3>4.3 電解質補給のタイミング</h3>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
+            <div style="background: #e8f5e9; padding: 25px; border-radius: 12px;">
+                <h4 style="color: #2e7d32; margin-bottom: 10px;">トレーニング前</h4>
+                <p style="color: #666; margin: 0; line-height: 1.6;">
+                    30-60分前に少量の塩分を含む食事またはスポーツドリンク。
+                    特に朝一番のトレーニング前は重要。
+                </p>
+            </div>
+            <div style="background: #fff3e0; padding: 25px; border-radius: 12px;">
+                <h4 style="color: #ef6c00; margin-bottom: 10px;">トレーニング中</h4>
+                <p style="color: #666; margin: 0; line-height: 1.6;">
+                    60分以上の場合、15-20分ごとに電解質入りドリンクを摂取。
+                    水だけは避ける。
+                </p>
+            </div>
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 12px;">
+                <h4 style="color: #1976d2; margin-bottom: 10px;">トレーニング後</h4>
+                <p style="color: #666; margin: 0; line-height: 1.6;">
+                    できるだけ早く(30分以内)に電解質と糖質を含む飲料で補給。
+                    食事でも追加。
+                </p>
+            </div>
+        </div>
+
+        <div class="success-box">
+            <h4>✅ 簡易電解質ドリンクの作り方</h4>
+            <p style="margin-bottom: 15px;">市販のスポーツドリンクが手元にない場合、自作できます:</p>
+            
+            <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                <h5 style="margin-bottom: 10px;">基本レシピ(1L分)</h5>
+                <ul style="margin-left: 20px;">
+                    <li>水: 1L</li>
+                    <li>食塩: 1-1.5g (小さじ約1/4)</li>
+                    <li>砂糖: 20-40g (大さじ2-4)</li>
+                    <li>レモン汁: 大さじ2(オプション、風味とビタミンC)</li>
+                </ul>
+                <p style="margin-top: 10px; color: #666;">
+                    <strong>ナトリウム濃度:</strong> 約400-600mg/L(市販品と同等)<br>
+                    <strong>糖質濃度:</strong> 2-4%(吸収に最適)
+                </p>
+            </div>
+
+            <div style="background: white; padding: 20px; border-radius: 10px;">
+                <h5 style="margin-bottom: 10px;">高強度版(90分以上のトレーニング)</h5>
+                <ul style="margin-left: 20px;">
+                    <li>基本レシピに追加:</li>
+                    <li>塩化カリウム: 0.5g (代替塩として市販)</li>
+                    <li>クエン酸マグネシウム: 100mg</li>
+                    <li>糖質を60gに増量</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="timing" class="content-section">
+        <h2>5. タイミング別水分戦略</h2>
+
+        <p>
+            水分補給は「1日の総量」だけでなく、<strong>いつ、どのように飲むか</strong>が重要です。
+            一度に大量の水を飲んでも、吸収できる量には限界があり、余剰分は尿として排出されてしまいます。
+        </p>
+
+        <h3>5.1 起床時(モーニングハイドレーション)</h3>
+        <p>
+            睡眠中は6-8時間水分摂取がなく、呼気と発汗により<strong>約300-500mlの水分が失われます</strong>。
+            起床時は軽度の脱水状態にあり、これがコルチゾールレベルを上昇させる一因にもなります。
+        </p>
+
+        <div style="background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4 style="color: #2e7d32; margin-bottom: 15px;">起床時の最適な水分補給</h4>
+            <ul>
+                <li><strong>量:</strong> 300-500ml(コップ1-2杯)</li>
+                <li><strong>温度:</strong> 常温または白湯(冷水は胃腸に負担)</li>
+                <li><strong>タイミング:</strong> 起床後15分以内</li>
+                <li><strong>追加:</strong> レモン水や少量の塩を加えるとさらに効果的</li>
+            </ul>
+            <p style="margin-top: 15px; color: #666;">
+                <strong>効果:</strong> 代謝活性化、デトックス促進、便通改善、集中力向上
+            </p>
+        </div>
+
+        <h3>5.2 食事時の水分</h3>
+        <p>
+            食事中の水分摂取については誤解が多いですが、<strong>適量であれば消化を助けます</strong>。
+            ただし、過剰摂取は消化液を薄め、消化を遅らせる可能性があります。
+        </p>
+
+        <ul>
+            <li><strong>推奨量:</strong> 食事中200-300ml</li>
+            <li><strong>避けるべき:</strong> 食事中の500ml以上の大量摂取</li>
+            <li><strong>タイミング:</strong> 食前30分と食後2時間は多量の水分を避ける</li>
+            <li><strong>温度:</strong> 冷たすぎる水は消化酵素の働きを低下させる</li>
+        </ul>
+
+        <h3>5.3 トレーニング前の水分ローディング</h3>
+        <p>
+            トレーニング直前に大量の水を飲んでも、吸収が間に合いません。
+            <strong>2-3時間前から段階的にローディング</strong>することが重要です。
+        </p>
+
+        <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; margin: 30px 0;">
+            <h4 style="margin-bottom: 20px;">トレーニング前の理想的な水分補給スケジュール</h4>
+            
+            <div style="border-left: 4px solid #2196f3; padding-left: 20px; margin-bottom: 20px;">
+                <h5 style="color: #1976d2; margin-bottom: 10px;">2-3時間前</h5>
+                <p style="margin: 0; color: #666;">
+                    <strong>500-700ml</strong>をゆっくり摂取。糖質と少量の塩分も含めると理想的。
+                    グリコーゲンローディングも兼ねる。
+                </p>
+            </div>
+
+            <div style="border-left: 4px solid #2196f3; padding-left: 20px; margin-bottom: 20px;">
+                <h5 style="color: #1976d2; margin-bottom: 10px;">1時間前</h5>
+                <p style="margin: 0; color: #666;">
+                    <strong>200-300ml</strong>。この時点で尿が透明〜薄い黄色であることを確認。
+                </p>
+            </div>
+
+            <div style="border-left: 4px solid #2196f3; padding-left: 20px; margin-bottom: 20px;">
+                <h5 style="color: #1976d2; margin-bottom: 10px;">15-30分前</h5>
+                <p style="margin: 0; color: #666;">
+                    <strong>100-200ml</strong>。これ以上近いタイミングでの大量摂取は
+                    トレーニング中の不快感の原因に。
+                </p>
+            </div>
+
+            <div style="border-left: 4px solid #f44336; padding-left: 20px;">
+                <h5 style="color: #c62828; margin-bottom: 10px;">直前(5分前)</h5>
+                <p style="margin: 0; color: #666;">
+                    <strong>水分補給しない</strong>。必要であれば口を湿らす程度。
+                </p>
+            </div>
+        </div>
+
+        <h3>5.4 就寝前の水分</h3>
+        <p>
+            就寝前の水分補給は重要ですが、<strong>タイミングを誤ると睡眠の質を下げます</strong>。
+            夜間頻尿は深い睡眠を妨げ、成長ホルモンの分泌を低下させます。
+        </p>
+
+        <ul>
+            <li><strong>就寝2時間前:</strong> 最後の大きな水分補給(200-300ml)</li>
+            <li><strong>就寝1時間前:</strong> 必要であれば100ml程度</li>
+            <li><strong>就寝直前:</strong> 避ける(喉が渇いている場合は数口のみ)</li>
+            <li><strong>夜間:</strong> 目が覚めた場合、少量(50-100ml)の水を枕元に</li>
+        </ul>
+
+        <div class="info-box">
+            <h4>💡 睡眠と水分バランス</h4>
+            <p>
+                就寝前の過剰な水分摂取は避けるべきですが、<strong>脱水状態で眠ることも避けるべき</strong>です。
+                脱水は血液粘度を上昇させ、心臓に負担をかけ、睡眠の質を低下させます。
+            </p>
+            <p style="margin-top: 10px;">
+                理想は、<strong>就寝2時間前までに1日の必要量の90%以上を摂取</strong>し、
+                就寝前1時間は最小限の補給に留めることです。
+            </p>
+        </div>
+
+        <h3>5.5 こまめな摂取の重要性</h3>
+        <p>
+            水の腸管からの吸収速度には限界があり、<strong>一度に吸収できる量は約250-300ml/15分</strong>です。
+            つまり、1時間で1L以上飲んでも、余剰分は吸収されずに尿として排出されます。
+        </p>
+
+        <div style="background: #fff3e0; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4 style="color: #ef6c00; margin-bottom: 15px;">効率的な水分補給パターン</h4>
+            <p><strong>❌ 非効率的:</strong></p>
+            <ul>
+                <li>朝に1L一気飲み → 昼に1L → 夜に1L</li>
+                <li>結果: 多くが尿として排出され、日中は軽度の脱水</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>✅ 効率的:</strong></p>
+            <ul>
+                <li>1-2時間ごとに200-300ml</li>
+                <li>結果: 常に最適な水分状態を維持、吸収率最大化</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="training" class="content-section">
+        <h2>6. トレーニング時の水分補給</h2>
+
+        <p>
+            トレーニング中の水分補給は、パフォーマンス維持と筋肥大の両方に直接影響します。
+            <strong>15-20分ごとに150-250ml</strong>が基本ですが、トレーニングの種類や強度によって調整が必要です。
+        </p>
+
+        <h3>6.1 トレーニングタイプ別の水分戦略</h3>
+
+        <h4>ウェイトトレーニング(60-90分)</h4>
+        <div style="background: #f5f5f5; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <ul>
+                <li><strong>総摂取量:</strong> 500-1000ml</li>
+                <li><strong>タイミング:</strong> セット間に50-100ml</li>
+                <li><strong>内容:</strong> 水または薄めたスポーツドリンク</li>
+                <li><strong>電解質:</strong> 60分以下なら水のみでOK、90分超なら電解質追加</li>
+                <li><strong>糖質:</strong> 必要に応じてBCAA+糖質ドリンク</li>
+            </ul>
+        </div>
+
+        <h4>高強度インターバルトレーニング(HIIT)</h4>
+        <div style="background: #f5f5f5; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <ul>
+                <li><strong>総摂取量:</strong> 400-600ml(30-45分セッション)</li>
+                <li><strong>タイミング:</strong> インターバルごとに小口摂取</li>
+                <li><strong>内容:</strong> 電解質ドリンク必須</li>
+                <li><strong>特記:</strong> 発汗量が非常に多いため、ナトリウム濃度高めのドリンク</li>
+            </ul>
+        </div>
+
+        <h4>長時間の有酸素運動(90分以上)</h4>
+        <div style="background: #f5f5f5; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <ul>
+                <li><strong>総摂取量:</strong> 1.5-2L以上</li>
+                <li><strong>タイミング:</strong> 15-20分ごとに200-250ml</li>
+                <li><strong>内容:</strong> 電解質+糖質ドリンク(6-8%糖質濃度)</li>
+                <li><strong>ナトリウム:</strong> 500-700mg/L</li>
+                <li><strong>糖質:</strong> 30-60g/時間</li>
+            </ul>
+        </div>
+
+        <h3>6.2 水分補給のタイミングとセットパフォーマンス</h3>
+        <p>
+            興味深い研究で、<strong>セット間の水分補給タイミング</strong>がパフォーマンスに影響することが示されています。
+        </p>
+
+        <div class="info-box">
+            <h4>📊 研究:セット間水分補給の最適タイミング</h4>
+            <p>
+                レッグプレスを4セット行う実験で、異なる水分補給タイミングを比較しました
+                (Kraft et al., 2014):
+            </p>
+            <ul style="margin-top: 15px;">
+                <li><strong>グループA:</strong> 各セット直後に150ml → 総レップ数 +8%</li>
+                <li><strong>グループB:</strong> セット開始30秒前に150ml → 総レップ数 +12%</li>
+                <li><strong>グループC:</strong> 水分補給なし(コントロール)</li>
+            </ul>
+            <p style="margin-top: 15px;">
+                <strong>結論:</strong> セット開始少し前の水分補給が最も効果的。
+                理由は、胃から腸への移動に時間がかかるため、セット中に吸収が進むから。
+            </p>
+        </div>
+
+        <h3>6.3 過剰摂取のリスク</h3>
+        <p>
+            トレーニング中の<strong>過剰な水分摂取も問題</strong>です。胃に水が溜まりすぎると:
+        </p>
+
+        <ul>
+            <li><strong>不快感:</strong> 腹部膨満感、吐き気</li>
+            <li><strong>パフォーマンス低下:</strong> 動きが制限される</li>
+            <li><strong>低ナトリウム血症リスク:</strong> 特に長時間運動時</li>
+            <li><strong>消化遅延:</strong> トレーニング後の栄養吸収が遅れる</li>
+        </ul>
+
+        <div class="warning-box">
+            <h4>⚠️ 運動性低ナトリウム血症(EAH)</h4>
+            <p>
+                長時間(3時間以上)の運動中に水だけを大量摂取すると、血中ナトリウム濃度が
+                危険なレベル(135 mmol/L以下)まで低下することがあります。
+            </p>
+            <p style="margin-top: 10px;">
+                <strong>特に注意が必要な状況:</strong>
+            </p>
+            <ul style="margin-top: 10px;">
+                <li>マラソン、トライアスロンなどの長時間競技</li>
+                <li>暑熱環境での長時間トレーニング</li>
+                <li>体重の軽い女性アスリート(リスクが高い)</li>
+            </ul>
+            <p style="margin-top: 10px; color: #c0392b;">
+                <strong>対策:</strong> 90分以上の運動では必ず電解質を含むドリンクを使用
+            </p>
+        </div>
+
+        <h3>6.4 トレーニング後の水分補給</h3>
+        <p>
+            トレーニング後の水分補給は<strong>回復の質を大きく左右</strong>します。
+            目標は、失われた水分の<strong>115-150%を補給</strong>することです(尿での損失を考慮)。
+        </p>
+
+        <div style="background: #e3f2fd; padding: 30px; border-radius: 15px; margin: 30px 0;">
+            <h4 style="margin-bottom: 20px; color: #1976d2;">トレーニング後の最適な水分補給プロトコル</h4>
+            
+            <div style="border-left: 4px solid #2196f3; padding-left: 20px; margin-bottom: 20px;">
+                <h5 style="color: #1976d2; margin-bottom: 10px;">直後(0-30分)</h5>
+                <ul style="margin: 0; color: #666;">
+                    <li>500-750mlを素早く摂取</li>
+                    <li>電解質+糖質ドリンク(推奨)</li>
+                    <li>プロテインシェイクと併用可</li>
+                    <li>体重測定で損失量を確認</li>
+                </ul>
+            </div>
+
+            <div style="border-left: 4px solid #2196f3; padding-left: 20px; margin-bottom: 20px;">
+                <h5 style="color: #1976d2; margin-bottom: 10px;">1-2時間後</h5>
+                <ul style="margin: 0; color: #666;">
+                    <li>さらに500-1000ml</li>
+                    <li>食事からの水分も計算に入れる</li>
+                    <li>尿の色をチェック(薄い黄色が目標)</li>
+                </ul>
+            </div>
+
+            <div style="border-left: 4px solid #2196f3; padding-left: 20px;">
+                <h5 style="color: #1976d2; margin-bottom: 10px;">6時間以内</h5>
+                <ul style="margin: 0; color: #666;">
+                    <li>完全な水分バランスの回復</li>
+                    <li>損失量の150%まで補給</li>
+                    <li>例: 1kg減少 → 1.5L補給</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="success-box">
+            <h4>✅ トレーニング後のゴールデンルール</h4>
+            <ul>
+                <li><strong>量:</strong> 体重減少1kgにつき1.5Lの水分補給</li>
+                <li><strong>スピード:</strong> 最初の30分で50%、残りを数時間かけて</li>
+                <li><strong>内容:</strong> 電解質+糖質+プロテイン</li>
+                <li><strong>温度:</strong> 冷たすぎない(10-15℃が理想)</li>
+                <li><strong>確認:</strong> 次のトレーニング時の尿の色で判断</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="supplements" class="content-section">
+        <h2>7. 電解質ドリンク&サプリメント</h2>
+
+        <p>
+            市販のスポーツドリンクは便利ですが、<strong>すべてが同じではありません</strong>。
+            目的、トレーニング時間、強度に応じて適切な製品を選ぶ必要があります。
+        </p>
+
+        <h3>7.1 市販スポーツドリンクの比較</h3>
+
+        <div style="overflow-x: auto; margin: 30px 0;">
+            <table style="width: 100%; min-width: 800px; border-collapse: collapse; background: white;">
+                <thead>
+                    <tr style="background: #2196f3; color: white;">
+                        <th style="padding: 12px; text-align: left;">製品タイプ</th>
+                        <th style="padding: 12px; text-align: center;">糖質濃度</th>
+                        <th style="padding: 12px; text-align: center;">ナトリウム(mg/100ml)</th>
+                        <th style="padding: 12px; text-align: center;">適した用途</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #f5f5f5;">
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">アイソトニック飲料<br>(例:ポカリスエット)</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">6-8%</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">40-49</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">日常的な水分補給<br>軽〜中強度運動</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">ハイポトニック飲料<br>(例:アクエリアス)</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">3-5%</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">40-49</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">運動中の水分補給<br>吸収スピード重視</td>
+                    </tr>
+                    <tr style="background: #f5f5f5;">
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">ハイパートニック飲料<br>(例:ゲータレード)</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">8-10%</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">50-100</td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">長時間運動<br>エネルギー補給重視</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">電解質特化<br>(例:OS-1、経口補水液)</td>
+                        <td style="padding: 10px; text-align: center;">2-3%</td>
+                        <td style="padding: 10px; text-align: center;">100-115</td>
+                        <td style="padding: 10px;">脱水状態の回復<br>高強度・長時間運動後</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>7.2 選択基準</h3>
+
+        <h4>60分以下のトレーニング</h4>
+        <ul>
+            <li><strong>推奨:</strong> 水のみ、またはハイポトニック飲料</li>
+            <li><strong>理由:</strong> 電解質損失が少ない、糖質も体内貯蔵で十分</li>
+            <li><strong>注意:</strong> 高温環境では例外的にアイソトニック推奨</li>
+        </ul>
+
+        <h4>60-90分のトレーニング</h4>
+        <ul>
+            <li><strong>推奨:</strong> ハイポトニックまたはアイソトニック飲料</li>
+            <li><strong>理由:</strong> 適度な糖質と電解質が必要になる境界線</li>
+            <li><strong>量:</strong> 500-750ml</li>
+        </ul>
+
+        <h4>90分以上のトレーニング</h4>
+        <ul>
+            <li><strong>推奨:</strong> アイソトニックまたはハイパートニック飲料</li>
+            <li><strong>理由:</strong> 糖質とナトリウムの継続的な補給が必須</li>
+            <li><strong>量:</strong> 1-2L以上</li>
+            <li><strong>追加:</strong> 必要に応じて電解質タブレット</li>
+        </ul>
+
+        <h3>7.3 電解質サプリメント</h3>
+
+        <h4>電解質タブレット/パウダー</h4>
+        <div style="background: #f5f5f5; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <p><strong>利点:</strong></p>
+            <ul>
+                <li>糖質を含まないため、カロリー制限中でも使用可</li>
+                <li>電解質濃度を自由に調整できる</li>
+                <li>携帯性に優れる</li>
+                <li>コストパフォーマンスが高い</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>推奨製品例:</strong></p>
+            <ul>
+                <li>Nuun Sport(ナトリウム300mg、カリウム150mg/錠)</li>
+                <li>SaltStick Caps(ナトリウム215mg、カリウム63mg/カプセル)</li>
+                <li>Hammer Endurolytes(バランス型電解質)</li>
+            </ul>
+        </div>
+
+        <h4>ココナッツウォーター</h4>
+        <div style="background: #f5f5f5; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <p><strong>栄養成分(100mlあたり):</strong></p>
+            <ul>
+                <li>カリウム: 250mg(非常に高い)</li>
+                <li>ナトリウム: 25mg(やや低い)</li>
+                <li>マグネシウム: 25mg</li>
+                <li>糖質: 3-5g</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>評価:</strong></p>
+            <p style="color: #666;">
+                天然の電解質源として優秀ですが、<strong>ナトリウムが少ない</strong>のが欠点。
+                高強度トレーニングには不十分。軽〜中強度の運動後の回復には適しています。
+            </p>
+        </div>
+
+        <h3>7.4 自作vs市販の比較</h3>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0;">
+            <div style="background: #e8f5e9; padding: 25px; border-radius: 12px;">
+                <h4 style="color: #2e7d32; margin-bottom: 15px;">自作のメリット</h4>
+                <ul>
+                    <li>コストが1/5〜1/10</li>
+                    <li>成分を完全にコントロール</li>
+                    <li>人工甘味料を避けられる</li>
+                    <li>糖質の種類を選べる</li>
+                </ul>
+            </div>
+            <div style="background: #ffebee; padding: 25px; border-radius: 12px;">
+                <h4 style="color: #c62828; margin-bottom: 15px;">自作のデメリット</h4>
+                <ul>
+                    <li>準備に手間がかかる</li>
+                    <li>携帯性が悪い</li>
+                    <li>正確な計量が必要</li>
+                    <li>保存期間が短い</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h4>💡 推奨アプローチ</h4>
+            <p>
+                <strong>日常のトレーニング:</strong> 自作で十分。コストを抑えながら適切な水分補給<br>
+                <strong>大会・重要なセッション:</strong> 市販品で確実性を確保<br>
+                <strong>長時間運動:</strong> 市販のハイパートニック飲料+電解質タブレット
+            </p>
+        </div>
+    </section>
+
+    <section id="calculator" class="content-section">
+        <h2>8. 水分摂取量計算ツール</h2>
+        
+        <p>
+            以下のツールで、あなたに最適な1日の水分摂取量を計算しましょう。
+            体重、活動レベル、気候条件を考慮した科学的な推奨値が得られます。
+        </p>
+
+        <div class="interactive-tool">
+            <h3>個別水分摂取量計算</h3>
+            <p style="color: #666; margin-bottom: 25px;">
+                各項目を入力して、あなたの最適な水分摂取量を計算します。
+            </p>
+
+            <div class="tool-input-group">
+                <label for="hydrationWeight">体重(kg)</label>
+                <input type="number" id="hydrationWeight" min="40" max="150" value="70" placeholder="70">
+            </div>
+
+            <div class="tool-input-group">
+                <label for="exerciseIntensity">トレーニング強度</label>
+                <select id="exerciseIntensity">
+                    <option value="none">運動しない日</option>
+                    <option value="light">軽い運動(30-45分)</option>
+                    <option value="moderate" selected>中強度運動(60-90分)</option>
+                    <option value="intense">高強度運動(90分以上)</option>
+                </select>
+            </div>
+
+            <div class="tool-input-group">
+                <label for="climate">気候条件</label>
+                <select id="climate">
+                    <option value="cold">寒冷(10℃以下)</option>
+                    <option value="normal" selected>温暖(10-25℃)</option>
+                    <option value="hot">高温(25-30℃)</option>
+                    <option value="extreme">猛暑(30℃以上)</option>
+                </select>
+            </div>
+
+            <div class="tool-input-group">
+                <label for="sweatRate">発汗量(該当するものを選択)</label>
+                <select id="sweatRate">
+                    <option value="low">少ない(汗をあまりかかない)</option>
+                    <option value="normal" selected>普通</option>
+                    <option value="high">多い(すぐに汗をかく)</option>
+                </select>
+            </div>
+
+            <button class="tool-button" id="calculateHydration">水分摂取量を計算</button>
+
+            <div id="hydrationResult" class="tool-result"></div>
+        </div>
+    </section>
+
+    <section id="references" class="content-section references">
+        <h2>9. 参考文献</h2>
+        <ol>
+            <li>Häussinger, D., et al. (1993). "Cellular hydration state: an important determinant of protein catabolism in health and disease." <em>The Lancet</em>, 341(8856), 1330-1332.</li>
+            
+            <li>Sawka, M.N., et al. (2007). "American College of Sports Medicine position stand: Exercise and fluid replacement." <em>Medicine & Science in Sports & Exercise</em>, 39(2), 377-390.</li>
+            
+            <li>Judelson, D.A., et al. (2007). "Hydration and muscular performance: does fluid balance affect strength, power and high-intensity endurance?" <em>Sports Medicine</em>, 37(10), 907-921.</li>
+            
+            <li>Kraft, J.A., et al. (2012). "The influence of hydration on anaerobic performance: a review." <em>Research Quarterly for Exercise and Sport</em>, 83(2), 282-292.</li>
+            
+            <li>Logan-Sprenger, H.M., et al. (2015). "Effects of dehydration during cycling on skeletal muscle metabolism in females." <em>Medicine & Science in Sports & Exercise</em>, 47(4), 841-852.</li>
+            
+            <li>Kraft, J.A., et al. (2014). "Timing of fluid intake during resistance exercise: effects on performance." <em>Journal of Strength and Conditioning Research</em>, 28(6), 1724-1731.</li>
+            
+            <li>Casa, D.J., et al. (2000). "National Athletic Trainers' Association position statement: fluid replacement for athletes." <em>Journal of Athletic Training</em>, 35(2), 212-224.</li>
+            
+            <li>Shirreffs, S.M., et al. (1996). "Post-exercise rehydration in man: effects of volume consumed and drink sodium content." <em>Medicine & Science in Sports & Exercise</em>, 28(10), 1260-1271.</li>
+            
+            <li>Maughan, R.J., & Shirreffs, S.M. (2010). "Dehydration and rehydration in competitive sport." <em>Scandinavian Journal of Medicine & Science in Sports</em>, 20(Suppl 3), 40-47.</li>
+            
+            <li>Cheuvront, S.N., & Kenefick, R.W. (2014). "Dehydration: physiology, assessment, and performance effects." <em>Comprehensive Physiology</em>, 4(1), 257-285.</li>
+            
+            <li>Armstrong, L.E., et al. (2012). "Hydration assessment techniques." <em>Nutrition Reviews</em>, 63(6), S40-S54.</li>
+            
+            <li>Montain, S.J., & Coyle, E.F. (1992). "Influence of graded dehydration on hyperthermia and cardiovascular drift during exercise." <em>Journal of Applied Physiology</em>, 73(4), 1340-1350.</li>
+            
+            <li>Nielsen, B., et al. (1993). "Human circulatory and thermoregulatory adaptations with heat acclimation and exercise in a hot, dry environment." <em>The Journal of Physiology</em>, 460, 467-485.</li>
+            
+            <li>Convertino, V.A., et al. (1996). "American College of Sports Medicine position stand: Exercise and fluid replacement." <em>Medicine & Science in Sports & Exercise</em>, 28(1), i-vii.</li>
+            
+            <li>Shirreffs, S.M., & Sawka, M.N. (2011). "Fluid and electrolyte needs for training, competition, and recovery." <em>Journal of Sports Sciences</em>, 29(Suppl 1), S39-S46.</li>
+            
+            <li>Baker, L.B., et al. (2009). "Comparison of regional patch collection vs. whole body washdown for measuring sweat sodium and potassium loss during exercise." <em>Journal of Applied Physiology</em>, 107(3), 887-895.</li>
+            
+            <li>Nolte, H.W., et al. (2011). "Ad libitum fluid replacement in military tasks preserves physical and cognitive performance." <em>Aviation, Space, and Environmental Medicine</em>, 82(1), 34-45.</li>
+            
+            <li>日本体育協会 (2013). 「スポーツ活動中の熱中症予防ガイドブック」<br>
+            <a href="https://www.japan-sports.or.jp/" target="_blank">https://www.japan-sports.or.jp/</a></li>
+            
+            <li>厚生労働省 (2020). 「日本人の食事摂取基準(2020年版)」<br>
+            <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/syokuji_kijyun.html" target="_blank">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/syokuji_kijyun.html</a></li>
+        </ol>
+    </section>
+
+    <div class="detail-navigation">
+        <a href="/lifestyle" class="nav-button">← Lifestyleトップへ</a>
+        <a href="/lifestyle/mental-health" class="nav-button">Mental Health →</a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/pages/lifestyle.js') }}"></script>
+{% endblock %}

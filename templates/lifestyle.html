@@ -1,167 +1,171 @@
 {% extends "base.html" %}
 
-{% block title %}Lifestyle - 筋肥大を最大化する生活習慣{% endblock %}
+{% block title %}Lifestyle Science - 筋肥大の生活習慣ポータル{% endblock %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/lifestyle.css') }}">
-
+<link rel="stylesheet" href="{{ url_for('static', filename='css/lifestyle_portal.css') }}">
 {% endblock %}
 
 {% block content %}
-<div class="lifestyle-hero">
-    <h1>💪 Lifestyle for Muscle Growth</h1>
-    <p>トレーニングだけでは不十分。筋肥大を最大化するための生活習慣を科学的に解説します。<br>
-    睡眠、ストレス管理、飲酒・喫煙の影響、そして回復戦略まで、包括的にカバーします。</p>
-</div>
 
-<div class="lifestyle-categories">
-    <div class="section-intro" style="text-align: center; margin-bottom: 40px;">
-        <h2 style="font-size: 2rem; margin-bottom: 15px;">なぜライフスタイルが重要なのか？</h2>
-        <p style="max-width: 800px; margin: 0 auto; color: #666; line-height: 1.8;">
-            筋肥大は単にジムでのトレーニングだけで決まるものではありません。
-            実際、筋肉の成長の70%は<strong>ジムの外</strong>で決まると言われています。
-            睡眠、栄養、ストレス管理、そして生活習慣全般が、あなたの努力を最大限に活かすか、
-            それとも無駄にするかを左右します。
+<header class="magazine-hero">
+    <div class="container">
+        <span class="category-tag">Complete Guide</span>
+        <h1>Lifestyle Architecture</h1>
+        <p class="lead">
+            筋肉はジムで破壊され、ベッドの上で作られる。<br>
+            科学的エビデンスに基づいた、筋肥大のための「24時間の過ごし方」。
         </p>
-    </div>
 
-    <div class="stats-grid" style="margin-bottom: 60px;">
-        <div class="stat-card">
-            <div class="stat-number">70%</div>
-            <div class="stat-label">ジム外での要因</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">7-9h</div>
-            <div class="stat-label">最適な睡眠時間</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">-30%</div>
-            <div class="stat-label">飲酒後の筋合成低下</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">48h</div>
-            <div class="stat-label">最適な回復期間</div>
-        </div>
-    </div>
-
-    <h2 style="text-align: center; margin-bottom: 30px; font-size: 2rem;">7つの重要なライフスタイル要素</h2>
-    
-    <div class="categories-grid">
-        <!-- Stress Management -->
-        <div class="category-card" onclick="location.href='/lifestyle/stress'">
-            <div class="category-icon">😰</div>
-            <h3>Stress Management</h3>
-            <p>
-                慢性的なストレスは筋肥大の最大の敵。コルチゾール(ストレスホルモン)は
-                筋肉を分解し、テストステロンレベルを低下させます。
-                科学的なストレス管理法で筋肉を守りましょう。
-            </p>
-            <a href="/lifestyle/stress" class="category-link">詳しく見る →</a>
-        </div>
-
-        <!-- Sleep -->
-        <div class="category-card" onclick="location.href='/lifestyle/sleep'">
-            <div class="category-icon">😴</div>
-            <h3>Sleep Optimization</h3>
-            <p>
-                睡眠中に成長ホルモンの70%が分泌されます。質の高い睡眠なくして
-                筋肥大はありえません。最適な睡眠時間、睡眠の質を高める方法、
-                そして睡眠サイクルについて深く掘り下げます。
-            </p>
-            <a href="/lifestyle/sleep" class="category-link">詳しく見る →</a>
-        </div>
-
-        <!-- Alcohol -->
-        <div class="category-card" onclick="location.href='/lifestyle/drinking'">
-            <div class="category-icon">🍺</div>
-            <h3>Alcohol & Muscle</h3>
-            <p>
-                アルコールは筋タンパク質合成を最大37%も低下させます。
-                しかし完全に避ける必要はありません。賢い飲み方、タイミング、
-                そして影響を最小限に抑える方法を科学的に解説します。
-            </p>
-            <a href="/lifestyle/drinking" class="category-link">詳しく見る →</a>
-        </div>
-
-        <!-- Smoking -->
-        <div class="category-card" onclick="location.href='/lifestyle/smoking'">
-            <div class="category-icon">🚬</div>
-            <h3>Smoking Impact</h3>
-            <p>
-                喫煙は酸素供給を阻害し、筋肉の回復を遅らせます。
-                さらにタンパク質合成を妨げ、持久力を大幅に低下させます。
-                禁煙のメリットと回復のタイムラインを詳しく解説します。
-            </p>
-            <a href="/lifestyle/smoking" class="category-link">詳しく見る →</a>
-        </div>
-
-        <!-- Recovery -->
-        <div class="category-card" onclick="location.href='/lifestyle/recovery'">
-            <div class="category-icon">🔄</div>
-            <h3>Recovery Strategies</h3>
-            <p>
-                筋肉はトレーニング中ではなく、休息中に成長します。
-                アクティブレスト、ストレッチ、マッサージ、そして栄養補給のタイミング。
-                科学的な回復戦略で筋肥大を加速させましょう。
-            </p>
-            <a href="/lifestyle/recovery" class="category-link">詳しく見る →</a>
-        </div>
-
-        <!-- Mental Health -->
-        <div class="category-card" onclick="location.href='/lifestyle/mental-health'">
-            <div class="category-icon">🧠</div>
-            <h3>Mental Health</h3>
-            <p>
-                メンタルヘルスは身体の健康と密接に関係しています。
-                モチベーション維持、目標設定、バーンアウト防止。
-                長期的な成功のための心理的アプローチを学びましょう。
-            </p>
-            <a href="/lifestyle/mental-health" class="category-link">詳しく見る →</a>
-        </div>
-
-        <!-- Hydration -->
-        <div class="category-card" onclick="location.href='/lifestyle/hydration'">
-            <div class="category-icon">💧</div>
-            <h3>Hydration Science</h3>
-            <p>
-                筋肉の75%は水分です。わずか2%の脱水でパフォーマンスは10%低下。
-                最適な水分摂取量、電解質バランス、そしてタイミング。
-                水分補給の科学を完全マスターしましょう。
-            </p>
-            <a href="/lifestyle/hydration" class="category-link">詳しく見る →</a>
+        <div class="stats-strip">
+            <div class="stat-item">
+                <strong>70%</strong>
+                <span>Results outside Gym</span>
+            </div>
+            <div class="stat-item">
+                <strong>8h+</strong>
+                <span>Recommended Sleep</span>
+            </div>
+            <div class="stat-item">
+                <strong>48h</strong>
+                <span>Full Recovery</span>
+            </div>
+            <div class="stat-item">
+                <strong>-20%</strong>
+                <span>Cortisol Effect</span>
+            </div>
         </div>
     </div>
+</header>
 
-    <!-- Quick Tips Section -->
-    <div style="margin-top: 60px; padding: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; color: white;">
-        <h2 style="text-align: center; margin-bottom: 30px; font-size: 2rem;">今日から始められる5つの習慣</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
-                <h4 style="margin-bottom: 10px;">1. 睡眠を最優先</h4>
-                <p style="opacity: 0.9;">毎日同じ時刻に就寝・起床。7-9時間の睡眠を確保。</p>
+<div class="container">
+    <div class="grid-layout">
+        
+        <main>
+            <div class="section-title">
+                <h2>Featured Topics</h2>
+                <span>Latest Insights</span>
             </div>
-            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
-                <h4 style="margin-bottom: 10px;">2. ストレスケア</h4>
-                <p style="opacity: 0.9;">毎日10分の瞑想または深呼吸。ストレスを溜めない。</p>
+
+            <div class="cards-grid">
+                
+                <article class="article-card" onclick="location.href='/lifestyle/sleep'" style="cursor: pointer;">
+                    <div class="card-header bg-sleep">
+                        😴
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">Recovery • Priority High</div>
+                        <h3>睡眠の科学と最適化</h3>
+                        <p>成長ホルモンの70%は睡眠中に分泌される。ただ長く寝るだけではない、深さをコントロールする技術。</p>
+                        <span class="read-more">Read Article</span>
+                    </div>
+                </article>
+
+                <article class="article-card" onclick="location.href='/lifestyle/stress'" style="cursor: pointer;">
+                    <div class="card-header bg-stress">
+                        😰
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">Hormone • Cortisol</div>
+                        <h3>ストレス管理とカタボリック</h3>
+                        <p>精神的ストレスは物理的に筋肉を分解する。コルチゾール値を下げ、テストステロンを守る方法。</p>
+                        <span class="read-more">Read Article</span>
+                    </div>
+                </article>
+
+                <article class="article-card" onclick="location.href='/lifestyle/drinking'" style="cursor: pointer;">
+                    <div class="card-header bg-alcohol">
+                        🍺
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">Diet • Impact</div>
+                        <h3>アルコールとの付き合い方</h3>
+                        <p>「筋トレ後のビール」は最悪なのか？mTOR経路への影響と、ダメージを最小限にする飲み方。</p>
+                        <span class="read-more">Read Article</span>
+                    </div>
+                </article>
+
+                <article class="article-card" onclick="location.href='/lifestyle/recovery'" style="cursor: pointer;">
+                    <div class="card-header bg-recovery">
+                        🔄
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">Active Rest</div>
+                        <h3>戦略的リカバリー</h3>
+                        <p>完全休養か、アクティブレストか。デロードのタイミングと、超回復を加速させるテクニック。</p>
+                        <span class="read-more">Read Article</span>
+                    </div>
+                </article>
+
+                <article class="article-card" onclick="location.href='/lifestyle/smoking'" style="cursor: pointer;">
+                    <div class="card-header bg-smoke">
+                        🚬
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">Health • Oxygen</div>
+                        <h3>喫煙と筋肥大の真実</h3>
+                        <p>ニコチンと一酸化炭素が筋肉への酸素供給をどう阻害するか。パフォーマンス低下のメカニズム。</p>
+                        <span class="read-more">Read Article</span>
+                    </div>
+                </article>
+
+                <article class="article-card" onclick="location.href='/lifestyle/hydration'" style="cursor: pointer;">
+                    <div class="card-header bg-water">
+                        💧
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">Performance</div>
+                        <h3>水分補給の科学</h3>
+                        <p>筋肉の75%は水。わずか2%の脱水で筋力は低下する。パフォーマンスを維持する水分戦略。</p>
+                        <span class="read-more">Read Article</span>
+                    </div>
+                </article>
+
             </div>
-            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
-                <h4 style="margin-bottom: 10px;">3. 水分補給</h4>
-                <p style="opacity: 0.9;">体重1kgあたり30-35mlの水分。こまめに摂取。</p>
+
+            <div class="cta-box">
+                <h2>Ready to Optimize?</h2>
+                <p>生活習慣の改善は、最もコストのかからないサプリメントです。</p>
+                <a href="/lifestyle/sleep" class="btn-white">まずは「睡眠」から改善する</a>
             </div>
-            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
-                <h4 style="margin-bottom: 10px;">4. アルコール管理</h4>
-                <p style="opacity: 0.9;">トレーニング後48時間は飲酒を避ける。週2日休肝日。</p>
+
+        </main>
+
+        <aside>
+            <div class="sidebar-widget">
+                <h4>Editor's Note</h4>
+                <p style="font-size: 0.9rem; color: var(--text-body);">
+                    筋トレ初心者が最も軽視しがちなのが「ジムの外」の時間です。
+                    週4時間のトレーニングよりも、週164時間の生活習慣の方が身体への影響力は強大です。
+                    まずは睡眠時間の確保から始めましょう。
+                </p>
             </div>
-            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
-                <h4 style="margin-bottom: 10px;">5. アクティブレスト</h4>
-                <p style="opacity: 0.9;">完全休養日も軽い運動(散歩、ヨガ)で血流促進。</p>
+
+            <div class="sidebar-widget">
+                <h4>Quick Habits Checklist</h4>
+                <ul class="check-list">
+                    <li>起床時にコップ1杯の水を飲む</li>
+                    <li>就寝2時間前はスマホを見ない</li>
+                    <li>週に2日は休肝日を作る</li>
+                    <li>トレ後は温冷交代浴を試す</li>
+                    <li>毎日10分の瞑想時間を確保</li>
+                </ul>
             </div>
-        </div>
+
+            <div class="sidebar-widget" style="background-color: #fcf8e3; border-color: #faebcc;">
+                <h4 style="color: #8a6d3b; border-color: #faebcc;">Warning</h4>
+                <p style="font-size: 0.85rem; color: #8a6d3b;">
+                    オーバートレーニングに注意。<br>
+                    「眠れない」「イライラする」「関節が痛む」は身体からのSOSです。勇気を持って休みましょう。
+                </p>
+            </div>
+        </aside>
+
     </div>
 </div>
 
 {% endblock %}
 
 {% block scripts %}
-<script src="{{ url_for('static', filename='js/lifestyle.js') }}"></script>
+<script src="{{ url_for('static', filename='js/pages/lifestyle.js') }}"></script>
 {% endblock %}

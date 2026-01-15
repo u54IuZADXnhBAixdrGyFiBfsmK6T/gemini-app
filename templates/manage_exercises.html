@@ -9,13 +9,14 @@
 {% block content %}
 <div class="app-container">
     <!-- ヘッダー -->
-    <header class="page-header">
-        <button class="back-btn" onclick="location.href='{{ url_for("main.record_workout") }}'">
-            ← 戻る
-        </button>
-        <h1>種目管理</h1>
-        <button class="add-category-btn" id="addCategoryBtn">＋部位</button>
-    </header>
+<header class="page-header">
+    <a href="{{ url_for('main.record_workout') }}" class="back-btn">
+        ← 戻る
+    </a>
+
+    <h1>種目管理</h1>
+    <button class="add-category-btn" id="addCategoryBtn">＋部位</button>
+</header>
 
     <!-- メインコンテンツ -->
     <main class="main-content" id="categoriesContainer">
@@ -67,5 +68,5 @@
 {% block footer %}{% endblock %}
 
 {% block scripts %}
-<script src="{{ url_for('static', filename='js/manage_exercises.js') }}"></script>
+<script src="{{ url_for('static', filename='js/pages/manage_exercises.js') }}"></script>
 {% endblock %}

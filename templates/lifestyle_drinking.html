@@ -1,4 +1,38 @@
-<div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
+{% extends "base.html" %}
+
+{% block title %}Alcohol & Hypertrophy - アルコールと筋肥大の真実{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/lifestyle.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="lifestyle-detail">
+    <div class="detail-hero">
+        <h1>🍺 Alcohol & Hypertrophy</h1>
+        <p class="subtitle">「アルコールは筋肉を分解する」の科学的メカニズムと対策</p>
+    </div>
+
+    <div class="toc">
+        <h2>📑 目次</h2>
+        <ul>
+            <li><a href="#mps">3. 筋タンパク質合成(MPS)への影響</a></li>
+            <li><a href="#hormones">4. ホルモンバランスへの影響</a></li>
+            <li><a href="#recovery">5. 回復プロセスへの影響</a></li>
+            <li><a href="#sleep-quality">6. 睡眠の質への影響</a></li>
+            <li><a href="#body-composition">7. 体組成への影響</a></li>
+            <li><a href="#guidelines">8. 適量飲酒のガイドライン</a></li>
+            <li><a href="#timing">9. トレーニング前後の飲酒</a></li>
+            <li><a href="#strategies">10. ダメージコントロール戦略</a></li>
+            <li><a href="#calculator">11. アルコール影響計算ツール</a></li>
+            <li><a href="#references">12. 参考文献</a></li>
+        </ul>
+    </div>
+
+    <section id="mps" class="content-section">
+        <h2>3. 筋タンパク質合成(MPS)への影響</h2>
+        
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;">
             <h4>トレーニングからの経過時間と飲酒の影響</h4>
             <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
                 <tr style="background: #667eea; color: white;">
@@ -51,7 +85,6 @@
         </div>
     </section>
 
-    <!-- Section 4: Hormones -->
     <section id="hormones" class="content-section">
         <h2>4. ホルモンバランスへの影響</h2>
 
@@ -202,7 +235,6 @@
         </ul>
     </section>
 
-    <!-- Section 5: Recovery -->
     <section id="recovery" class="content-section">
         <h2>5. 回復プロセスへの影響</h2>
 
@@ -309,7 +341,6 @@
         </p>
     </section>
 
-    <!-- Section 6: Sleep Quality -->
     <section id="sleep-quality" class="content-section">
         <h2>6. 睡眠の質への影響</h2>
 
@@ -436,7 +467,6 @@
         </div>
     </section>
 
-    <!-- Section 7: Body Composition -->
     <section id="body-composition" class="content-section">
         <h2>7. 体組成への影響</h2>
 
@@ -572,7 +602,6 @@
         </ul>
     </section>
 
-    <!-- Section 8: Guidelines -->
     <section id="guidelines" class="content-section">
         <h2>8. 適量飲酒のガイドライン</h2>
 
@@ -697,7 +726,6 @@
         </div>
     </section>
 
-    <!-- Section 9: Timing -->
     <section id="timing" class="content-section">
         <h2>9. トレーニング前後の飲酒</h2>
 
@@ -884,7 +912,6 @@
         </div>
     </section>
 
-    <!-- Section 10: Strategies -->
     <section id="strategies" class="content-section">
         <h2>10. ダメージコントロール戦略</h2>
 
@@ -1139,7 +1166,6 @@
         </div>
     </section>
 
-    <!-- Section 11: Calculator -->
     <section id="calculator" class="content-section">
         <h2>11. アルコール影響計算ツール</h2>
 
@@ -1177,7 +1203,6 @@
         </div>
     </section>
 
-    <!-- Section 12: References -->
     <section id="references" class="content-section references">
         <h2>12. 参考文献</h2>
         <ol>
@@ -1227,15 +1252,14 @@
         </ol>
     </section>
 
-    <!-- Navigation -->
     <div class="detail-navigation">
-        <a href="/lifestyle/sleep" class="nav-button">← Sleep Optimization</a>
-        <a href="/lifestyle/smoking" class="nav-button">Smoking Impact →</a>
+        <a href="/lifestyle/stress" class="nav-button">← Stress Management</a>
+        <a href="/lifestyle/sleep" class="nav-button">Sleep Optimization →</a>
     </div>
 </div>
 
 {% endblock %}
 
-{% block extra_js %}
-<script src="{{ url_for('static', filename='js/lifestyle.js') }}"></script>
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/pages/lifestyle.js') }}"></script>
 {% endblock %}

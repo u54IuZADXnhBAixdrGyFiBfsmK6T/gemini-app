@@ -1,6 +1,8 @@
+{% extends "base.html" %}
+
 {% block title %}Smoking Impact - 喫煙と筋肥大の科学{% endblock %}
 
-{% block extra_css %}
+{% block head %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/lifestyle.css') }}">
 {% endblock %}
 
@@ -11,7 +13,6 @@
         <p class="subtitle">喫煙が筋肉を破壊する - 禁煙で筋肥大を加速させる</p>
     </div>
 
-    <!-- Table of Contents -->
     <div class="toc">
         <h2>📑 目次</h2>
         <ul>
@@ -30,7 +31,6 @@
         </ul>
     </div>
 
-    <!-- Section 1: Reality -->
     <section id="reality" class="content-section">
         <h2>1. 厳しい現実：喫煙と筋肥大の関係</h2>
         
@@ -140,10 +140,9 @@
         </div>
     </section>
 
-    <!-- Section 2: Oxygen -->
     <section id="oxygen" class="content-section">
         <h2>2. 酸素供給の破壊</h2>
-
+        
         <p>
             喫煙が筋肥大に与える最も直接的で深刻な影響は、<strong>酸素供給システムの破壊</strong>です。
             筋肉の成長には十分な酸素が不可欠ですが、喫煙はこれを多方面から阻害します。
@@ -283,10 +282,9 @@
         </ul>
     </section>
 
-    <!-- Section 3: Protein Synthesis -->
     <section id="protein-synthesis" class="content-section">
         <h2>3. 筋タンパク質合成への影響</h2>
-
+        
         <p>
             喫煙は筋タンパク質合成（MPS）を<strong>直接的かつ間接的に抑制</strong>します。
         </p>
@@ -415,6 +413,7 @@
             <li>実質的に、摂取プロテインの30%が無駄に</li>
         </ul>
     </section>
+
     <section id="hormones" class="content-section">
         <h2>4. ホルモンバランスの崩壊</h2>
 
@@ -437,12 +436,6 @@
         </ul>
 
         <h3>4.2 成長ホルモンとIGF-1</h3>
-
-        <ul>
-            <li><strong>GH分泌:</strong> 間接的に低下（睡眠の質悪化）</li>
-            <li><strong>IGF-1:</strong> 15-20%低下</li>
-            <li><strong>肝臓機能:</strong> ニコチンが肝臓のIGF-1産生
-                <h3>4.2 成長ホルモンとIGF-1</h3>
 
         <ul>
             <li><strong>GH分泌:</strong> 間接的に低下（睡眠の質悪化）</li>
@@ -508,7 +501,6 @@
         </div>
     </section>
 
-    <!-- Section 5: Recovery -->
     <section id="recovery" class="content-section">
         <h2>5. 回復能力の低下</h2>
 
@@ -602,7 +594,6 @@
         </div>
     </section>
 
-    <!-- Section 6: Performance -->
     <section id="performance" class="content-section">
         <h2>6. トレーニングパフォーマンスへの影響</h2>
 
@@ -682,7 +673,6 @@
         </ul>
     </section>
 
-    <!-- Section 7: Body Composition -->
     <section id="body-composition" class="content-section">
         <h2>7. 体組成への悪影響</h2>
 
@@ -745,7 +735,6 @@
         </ul>
     </section>
 
-    <!-- Section 8: Inflammation -->
     <section id="inflammation" class="content-section">
         <h2>8. 慢性炎症と免疫抑制</h2>
 
@@ -807,10 +796,9 @@
         </ul>
     </section>
 
-    <!-- Section 9: Quitting Benefits -->
     <section id="quitting" class="content-section">
         <h2>9. 禁煙のメリットとタイムライン</h2>
-
+        
         <p>
             禁煙の効果は<strong>驚くほど速く現れます</strong>。
             筋肥大への効果も数週間で実感できます。
@@ -933,4 +921,239 @@
                     <td style="padding: 12px;">20%遅い</td>
                     <td style="padding: 12px;"><strong>+60%</strong></td>
                 </tr>
-            </table{% extends "base.html" %}
+            </table>
+        </div>
+    </section>
+
+    <section id="strategies" class="content-section">
+        <h2>10. 禁煙成功戦略</h2>
+
+        <p>
+            禁煙は<strong>最も投資対効果の高い健康改善</strong>です。
+            以下の科学的に証明された戦略を活用しましょう。
+        </p>
+
+        <h3>10.1 禁煙の準備</h3>
+
+        <div style="background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>禁煙開始前2週間の準備</h4>
+            
+            <ol style="line-height: 1.8;">
+                <li><strong>禁煙日を設定:</strong> 具体的な日付を決める（ストレスの少ない日）</li>
+                <li><strong>動機を明確化:</strong> 
+                    <ul style="margin-top: 5px;">
+                        <li>筋肥大効果が40%向上</li>
+                        <li>トレーニングパフォーマンス改善</li>
+                        <li>年間30-50万円の節約</li>
+                        <li>健康寿命の延長</li>
+                    </ul>
+                </li>
+                <li><strong>トリガーを特定:</strong> いつ、どこで、なぜ吸いたくなるかを記録</li>
+                <li><strong>サポート体制:</strong> 家族・友人に宣言、禁煙外来の予約</li>
+                <li><strong>環境整備:</strong> タバコ・灰皿・ライターを全て処分</li>
+            </ol>
+        </div>
+
+        <h3>10.2 ニコチン置換療法（NRT）</h3>
+
+        <p>
+            <strong>ニコチンパッチ・ガム</strong>は禁煙成功率を2倍にします。
+        </p>
+
+        <ul>
+            <li><strong>ニコチンパッチ:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>1日1回貼るだけ、簡便</li>
+                    <li>禁煙成功率：50-70%向上</li>
+                    <li>使用期間：8-12週間</li>
+                    <li>段階的に減量（21mg→14mg→7mg）</li>
+                </ul>
+            </li>
+            <li><strong>ニコチンガム:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>急な渇望に対処可能</li>
+                    <li>1日8-12個から開始</li>
+                    <li>30分かけてゆっくり噛む</li>
+                </ul>
+            </li>
+            <li><strong>注意:</strong> タバコとの併用は絶対に避ける</li>
+        </ul>
+
+        <h3>10.3 処方薬</h3>
+
+        <div style="background: #e3f2fd; padding: 25px; border-radius: 12px; margin: 20px 0;">
+            <h4>バレニクリン（チャンピックス）</h4>
+            <ul>
+                <li><strong>作用:</strong> ニコチン受容体に作用、渇望を軽減</li>
+                <li><strong>成功率:</strong> プラセボの3倍</li>
+                <li><strong>使用期間:</strong> 12週間</li>
+                <li><strong>開始:</strong> 禁煙日の1週間前から</li>
+                <li><strong>副作用:</strong> 吐き気（軽度）、異常な夢</li>
+                <li><strong>処方:</strong> 医師の処方が必要</li>
+            </ul>
+        </div>
+
+        <h3>10.4 行動療法</h3>
+
+        <ul>
+            <li><strong>代替行動:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>吸いたくなったら：深呼吸、水を飲む、ガムを噛む</li>
+                    <li>手持ち無沙汰：ストレスボール、筆記用具</li>
+                    <li>休憩時：散歩、ストレッチ</li>
+                </ul>
+            </li>
+            <li><strong>トリガー回避:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>コーヒー→紅茶に変更（コーヒー=タバコの連想を断つ）</li>
+                    <li>飲酒を控える（特に最初の1ヶ月）</li>
+                    <li>喫煙者との接触を最小化</li>
+                </ul>
+            </li>
+            <li><strong>報酬システム:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>節約したお金で自分にご褒美</li>
+                    <li>1週間ごとのマイルストーン設定</li>
+                    <li>トレーニング成果を記録・可視化</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>10.5 トレーニングを活用した禁煙</h3>
+
+        <div class="success-box">
+            <h4>✅ 運動は最強の禁煙サポート</h4>
+            <ul>
+                <li><strong>渇望軽減:</strong> 運動後30-60分は渇望が50%減少</li>
+                <li><strong>禁断症状緩和:</strong> エンドルフィン分泌でストレス軽減</li>
+                <li><strong>体重管理:</strong> 禁煙後の体重増加を最小化</li>
+                <li><strong>自己効力感:</strong> 「やればできる」という自信</li>
+            </ul>
+            
+            <p style="margin-top: 15px;"><strong>推奨プロトコル:</strong></p>
+            <ul>
+                <li>渇望が強い時：10-15分の軽い運動（散歩、階段昇降）</li>
+                <li>毎日：30-60分の有酸素運動</li>
+                <li>週3-5回：筋トレ（禁煙のモチベーション維持）</li>
+            </ul>
+        </div>
+
+        <h3>10.6 再喫煙防止策</h3>
+
+        <ul>
+            <li><strong>「1本だけ」は存在しない:</strong> 95%が再喫煙につながる</li>
+            <li><strong>高リスク状況を特定:</strong> 飲酒、ストレス、喫煙者との交流</li>
+            <li><strong>対処計画:</strong> 各状況での具体的行動を事前に決める</li>
+            <li><strong>スリップ（失敗）への対応:</strong>
+                <ul style="margin-top: 5px;">
+                    <li>1本吸ってしまっても諦めない</li>
+                    <li>すぐに禁煙を再開</li>
+                    <li>失敗から学ぶ（何がトリガーだったか）</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>10.7 禁煙外来の活用</h3>
+
+        <p>
+            <strong>禁煙外来</strong>は成功率を大幅に向上させます。
+        </p>
+
+        <ul>
+            <li><strong>成功率:</strong> 自力の3-4倍</li>
+            <li><strong>保険適用:</strong> 条件を満たせば保険診療可能</li>
+            <li><strong>費用:</strong> 3ヶ月で約2万円（タバコ代より安い）</li>
+            <li><strong>内容:</strong> 
+                <ul style="margin-top: 5px;">
+                    <li>医師による診察・アドバイス</li>
+                    <li>処方薬（バレニクリン等）</li>
+                    <li>定期的なフォローアップ</li>
+                    <li>呼気一酸化炭素濃度測定</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="calculator" class="content-section">
+        <h2>11. 喫煙影響計算ツール</h2>
+        
+        <p>
+            以下のツールで、喫煙があなたの体とお金に与えている影響を確認しましょう。
+        </p>
+
+        <div class="interactive-tool">
+            <h3>喫煙影響シミュレーター</h3>
+            <p style="color: #666; margin-bottom: 25px;">
+                現在の喫煙習慣を入力してください。禁煙した場合の効果も確認できます。
+            </p>
+
+            <div class="tool-input-group">
+                <label for="cigarettesPerDay">1日の喫煙本数</label>
+                <input type="number" id="cigarettesPerDay" min="0" max="100" value="20" placeholder="20">
+            </div>
+
+            <div class="tool-input-group">
+                <label for="yearsSmoked">喫煙年数</label>
+                <input type="number" id="yearsSmoked" min="0" max="80" value="10" placeholder="10">
+            </div>
+
+            <div class="tool-input-group">
+                <label for="quitDays">禁煙日数（禁煙中の方のみ）</label>
+                <input type="number" id="quitDays" min="0" max="10000" value="0" placeholder="0">
+            </div>
+
+            <button class="tool-button" id="calculateSmoking">影響を計算</button>
+
+            <div id="smokingResult" class="tool-result"></div>
+        </div>
+    </section>
+
+    <section id="references" class="content-section references">
+        <h2>12. 参考文献</h2>
+        <ol>
+            <li>Petersen, A.M., & Pedersen, B.K. (2007). "The role of IL-6 in mediating the anti-inflammatory effects of exercise." <em>Journal of Physiology and Pharmacology</em>, 57 Suppl 10, 43-51.</li>
+            
+            <li>Hollings, M., et al. (2012). "The effect of progressive resistance training on aerobic fitness and strength in adults with coronary heart disease: a systematic review and meta-analysis of randomised controlled trials." <em>European Journal of Preventive Cardiology</em>, 24(12), 1242-1259.</li>
+            
+            <li>Bernaards, C.M., et al. (2003). "Can strenuous leisure time physical activity prevent psychological complaints in a working population?" <em>Occupational and Environmental Medicine</em>, 60(1), 10-16.</li>
+            
+            <li>Pärssinen, M., et al. (2000). "Increased premature mortality of competitive powerlifters suspected to have used anabolic agents." <em>International Journal of Sports Medicine</em>, 21(3), 225-227.</li>
+            
+            <li>Nawrot, T.S., et al. (2007). "Public health importance of triggers of myocardial infarction: a comparative risk assessment." <em>The Lancet</em>, 369(9558), 397-406.</li>
+            
+            <li>Halmenschlager, G., et al. (2009). "Evaluation of the effects of cigarette smoking on testosterone levels in adult men." <em>The Journal of Sexual Medicine</em>, 6(6), 1763-1772.</li>
+            
+            <li>U.S. Department of Health and Human Services (2020). "Smoking Cessation: A Report of the Surgeon General." <em>U.S. Department of Health and Human Services</em>, Centers for Disease Control and Prevention, National Center for Chronic Disease Prevention and Health Promotion, Office on Smoking and Health.</li>
+            
+            <li>Hackshaw, A., et al. (2018). "Low cigarette consumption and risk of coronary heart disease and stroke: meta-analysis of 141 cohort studies in 55 study reports." <em>BMJ</em>, 360, j5855.</li>
+            
+            <li>World Health Organization (2019). "WHO Report on the Global Tobacco Epidemic, 2019." <em>World Health Organization</em>.</li>
+            
+            <li>Cahill, K., et al. (2016). "Nicotine receptor partial agonists for smoking cessation." <em>Cochrane Database of Systematic Reviews</em>, (5), CD006103.</li>
+            
+            <li>Taylor, G.M., et al. (2021). "Change in mental health after smoking cessation: systematic review and meta-analysis." <em>BMJ</em>, 372, m4349.</li>
+            
+            <li>Ussher, M.H., et al. (2014). "Exercise interventions for smoking cessation." <em>Cochrane Database of Systematic Reviews</em>, (8), CD002295.</li>
+            
+            <li>厚生労働省 (2021). 「令和元年 国民健康・栄養調査結果の概要」<br>
+            <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/r1-houkoku_00002.html" target="_blank">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/r1-houkoku_00002.html</a></li>
+            
+            <li>日本循環器学会 (2020). 「禁煙治療のための標準手順書」<br>
+            <a href="http://www.j-circ.or.jp/" target="_blank">http://www.j-circ.or.jp/</a></li>
+            
+            <li>国立がん研究センター (2021). 「喫煙とがん」<br>
+            <a href="https://ganjoho.jp/public/pre_scr/cause_prevention/smoking/index.html" target="_blank">https://ganjoho.jp/public/pre_scr/cause_prevention/smoking/index.html</a></li>
+        </ol>
+    </section>
+
+    <div class="detail-navigation">
+        <a href="/lifestyle" class="nav-button">← Lifestyleトップへ</a>
+        <a href="/lifestyle/drinking" class="nav-button">Drinking Impact →</a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/pages    /lifestyle.js') }}"></script>
+{% endblock %}

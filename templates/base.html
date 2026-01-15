@@ -51,7 +51,6 @@
                 font-size: 0.95rem;
             }
             
-            /* モバイルでRecordプロモボタンは非表示 */
             #recordDropdown > .site-header__promo {
                 display: none;
             }
@@ -164,7 +163,7 @@
     </footer>
     {% endblock %}
 
-    <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/shared/header.js') }}"></script>
     {% block scripts %}{% endblock %}
 </body>
 
