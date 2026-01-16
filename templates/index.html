@@ -1,133 +1,170 @@
 {% extends "base.html" %}
 
-{% block title %}GEMINI-FITNESS{% endblock %}
+{% block title %}GEMINI FITNESS - Science of Body Architecture{% endblock %}
 
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-<section class="hero-section">
-    <div class="hero-content-grid">
-        <div class="hero-text-content">
-            <h1 class="hero-main-title">AIと、理想のカラダへ</h1>
-            <p class="hero-subtitle">
-                あなたの目標、レベル、ライフスタイルに合わせて、Geminiが最適なトレーニングと食事プランをパーソナライズ。
+
+<section class="brand-hero fade-in">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-container">
+        <div class="hero-caption">
+            <span class="eyebrow-text">Science x Consistency</span>
+            <h1 class="hero-title">
+                身体作りは、<br>
+                <span class="serif-italic">科学</span>である。
+            </h1>
+            <p class="hero-desc">
+                根性論や流行のダイエットはもう終わり。<br>
+                あなたの骨格、代謝、ライフスタイルを解析し、<br>
+                最短距離で「理想」へ導く、あなただけのメソッド。
             </p>
-            <a href="{{ url_for('main.gemini_fitness') }}" class="hero-cta-button">今すぐAIプランを体験 →</a>
+            <div class="hero-actions">
+                <a href="{{ url_for('main.gemini_fitness') }}" class="btn-primary">プランを作成する</a>
+                <a href="#philosophy" class="btn-text">メソッドを知る ↓</a>
+            </div>
         </div>
-        <div class="hero-visual-content">
-            <div class="ai-coach-card">
-                <div class="card-header">
-                    <span class="light"></span>
-                    <span class="dots"></span>
-                </div>
-                <div class="card-body">
-                    <p class="prompt"><span class="prompt-label">目標:</span> 筋肉を増やし、引き締まった体へ</p>
-                    <p class="prompt"><span class="prompt-label">経験:</span> 週2回のジム通い</p>
-                    <p class="prompt"><span class="prompt-label">食事:</span> 外食が多め</p>
-                </div>
-                <div class="card-footer">
-                    <span>AIプランを生成中...</span>
+        <div class="hero-visual">
+            <div class="abstract-shape"></div>
+            <div class="stat-floating-card">
+                <span class="stat-label">Success Rate</span>
+                <span class="stat-value">94<small>%</small></span>
+                <span class="stat-caption">継続率（3ヶ月以上）</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="trust-bar fade-in">
+    <div class="container">
+        <p>Trusted by Data Science & Physiology</p>
+        <div class="logos-grid">
+            <span>METABOLISM</span>
+            <span>HYPERTROPHY</span>
+            <span>RECOVERY</span>
+            <span>NUTRITION</span>
+        </div>
+    </div>
+</div>
+
+<section id="philosophy" class="section-philosophy fade-in">
+    <div class="container">
+        <div class="split-layout">
+            <div class="split-text">
+                <h2 class="section-heading">Why Logic Matters?</h2>
+                <h3 class="sub-heading">感覚ではなく、論理で動く。</h3>
+                <p>
+                    「頑張っているのに変わらない」<br>
+                    その原因の9割は、努力の方向性が個人の体質とズレていることにあります。
+                </p>
+                <p>
+                    Gemini Fitnessは、膨大な身体データと栄養学のエビデンスに基づき、
+                    今のあなたに「何が必要で、何が不要か」を冷徹なまでに分析。
+                    まるで専属のコーチが隣にいるかのように、日々の選択を最適化します。
+                </p>
+                <a href="/lifestyle" class="link-arrow">ライフスタイルの重要性について</a>
+            </div>
+            <div class="split-image-placeholder">
+                <div class="image-box">
+                    <span>Personalized<br>Engineering</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="knowledge-section">
+<section class="section-services fade-in">
     <div class="container">
-        <div class="section-header">
-            <span class="section-badge">ESSENTIALS</span>
-            <h2 class="section-title">理想の体を作るための3原則</h2>
-            <p class="section-intro">理想の体型は、正しい知識の上に成り立ちます。科学的根拠に基づいたアプローチを学びましょう。</p>
+        <div class="center-header">
+            <span class="tag-small">OUR APPROACH</span>
+            <h2>3つのコア・メソッド</h2>
         </div>
+        
+        <div class="service-grid">
+            <article class="service-card">
+                <div class="card-number">01</div>
+                <h3>Hyper-Personalized<br>Training</h3>
+                <p>
+                    「週2回しか時間がない」「腰が痛くなりやすい」。
+                    制約条件こそが、プランの精度を高めます。
+                    画一的なメニューではなく、あなたの生活に溶け込むプログラムを構築。
+                </p>
+            </article>
 
-        <div class="knowledge-grid">
-            <div class="k-card training">
-                <div class="k-card-icon">💪</div>
-                <div class="k-card-content">
-                    <div class="k-tag">TRAINING</div>
-                    <h3 class="k-card-title">筋トレを「今」始める理由</h3>
-                    <p class="k-card-description">
-                        筋トレは見た目を変えるだけでなく、体質そのものを<strong>「燃焼型」</strong>へと作り変える唯一の方法です。
-                    </p>
-                    <ul class="k-list">
-                        <li>
-                            <span class="k-list-icon">✓</span>
-                            <div><strong>代謝アップ:</strong> 基礎代謝が向上し、痩せやすく太りにくい体へ。</div>
-                        </li>
-                        <li>
-                            <span class="k-list-icon">✓</span>
-                            <div><strong>若返り効果:</strong> 成長ホルモンの分泌で肌や髪のツヤが改善。</div>
-                        </li>
-                        <li>
-                            <span class="k-list-icon">✓</span>
-                            <div><strong>メンタル強化:</strong> セロトニン分泌によりストレスに強い心を作ります。</div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <article class="service-card">
+                <div class="card-number">02</div>
+                <h3>Calculated<br>Nutrition</h3>
+                <p>
+                    PFCバランス（タンパク質・脂質・炭水化物）の黄金比は人それぞれ。
+                    目的の体重と体脂肪率から逆算された、
+                    「美味しく食べても痩せる」食事戦略を提案します。
+                </p>
+            </article>
 
-            <div class="k-card nutrition">
-                <div class="k-card-icon">🥗</div>
-                <div class="k-card-content">
-                    <div class="k-tag">NUTRITION</div>
-                    <h3 class="k-card-title">食事が体型改善の鍵である根拠</h3>
-                    <p class="k-card-description">
-                        「腹筋はキッチンで作られる」と言われるほど、食事の影響は絶大。PFCバランスを整えることが近道です。
-                    </p>
-                    <ul class="k-list">
-                        <li>
-                            <span class="k-list-icon">✓</span>
-                            <div><strong>リバウンド防止:</strong> タンパク質中心の食事で筋肉を落とさず脂肪を燃焼。</div>
-                        </li>
-                        <li>
-                            <span class="k-list-icon">✓</span>
-                            <div><strong>血糖値制御:</strong> インスリンの過剰分泌を抑え、脂肪蓄積をブロック。</div>
-                        </li>
-                        <li>
-                            <span class="k-list-icon">✓</span>
-                            <div><strong>吸収効率:</strong> 腸内環境を整えることで、栄養を効率よくエネルギーへ。</div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="k-card habits">
-                <div class="k-card-icon">⚠️</div>
-                <div class="k-card-content">
-                    <div class="k-tag">HABITS</div>
-                    <h3 class="k-card-title">成果を阻害する「生活の罠」</h3>
-                    <p class="k-card-description">
-                        悪い習慣は、トレーニングの努力を<strong>50%以上無効化</strong>します。特に「睡眠」と「酒」には要注意。
-                    </p>
-                    <ul class="k-list">
-                        <li>
-                            <span class="k-list-icon">✓</span>
-                            <div><strong>アルコールの害:</strong> 筋肉の合成を直接阻害し、脂肪燃焼をストップさせます。</div>
-                        </li>
-                        <li>
-                            <span class="k-list-icon">✓</span>
-                            <div><strong>睡眠不足:</strong> 食欲増進ホルモンが増加し、翌日のドカ食いを招きます。</div>
-                        </li>
-                        <li>
-                            <span class="k-list-icon">✓</span>
-                            <div><strong>慢性炎症:</strong> 加工食品の摂りすぎは代謝を停滞させる大きな原因です。</div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <article class="service-card">
+                <div class="card-number">03</div>
+                <h3>Recovery<br>Management</h3>
+                <p>
+                    筋肉はジムではなく、ベッドの中で作られます。
+                    睡眠、ストレスケア、アクティブレスト。
+                    見落とされがちな「休む技術」を科学的に指導します。
+                </p>
+            </article>
         </div>
     </div>
 </section>
 
-<!-- <section class="cta-section">
+<section class="magazine-cta fade-in">
     <div class="container">
-        <h2 class="cta-title">準備はできましたか？</h2>
-        <p class="cta-description">次はあなたのライフスタイルに合わせて、具体的なプランをAIと作成しましょう。</p>
-        <a href="{{ url_for('main.gemini_fitness') }}" class="hero-cta-button">パーソナライズを開始する</a>
+        <div class="cta-inner">
+            <h2>Ready to Redefine?</h2>
+            <p>
+                理想の体型を手に入れるのに、才能は必要ありません。<br>
+                必要なのは、正しい地図と、最初の一歩だけです。
+            </p>
+            <a href="{{ url_for('main.gemini_fitness') }}" class="btn-primary btn-large">無料カウンセリング(AI)を始める</a>
+        </div>
     </div>
-</section> -->
+</section>
 
+<section class="section-journal fade-in">
+    <div class="container">
+        <div class="journal-header">
+            <h2>From the Journal</h2>
+            <a href="/lifestyle" class="view-all">View All Articles →</a>
+        </div>
+        <div class="journal-grid">
+            <a href="/lifestyle/sleep" class="journal-item">
+                <div class="journal-thumb" style="background-color: #e2e8f0;"></div>
+                <div class="journal-content">
+                    <span class="journal-cat">RECOVERY</span>
+                    <h4>睡眠の質が筋肥大を左右する科学的理由</h4>
+                </div>
+            </a>
+            <a href="/lifestyle/nutrition" class="journal-item">
+                <div class="journal-thumb" style="background-color: #cbd5e1;"></div>
+                <div class="journal-content">
+                    <span class="journal-cat">NUTRITION</span>
+                    <h4>「食べない」ダイエットが失敗するワケ</h4>
+                </div>
+            </a>
+            <a href="/lifestyle/stress" class="journal-item">
+                <div class="journal-thumb" style="background-color: #94a3b8;"></div>
+                <div class="journal-content">
+                    <span class="journal-cat">MINDSET</span>
+                    <h4>ストレスとコルチゾールの関係性</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/pages/index.js') }}"></script>
 {% endblock %}
