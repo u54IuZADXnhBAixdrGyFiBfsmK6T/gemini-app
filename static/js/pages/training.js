@@ -531,3 +531,4 @@ function debounce(fn, wait = 200) {
     main.innerHTML = `<div style="text-align:center; padding: 40px;">トレーニングデータの読み込みに失敗しました。ファイルパスを確認してください。</div>`;
   }
 })();
+

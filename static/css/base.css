@@ -237,6 +237,7 @@ body {
     cursor: pointer;
     padding: 0;
     z-index: 1200;
+    margin-left: 12px;
 }
 
 .site-header__hamburger-bar {
@@ -363,13 +364,27 @@ body {
 
     .site-header__content {
         height: 60px;
-        padding: 0 20px;
+        padding: 0 16px !important;
+        gap: 12px;
+    }
+    
+    /* index.htmlのcontainerとの競合を防ぐ */
+    .site-header .container {
+        padding: 0 !important;
+        max-width: 100% !important;
     }
 
     .site-header__logo img {
         height: 32px;
     }
 
+    /* ハンバーガーメニューを表示 */
+    .site-header__hamburger {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    /* ナビゲーションをハンバーガーメニュー内に */
     .site-header__nav {
         display: block;
         position: absolute;
@@ -382,15 +397,14 @@ body {
         transform: translateY(-120%);
         transition: transform 0.3s ease-in-out;
         visibility: hidden;
+        margin-left: 0;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
     }
 
     .site-header.is-open .site-header__nav {
         transform: translateY(0);
         visibility: visible;
-    }
-
-    .site-header__hamburger {
-        display: flex;
     }
 
     .site-header.is-open .site-header__hamburger-bar:nth-child(1) {
@@ -448,10 +462,12 @@ body {
         color: var(--text-dark);
     }
 
+    /* デスクトップのドロップダウンは非表示 */
     .site-header__dropdown {
         display: none !important;
     }
 
+    /* Recordドロップダウンのみモバイルで表示 */
     #recordDropdown .site-header__dropdown {
         display: block !important;
         position: static;
@@ -475,6 +491,28 @@ body {
 
     #recordDropdown > .site-header__promo {
         display: none;
+    }
+
+    /* モバイルでドロップダウンを開いたとき */
+    .site-header__nav-item.show-dropdown .site-header__dropdown {
+        display: block !important;
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background: #f9fafb;
+        margin-top: 4px;
+    }
+
+    .site-header__nav-item.show-dropdown .site-header__dropdown-content {
+        padding: 4px 0;
+    }
+
+    .site-header__nav-item.show-dropdown .site-header__dropdown-list li a {
+        padding: 10px 20px 10px 40px;
+        font-size: 0.875rem;
     }
 
     /* Footer Mobile */

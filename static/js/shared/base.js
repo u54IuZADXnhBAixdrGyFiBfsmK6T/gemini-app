@@ -1,45 +1,90 @@
 document.addEventListener('DOMContentLoaded', () => {
     const siteHeader = document.getElementById('site-header');
-
-    // Dropdown functionality for navigation items
+    const hamburgerBtn = document.getElementById('hamburger-btn');
     const navItemsWithDropdown = document.querySelectorAll('.site-header__nav-item.has-dropdown');
+
+    // モバイル判定
+    const isMobile = () => window.innerWidth <= 768;
+
+    // ドロップダウン機能（デスクトップ用）
     navItemsWithDropdown.forEach(item => {
         item.addEventListener('mouseenter', () => {
-            if (siteHeader && !siteHeader.classList.contains('is-open')) {
+            if (!isMobile() && siteHeader && !siteHeader.classList.contains('is-open')) {
                 item.classList.add('show-dropdown');
             }
         });
         item.addEventListener('mouseleave', () => {
-            item.classList.remove('show-dropdown');
+            if (!isMobile()) {
+                item.classList.remove('show-dropdown');
+            }
         });
+
+        // モバイル用：クリックでドロップダウン切り替え
+        const navLink = item.querySelector('.site-header__nav-link, .site-header__promo');
+        if (navLink) {
+            navLink.addEventListener('click', (e) => {
+                if (isMobile() && siteHeader.classList.contains('is-open')) {
+                    e.preventDefault();
+                    
+                    // 他のドロップダウンを閉じる
+                    navItemsWithDropdown.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('show-dropdown');
+                        }
+                    });
+                    
+                    // 現在のドロップダウンを切り替え
+                    item.classList.toggle('show-dropdown');
+                }
+            });
+        }
     });
 
-    // Hamburger menu toggle
-    const hamburgerBtn = document.getElementById('hamburger-btn');
+    // ハンバーガーメニュートグル
     if (hamburgerBtn && siteHeader) {
         hamburgerBtn.addEventListener('click', () => {
-            siteHeader.classList.toggle('is-open');
-            const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
-            hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
+            const isOpen = siteHeader.classList.toggle('is-open');
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
+            
+            // メニューを閉じるときは全てのドロップダウンも閉じる
+            if (!isOpen) {
+                navItemsWithDropdown.forEach(item => {
+                    item.classList.remove('show-dropdown');
+                });
+            }
         });
     }
 
-    // Hide header on scroll down, show on scroll up
+    // メニュー外をクリックしたら閉じる
+    document.addEventListener('click', (e) => {
+        if (isMobile() && siteHeader.classList.contains('is-open')) {
+            const isClickInsideNav = e.target.closest('.site-header__nav') || e.target.closest('.site-header__hamburger');
+            if (!isClickInsideNav) {
+                siteHeader.classList.remove('is-open');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                navItemsWithDropdown.forEach(item => {
+                    item.classList.remove('show-dropdown');
+                });
+            }
+        }
+    });
+
+    // スクロールでヘッダーを隠す/表示
     let lastScrollY = window.scrollY;
     if (siteHeader) {
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
             
-            // Don't hide header when mobile menu is open
+            // モバイルメニューが開いている時は隠さない
             if (siteHeader.classList.contains('is-open')) {
                 return;
             }
             
-            // Hide header when scrolling down
+            // 下にスクロール時はヘッダーを隠す
             if (currentScrollY > lastScrollY && currentScrollY > siteHeader.offsetHeight) {
                 siteHeader.classList.add('is-hidden');
             }
-            // Show header when scrolling up
+            // 上にスクロール時はヘッダーを表示
             else if (currentScrollY < lastScrollY) {
                 siteHeader.classList.remove('is-hidden');
             }
@@ -48,12 +93,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
     
-    // Highlight current record page
+    // 現在のRecordページをハイライト
     highlightCurrentRecordPage();
+
+    // ウィンドウリサイズ時の処理
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            // デスクトップに戻ったらモバイルメニューの状態をリセット
+            if (!isMobile() && siteHeader.classList.contains('is-open')) {
+                siteHeader.classList.remove('is-open');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                navItemsWithDropdown.forEach(item => {
+                    item.classList.remove('show-dropdown');
+                });
+            }
+        }, 250);
+    });
 });
 
 /**
- * Highlights the active record page link in the dropdown
+ * 現在のRecordページのリンクをハイライト
  */
 function highlightCurrentRecordPage() {
     const currentPath = window.location.pathname;
