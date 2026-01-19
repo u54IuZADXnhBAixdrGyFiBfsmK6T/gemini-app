@@ -242,6 +242,7 @@ function createCard(item) {
   const card = document.createElement('article');
   card.className = 'card';
   card.dataset.id = item.id;
+  card.dataset.level = item.level;
   const equipmentText = Array.isArray(item.equipment) ? item.equipment.join(' / ') : item.equipment;
 
   // YouTubeボタンのHTMLを条件付きで生成
