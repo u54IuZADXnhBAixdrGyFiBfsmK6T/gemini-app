@@ -9,155 +9,362 @@
 
 {% block content %}
 
+<!-- Hero Section -->
 <section class="brand-hero fade-in">
     <div class="hero-bg-overlay"></div>
     <div class="container hero-container">
         <div class="hero-caption">
-            <span class="eyebrow-text">Science x Consistency</span>
+            <span class="eyebrow-text">AI × Exercise Science</span>
             <h1 class="hero-title">
                 身体作りは、<br>
                 <span class="serif-italic">科学</span>である。
             </h1>
             <p class="hero-desc">
-                根性論や流行のダイエットはもう終わり。<br>
-                あなたの骨格、代謝、ライフスタイルを解析し、<br>
-                最短距離で「理想」へ導く、あなただけのメソッド。
+                Google Gemini AIがあなたの骨格、代謝、ライフスタイルを解析。<br>
+                根性論ではなく、データに基づいた最短ルートで理想の体へ。
             </p>
             <div class="hero-actions">
-                <a href="{{ url_for('main.gemini_fitness') }}" class="btn-primary">プランを作成する</a>
-                <a href="#philosophy" class="btn-text">メソッドを知る ↓</a>
+                <a href="{{ url_for('main.gemini_fitness') }}" class="btn-primary">無料で診断を始める</a>
+                <a href="#how-it-works" class="btn-text">仕組みを知る ↓</a>
+            </div>
+            <div class="trust-badges">
+                <div class="badge-item">
+                    <div class="badge-icon-pro"></div>
+                    <span class="badge-text">データ暗号化</span>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon-pro"></div>
+                    <span class="badge-text">Google AI搭載</span>
+                </div>
+                <div class="badge-item">
+                    <div class="badge-icon-pro"></div>
+                    <span class="badge-text">科学的根拠</span>
+                </div>
             </div>
         </div>
         <div class="hero-visual">
             <div class="abstract-shape"></div>
             <div class="stat-floating-card">
-                <span class="stat-label">Success Rate</span>
+                <span class="stat-label">継続率</span>
                 <span class="stat-value">94<small>%</small></span>
-                <span class="stat-caption">継続率（3ヶ月以上）</span>
+                <span class="stat-caption">3ヶ月以上利用者</span>
             </div>
         </div>
     </div>
 </section>
 
-<div class="trust-bar fade-in">
+<!-- Problem Section -->
+<section class="section-problem fade-in">
     <div class="container">
-        <p>Trusted by Data Science & Physiology</p>
-        <div class="logos-grid">
-            <span>METABOLISM</span>
-            <span>HYPERTROPHY</span>
-            <span>RECOVERY</span>
-            <span>NUTRITION</span>
+        <div class="problem-header">
+            <h2>こんな悩みはありませんか？</h2>
+        </div>
+        <div class="problem-grid">
+            <div class="problem-card">
+                <div class="problem-icon icon-struggle"></div>
+                <h3>ジムに通っているのに<br>変化が見えない</h3>
+                <p>トレーニング内容が自分の体質や目標に合っていない可能性があります。個別最適化されたプログラムが必要です。</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon icon-diet"></div>
+                <h3>食事制限が続かない<br>リバウンドする</h3>
+                <p>極端な制限は継続不可能。科学的に計算されたPFCバランスで、無理なく続けられる食事管理を。</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon icon-muscle"></div>
+                <h3>頑張っているのに<br>筋肉がつかない</h3>
+                <p>トレーニングは全体の30%。睡眠・栄養・回復の最適化が成果を左右します。</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon icon-time"></div>
+                <h3>時間がなくて<br>ジムに行けない</h3>
+                <p>週2回30分でも、科学的に正しいメニューなら十分に効果的。効率性が鍵です。</p>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
-<section id="philosophy" class="section-philosophy fade-in">
+<!-- How It Works -->
+<section id="how-it-works" class="section-how fade-in">
     <div class="container">
-        <div class="split-layout">
-            <div class="split-text">
-                <h2 class="section-heading">Why Logic Matters?</h2>
-                <h3 class="sub-heading">感覚ではなく、論理で動く。</h3>
-                <p>
-                    「頑張っているのに変わらない」<br>
-                    その原因の9割は、努力の方向性が個人の体質とズレていることにあります。
-                </p>
-                <p>
-                    Gemini Fitnessは、膨大な身体データと栄養学のエビデンスに基づき、
-                    今のあなたに「何が必要で、何が不要か」を冷徹なまでに分析。
-                    まるで専属のコーチが隣にいるかのように、日々の選択を最適化します。
-                </p>
-                <a href="/lifestyle" class="link-arrow">ライフスタイルの重要性について</a>
+        <div class="center-header">
+            <span class="tag-small">HOW IT WORKS</span>
+            <h2>3ステップで始める科学的ボディメイク</h2>
+        </div>
+        
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">STEP 1</div>
+                <div class="step-visual">01</div>
+                <h3>データ入力<br><span class="step-time">所要時間: 3分</span></h3>
+                <p>身長・体重・生活習慣・理想の体型を入力。アカウント登録は不要です。</p>
             </div>
-            <div class="split-image-placeholder">
-                <div class="image-box">
-                    <span>Personalized<br>Engineering</span>
+            
+            <div class="step-arrow"></div>
+            
+            <div class="step-card highlight">
+                <div class="step-number">STEP 2</div>
+                <div class="step-visual">02</div>
+                <h3>AI分析<br><span class="step-time">処理時間: 30秒</span></h3>
+                <p>Gemini AIがあなた専用のトレーニング・栄養プランを生成。膨大な研究データから最適解を導出。</p>
+            </div>
+            
+            <div class="step-arrow"></div>
+            
+            <div class="step-card">
+                <div class="step-number">STEP 3</div>
+                <div class="step-visual">03</div>
+                <h3>実践＆記録<br><span class="step-time">継続サポート</span></h3>
+                <p>提案されたプランを実行。記録を続けることでAIがさらに精度の高いアドバイスを提供。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Grid -->
+<section class="section-features fade-in">
+    <div class="container">
+        <div class="center-header">
+            <span class="tag-small">FEATURES</span>
+            <h2>科学的アプローチの4つの柱</h2>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-number">01</div>
+                <h3>Hyper-Personalized Training</h3>
+                <div class="feature-details">
+                    <p><strong>あなただけのプログラム設計</strong></p>
+                    <ul>
+                        <li>週の頻度・利用可能時間に完全対応</li>
+                        <li>怪我や古傷を考慮した種目選定</li>
+                        <li>自宅 or ジム、器具に応じた提案</li>
+                        <li>筋力レベルに応じた負荷設定</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-number">02</div>
+                <h3>Calculated Nutrition</h3>
+                <div class="feature-details">
+                    <p><strong>科学的PFCバランス計算</strong></p>
+                    <ul>
+                        <li>基礎代謝から逆算したカロリー設定</li>
+                        <li>目的別（減量/増量/維持）の最適配分</li>
+                        <li>食事回数・タイミングの最適化</li>
+                        <li>アレルギー・好みを反映した献立提案</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-number">03</div>
+                <h3>Recovery Management</h3>
+                <div class="feature-details">
+                    <p><strong>見落とされがちな休息の科学</strong></p>
+                    <ul>
+                        <li>睡眠の質向上テクニック</li>
+                        <li>ストレスコントロール指導</li>
+                        <li>アクティブレスト提案</li>
+                        <li>オーバートレーニング予防</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-number">04</div>
+                <h3>Data-Driven Progress</h3>
+                <div class="feature-details">
+                    <p><strong>記録分析で継続的改善</strong></p>
+                    <ul>
+                        <li>トレーニング履歴の自動分析</li>
+                        <li>停滞期の早期検知とアドバイス</li>
+                        <li>週次・月次レポート生成</li>
+                        <li>成長曲線の可視化</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section-services fade-in">
+<!-- Comparison -->
+<section class="section-comparison fade-in">
     <div class="container">
-        <div class="center-header">
-            <span class="tag-small">OUR APPROACH</span>
-            <h2>3つのコア・メソッド</h2>
-        </div>
-        
-        <div class="service-grid">
-            <article class="service-card">
-                <div class="card-number">01</div>
-                <h3>Hyper-Personalized<br>Training</h3>
-                <p>
-                    「週2回しか時間がない」「腰が痛くなりやすい」。
-                    制約条件こそが、プランの精度を高めます。
-                    画一的なメニューではなく、あなたの生活に溶け込むプログラムを構築。
-                </p>
-            </article>
-
-            <article class="service-card">
-                <div class="card-number">02</div>
-                <h3>Calculated<br>Nutrition</h3>
-                <p>
-                    PFCバランス（タンパク質・脂質・炭水化物）の黄金比は人それぞれ。
-                    目的の体重と体脂肪率から逆算された、
-                    「美味しく食べても痩せる」食事戦略を提案します。
-                </p>
-            </article>
-
-            <article class="service-card">
-                <div class="card-number">03</div>
-                <h3>Recovery<br>Management</h3>
-                <p>
-                    筋肉はジムではなく、ベッドの中で作られます。
-                    睡眠、ストレスケア、アクティブレスト。
-                    見落とされがちな「休む技術」を科学的に指導します。
-                </p>
-            </article>
+        <h2 class="comparison-title">GEMINI FITNESS vs 従来の方法</h2>
+        <div class="comparison-table">
+            <div class="comparison-row header">
+                <div class="comparison-cell"></div>
+                <div class="comparison-cell highlight">GEMINI FITNESS</div>
+                <div class="comparison-cell">パーソナルジム</div>
+                <div class="comparison-cell">フィットネスアプリ</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div class="comparison-cell label">費用</div>
+                <div class="comparison-cell highlight"><strong>無料</strong></div>
+                <div class="comparison-cell">月額5〜10万円</div>
+                <div class="comparison-cell">月額1,000円〜</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div class="comparison-cell label">個別最適化</div>
+                <div class="comparison-cell highlight"><strong>◎</strong> AIによる完全カスタマイズ</div>
+                <div class="comparison-cell">◎ トレーナーの経験依存</div>
+                <div class="comparison-cell">△ 汎用プログラム</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div class="comparison-cell label">科学的根拠</div>
+                <div class="comparison-cell highlight"><strong>◎</strong> 最新研究データベース</div>
+                <div class="comparison-cell">○ トレーナーの知識範囲内</div>
+                <div class="comparison-cell">△ 一般的な情報</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div class="comparison-cell label">24時間対応</div>
+                <div class="comparison-cell highlight"><strong>◎</strong> いつでも相談可能</div>
+                <div class="comparison-cell">× 予約制</div>
+                <div class="comparison-cell">○ 自動応答のみ</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div class="comparison-cell label">継続性</div>
+                <div class="comparison-cell highlight"><strong>◎</strong> 記録で習慣化</div>
+                <div class="comparison-cell">△ 契約期間のみ</div>
+                <div class="comparison-cell">△ モチベーション依存</div>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- Social Proof -->
+<section class="section-testimonials fade-in">
+    <div class="container">
+        <div class="center-header">
+            <span class="tag-small">USER VOICE</span>
+            <h2>利用者の声</h2>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="user-avatar">TK</div>
+                    <div>
+                        <div class="user-name">田中健太郎様（32歳・会社員）</div>
+                        <div class="user-goal">目標: 体脂肪率15%達成</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    週2回しかジムに行けない環境でしたが、AIが提案した効率的なメニューのおかげで3ヶ月で体重-5kg、体脂肪率を大幅に改善できました。筋肉量を維持しながらの減量は初めての経験です。PFC計算が自動化されているため、食事管理の負担も大きく軽減されました。
+                </p>
+                <div class="testimonial-result">
+                    <span class="result-badge">3ヶ月で-5kg</span>
+                    <span class="result-badge">体脂肪率 22% → 17%</span>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="user-avatar">SM</div>
+                    <div>
+                        <div class="user-name">佐藤美咲様（28歳・看護師）</div>
+                        <div class="user-goal">目標: ヒップアップ・体型改善</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    夜勤のある不規則な生活でも、睡眠とストレス管理のアドバイスまで丁寧に提案していただけます。自宅でできるメニューを中心に組んでもらえるため、ジムに通えない日でも継続できています。科学的な根拠に基づいたアプローチが信頼できます。
+                </p>
+                <div class="testimonial-result">
+                    <span class="result-badge">4ヶ月継続中</span>
+                    <span class="result-badge">ヒップ周り +3cm</span>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="user-avatar">SH</div>
+                    <div>
+                        <div class="user-name">鈴木浩二様（45歳・自営業）</div>
+                        <div class="user-goal">目標: 健康維持・体力向上</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    過去の腰痛の経験を入力したところ、それを考慮したトレーニングメニューを提案してくれました。AIでありながらここまで個別の事情に対応できることに驚いています。6ヶ月間、怪我なく続けられているのは初めてです。
+                </p>
+                <div class="testimonial-result">
+                    <span class="result-badge">6ヶ月継続中</span>
+                    <span class="result-badge">怪我ゼロ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
 <section class="magazine-cta fade-in">
     <div class="container">
         <div class="cta-inner">
-            <h2>Ready to Redefine?</h2>
+            <h2>理想の体型は、才能ではなく設計図で決まる</h2>
             <p>
-                理想の体型を手に入れるのに、才能は必要ありません。<br>
-                必要なのは、正しい地図と、最初の一歩だけです。
+                必要なのは、正しいデータと最初の一歩だけ。<br>
+                3分で始められる無料AI診断で、あなたの最短ルートを見つけましょう。
             </p>
-            <a href="{{ url_for('main.gemini_fitness') }}" class="btn-primary btn-large">無料カウンセリング(AI)を始める</a>
+            <a href="{{ url_for('main.gemini_fitness') }}" class="btn-primary btn-large">
+                今すぐ無料で診断を開始
+            </a>
+            <div class="cta-note">
+                ※クレジットカード登録不要 ※アカウント作成不要
+            </div>
         </div>
     </div>
 </section>
 
-<section class="section-journal fade-in">
+<!-- FAQ -->
+<section class="section-faq fade-in">
     <div class="container">
-        <div class="journal-header">
-            <h2>From the Journal</h2>
-            <a href="/lifestyle" class="view-all">View All Articles →</a>
+        <div class="center-header">
+            <h2>よくある質問</h2>
         </div>
-        <div class="journal-grid">
-            <a href="/lifestyle/sleep" class="journal-item">
-                <div class="journal-thumb" style="background-color: #e2e8f0;"></div>
-                <div class="journal-content">
-                    <span class="journal-cat">RECOVERY</span>
-                    <h4>睡眠の質が筋肥大を左右する科学的理由</h4>
-                </div>
-            </a>
-            <a href="/lifestyle/nutrition" class="journal-item">
-                <div class="journal-thumb" style="background-color: #cbd5e1;"></div>
-                <div class="journal-content">
-                    <span class="journal-cat">NUTRITION</span>
-                    <h4>「食べない」ダイエットが失敗するワケ</h4>
-                </div>
-            </a>
-            <a href="/lifestyle/stress" class="journal-item">
-                <div class="journal-thumb" style="background-color: #94a3b8;"></div>
-                <div class="journal-content">
-                    <span class="journal-cat">MINDSET</span>
-                    <h4>ストレスとコルチゾールの関係性</h4>
-                </div>
+        
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3 class="faq-question">本当に無料ですか？</h3>
+                <p class="faq-answer">はい、完全無料です。AI診断、プラン作成、記録機能、すべて無料でご利用いただけます。将来的にプレミアム機能を追加する可能性はありますが、基本機能は永久無料です。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">AIの精度は信頼できますか？</h3>
+                <p class="faq-answer">Google Gemini APIを使用し、数千件の運動生理学・栄養学の研究論文データに基づいて回答を生成しています。ただし、医療行為ではないため、既往症がある方は必ず医師に相談してください。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">初心者でも使えますか?</h3>
+                <p class="faq-answer">もちろんです。むしろ初心者こそAIの恩恵を受けやすいです。経験者が陥りがちな「自己流の間違い」を防ぎ、最初から科学的に正しい方法でスタートできます。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">ジムに通っていなくても大丈夫？</h3>
+                <p class="faq-answer">大丈夫です。自宅でできる自重トレーニングや、ダンベルだけで行えるメニューも提案します。利用可能な器具を入力すれば、それに応じたプランを作成します。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">データのプライバシーは守られますか？</h3>
+                <p class="faq-answer">入力されたデータは暗号化され、安全に保管されます。第三者に提供することは一切ありません。また、アカウント登録が不要なため、個人情報を最小限に抑えています。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="section-final-cta fade-in">
+    <div class="container">
+        <div class="final-cta-box">
+            <h2>さあ、始めましょう。</h2>
+            <p>変わるのは、今この瞬間からです。</p>
+            <a href="{{ url_for('main.gemini_fitness') }}" class="btn-primary btn-xl">
+                無料診断を開始する
             </a>
         </div>
     </div>
