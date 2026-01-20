@@ -8,7 +8,6 @@
 {% endblock %}
 
 {% block content %}
-
 <!-- Hero Section -->
 <section class="brand-hero fade-in">
     <div class="hero-bg-overlay"></div>
@@ -43,11 +42,202 @@
             </div>
         </div>
         <div class="hero-visual">
-            <div class="abstract-shape"></div>
+                <img src="{{ url_for('static', filename='img/top.png') }}" alt="Abstract background image" style="width: 100%; height: 100%; object-fit: cover;">
             <div class="stat-floating-card">
                 <span class="stat-label">継続率</span>
                 <span class="stat-value">94<small>%</small></span>
                 <span class="stat-caption">3ヶ月以上利用者</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-recording fade-in">
+    <div class="container">
+        <div class="recording-layout">
+            <div class="recording-content">
+                <span class="tag-small">DAILY TRACKING</span>
+                <h2>毎日の積み重ねが、<br>確実な成果を生む</h2>
+                <p class="section-lead">
+                    トレーニングと食事の記録は、目標達成への最短ルート。<br>
+                    データがあなたの成長を可視化し、モチベーションを持続させます。
+                </p>
+                
+                <div class="recording-cards">
+                    <a href="{{ url_for('main.record_workout') }}" class="record-card">
+                        <div class="record-card-icon training-icon"></div>
+                        <div class="record-card-content">
+                            <h3>Training Record</h3>
+                            <p>種目・重量・回数を記録。成長が数字で見える喜びを。</p>
+                            <span class="record-link">記録を開始する →</span>
+                        </div>
+                    </a>
+                    
+                    <a href="{{ url_for('main.record_meal') }}" class="record-card">
+                        <div class="record-card-icon meal-icon"></div>
+                        <div class="record-card-content">
+                            <h3>Meal Record</h3>
+                            <p>食事内容とPFCを記録。栄養管理の習慣化をサポート。</p>
+                            <span class="record-link">記録を開始する →</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="recording-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-number">01</div>
+                        <div class="benefit-text">
+                            <strong>進捗の可視化</strong>
+                            <span>グラフとデータで成長を実感</span>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-number">02</div>
+                        <div class="benefit-text">
+                            <strong>習慣化の促進</strong>
+                            <span>記録することで継続力が向上</span>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-number">03</div>
+                        <div class="benefit-text">
+                            <strong>AI分析の精度向上</strong>
+                            <span>データが多いほど正確なアドバイス</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recording-visual">
+                <div class="stat-card elevated">
+                    <div class="stat-card-header">
+                        <span class="stat-label">今週のトレーニング</span>
+                    </div>
+                    <div class="stat-card-body">
+                        <div class="stat-row">
+                            <span class="stat-day">月</span>
+                            <div class="stat-bar" style="width: 85%;"></div>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-day">水</span>
+                            <div class="stat-bar" style="width: 92%;"></div>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-day">金</span>
+                            <div class="stat-bar" style="width: 78%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card elevated delay-1">
+                    <div class="stat-card-header">
+                        <span class="stat-label">PFC達成率</span>
+                    </div>
+                    <div class="stat-card-body">
+                        <div class="pfc-grid">
+                            <div class="pfc-item">
+                                <span class="pfc-letter">P</span>
+                                <span class="pfc-value">96%</span>
+                            </div>
+                            <div class="pfc-item">
+                                <span class="pfc-letter">F</span>
+                                <span class="pfc-value">88%</span>
+                            </div>
+                            <div class="pfc-item">
+                                <span class="pfc-letter">C</span>
+                                <span class="pfc-value">91%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AI Coach Section -->
+<section class="section-coach fade-in">
+    <div class="container">
+        <div class="coach-header">
+            <span class="tag-small">AI-POWERED COACHING</span>
+            <h2>24時間、あなた専属の<br>プロフェッショナルコーチ</h2>
+            <p class="section-lead">
+                記録したデータをもとに、AIがパーソナライズされたアドバイスを提供。<br>
+                トレーニングから栄養まで、あらゆる疑問に即座に回答します。
+            </p>
+        </div>
+        
+        <div class="coach-grid">
+            <a href="{{ url_for('main.training_coach') }}" class="coach-card training-card">
+                <div class="coach-card-header">
+                    <div class="coach-icon-wrapper">
+                        <div class="coach-icon training-coach-icon"></div>
+                    </div>
+                    <div class="coach-badge">Training</div>
+                </div>
+                <h3>Training Coach AI</h3>
+                <p>フォーム改善、メニュー設計、怪我のリハビリまで。トレーニングのすべてをサポート。</p>
+                
+                <div class="coach-features">
+                    <div class="coach-feature-item">
+                        <div class="feature-check"></div>
+                        <span>個別メニュー提案</span>
+                    </div>
+                    <div class="coach-feature-item">
+                        <div class="feature-check"></div>
+                        <span>フォーム改善指導</span>
+                    </div>
+                    <div class="coach-feature-item">
+                        <div class="feature-check"></div>
+                        <span>進捗データ分析</span>
+                    </div>
+                </div>
+                
+                <div class="coach-cta">
+                    <span class="coach-link">相談する</span>
+                    <div class="arrow-icon"></div>
+                </div>
+            </a>
+            
+            <a href="{{ url_for('main.nutrition_coach') }}" class="coach-card nutrition-card">
+                <div class="coach-card-header">
+                    <div class="coach-icon-wrapper">
+                        <div class="coach-icon nutrition-coach-icon"></div>
+                    </div>
+                    <div class="coach-badge nutrition-badge">Nutrition</div>
+                </div>
+                <h3>Nutrition Coach AI</h3>
+                <p>PFC計算、献立提案、食事相談まで。科学的栄養管理をあなたの手に。</p>
+                
+                <div class="coach-features">
+                    <div class="coach-feature-item">
+                        <div class="feature-check"></div>
+                        <span>PFC自動計算</span>
+                    </div>
+                    <div class="coach-feature-item">
+                        <div class="feature-check"></div>
+                        <span>献立提案</span>
+                    </div>
+                    <div class="coach-feature-item">
+                        <div class="feature-check"></div>
+                        <span>食事記録分析</span>
+                    </div>
+                </div>
+                
+                <div class="coach-cta">
+                    <span class="coach-link">相談する</span>
+                    <div class="arrow-icon"></div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="coach-integration">
+            <div class="integration-badge">
+                <div class="integration-icon"></div>
+                <div class="integration-text">
+                    <strong>シームレスな連携</strong>
+                    <span>記録データとAIコーチが連動し、より精度の高いアドバイスを実現</span>
+                </div>
             </div>
         </div>
     </div>
@@ -62,12 +252,12 @@
         <div class="problem-grid">
             <div class="problem-card">
                 <div class="problem-icon icon-struggle"></div>
-                <h3>ジムに通っているのに<br>変化が見えない</h3>
+                <h3>体型改善の方法が<br>わからない</h3>
                 <p>トレーニング内容が自分の体質や目標に合っていない可能性があります。個別最適化されたプログラムが必要です。</p>
             </div>
             <div class="problem-card">
                 <div class="problem-icon icon-diet"></div>
-                <h3>食事制限が続かない<br>リバウンドする</h3>
+                <h3>食事制限の方法が<br>わからない</h3>
                 <p>極端な制限は継続不可能。科学的に計算されたPFCバランスで、無理なく続けられる食事管理を。</p>
             </div>
             <div class="problem-card">
@@ -352,6 +542,41 @@
             <div class="faq-item">
                 <h3 class="faq-question">データのプライバシーは守られますか？</h3>
                 <p class="faq-answer">入力されたデータは暗号化され、安全に保管されます。第三者に提供することは一切ありません。また、アカウント登録が不要なため、個人情報を最小限に抑えています。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bottom Quick Access (簡易版) -->
+<section class="section-quick-access fade-in">
+    <div class="container">
+        <div class="quick-access-grid">
+            <div class="quick-access-group">
+                <h3>記録する</h3>
+                <div class="quick-links">
+                    <a href="{{ url_for('main.record_workout') }}" class="quick-link">
+                        <span>トレーニング記録</span>
+                        <div class="quick-arrow">→</div>
+                    </a>
+                    <a href="{{ url_for('main.record_meal') }}" class="quick-link">
+                        <span>食事記録</span>
+                        <div class="quick-arrow">→</div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="quick-access-group">
+                <h3>相談する</h3>
+                <div class="quick-links">
+                    <a href="{{ url_for('main.training_coach') }}" class="quick-link">
+                        <span>Training Coach</span>
+                        <div class="quick-arrow">→</div>
+                    </a>
+                    <a href="{{ url_for('main.nutrition_coach') }}" class="quick-link">
+                        <span>Nutrition Coach</span>
+                        <div class="quick-arrow">→</div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
