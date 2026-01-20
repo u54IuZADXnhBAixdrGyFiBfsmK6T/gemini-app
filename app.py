@@ -6,7 +6,6 @@ load_dotenv(override=True)
 from flask import Flask
 from extensions import db
 
-# 分割したブループリントをインポート
 from routes.main_routes import main_bp
 from routes.ai_routes import ai_bp
 from routes.api_workout import workout_bp

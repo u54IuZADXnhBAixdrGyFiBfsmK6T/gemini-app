@@ -150,14 +150,12 @@ async function improveForm() {
     const output = document.getElementById('output');
     const btn = document.getElementById('improve-form-btn');
 
-    // バリデーション
     if (!exerciseName.trim() || !issue.trim()) {
         output.innerHTML = '❌ 種目名と悩みを入力してください';
         return;
     }
 
-    // ローディング表示
-    output.innerHTML = '<p class="loading">🔧 AIがフォーム改善策を分析しています...</p>';
+    output.innerHTML = '<p class="loading">AIがフォーム改善策を分析しています</p>';
     btn.disabled = true;
 
     try {

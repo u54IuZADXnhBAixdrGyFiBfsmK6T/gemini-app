@@ -8,11 +8,11 @@ async function getRecommendation() {
     const outputDiv = document.getElementById('output');
 
     if (!height || !weight || !activity || !ideal) {
-        outputDiv.innerHTML = "                  😡全ての項目を入力してください😡";
+        outputDiv.innerHTML = "                  全ての項目を入力してください";
         return;
     }
 
-    outputDiv.innerHTML = '<p class="loading">           🤔Gemini AIが提案を作成しています🤔</p>';
+    outputDiv.innerHTML = '<p class="loading">           Gemini AIが提案を作成しています</p>';
 
     try {
         const response = await fetch('/get_recommendation', {
