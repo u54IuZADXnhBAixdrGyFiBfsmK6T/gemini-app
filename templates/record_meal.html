@@ -5,7 +5,7 @@
 
 {% block head %}
 {{ super() }}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/record_common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/record_layout.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -42,6 +42,7 @@
                     <div class="stat-label">Target</div>
                     <div class="stat-value" id="targetCalories">2000 kcal</div>
                 </div>
+                <button class="settings-btn" id="openSettingsBtn" title="目標を設定">⚙️</button>
             </div>
 
             <div class="graph-section">
@@ -52,7 +53,9 @@
                     <div class="pfc-bar-wrapper">
                         <div class="pfc-bar-label">
                             <span class="pfc-label protein-label">Protein</span>
-                            <span class="pfc-value" id="proteinValue">0g</span>
+                            <span class="pfc-value">
+                                <span id="proteinValue">0</span>g / <span id="proteinTarget">150</span>g
+                            </span>
                         </div>
                         <div class="pfc-bar-bg">
                             <div class="pfc-bar-fill protein-fill" id="proteinBar" style="width: 0%"></div>
@@ -60,8 +63,10 @@
                     </div>
                     <div class="pfc-bar-wrapper">
                         <div class="pfc-bar-label">
-                            <span class="pfc-label fat-label">Fat</span>
-                            <span class="pfc-value" id="fatValue">0g</span>
+                            <span class="pfc-label protein-label">Fat</span>
+                            <span class="pfc-value">
+                                <span id="fatValue">0</span>g / <span id="fatTarget">50</span>g
+                            </span>
                         </div>
                         <div class="pfc-bar-bg">
                             <div class="pfc-bar-fill fat-fill" id="fatBar" style="width: 0%"></div>
@@ -69,8 +74,10 @@
                     </div>
                     <div class="pfc-bar-wrapper">
                         <div class="pfc-bar-label">
-                            <span class="pfc-label carbs-label">Carbs</span>
-                            <span class="pfc-value" id="carbsValue">0g</span>
+                            <span class="pfc-label protein-label">Carbs</span>
+                            <span class="pfc-value">
+                                <span id="carbsValue">0</span>g / <span id="carbsTarget">300</span>g
+                            </span>
                         </div>
                         <div class="pfc-bar-bg">
                             <div class="pfc-bar-fill carbs-fill" id="carbsBar" style="width: 0%"></div>
@@ -78,8 +85,10 @@
                     </div>
                     <div class="pfc-bar-wrapper">
                         <div class="pfc-bar-label">
-                            <span class="pfc-label calories-label">Calories</span>
-                            <span class="pfc-value" id="caloriesValue">0 kcal</span>
+                            <span class="pfc-label protein-label">Calories</span>
+                            <span class="pfc-value">
+                                <span id="caloriesValue">0</span>cal / <span id="caloriesTarget">2000</span>cal
+                            </span>
                         </div>
                         <div class="pfc-bar-bg">
                             <div class="pfc-bar-fill calories-fill" id="caloriesBar" style="width: 0%"></div>
@@ -92,7 +101,7 @@
         <div class="right-column">
             <button class="add-meal-btn" id="addMealBtn">
                 <div class="add-icon">+</div>
-                <span>本日の食事を追加</span>
+                <span>Add Meal Record</span>
             </button>
 
             <div id="mealsContainer"></div>
@@ -139,7 +148,39 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- 目標設定モーダル -->
+    <div class="modal" id="settingsModal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-sheet">
+            <div class="modal-header">
+                <h2>目標を設定</h2>
+                <button class="modal-close-btn" id="closeSettingsModal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>目標タンパク質 (g)</label>
+                    <input type="number" class="form-input" id="targetProteinInput" placeholder="150">
+                </div>
+                <div class="form-group">
+                    <label>目標脂質 (g)</label>
+                    <input type="number" class="form-input" id="targetFatInput" placeholder="60">
+                </div>
+                <div class="form-group">
+                    <label>目標炭水化物 (g)</label>
+                    <input type="number" class="form-input" id="targetCarbsInput" placeholder="250">
+                </div>
+                <div class="form-group">
+                    <label>目標カロリー (自動計算)</label>
+                    <div id="calculatedTargetCalories" class="calculated-calories">0 kcal</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="submit-btn" id="saveSettingsBtn">保存する</button>
+            </div>
+        </div>
+    </div>
+
     <div id="toastContainer"></div>
 </div>
 {% endblock %}

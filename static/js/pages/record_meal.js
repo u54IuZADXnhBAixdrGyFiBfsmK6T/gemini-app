@@ -2,6 +2,7 @@
 let currentDate = new Date();
 let selectedDate = new Date();
 let mealDates = [];
+let currentEditingMealId = null;
 let userGoal = {
   target_calories: 2000,
   target_protein: 150,
@@ -37,10 +38,38 @@ function setupEventListeners() {
   
   // モーダル閉じる
   document.getElementById('closeMealModal').addEventListener('click', closeMealModal);
-  document.querySelector('.modal-backdrop').addEventListener('click', (e) => {
-    if (e.target === e.currentTarget) {
-      closeMealModal();
-    }
+  
+  // 設定ボタン
+  const openSettingsBtn = document.getElementById('openSettingsBtn');
+  const closeSettingsBtn = document.getElementById('closeSettingsModal');
+  const saveSettingsBtn = document.getElementById('saveSettingsBtn');
+  
+  if (openSettingsBtn) {
+    openSettingsBtn.addEventListener('click', openSettingsModal);
+  } else {
+    console.error('openSettingsBtn not found');
+  }
+  
+  if (closeSettingsBtn) {
+    closeSettingsBtn.addEventListener('click', closeSettingsModal);
+  } else {
+    console.error('closeSettingsModal not found');
+  }
+  
+  if (saveSettingsBtn) {
+    saveSettingsBtn.addEventListener('click', saveSettings);
+  } else {
+    console.error('saveSettingsBtn not found');
+  }
+  
+  // バックドロップクリックでモーダルを閉じる
+  document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) {
+        closeMealModal();
+        closeSettingsModal();
+      }
+    });
   });
   
   // 食事送信
@@ -49,6 +78,11 @@ function setupEventListeners() {
   // PFC入力時にカロリー計算
   ['proteinInput', 'fatInput', 'carbsInput'].forEach(id => {
     document.getElementById(id).addEventListener('input', calculateCalories);
+  });
+  
+  // 設定モーダルのPFC入力時にカロリー計算
+  ['targetProteinInput', 'targetFatInput', 'targetCarbsInput'].forEach(id => {
+    document.getElementById(id).addEventListener('input', calculateTargetCalories);
   });
 }
 
@@ -149,12 +183,32 @@ async function loadMealDates(year, month) {
 // ===== ユーザー目標読み込み =====
 async function loadUserGoal() {
   try {
+    // まずローカルストレージをチェック
+    const savedGoal = localStorage.getItem('userGoal');
+    if (savedGoal) {
+      userGoal = JSON.parse(savedGoal);
+      document.getElementById('targetCalories').textContent = `${userGoal.target_calories} kcal`;
+
+    document.getElementById('proteinTarget').textContent = userGoal.target_protein;
+    document.getElementById('fatTarget').textContent = userGoal.target_fat;
+    document.getElementById('carbsTarget').textContent = userGoal.target_carbs;
+    document.getElementById('caloriesTarget').textContent = userGoal.target_calories;
+      return;
+    }
+    
+    // ローカルストレージになければAPIから取得
     const response = await fetch('/api/user_goal');
-    userGoal = await response.json();
+    if (response.ok) {
+      userGoal = await response.json();
+      // ローカルストレージに保存
+      localStorage.setItem('userGoal', JSON.stringify(userGoal));
+    }
     
     document.getElementById('targetCalories').textContent = `${userGoal.target_calories} kcal`;
   } catch (error) {
     console.error('Error loading user goal:', error);
+    // エラー時はデフォルト値を使用
+    document.getElementById('targetCalories').textContent = `${userGoal.target_calories} kcal`;
   }
 }
 
@@ -200,7 +254,10 @@ function createMealCard(meal) {
   card.innerHTML = `
     <div class="meal-header">
       <div class="meal-name">${meal.meal_name}</div>
-      <button class="delete-meal-btn" data-id="${meal.id}">🗑️</button>
+      <div>
+        <button class="edit-meal-btn">✏️</button>
+        <button class="delete-meal-btn" data-id="${meal.id}">🗑️</button>
+      </div>
     </div>
     <div class="meal-pfc">
       <div class="pfc-item">
@@ -222,9 +279,14 @@ function createMealCard(meal) {
     </div>
   `;
   
+  // 編集ボタン
+  card.querySelector('.edit-meal-btn').addEventListener('click', () => {
+    openMealModal(meal);
+  });
+
   // 削除ボタン
   card.querySelector('.delete-meal-btn').addEventListener('click', async () => {
-    if (!confirm('この食事を削除しますか？')) return;
+    if (!confirm('この食事を削除しますか?')) return;
     
     await deleteMeal(meal.id);
   });
@@ -268,13 +330,12 @@ async function loadDailyPFC() {
 
 function updatePFCDisplay(pfc) {
   // 今日のカロリー表示
-  document.getElementById('todayCalories').textContent = `${pfc.calories || 0} kcal`;
-  
+  document.getElementById('todayCalories').textContent = `${pfc.calories || 0} kcal`;  
   // PFC値表示
-  document.getElementById('proteinValue').textContent = `${pfc.protein || 0}g`;
-  document.getElementById('fatValue').textContent = `${pfc.fat || 0}g`;
-  document.getElementById('carbsValue').textContent = `${pfc.carbs || 0}g`;
-  document.getElementById('caloriesValue').textContent = `${pfc.calories || 0} kcal`;
+  document.getElementById('proteinValue').textContent = `${pfc.protein || 0}`;
+  document.getElementById('fatValue').textContent = `${pfc.fat || 0}`;
+  document.getElementById('carbsValue').textContent = `${pfc.carbs || 0}`;
+  document.getElementById('caloriesValue').textContent = `${pfc.calories || 0}`;
   
   // グラフバーの幅計算
   const proteinPercent = (pfc.protein / userGoal.target_protein) * 100;
@@ -289,18 +350,32 @@ function updatePFCDisplay(pfc) {
 }
 
 // ===== 食事入力モーダル =====
-function openMealModal() {
-  document.getElementById('mealName').value = '';
-  document.getElementById('proteinInput').value = '';
-  document.getElementById('fatInput').value = '';
-  document.getElementById('carbsInput').value = '';
-  document.getElementById('calculatedCalories').textContent = '0';
+function openMealModal(meal = null) {
+  const isEditing = meal !== null;
+  
+  document.getElementById('mealName').value = isEditing ? meal.meal_name : '';
+  document.getElementById('proteinInput').value = isEditing ? meal.protein : '';
+  document.getElementById('fatInput').value = isEditing ? meal.fat : '';
+  document.getElementById('carbsInput').value = isEditing ? meal.carbs : '';
+  
+  const modalTitle = document.getElementById('modalTitle');
+
+  if (isEditing) {
+    currentEditingMealId = meal.id;
+    if(modalTitle) modalTitle.textContent = '食事を編集';
+  } else {
+    currentEditingMealId = null;
+    if(modalTitle) modalTitle.textContent = '食事を追加';
+  }
+  
+  calculateCalories();
   
   document.getElementById('mealInputModal').setAttribute('aria-hidden', 'false');
 }
 
 function closeMealModal() {
   document.getElementById('mealInputModal').setAttribute('aria-hidden', 'true');
+  currentEditingMealId = null;
 }
 
 function calculateCalories() {
@@ -330,19 +405,27 @@ async function submitMeal() {
     return;
   }
   
+  const isEditing = currentEditingMealId !== null;
+  const url = isEditing ? '/api/update_meal' : '/api/save_meal';
   const dateStr = formatDate(selectedDate);
   
+  const payload = {
+    date: dateStr,
+    meal_name: mealName,
+    protein: protein,
+    fat: fat,
+    carbs: carbs
+  };
+
+  if (isEditing) {
+    payload.id = currentEditingMealId;
+  }
+
   try {
-    const response = await fetch('/api/save_meal', {
+    const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        date: dateStr,
-        meal_name: mealName,
-        protein: protein,
-        fat: fat,
-        carbs: carbs
-      })
+      body: JSON.stringify(payload)
     });
     
     const data = await response.json();
@@ -352,7 +435,7 @@ async function submitMeal() {
       return;
     }
     
-    showToast('食事を追加しました');
+    showToast(isEditing ? '食事を更新しました' : '食事を追加しました');
     closeMealModal();
     await loadDailyMeals();
     await loadDailyPFC();
@@ -362,6 +445,109 @@ async function submitMeal() {
     console.error('Error saving meal:', error);
     showToast('保存に失敗しました');
   }
+}
+
+// ===== 設定モーダル =====
+function openSettingsModal() {
+  console.log('Opening settings modal');
+  console.log('Current userGoal:', userGoal);
+  
+  // 現在の目標値を入力欄に設定
+  const proteinInput = document.getElementById('targetProteinInput');
+  const fatInput = document.getElementById('targetFatInput');
+  const carbsInput = document.getElementById('targetCarbsInput');
+  
+  if (proteinInput) proteinInput.value = userGoal.target_protein;
+  if (fatInput) fatInput.value = userGoal.target_fat;
+  if (carbsInput) carbsInput.value = userGoal.target_carbs;
+  
+  // カロリーを計算して表示
+  calculateTargetCalories();
+  
+  const modal = document.getElementById('settingsModal');
+  if (modal) {
+    modal.setAttribute('aria-hidden', 'false');
+    console.log('Settings modal opened');
+  } else {
+    console.error('settingsModal element not found');
+  }
+}
+
+function closeSettingsModal() {
+  document.getElementById('settingsModal').setAttribute('aria-hidden', 'true');
+}
+
+function calculateTargetCalories() {
+  const protein = parseFloat(document.getElementById('targetProteinInput').value) || 0;
+  const fat = parseFloat(document.getElementById('targetFatInput').value) || 0;
+  const carbs = parseFloat(document.getElementById('targetCarbsInput').value) || 0;
+  
+  // P=4kcal/g, F=9kcal/g, C=4kcal/g
+  const calories = (protein * 4) + (fat * 9) + (carbs * 4);
+  
+  const caloriesElement = document.getElementById('calculatedTargetCalories');
+  if (caloriesElement) {
+    caloriesElement.textContent = `${Math.round(calories)} kcal`;
+    console.log('Calculated target calories:', Math.round(calories));
+  } else {
+    console.error('calculatedTargetCalories element not found');
+  }
+}
+
+async function saveSettings() {
+  const targetProtein = parseFloat(document.getElementById('targetProteinInput').value) || 150;
+  const targetFat = parseFloat(document.getElementById('targetFatInput').value) || 60;
+  const targetCarbs = parseFloat(document.getElementById('targetCarbsInput').value) || 250;
+  
+  // PFCからカロリーを計算
+  const targetCalories = (targetProtein * 4) + (targetFat * 9) + (targetCarbs * 4);
+  
+  // グローバル変数を更新
+  userGoal.target_calories = Math.round(targetCalories);
+  userGoal.target_protein = targetProtein;
+  userGoal.target_fat = targetFat;
+  userGoal.target_carbs = targetCarbs;
+  
+  // ローカルストレージに保存
+  localStorage.setItem('userGoal', JSON.stringify(userGoal));
+  
+  try {
+    // APIに保存
+    const response = await fetch('/api/user_goal', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        target_calories: Math.round(targetCalories),
+        target_protein: targetProtein,
+        target_fat: targetFat,
+        target_carbs: targetCarbs
+      })
+    });
+    
+    if (!response.ok) {
+      const data = await response.json();
+      showToast(data.error || '保存に失敗しました');
+      return;
+    }
+    
+    const data = await response.json();
+    console.log('Settings saved to server:', data);
+  } catch (error) {
+    console.error('Error saving settings:', error);
+    showToast('保存に失敗しました');
+    return;
+  }
+  
+  // 表示を更新
+  document.getElementById('targetCalories').textContent = `${Math.round(targetCalories)} kcal`;
+  document.getElementById('proteinTarget').textContent = targetProtein;
+  document.getElementById('fatTarget').textContent = targetFat;
+  document.getElementById('carbsTarget').textContent = targetCarbs;
+  document.getElementById('caloriesTarget').textContent = Math.round(targetCalories);
+  await loadDailyPFC(); // グラフを再描画
+  
+  showToast('目標を保存しました');
+  closeSettingsModal();
 }
 
 // ===== ユーティリティ関数 =====

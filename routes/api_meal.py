@@ -87,6 +87,48 @@ def save_meal():
         print(f"Error saving meal: {e}")
         return jsonify({"error": str(e)}), 500
 
+# API: 食事の更新
+@meal_bp.route("/api/update_meal", methods=["POST"])
+def update_meal():
+    data = request.json
+    user_id = 1
+    
+    try:
+        meal_id = int(data.get('id'))
+        meal = MealLog.query.filter_by(id=meal_id, user_id=user_id).first()
+        
+        if not meal:
+            return jsonify({"error": "食事記録が見つかりません"}), 404
+            
+        meal.meal_name = data.get('meal_name', meal.meal_name).strip()
+        meal.protein = float(data.get('protein', meal.protein))
+        meal.fat = float(data.get('fat', meal.fat))
+        meal.carbs = float(data.get('carbs', meal.carbs))
+        
+        meal.calories = (meal.protein * 4) + (meal.fat * 9) + (meal.carbs * 4)
+        
+        if not meal.meal_name:
+            return jsonify({"error": "食事名を入力してください"}), 400
+            
+        db.session.commit()
+        
+        return jsonify({
+            "status": "success",
+            "meal": {
+                "id": meal.id,
+                "meal_name": meal.meal_name,
+                "protein": meal.protein,
+                "fat": meal.fat,
+                "carbs": meal.carbs,
+                "calories": meal.calories
+            }
+        })
+
+    except Exception as e:
+        db.session.rollback()
+        print(f"Error updating meal: {e}")
+        return jsonify({"error": str(e)}), 500
+
 # API: 食事の削除
 @meal_bp.route("/api/delete_meal", methods=["POST"])
 def delete_meal():
