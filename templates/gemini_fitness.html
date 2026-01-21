@@ -2,8 +2,11 @@
 
 {% block title %}AI Fitness Pro{% endblock %}
 
+{% block body_class %}theme-gemini{% endblock %}
+
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/gemini_fitness.css') }}">
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/coach-layout.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -30,6 +33,7 @@
 {% endblock %}
 
 {% block scripts %}
+{{ super() }}
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="{{ url_for('static', filename='js/pages/gemini-fitness.js') }}"></script>
 {% endblock %}

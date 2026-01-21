@@ -2,8 +2,11 @@
 
 {% block title %}Training Coach AI{% endblock %}
 
+{% block body_class %}theme-training{% endblock %}
+
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/training_coach.css') }}">
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/coach-layout.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -11,7 +14,6 @@
     <h1>💪 Training Coach AI</h1>
     <p class="subtitle">あなた専属のパーソナルトレーナー</p>
 
-    <!-- タブナビゲーション -->
     <div class="tabs">
         <button class="tab-btn active" data-tab="exercises">💪 メニュー提案</button>
         <button class="tab-btn" data-tab="form">🔧 フォーム改善</button>
@@ -20,7 +22,6 @@
         <button class="tab-btn special" data-tab="analysis">⭐ 記録分析</button>
     </div>
 
-    <!-- メニュー提案タブ -->
     <div class="tab-content active" id="exercises-tab">
         <div class="form-group">
             <label for="target-muscle">鍛えたい筋肉</label>
@@ -58,7 +59,6 @@
         <button class="submit-btn" id="suggest-exercises-btn">💪 メニューを提案してもらう</button>
     </div>
 
-    <!-- フォーム改善タブ -->
     <div class="tab-content" id="form-tab">
         <div class="form-group">
             <label for="exercise-name">種目名</label>
@@ -80,7 +80,6 @@
         <button class="submit-btn" id="improve-form-btn">🔧 フォーム改善アドバイスをもらう</button>
     </div>
 
-    <!-- 怪我対応タブ -->
     <div class="tab-content" id="injury-tab">
         <div class="alert">
             ⚠️ <strong>重要:</strong> 痛みや違和感がある場合は、必ず専門医の診断を受けてください。このツールは一般的な情報提供のみです。
@@ -114,7 +113,6 @@
         <button class="submit-btn" id="injury-recovery-btn">🩹 リハビリ計画を提案してもらう</button>
     </div>
 
-    <!-- プログラム設計タブ -->
     <div class="tab-content" id="program-tab">
         <div class="form-group">
             <label for="program-goal">トレーニング目標</label>
@@ -166,7 +164,6 @@
         <button class="submit-btn" id="design-program-btn">📅 プログラムを作成してもらう</button>
     </div>
 
-    <!-- 記録分析タブ -->
     <div class="tab-content" id="analysis-tab">
         <div class="info-box">
             📊 あなたの過去のトレーニング記録をAIが分析し、改善点や強化すべきポイントを提案します
@@ -183,12 +180,12 @@
         <button class="submit-btn special-btn" id="analyze-history-btn">📊 記録を分析する</button>
     </div>
 
-    <!-- 結果表示エリア -->
     <div id="output">✨ 情報を入力して、AIに相談してください</div>
 </div>
 {% endblock %}
 
 {% block scripts %}
+{{ super() }}
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="{{ url_for('static', filename='js/pages/training_coach.js') }}"></script>
 {% endblock %}
