@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
 {% block title %}筋トレ記録{% endblock %}
+{% block body_class %}theme-workout{% endblock %}
 
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/record_workout.css') }}">
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/record_common.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -63,7 +65,7 @@
         <div class="right-column">
             <!-- トレーニング追加ボタン -->
             <button class="add-training-btn" id="addTrainingBtn">
-                <div class="add-icon">＋</div>
+                <div class="add-icon">+</div>
                 <span>本日のトレーニングを追加</span>
             </button>
             
@@ -112,14 +114,14 @@
                     </table>
                 </div>
                 <button class="add-set-btn" id="addSetBtn">
-                    <span>＋</span> セットを追加
+                    <span>+</span> セットを追加
                 </button>
             </div>
         </div>
     </div>
 
     <!-- FAB -->
-    <button class="fab" id="fabBtn" title="種目を追加">＋</button>
+    <button class="fab" id="fabBtn" title="種目を追加">+</button>
 
     <!-- トースト -->
     <div id="toastContainer"></div>
@@ -127,5 +129,6 @@
 {% endblock %}
 
 {% block scripts %}
-    <script src="{{ url_for('static', filename='js/pages/record_workout.js') }}"></script>
+{{ super() }}
+<script src="{{ url_for('static', filename='js/pages/record_workout.js') }}"></script>
 {% endblock %}
