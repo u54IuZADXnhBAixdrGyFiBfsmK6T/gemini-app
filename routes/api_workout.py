@@ -277,6 +277,36 @@ def add_exercise():
         print(f"Error adding exercise: {e}")
         return jsonify({"error": str(e)}), 500
 
+
+# API: 特定の日付の種目の全セットを削除
+@workout_bp.route("/api/delete_exercise_sets", methods=["POST"])
+def delete_exercise_sets():
+    data = request.json
+    user_id = 1
+    
+    try:
+        exercise_id = int(data['exercise_id'])
+        target_date = datetime.strptime(data['date'], '%Y-%m-%d').date()
+        
+        # 特定の日付の特定の種目の全セットを削除
+        deleted_count = WorkoutLog.query.filter_by(
+            user_id=user_id,
+            exercise_id=exercise_id,
+            date=target_date
+        ).delete()
+        
+        db.session.commit()
+        
+        return jsonify({
+            "status": "success",
+            "deleted_count": deleted_count
+        })
+        
+    except Exception as e:
+        db.session.rollback()
+        print(f"Error deleting exercise sets: {e}")
+        return jsonify({"error": str(e)}), 500
+
 # API: 種目の削除
 @workout_bp.route("/api/delete_exercise", methods=["POST"])
 def delete_exercise():

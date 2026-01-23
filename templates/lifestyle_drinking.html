@@ -1193,6 +1193,14 @@
             </div>
 
             <div class="tool-input-group" style="margin-bottom: 20px;">
+                <label for="gender">性別</label>
+                <select id="gender">
+                    <option value="male">男性</option>
+                    <option value="female">女性</option>
+                </select>
+            </div>
+
+            <div class="tool-input-group" style="margin-bottom: 20px;">
                 <label for="bodyWeight">体重(kg)</label>
                 <input type="number" id="bodyWeight" value="70" min="40" max="150">
             </div>
@@ -1261,5 +1269,5 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="{{ url_for('static', filename='js/pages/lifestyle.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/pages/lifestyle.js') }}"></script>
 {% endblock %}
