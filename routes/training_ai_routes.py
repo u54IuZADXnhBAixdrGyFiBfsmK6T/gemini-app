@@ -6,7 +6,7 @@ training_ai_bp = Blueprint('training_ai', __name__)
 
 # TrainingCoach のインポート（エラーハンドリング付き）
 try:
-    from ai_training_coach import TrainingCoach
+    from services.ai_training_coach import TrainingCoach
     training_coach = TrainingCoach()
 except Exception as e:
     print(f"TrainingCoach インポートエラー: {e}")

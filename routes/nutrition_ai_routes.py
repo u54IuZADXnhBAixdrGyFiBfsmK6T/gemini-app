@@ -1,6 +1,6 @@
 # routes/nutrition_ai_routes.py
 from flask import Blueprint, request, jsonify
-from ai_nutrition_coach import NutritionCoach
+from services.ai_nutrition_coach import NutritionCoach
 
 nutrition_ai_bp = Blueprint('nutrition_ai', __name__)
 nutrition_coach = NutritionCoach()

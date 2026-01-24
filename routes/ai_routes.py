@@ -1,6 +1,6 @@
 # routes/ai_routes.py
 from flask import Blueprint, request, jsonify
-from ai_coach import AICoach
+from services.ai_coach import AICoach
 
 ai_bp = Blueprint('ai', __name__)
 ai_coach = AICoach()
