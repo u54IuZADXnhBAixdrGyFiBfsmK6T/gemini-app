@@ -8,9 +8,11 @@ from typing import Dict, List, Any
 class LifestyleContentExtractor:
     """LifestyleページのHTMLコンテンツをJSONに抽出するツール"""
     
-    def __init__(self, templates_dir: str = "templates", json_dir: str = "static/json/lifestyle"):
+    def __init__(self, templates_dir: str = "templates/lifestyle", json_dir: str = "static/json/lifestyle"):
         self.templates_dir = Path(templates_dir)
         self.json_dir = Path(json_dir)
+        # 両方のディレクトリを作成
+        self.templates_dir.mkdir(parents=True, exist_ok=True)
         self.json_dir.mkdir(parents=True, exist_ok=True)
         
     def extract_lifestyle_content(self, html_file: Path) -> Dict[str, Any]:
@@ -184,15 +186,15 @@ class LifestyleContentExtractor:
         }
     
     def _extract_interactive_tool(self, elem) -> Dict[str, Any]:
-        """インタラクティブツールの抽出（構造のみ、JSは保持）"""
+        """インタラクティブツールの抽出(構造のみ、JSは保持)"""
         return {
             "type": "interactive_tool",
             "id": elem.get('id', ''),
-            "note": "このツールのHTMLはテンプレート内に残します（JS連携のため）"
+            "note": "このツールのHTMLはテンプレート内に残します(JS連携のため)"
         }
     
     def _extract_styled_div(self, elem) -> Dict[str, Any]:
-        """スタイル付きdivの抽出（テーブルなど）"""
+        """スタイル付きdivの抽出(テーブルなど)"""
         # テーブルの検出
         table = elem.find('table')
         if table:
@@ -273,7 +275,7 @@ class LifestyleContentExtractor:
         return {"buttons": buttons}
     
     def _get_html_content(self, elem) -> str:
-        """HTML要素の内容を取得（<strong>などのタグを保持）"""
+        """HTML要素の内容を取得(<strong>などのタグを保持)"""
         if not elem:
             return ""
         
@@ -287,7 +289,7 @@ class LifestyleContentExtractor:
         return html.strip()
     
     def create_simplified_html(self, original_file: Path, json_data: Dict[str, Any]) -> str:
-        """簡潔化されたHTMLテンプレートを生成"""
+        """簡潔化されたHTMLテンプレートを生成 (VSCodeエラー回避版)"""
         page_id = json_data['page_id']
         
         template = f'''{{% extends "base.html" %}}
@@ -305,31 +307,51 @@ class LifestyleContentExtractor:
         <p>Loading...</p>
     </div>
 </div>
+
+<!-- データURLをdata属性として渡す (VSCodeエラー回避) -->
+<script id="lifestyle-config" type="application/json">
+{{
+    "jsonUrl": "{{{{ url_for('static', filename='json/lifestyle/{page_id}.json') }}}}",
+    "rendererUrl": "{{{{ url_for('static', filename='js/shared/lifestyle_renderer.js') }}}}"
+}}
+</script>
 {{% endblock %}}
 
 {{% block scripts %}}
 <script type="module">
-    import {{ renderLifestyleContent }} from '{{{{ url_for('static', filename='js/shared/lifestyle_renderer.js') }}}}';
+    // 設定を取得
+    const config = JSON.parse(document.getElementById('lifestyle-config').textContent);
     
-    // JSONデータを読み込んでレンダリング
-    fetch('{{{{ url_for('static', filename='json/lifestyle/{page_id}.json') }}}}')
-        .then(response => response.json())
-        .then(data => {{
-            renderLifestyleContent(data, 'lifestyle-{page_id}');
-        }})
-        .catch(error => {{
-            console.error('コンテンツの読み込みに失敗しました:', error);
-            document.getElementById('content-loading').innerHTML = 
-                '<p style="color: red;">コンテンツの読み込みに失敗しました。</p>';
-        }});
+    // レンダラーを動的インポート
+    import(config.rendererUrl).then(module => {{
+        const {{ renderLifestyleContent }} = module;
+        
+        // JSONデータを読み込んでレンダリング
+        fetch(config.jsonUrl)
+            .then(response => response.json())
+            .then(data => {{
+                renderLifestyleContent(data, 'lifestyle-{page_id}');
+            }})
+            .catch(error => {{
+                console.error('コンテンツの読み込みに失敗しました:', error);
+                document.getElementById('content-loading').innerHTML = 
+                    '<p style="color: red;">コンテンツの読み込みに失敗しました。</p>';
+            }});
+    }});
 </script>
 <script type="module" src="{{{{ url_for('static', filename='js/pages/lifestyle.js') }}}}"></script>
 {{% endblock %}}
 '''
         return template
     
-    def process_file(self, html_filename: str, create_backup: bool = True):
-        """単一ファイルを処理"""
+    def process_file(self, html_filename: str, create_backup: bool = True, auto_replace: bool = False):
+        """単一ファイルを処理
+        
+        Args:
+            html_filename: 処理するHTMLファイル名
+            create_backup: バックアップを作成するか
+            auto_replace: 自動的に新ファイルで置き換えるか
+        """
         html_file = self.templates_dir / html_filename
         
         if not html_file.exists():
@@ -341,6 +363,7 @@ class LifestyleContentExtractor:
         print(f"{'='*60}")
         
         # バックアップ作成
+        backup_file = None
         if create_backup:
             backup_file = html_file.with_suffix('.html.backup')
             import shutil
@@ -365,8 +388,22 @@ class LifestyleContentExtractor:
             with open(new_html_file, 'w', encoding='utf-8') as f:
                 f.write(new_html)
             print(f"✅ 新HTML生成: {new_html_file.name}")
-            print(f"\n💡 確認後、以下のコマンドで置き換えてください:")
-            print(f"   mv {new_html_file} {html_file}")
+            
+            # 自動置換
+            if auto_replace:
+                import os
+                # 元のファイルを削除
+                os.remove(html_file)
+                print(f"🗑️  元のファイル削除: {html_file.name}")
+                
+                # .new.htmlを正式なファイル名にリネーム
+                new_html_file.rename(html_file)
+                print(f"✅ ファイル置換完了: {html_file.name}")
+                print(f"📦 バックアップ保存: {backup_file.name if backup_file else 'なし'}")
+            else:
+                print(f"\n💡 確認後、以下のコマンドで置き換えてください:")
+                print(f"   rm {html_file}")
+                print(f"   mv {new_html_file} {html_file}")
             
             return True
             
@@ -380,23 +417,35 @@ class LifestyleContentExtractor:
 def interactive_mode():
     """対話型モード"""
     print("\n" + "="*60)
-    print("Lifestyle HTMLからJSONへの変換ツール（対話型）")
+    print("Lifestyle HTMLからJSONへの変換ツール(対話型)")
     print("="*60)
     
     extractor = LifestyleContentExtractor(
-        templates_dir="templates",
+        templates_dir="templates/lifestyle",
         json_dir="static/json/lifestyle"
     )
     
-    lifestyle_files = [
-        'lifestyle_drinking.html',
-        'lifestyle_hydration.html',
-        'lifestyle_sleep.html',
-        'lifestyle_stress.html',
-        'lifestyle_recovery.html',
-        'lifestyle_smoking.html',
-        'lifestyle_mental_health.html'
-    ]
+    # templates/lifestyleフォルダ内の実際のファイル名を確認
+    lifestyle_files = []
+    lifestyle_dir = Path("templates/lifestyle")
+    
+    if lifestyle_dir.exists():
+        # lifestyle_*.htmlファイルを自動検出
+        lifestyle_files = sorted([f.name for f in lifestyle_dir.glob("lifestyle_*.html") 
+                                 if not f.name.endswith('.backup') and not f.name.endswith('.new.html')])
+    
+    if not lifestyle_files:
+        # フォールバック: 標準的なファイル名リスト
+        lifestyle_files = [
+            'lifestyle_drinking.html',
+            'lifestyle_hydration.html',
+            'lifestyle_sleep.html',
+            'lifestyle_stress.html',
+            'lifestyle_recovery.html',
+            'lifestyle_smoking.html',
+        ]
+        print("\n⚠️  templates/lifestyleフォルダにファイルが見つかりません")
+        print("    標準的なファイル名リストを使用します")
     
     while True:
         print("\n" + "-"*60)
@@ -419,12 +468,26 @@ def interactive_mode():
                 selected_file = lifestyle_files[choice - 1]
                 
                 # 確認
-                confirm = input(f"\n'{selected_file}' を変換しますか? (y/n): ").lower()
+                print(f"\n📋 選択: {selected_file}")
+                confirm = input(f"変換しますか? (y/n): ").lower()
+                
                 if confirm == 'y':
-                    success = extractor.process_file(selected_file, create_backup=True)
+                    # 自動置換の確認
+                    replace_choice = input(f"\n⚠️  変換後、元のHTMLを自動的に置き換えますか?\n   (バックアップは .html.backup として保存されます)\n   自動置換 (y/n): ").lower()
+                    auto_replace = (replace_choice == 'y')
+                    
+                    success = extractor.process_file(selected_file, create_backup=True, auto_replace=auto_replace)
                     
                     if success:
-                        print("\n✅ 変換が完了しました！")
+                        print("\n" + "="*60)
+                        print("✅ 変換が完了しました!")
+                        print("="*60)
+                        
+                        if auto_replace:
+                            print("\n📁 ファイル構成:")
+                            print(f"   ✅ {selected_file} (新しいバージョン)")
+                            print(f"   📦 {selected_file}.backup (元のバージョン)")
+                            print(f"   📄 {selected_file.replace('.html', '.json')} (JSONデータ)")
                         
                         # 続けるか確認
                         continue_choice = input("\n別のファイルも変換しますか? (y/n): ").lower()

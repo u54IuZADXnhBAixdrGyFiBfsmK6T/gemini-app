@@ -1,0 +1,2614 @@
+{
+  "page_id": "recovery",
+  "title": "Recovery - 筋肥大のための回復戦略",
+  "hero": {
+    "title": "💪 Recovery",
+    "subtitle": "回復こそが筋肥大の鍵 - 科学的回復戦略で成長を最大化する"
+  },
+  "toc": {
+    "title": "📑 目次",
+    "items": [
+      {
+        "href": "#science",
+        "text": "1. 回復の科学"
+      },
+      {
+        "href": "#mechanisms",
+        "text": "2. 筋肉回復のメカニズム"
+      },
+      {
+        "href": "#doms",
+        "text": "3. 筋肉痛(DOMS)の真実"
+      },
+      {
+        "href": "#sleep-recovery",
+        "text": "4. 睡眠と回復"
+      },
+      {
+        "href": "#active-rest",
+        "text": "5. アクティブレスト vs 完全休養"
+      },
+      {
+        "href": "#stretching",
+        "text": "6. ストレッチング戦略"
+      },
+      {
+        "href": "#massage",
+        "text": "7. マッサージ・筋膜リリース"
+      },
+      {
+        "href": "#bath",
+        "text": "8. 入浴・温冷療法"
+      },
+      {
+        "href": "#nutrition",
+        "text": "9. 回復を加速する栄養戦略"
+      },
+      {
+        "href": "#supplements",
+        "text": "10. 回復特化サプリメント"
+      },
+      {
+        "href": "#overtraining",
+        "text": "11. オーバートレーニング症候群"
+      },
+      {
+        "href": "#monitoring",
+        "text": "12. 回復度モニタリング"
+      },
+      {
+        "href": "#calculator",
+        "text": "13. 回復度チェックツール"
+      },
+      {
+        "href": "#references",
+        "text": "14. 参考文献"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "science",
+      "title": "1. 回復の科学",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "多くのトレーニーが見落としている事実があります。<strong>筋肉はトレーニング中ではなく、回復中に成長する</strong>のです。\n            トレーニングは筋肉に「刺激」を与えるだけで、実際の成長は回復期間中に起こります。\n            つまり、<strong>回復を制する者が筋肥大を制する</strong>のです。"
+        },
+        {
+          "type": "box",
+          "box_type": "info",
+          "title": "💡 回復の重要性を示すデータ",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>筋タンパク質合成(MPS)のピーク:</strong> トレーニング後24-48時間が最も高い (Burd et al., 2011)",
+                "<strong>不十分な回復:</strong> 筋肥大効果が<strong>最大50%低下</strong> (Schoenfeld et al., 2017)",
+                "<strong>最適な休息:</strong> 同一筋群のトレーニング間隔は<strong>48-72時間</strong>が理想 (Wernbom et al., 2007)",
+                "<strong>睡眠不足:</strong> 1時間の睡眠不足で筋タンパク質合成が<strong>18%低下</strong> (Dattilo et al., 2011)",
+                "<strong>慢性疲労:</strong> オーバートレーニングで筋力が<strong>20-30%低下</strong>し、回復に数週間～数ヶ月 (Kreher &amp; Schwartz, 2012)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "回復の3つの主要フェーズ"
+        },
+        {
+          "type": "styled_div",
+          "style": "display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;",
+          "content": [
+            {
+              "type": "styled_div",
+              "style": "background: #e3f2fd; padding: 25px; border-radius: 12px; border-left: 5px solid #2196f3;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "Phase 1: 即時回復"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>0-2時間</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "エネルギー貯蔵の回復",
+                    "代謝廃物の除去",
+                    "ホルモン環境の正常化",
+                    "水分・電解質バランス"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #e8f5e9; padding: 25px; border-radius: 12px; border-left: 5px solid #4caf50;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "Phase 2: 短期回復"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>2-48時間</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "筋損傷の修復開始",
+                    "炎症反応のピーク",
+                    "タンパク質合成の急増",
+                    "筋グリコーゲン再補充"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #fff3e0; padding: 25px; border-radius: 12px; border-left: 5px solid #ff9800;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "Phase 3: 長期適応"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>48-96時間</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "筋繊維の肥大",
+                    "神経適応の強化",
+                    "結合組織の強化",
+                    "超回復の完了"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "トレーニング vs 回復のバランス"
+        },
+        {
+          "type": "paragraph",
+          "text": "筋肥大の方程式は単純です：<br/>\n<strong>筋肥大 = トレーニング刺激 × 回復の質</strong>"
+        },
+        {
+          "type": "paragraph",
+          "text": "どちらか一方だけでは不十分です。100%のトレーニングでも、回復が50%なら、結果は50%です。\n            逆に、適度なトレーニング(80%)でも完璧な回復(100%)なら、結果は80%となり、前者を上回ります。"
+        },
+        {
+          "type": "stats_grid",
+          "cards": [
+            {
+              "number": "24-48h",
+              "label": "MPSピーク期間"
+            },
+            {
+              "number": "48-72h",
+              "label": "最適トレーニング間隔"
+            },
+            {
+              "number": "-50%",
+              "label": "不十分な回復による損失"
+            },
+            {
+              "number": "7-9h",
+              "label": "最適睡眠時間"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mechanisms",
+      "title": "2. 筋肉回復のメカニズム",
+      "content": [
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "2.1 筋損傷と修復のプロセス"
+        },
+        {
+          "type": "paragraph",
+          "text": "トレーニングは筋繊維に<strong>微細な損傷(マイクロトラウマ)</strong>を与えます。\n            この損傷が適切に修復されることで、筋肉はより強く、大きくなります。"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "筋損傷から成長までの6ステップ"
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px;",
+              "content": [
+                {
+                  "type": "styled_div",
+                  "style": "padding: 15px; margin-bottom: 10px; background: white; border-left: 4px solid #667eea; border-radius: 5px;",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "トレーニングによる筋繊維の物理的破壊、サルコメア(筋節)の断裂"
+                    }
+                  ]
+                },
+                {
+                  "type": "styled_div",
+                  "style": "padding: 15px; margin-bottom: 10px; background: white; border-left: 4px solid #667eea; border-radius: 5px;",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "好中球が損傷部位に集まり、損傷した組織を除去開始"
+                    }
+                  ]
+                },
+                {
+                  "type": "styled_div",
+                  "style": "padding: 15px; margin-bottom: 10px; background: white; border-left: 4px solid #667eea; border-radius: 5px;",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "マクロファージが到着、サイトカイン(IL-6, TNF-α)放出、筋肉痛のピーク"
+                    }
+                  ]
+                },
+                {
+                  "type": "styled_div",
+                  "style": "padding: 15px; margin-bottom: 10px; background: white; border-left: 4px solid #667eea; border-radius: 5px;",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "筋幹細胞が増殖し、損傷部位に移動、筋芽細胞に分化"
+                    }
+                  ]
+                },
+                {
+                  "type": "styled_div",
+                  "style": "padding: 15px; margin-bottom: 10px; background: white; border-left: 4px solid #667eea; border-radius: 5px;",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "mTOR経路活性化、筋タンパク質合成率が安静時の2-5倍に上昇"
+                    }
+                  ]
+                },
+                {
+                  "type": "styled_div",
+                  "style": "padding: 15px; background: white; border-left: 4px solid #667eea; border-radius: 5px;",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "新しい筋タンパク質が組み込まれ、筋繊維が太く強くなる(超回復)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "2.2 筋タンパク質合成(MPS)と分解(MPB)"
+        },
+        {
+          "type": "paragraph",
+          "text": "筋肉量は<strong>合成(MPS)と分解(MPB)のバランス</strong>で決まります。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>筋タンパク質合成(MPS):</strong> 新しい筋タンパク質の生成",
+            "<strong>筋タンパク質分解(MPB):</strong> 既存の筋タンパク質の分解",
+            "<strong>正味のタンパク質バランス = MPS - MPB</strong>"
+          ]
+        },
+        {
+          "type": "table",
+          "parent_style": "background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "headers": [],
+          "rows": [
+            [
+              "時間",
+              "MPS増加率",
+              "状態"
+            ],
+            [
+              "0-4時間後",
+              "+100-150%",
+              "急激な上昇開始"
+            ],
+            [
+              "4-24時間後",
+              "+150-200%",
+              "ピーク期間"
+            ],
+            [
+              "24-36時間後",
+              "+100-150%",
+              "高水準維持"
+            ],
+            [
+              "36-48時間後",
+              "+50-100%",
+              "徐々に低下"
+            ],
+            [
+              "48-72時間後",
+              "+20-50%",
+              "ベースライン復帰"
+            ]
+          ],
+          "table_style": "width: 100%; border-collapse: collapse; margin-top: 15px;"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "2.3 衛星細胞と筋肥大"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>衛星細胞(筋幹細胞)</strong>は筋肥大の鍵を握る細胞です。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>通常状態:</strong> 筋繊維の表面で休止状態",
+            "<strong>損傷検知:</strong> トレーニングによる損傷を感知すると活性化",
+            "<strong>増殖:</strong> 分裂して数を増やす",
+            "<strong>分化:</strong> 筋芽細胞に変化",
+            "<strong>融合:</strong> 既存の筋繊維に融合し、新しい核を提供",
+            "<strong>結果:</strong> 筋繊維が太く、強くなる"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ 回復不足が衛星細胞に与える悪影響",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>活性化の鈍化:</strong> 慢性的な疲労で衛星細胞の反応が30-40%低下",
+                "<strong>増殖能力の低下:</strong> 睡眠不足で増殖速度が50%減少",
+                "<strong>分化障害:</strong> 炎症が長引くと正常な分化が阻害される",
+                "<strong>枯渇リスク:</strong> オーバートレーニングで衛星細胞プールが枯渇"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "2.4 炎症と回復のバランス"
+        },
+        {
+          "type": "paragraph",
+          "text": "炎症は<strong>「諸刃の剣」</strong>です。適度な炎症は回復に必要ですが、過剰または慢性的な炎症は有害です。"
+        },
+        {
+          "type": "styled_div",
+          "style": "display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "styled_div",
+              "style": "background: #e8f5e9; padding: 20px; border-radius: 10px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "✅ 急性炎症(良い)"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "損傷組織の除去",
+                    "成長因子の放出",
+                    "衛星細胞の活性化",
+                    "血流増加",
+                    "<strong>期間:</strong> 24-72時間"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #ffebee; padding: 20px; border-radius: 10px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "❌ 慢性炎症(悪い)"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "筋タンパク質分解促進",
+                    "タンパク質合成阻害",
+                    "コルチゾール上昇",
+                    "インスリン抵抗性",
+                    "<strong>期間:</strong> 数週間～数ヶ月"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doms",
+      "title": "3. 筋肉痛(DOMS)の真実",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "<strong>遅発性筋肉痛(DOMS: Delayed Onset Muscle Soreness)</strong>は、\n            トレーニング後24-72時間にピークを迎える筋肉の痛みです。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "3.1 DOMSの原因"
+        },
+        {
+          "type": "box",
+          "box_type": "info",
+          "title": "💡 DOMSに関する誤解と真実",
+          "content": []
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "現在の科学的理解"
+        },
+        {
+          "type": "paragraph",
+          "text": "DOMSは以下の複合的な要因で発生します:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "<strong>筋繊維の微細損傷:</strong> 特に伸張性収縮(エキセントリック)で顕著",
+            "<strong>結合組織の損傷:</strong> 筋膜、腱、筋内膜などの損傷",
+            "<strong>炎症反応:</strong> 損傷部位への白血球集積と炎症性サイトカイン放出",
+            "<strong>浸透圧変化:</strong> 損傷部位への水分移動による腫れ",
+            "<strong>痛覚受容体の感作:</strong> ブラジキニン、プロスタグランジンなどによる"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "3.2 DOMSのタイムライン"
+        },
+        {
+          "type": "table",
+          "parent_style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "headers": [],
+          "rows": [
+            [
+              "時間",
+              "痛みレベル",
+              "症状"
+            ],
+            [
+              "0-6時間",
+              "軽度",
+              "ほとんど痛みなし、筋肉の張り感"
+            ],
+            [
+              "6-24時間",
+              "中程度",
+              "動作時に軽い痛み、硬直感"
+            ],
+            [
+              "24-48時間",
+              "ピーク",
+              "強い痛み、可動域制限、筋力低下(20-50%)"
+            ],
+            [
+              "48-72時間",
+              "中程度",
+              "痛みは持続するが徐々に軽減"
+            ],
+            [
+              "72-96時間",
+              "軽度",
+              "ほぼ回復、わずかな不快感のみ"
+            ]
+          ],
+          "table_style": "width: 100%; border-collapse: collapse;"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "3.3 DOMSへの対処法"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "✅ 効果が証明されている方法"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>軽い運動(アクティブレスト):</strong> 最も効果的。血流増加で回復促進 (Cheung et al., 2003)",
+            "<strong>マッサージ:</strong> 痛みを30%軽減、ただし回復速度は変わらない (Herbert et al., 2011)",
+            "<strong>温冷交代浴:</strong> 炎症を15-20%軽減 (Bieuzen et al., 2013)",
+            "<strong>NSAIDs(イブプロフェン等):</strong> 痛みは軽減するが、長期的な筋肥大を阻害する可能性"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "❌ 効果が限定的または不明な方法"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>ストレッチ:</strong> 予防・軽減効果はほぼない (Herbert et al., 2011)",
+            "<strong>アイシング:</strong> 炎症を抑えるが、回復を遅らせる可能性 (Takagi et al., 2011)",
+            "<strong>抗酸化サプリ:</strong> 炎症を過度に抑制し、適応を阻害する恐れ"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "success",
+          "title": "✅ DOMSとの付き合い方",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>重度のDOMSがある筋群は避ける:</strong> 48-72時間は完全休養",
+                "<strong>別の筋群をトレーニング:</strong> 脚が筋肉痛なら上半身を鍛える",
+                "<strong>アクティブレストを活用:</strong> 軽いウォーキング、サイクリング、水泳",
+                "<strong>痛みを筋肥大の指標にしない:</strong> 痛みがなくても成長は起きている",
+                "<strong>漸進的な負荷増加:</strong> 急激な変化を避け、DOMSを最小化"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "3.4 繰り返し効果(Repeated Bout Effect)"
+        },
+        {
+          "type": "paragraph",
+          "text": "同じトレーニングを繰り返すと、<strong>DOMSが軽減する</strong>現象があります。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>初回:</strong> 激しいDOMS",
+            "<strong>2回目(1-2週間後):</strong> DOMSが50-80%軽減",
+            "<strong>3回目以降:</strong> ほとんどDOMSなし",
+            "<strong>メカニズム:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>衛星細胞による筋繊維の補強</li>\n<li>結合組織の強化</li>\n<li>神経適応(運動単位の動員パターン改善)</li>\n<li>炎症反応の適応</li>\n</ul>",
+            "<strong>持続期間:</strong> 6-9ヶ月間効果が持続"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ 注意: DOMSがなくても筋肥大は起きる",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "ベテラントレーニーがほとんど筋肉痛を感じなくなるのは、\n                <strong>筋肥大していないからではなく、適応の証拠</strong>です。\n                筋肉痛の有無ではなく、<strong>重量やレップ数の進歩</strong>で判断しましょう。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sleep-recovery",
+      "title": "4. 睡眠と回復",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "睡眠は<strong>最も強力な回復ツール</strong>です。詳細は<a href=\"/lifestyle/sleep\">Sleep Optimizationページ</a>を参照してください。\n            ここでは回復に特化した睡眠の役割を解説します。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "4.1 睡眠中の筋肉回復"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>成長ホルモン分泌:</strong> 深睡眠(ステージ3-4)で最大量分泌\n                <ul style=\"margin-top: 5px;\">\n<li>睡眠前半(最初の3-4時間)が特に重要</li>\n<li>分泌量は睡眠不足で50-70%減少</li>\n</ul>",
+            "<strong>テストステロン回復:</strong> 睡眠中に正常レベルに戻る\n                <ul style=\"margin-top: 5px;\">\n<li>睡眠不足(5時間以下)でテストステロンが10-15%低下</li>\n<li>1週間の睡眠不足で若者のテストステロンレベルが15歳分老化</li>\n</ul>",
+            "<strong>コルチゾール低下:</strong> 睡眠中にストレスホルモンが最低値に",
+            "<strong>タンパク質合成:</strong> 睡眠中も継続(特にカゼインプロテイン摂取時)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "4.2 睡眠不足と回復"
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ 睡眠不足の深刻な影響",
+          "content": []
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "4.3 昼寝(パワーナップ)の効果"
+        },
+        {
+          "type": "paragraph",
+          "text": "短時間の昼寝は回復を<strong>大幅に促進</strong>します。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>20-30分の昼寝:</strong> 認知機能・集中力が向上、眠気解消",
+            "<strong>60-90分の昼寝:</strong> 成長ホルモン分泌、記憶定着、筋肉回復促進",
+            "<strong>最適タイミング:</strong> 午後1-3時(サーカディアンリズムの谷)",
+            "<strong>注意:</strong> 夕方以降の昼寝は夜の睡眠を妨げる"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "info",
+          "title": "💡 トレーニング後の昼寝",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "トレーニング後2-3時間以内に60-90分の昼寝をすると、\n                <strong>筋タンパク質合成が追加で15-20%向上</strong>する可能性があります (Dattilo et al., 2011)。"
+            },
+            {
+              "type": "paragraph",
+              "text": "プロアスリートの多くが午後のトレーニング後に昼寝を取り入れているのは、この効果を狙ったものです。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "active-rest",
+      "title": "5. アクティブレスト vs 完全休養",
+      "content": [
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "5.1 アクティブレストとは"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>アクティブレスト(積極的休養)</strong>は、完全に休むのではなく、\n            軽度の運動を行うことで回復を促進する方法です。"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "アクティブレストの生理学的メカニズム"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>血流増加:</strong> 軽い運動で筋肉への血流が2-3倍に\n                <ul style=\"margin-top: 5px;\">\n<li>酸素と栄養素の供給増加</li>\n<li>代謝廃物(乳酸、アンモニアなど)の除去促進</li>\n</ul>",
+            "<strong>リンパ循環:</strong> 筋収縮がリンパの流れを促進、腫れ・炎症軽減",
+            "<strong>関節可動域維持:</strong> 軽い動きで硬直を防ぐ",
+            "<strong>神経系のリフレッシュ:</strong> 低強度運動で副交感神経優位に"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "5.2 アクティブレスト vs 完全休養の比較"
+        },
+        {
+          "type": "table",
+          "parent_style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "headers": [],
+          "rows": [
+            [
+              "指標",
+              "アクティブレスト",
+              "完全休養"
+            ],
+            [
+              "筋肉痛軽減",
+              "優れている30-40%軽減",
+              "軽減効果少ない"
+            ],
+            [
+              "筋力回復速度",
+              "速い24-36時間",
+              "やや遅い36-48時間"
+            ],
+            [
+              "グリコーゲン再補充",
+              "同等",
+              "同等"
+            ],
+            [
+              "筋タンパク質合成",
+              "同等",
+              "同等"
+            ],
+            [
+              "精神的回復",
+              "優れている気分転換効果",
+              "可もなく不可もなく"
+            ],
+            [
+              "神経系回復",
+              "やや劣る",
+              "優れている"
+            ]
+          ],
+          "table_style": "width: 100%; border-collapse: collapse; margin-top: 15px;"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "5.3 最適なアクティブレスト活動"
+        },
+        {
+          "type": "styled_div",
+          "style": "display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "styled_div",
+              "style": "background: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 4px solid #4caf50;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "🚶 ウォーキング"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>強度:</strong> 心拍数100-120 bpm",
+                    "<strong>時間:</strong> 20-45分",
+                    "<strong>メリット:</strong> 最も安全、関節への負担ゼロ"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 4px solid #2196f3;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "🚴 サイクリング"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>強度:</strong> 軽いギア、楽なペース",
+                    "<strong>時間:</strong> 30-60分",
+                    "<strong>メリット:</strong> 下半身の血流促進に最適"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #e1f5fe; padding: 20px; border-radius: 10px; border-left: 4px solid #00bcd4;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "🏊 水泳・水中ウォーキング"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>強度:</strong> ゆっくり泳ぐ",
+                    "<strong>時間:</strong> 20-40分",
+                    "<strong>メリット:</strong> 全身の血流促進、浮力で関節保護"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #f3e5f5; padding: 20px; border-radius: 10px; border-left: 4px solid #9c27b0;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "🧘 ヨガ・ストレッチ"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>強度:</strong> リストラティブヨガ",
+                    "<strong>時間:</strong> 30-60分",
+                    "<strong>メリット:</strong> 柔軟性向上、副交感神経活性化"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "5.4 状況別の推奨"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #fff3e0; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "いつアクティブレスト、いつ完全休養?"
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 15px;",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "<strong style=\"color: #4caf50;\">✅ アクティブレストが推奨される状況:</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "軽度〜中程度の筋肉痛がある時",
+                    "トレーニング翌日(別の筋群をトレーニングしない日)",
+                    "ストレスが高い時(気分転換が必要)",
+                    "持久系トレーニングの回復期"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px;",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "<strong style=\"color: #f44336;\">⚠️ 完全休養が推奨される状況:</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "重度の筋肉痛・筋損傷がある時",
+                    "高強度トレーニング直後(CNS回復のため)",
+                    "睡眠不足が続いている時",
+                    "病気・体調不良の時",
+                    "オーバートレーニングの兆候がある時",
+                    "週に1-2日(完全休養日は必須)"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stretching",
+      "title": "6. ストレッチング戦略",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "ストレッチは回復ツールとして<strong>過大評価されている</strong>側面がありますが、\n            正しく使えば有効です。重要なのは<strong>タイミングと種類</strong>です。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "6.1 ストレッチの種類と効果"
+        },
+        {
+          "type": "styled_div",
+          "style": "display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "styled_div",
+              "style": "background: white; padding: 25px; border-radius: 12px; border: 2px solid #667eea;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "スタティックストレッチ"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>方法:</strong> 静止した状態で筋肉を伸ばす(20-60秒)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong style=\"color: #4caf50;\">✅ メリット:</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "柔軟性向上(長期的)",
+                    "副交感神経活性化",
+                    "リラクゼーション効果"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong style=\"color: #f44336;\">❌ デメリット:</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "トレーニング前は筋力を5-15%低下させる",
+                    "筋肉痛軽減効果はほぼない"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>推奨:</strong> トレーニング後、就寝前"
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: white; padding: 25px; border-radius: 12px; border: 2px solid #ff9800;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "ダイナミックストレッチ"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>方法:</strong> 動きながら筋肉を伸ばす"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong style=\"color: #4caf50;\">✅ メリット:</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "筋温上昇",
+                    "可動域向上",
+                    "神経系の準備",
+                    "パフォーマンス向上"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong style=\"color: #f44336;\">❌ デメリット:</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "リラクゼーション効果はない",
+                    "やりすぎると疲労"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>推奨:</strong> トレーニング前のウォームアップ"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "6.2 科学的に証明されていること・いないこと"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "styled_div",
+              "style": "margin-bottom: 20px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "✅ 証明されている効果"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "長期的な柔軟性向上(数週間〜数ヶ月)",
+                    "関節可動域の拡大",
+                    "リラクゼーション・ストレス軽減",
+                    "姿勢改善(特定のストレッチ)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "6.3 回復を促進するストレッチプロトコル"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "トレーニング後のストレッチルーチン(10-15分)"
+            },
+            {
+              "type": "paragraph",
+              "text": "目的: リラクゼーション、副交感神経優位、柔軟性維持"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "<strong>クールダウン(5分):</strong> 軽いウォーキングや軽いサイクリング",
+                "<strong>主要筋群のスタティックストレッチ(各30-60秒):</strong>\n<ul style=\"margin-top: 5px;\">\n<li>大腿四頭筋</li>\n<li>ハムストリングス</li>\n<li>臀筋</li>\n<li>大胸筋</li>\n<li>広背筋</li>\n<li>三角筋</li>\n</ul>",
+                "<strong>深呼吸:</strong> 各ストレッチ中、ゆっくりとした腹式呼吸",
+                "<strong>強度:</strong> 「心地よい伸び」程度(痛みを感じるまで伸ばさない)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "6.4 PNFストレッチ(上級者向け)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>PNF(Proprioceptive Neuromuscular Facilitation)ストレッチ</strong>は、\n            神経筋促通法を利用した高度なストレッチ技術です。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>方法:</strong> 伸ばす→収縮→さらに伸ばす、のサイクル",
+            "<strong>効果:</strong> 通常のストレッチより柔軟性が20-30%多く向上",
+            "<strong>注意:</strong> 正しいフォームが重要、パートナーが推奨",
+            "<strong>頻度:</strong> 週2-3回"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "massage",
+      "title": "7. マッサージ・筋膜リリース",
+      "content": [
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "7.1 マッサージの科学"
+        },
+        {
+          "type": "paragraph",
+          "text": "マッサージは<strong>筋肉痛を軽減</strong>しますが、<strong>回復速度は変わらない</strong>という興味深い特性があります。"
+        },
+        {
+          "type": "box",
+          "box_type": "info",
+          "title": "💡 マッサージの効果(科学的根拠)",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>痛み軽減:</strong> 30-40%軽減(主観的評価) (Herbert et al., 2011)",
+                "<strong>血流増加:</strong> 一時的に2-3倍",
+                "<strong>炎症マーカー:</strong> IL-6などが10-15%低下 (Crane et al., 2012)",
+                "<strong>筋力回復:</strong> 有意な差はない",
+                "<strong>筋タンパク質合成:</strong> 影響なし",
+                "<strong>心理的効果:</strong> リラクゼーション、ストレス軽減"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "<strong>結論:</strong> マッサージは「気持ち良く、痛みを軽減する」が、\n                「回復を加速する」わけではない。しかし、心理的・主観的な快適さは重要。"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "7.2 フォームローラー(筋膜リリース)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>フォームローラー</strong>は、セルフマッサージツールとして非常に人気です。"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "フォームローラーの効果"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>柔軟性:</strong> 即時効果あり(10-15%向上)、ストレッチと同等 (Cheatham et al., 2015)",
+            "<strong>筋肉痛:</strong> 軽度の軽減効果(10-20%)",
+            "<strong>パフォーマンス:</strong> トレーニング前の使用でパワー低下なし",
+            "<strong>コスト:</strong> マッサージより安価、自宅で可能"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "効果的なフォームローラー使用法"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "<strong>タイミング:</strong> トレーニング前のウォームアップ、または就寝前",
+                "<strong>圧力:</strong> 中程度の圧力、痛みが強すぎる場合は軽く",
+                "<strong>速度:</strong> ゆっくり(1秒に2-3cm程度)",
+                "<strong>時間:</strong> 各筋群30-60秒",
+                "<strong>呼吸:</strong> ゆっくりとした深呼吸を続ける",
+                "<strong>トリガーポイント:</strong> 特に硬い部分で10-15秒静止"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "<strong>推奨筋群:</strong>"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "大腿四頭筋",
+                "ハムストリングス",
+                "腸脛靭帯(IT band)",
+                "ふくらはぎ",
+                "臀筋",
+                "広背筋"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "7.3 マッサージガン(パーカッシブセラピー)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>マッサージガン</strong>は近年人気の回復ツールです。"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "マッサージガンの特徴"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>作用:</strong> 高速振動(毎分2000-3000回)で筋肉を刺激",
+            "<strong>効果:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>即時の柔軟性向上(フォームローラーと同等)</li>\n<li>血流増加</li>\n<li>筋肉痛の主観的軽減</li>\n<li>使用感が心地よい</li>\n</ul>",
+            "<strong>利点:</strong> ピンポイントで狙える、力が不要",
+            "<strong>欠点:</strong> 高価(1-5万円)、科学的根拠はフォームローラーより少ない"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "使用ガイドライン"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>時間:</strong> 各筋群30-120秒",
+            "<strong>圧力:</strong> 軽く当てる程度(強く押し付けない)",
+            "<strong>速度設定:</strong> 低〜中速度",
+            "<strong>避けるべき部位:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>骨の上</li>\n<li>関節</li>\n<li>頸動脈</li>\n<li>怪我・炎症部位</li>\n</ul>"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ マッサージツール使用の注意点",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>やりすぎ禁物:</strong> 過度の使用(1箇所5分以上)は逆効果",
+                "<strong>痛みは良いサインではない:</strong> 「痛気持ちいい」程度に留める",
+                "<strong>急性怪我には使わない:</strong> 捻挫、肉離れなどには48時間は避ける",
+                "<strong>骨・神経には当てない:</strong> 筋肉のみに使用",
+                "<strong>炎症を悪化させる可能性:</strong> トレーニング直後(30分以内)は避ける"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "7.4 プロのマッサージ vs セルフケア"
+        }
+      ]
+    },
+    {
+      "id": "bath",
+      "title": "8. 入浴・温冷療法",
+      "content": [
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.1 温浴の効果"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>温浴(40-42℃)</strong>は古くから回復手段として使われてきました。"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "温浴の生理学的効果"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>血管拡張:</strong> 血流が2-3倍に増加",
+            "<strong>筋弛緩:</strong> 筋緊張が30-40%低下",
+            "<strong>副交感神経活性化:</strong> リラクゼーション、ストレス軽減",
+            "<strong>体温上昇:</strong> 深部体温が1-2℃上昇→その後の低下で眠気誘発",
+            "<strong>ヒートショックプロテイン:</strong> ストレス耐性向上"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "科学的根拠"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>筋肉痛軽減:</strong> 15-25%軽減 (Vaile et al., 2008)",
+            "<strong>筋力回復:</strong> わずかに促進(統計的有意差は小さい)",
+            "<strong>睡眠の質:</strong> 就寝90分前の入浴で睡眠の質が向上 (Haghayegh et al., 2019)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.2 冷水浴・アイシング"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>冷水浴(10-15℃)</strong>は論争の的です。痛みは軽減しますが、長期的な筋肥大を阻害する可能性があります。"
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ アイシング・冷水浴の注意点",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>炎症抑制:</strong> 腫れ・痛みが20-30%軽減",
+                "<strong>血管収縮:</strong> 代謝廃物の除去",
+                "<strong>神経伝達速度低下:</strong> 痛み感覚の鈍化"
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>筋肥大阻害:</strong> 定期的な冷水浴で筋タンパク質合成が20-30%低下の可能性 (Roberts et al., 2015)",
+                "<strong>炎症は必要:</strong> 適度な炎症は筋肥大に不可欠",
+                "<strong>血流制限:</strong> 回復に必要な栄養・酸素の供給が減少"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "<strong>推奨:</strong> 筋肥大目的のトレーニーは、トレーニング後24時間は冷水浴・アイシングを避けるべき。\n                痛みが激しい場合や急性怪我の場合のみ使用。"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.3 温冷交代浴"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>温冷交代浴(Contrast Water Therapy)</strong>は、温水と冷水を交互に浴びる方法です。"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "プロトコル"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #e3f2fd; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "<strong>温水(38-40℃):</strong> 3-4分",
+                "<strong>冷水(10-15℃):</strong> 1分",
+                "<strong>繰り返し:</strong> 3-5サイクル",
+                "<strong>終了:</strong> 温水で終わる(リラックス)",
+                "<strong>総時間:</strong> 12-20分"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "効果"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>血流のポンプ効果:</strong> 温水で拡張→冷水で収縮を繰り返し、血流促進",
+            "<strong>筋肉痛軽減:</strong> 温浴のみより15-20%効果的 (Bieuzen et al., 2013)",
+            "<strong>筋力回復:</strong> わずかに促進",
+            "<strong>主観的疲労感:</strong> 大幅に改善"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "success",
+          "title": "✅ 入浴・温冷療法の推奨プラン",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>トレーニング日:</strong> 温浴のみ(40-42℃、15-20分)",
+                "<strong>就寝90分前:</strong> 温浴で睡眠の質向上",
+                "<strong>避けるべき:</strong> トレーニング後24時間以内の冷水浴・アイシング"
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>試合・重要トレーニング後:</strong> 温冷交代浴",
+                "<strong>目的:</strong> 即座の疲労回復、翌日のパフォーマンス維持",
+                "<strong>筋肥大への影響:</strong> 多少の犠牲は許容"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.4 サウナ"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>サウナ(80-100℃)</strong>も回復ツールとして注目されています。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>ヒートショックプロテイン:</strong> 筋損傷からの保護",
+            "<strong>成長ホルモン:</strong> 2回のサウナセッション(20分×2)で成長ホルモンが2倍に",
+            "<strong>血流:</strong> 大幅な増加",
+            "<strong>デトックス:</strong> 発汗による代謝産物排出",
+            "<strong>リラクゼーション:</strong> ストレス軽減"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "推奨プロトコル"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>温度:</strong> 80-90℃",
+            "<strong>時間:</strong> 15-20分(1-2セット)",
+            "<strong>頻度:</strong> 週2-4回",
+            "<strong>水分補給:</strong> 前後で500ml以上",
+            "<strong>タイミング:</strong> トレーニング2-4時間後、または休養日"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nutrition",
+      "title": "9. 回復を加速する栄養戦略",
+      "content": [
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "9.1 トレーニング後の栄養タイミング"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>「アナボリックウィンドウ」</strong>という概念は過大評価されていますが、\n            タイミングは依然として重要です。"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "トレーニング後の栄養摂取タイムライン"
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 15px;",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "<strong style=\"color: #f44336;\">🔴 最優先: トレーニング後2時間以内</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "タンパク質: 20-40g(体重1kgあたり0.3-0.5g)",
+                    "炭水化物: 0.5-1.5g/kg体重",
+                    "MPS最大化の黄金時間"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px;",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "<strong style=\"color: #ff9800;\">🟠 重要: トレーニング後24時間</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "総タンパク質: 1.6-2.2g/kg体重",
+                    "3-5時間ごとにタンパク質摂取",
+                    "MPSは48時間上昇し続ける"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px;",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "<strong style=\"color: #4caf50;\">🟢 継続: トレーニング後48-72時間</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "高タンパク質食を継続",
+                    "十分な炭水化物でグリコーゲン再補充",
+                    "抗炎症食品の摂取"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "9.2 最適なマクロ栄養素バランス(回復期)"
+        },
+        {
+          "type": "styled_div",
+          "style": "display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "styled_div",
+              "style": "background: #ffebee; padding: 20px; border-radius: 12px; border-left: 5px solid #f44336;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "🥩 タンパク質"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>目標: 1.6-2.2g/kg体重/日</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "筋修復の材料",
+                    "3-5時間ごとに20-40g",
+                    "就寝前: カゼインプロテイン30-40g",
+                    "高品質ソース: 肉、魚、卵、乳製品"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #fff3e0; padding: 20px; border-radius: 12px; border-left: 5px solid #ff9800;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "🍚 炭水化物"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>目標: 3-7g/kg体重/日</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "グリコーゲン再補充",
+                    "インスリン分泌→同化促進",
+                    "トレーニング後24時間で完全回復",
+                    "複合糖質中心、トレーニング後は単純糖質もOK"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #f3e5f5; padding: 20px; border-radius: 12px; border-left: 5px solid #9c27b0;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "🥑 脂質"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>目標: 0.5-1.5g/kg体重/日</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "ホルモン合成の材料",
+                    "抗炎症作用(オメガ3)",
+                    "脂溶性ビタミン吸収",
+                    "オメガ3:オメガ6 = 1:4が理想"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "9.3 回復を促進する具体的食品"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "カテゴリー別推奨食品"
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 15px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "抗炎症食品"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>オメガ3豊富:</strong> サーモン、サバ、イワシ、クルミ、亜麻仁",
+                    "<strong>ターメリック(クルクミン):</strong> カレー、ゴールデンミルク",
+                    "<strong>ベリー類:</strong> ブルーベリー、チェリー(アントシアニン豊富)",
+                    "<strong>緑茶:</strong> EGCG(抗酸化物質)",
+                    "<strong>生姜:</strong> ジンゲロール(抗炎症)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "筋グリコーゲン再補充"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>トレーニング直後:</strong> 白米、バナナ、スポーツドリンク",
+                    "<strong>その後の食事:</strong> さつまいも、オートミール、玄米、パスタ",
+                    "<strong>組み合わせ:</strong> 炭水化物+タンパク質で吸収率向上"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "電解質・水分補給"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>ナトリウム:</strong> 塩、味噌汁",
+                    "<strong>カリウム:</strong> バナナ、アボカド、ほうれん草",
+                    "<strong>マグネシウム:</strong> ナッツ、種子類、ダークチョコレート",
+                    "<strong>水分:</strong> 体重1kgあたり30-40ml/日 + トレーニング中の発汗分"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "9.4 回復特化の食事例"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "トレーニング後の24時間食事プラン(体重70kgの例)"
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 15px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "トレーニング直後(30分以内)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>プロテインシェイク + 炭水化物</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "ホエイプロテイン 30g",
+                    "バナナ 2本",
+                    "蜂蜜 大さじ1",
+                    "P: 30g / C: 60g / F: 2g"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "2時間後(食事1)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>高タンパク質 + 炭水化物</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "鶏胸肉 200g",
+                    "白米 200g",
+                    "ブロッコリー 150g",
+                    "サーモン(オメガ3)50g",
+                    "P: 55g / C: 75g / F: 12g"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "5時間後(食事2)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>バランス食</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "牛肉 150g",
+                    "さつまいも 250g",
+                    "アボカド 1/2個",
+                    "ほうれん草サラダ",
+                    "P: 40g / C: 60g / F: 20g"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "8時間後(食事3)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>抗炎症重視</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "サバ 150g(オメガ3豊富)",
+                    "玄米 150g",
+                    "ターメリックスープ",
+                    "ブルーベリー 100g",
+                    "P: 35g / C: 55g / F: 18g"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "就寝前"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>カゼインプロテイン</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "カゼインプロテイン 40g",
+                    "またはギリシャヨーグルト 300g",
+                    "P: 40g / C: 10g / F: 5g"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px; padding: 15px; background: white; border-radius: 5px;",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "<strong>1日合計:</strong>"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "タンパク質: 200g (2.86g/kg) ✅"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "炭水化物: 260g (3.71g/kg) ✅"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "脂質: 57g (0.81g/kg) ✅"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "総カロリー: 約2300kcal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "supplements",
+      "title": "10. 回復特化サプリメント",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "サプリメントは<strong>「補助」</strong>であり、基本(睡眠・栄養・トレーニング)が最優先です。\n            ここでは科学的根拠のある回復サプリメントのみを紹介します。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "10.1 エビデンスが強いサプリメント"
+        },
+        {
+          "type": "styled_div",
+          "style": "display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "styled_div",
+              "style": "background: white; padding: 25px; border-radius: 12px; border: 2px solid #4caf50;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "🥇 クレアチン"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>推奨度: ★★★★★</strong>"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>効果:</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "筋グリコーゲン回復促進",
+                    "筋損傷マーカー低下",
+                    "筋力回復加速",
+                    "細胞内水分保持"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>摂取量:</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "ローディング: 20g/日×5-7日",
+                    "維持: 3-5g/日",
+                    "タイミング: いつでもOK"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>根拠:</strong> 数百の研究で効果確認済み、最も研究されたサプリメント"
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: white; padding: 25px; border-radius: 12px; border: 2px solid #2196f3;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "🥈 プロテイン"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>推奨度: ★★★★★</strong>"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>種類と特徴:</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>ホエイ:</strong> 吸収速い、トレーニング後",
+                    "<strong>カゼイン:</strong> 吸収遅い、就寝前",
+                    "<strong>ソイ:</strong> 植物性、女性ホルモン様作用"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>摂取量:</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "トレーニング後: 20-40g(ホエイ)",
+                    "就寝前: 30-40g(カゼイン)",
+                    "食事で不足分を補う"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>根拠:</strong> MPSを20-30%向上させる (Moore et al., 2009)"
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: white; padding: 25px; border-radius: 12px; border: 2px solid #ff9800;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "🥉 オメガ3(EPA/DHA)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>推奨度: ★★★★☆</strong>"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>効果:</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "抗炎症作用",
+                    "筋タンパク質合成促進",
+                    "筋肉痛軽減(15-20%)",
+                    "関節保護"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>摂取量:</strong>"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "EPA+DHA: 2-3g/日",
+                    "高品質フィッシュオイル",
+                    "食事と一緒に摂取"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>根拠:</strong> 慢性炎症を20%軽減 (Calder, 2010)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "10.2 中程度のエビデンスがあるサプリメント"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "BCAA(分岐鎖アミノ酸)"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>成分:</strong> ロイシン、イソロイシン、バリン",
+                "<strong>効果:</strong> 筋タンパク質分解抑制、疲労軽減",
+                "<strong>摂取量:</strong> 5-10g(ロイシン2-3g含む)",
+                "<strong>タイミング:</strong> トレーニング中・直後",
+                "<strong>注意:</strong> 十分なタンパク質を摂取していれば不要な可能性",
+                "<strong>推奨度:</strong> ★★★☆☆"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "グルタミン"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>効果:</strong> 免疫機能サポート、腸内環境改善、筋グリコーゲン回復",
+                "<strong>摂取量:</strong> 5-10g/日",
+                "<strong>タイミング:</strong> トレーニング後、就寝前",
+                "<strong>注意:</strong> 筋肥大への直接効果は限定的",
+                "<strong>推奨度:</strong> ★★★☆☆"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "βアラニン"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>効果:</strong> 筋カルノシン増加、疲労軽減、高強度運動パフォーマンス向上",
+                "<strong>摂取量:</strong> 3-6g/日",
+                "<strong>効果発現:</strong> 2-4週間の継続摂取が必要",
+                "<strong>副作用:</strong> 顔のチクチク感(無害)",
+                "<strong>推奨度:</strong> ★★★☆☆"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "10.3 エビデンスが弱い・不要なサプリメント"
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ 過大評価されているサプリメント",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>高用量ビタミンC・E:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>抗酸化作用が炎症を過度に抑制</li>\n<li>トレーニング適応を阻害する可能性</li>\n<li>食事からの適量摂取で十分</li>\n</ul>",
+                "<strong>HMB(β-ヒドロキシ-β-メチル酪酸):</strong>\n<ul style=\"margin-top: 5px;\">\n<li>初心者や高齢者には効果あり</li>\n<li>経験者への効果は限定的</li>\n<li>高価</li>\n</ul>",
+                "<strong>ZMA(亜鉛・マグネシウム・ビタミンB6):</strong>\n<ul style=\"margin-top: 5px;\">\n<li>欠乏していれば効果あり</li>\n<li>十分な食事を摂っていれば不要</li>\n</ul>"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "overtraining",
+      "title": "11. オーバートレーニング症候群",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "<strong>オーバートレーニング症候群(OTS)</strong>は、回復不足の最悪の結果です。\n            パフォーマンスが長期的に低下し、回復に数週間〜数ヶ月かかります。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "11.1 オーバートレーニングの段階"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "3つの段階"
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 15px; padding: 15px; background: #fff3e0; border-left: 4px solid #ff9800; margin-bottom: 15px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "Stage 1: ファンクショナルオーバーリーチング"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>期間:</strong> 数日〜2週間"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>状態:</strong> 計画的な高負荷期間、一時的なパフォーマンス低下"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>回復:</strong> 数日の休養で超回復"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong style=\"color: #4caf50;\">✅ これは正常で有益</strong>"
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 15px; padding: 15px; background: #ffebee; border-left: 4px solid #f44336; margin-bottom: 15px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "Stage 2: ノンファンクショナルオーバーリーチング"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>期間:</strong> 2週間〜数ヶ月"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>状態:</strong> 回復不足、パフォーマンス停滞・低下"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>回復:</strong> 2-4週間の大幅な負荷軽減が必要"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong style=\"color: #f44336;\">⚠️ 警告サイン</strong>"
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 15px; padding: 15px; background: #fce4ec; border-left: 4px solid #880e4f;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "Stage 3: オーバートレーニング症候群(OTS)"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>期間:</strong> 数ヶ月以上"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>状態:</strong> 慢性的なパフォーマンス低下、全身症状"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>回復:</strong> 数ヶ月〜1年以上"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong style=\"color: #880e4f;\">🚨 深刻、医療介入が必要</strong>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "11.2 オーバートレーニングの兆候"
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ オーバートレーニングの警告サイン",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>パフォーマンス:</strong> 3週間以上の継続的な低下・停滞",
+                "<strong>安静時心拍数:</strong> 通常より10拍/分以上高い状態が続く",
+                "<strong>筋肉痛:</strong> 異常に長引く(5-7日以上)",
+                "<strong>疲労:</strong> 慢性的な重だるさ、回復しない",
+                "<strong>睡眠:</strong> 不眠または過眠、睡眠の質低下",
+                "<strong>食欲:</strong> 大幅な低下または増加",
+                "<strong>体重:</strong> 意図しない2kg以上の減少",
+                "<strong>免疫:</strong> 頻繁な風邪・感染症(月2回以上)",
+                "<strong>怪我:</strong> 頻発する小さな怪我・痛み"
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>モチベーション:</strong> トレーニングへの意欲喪失",
+                "<strong>気分:</strong> イライラ、抑うつ、不安",
+                "<strong>集中力:</strong> 著しい低下",
+                "<strong>トレーニング中:</strong> 「楽しくない」「つらいだけ」"
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>テストステロン:</strong> 20-40%低下",
+                "<strong>コルチゾール:</strong> 慢性的に高値",
+                "<strong>T/C比(テストステロン/コルチゾール比):</strong> 0.35以下"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "11.3 オーバートレーニングからの回復"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "回復プロトコル"
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 15px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "Week 1-2: 完全休養"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "すべてのトレーニングを停止",
+                    "軽いウォーキングのみOK(20-30分)",
+                    "睡眠を最優先(8-9時間以上)",
+                    "ストレス管理に注力"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "Week 3-4: 軽い活動再開"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "週2-3回の軽いトレーニング",
+                    "ボリューム・強度ともに通常の50%以下",
+                    "楽しむことを優先",
+                    "兆候が戻ればすぐ中止"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "Week 5-8: 段階的増加"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "週ごとに10%ずつ負荷増加",
+                    "週3-4回のトレーニング",
+                    "安静時心拍数をモニタリング",
+                    "体調記録を継続"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "Week 9以降: 通常復帰"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "通常の80-90%から開始",
+                    "ディロード週を必ず組み込む",
+                    "再発予防策を実施"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "11.4 オーバートレーニング予防策"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>ピリオダイゼーション:</strong> 高負荷期と低負荷期を計画的に配置",
+            "<strong>ディロード週:</strong> 4-6週間ごとに負荷50%の週を設ける",
+            "<strong>完全休養日:</strong> 週に最低1-2日",
+            "<strong>睡眠優先:</strong> 毎日7-9時間",
+            "<strong>栄養充足:</strong> カロリー不足を避ける",
+            "<strong>ストレス管理:</strong> 生活ストレスも考慮",
+            "<strong>モニタリング:</strong> 安静時心拍数、体重、気分を記録"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monitoring",
+      "title": "12. 回復度モニタリング",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "<strong>測定できないものは改善できません。</strong>\n            回復度を客観的に評価することで、トレーニングを最適化できます。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "12.1 安静時心拍数(RHR)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>最も簡単で信頼できる指標</strong>です。"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #e3f2fd; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "測定方法"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "毎朝、目覚めたらベッドで静かに1分間測定",
+                "スマートウォッチまたは手動(脈拍×60秒)",
+                "記録・グラフ化",
+                "7日間の平均を「ベースライン」とする"
+              ]
+            },
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "判定基準"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>ベースライン±2拍:</strong> 正常、通常のトレーニングOK",
+                "<strong>+3〜5拍:</strong> やや疲労、軽めのトレーニング",
+                "<strong>+6〜10拍:</strong> 疲労蓄積、アクティブレストのみ",
+                "<strong>+10拍以上:</strong> 完全休養日、体調不良の可能性"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "12.2 心拍変動(HRV)"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>HRV(Heart Rate Variability)</strong>は、より高度な回復度指標です。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>測定:</strong> 専用アプリ・デバイスが必要(スマートウォッチ等)",
+            "<strong>意味:</strong> 心拍の拍動間隔のばらつき",
+            "<strong>高HRV:</strong> 良好な回復、副交感神経優位",
+            "<strong>低HRV:</strong> ストレス・疲労、交感神経優位",
+            "<strong>使い方:</strong> 個人のベースラインと比較"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "12.3 主観的評価スケール"
+        },
+        {
+          "type": "table",
+          "parent_style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "headers": [],
+          "rows": [
+            [
+              "項目",
+              "1点(最悪)",
+              "5点(最高)"
+            ],
+            [
+              "睡眠の質",
+              "ほとんど眠れず",
+              "ぐっすり眠れた"
+            ],
+            [
+              "筋肉痛",
+              "激しい痛み",
+              "痛みなし"
+            ],
+            [
+              "疲労感",
+              "極度の疲労",
+              "活力満ちている"
+            ],
+            [
+              "気分",
+              "憂鬱・イライラ",
+              "前向き・穏やか"
+            ],
+            [
+              "トレーニング意欲",
+              "全くやる気なし",
+              "非常に意欲的"
+            ]
+          ],
+          "table_style": "width: 100%; border-collapse: collapse; margin-top: 15px;"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "12.4 パフォーマンステスト"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>垂直跳び:</strong> 神経筋疲労の指標\n                <ul style=\"margin-top: 5px;\">\n<li>毎朝3回測定、最高値を記録</li>\n<li>ベースラインより5%以上低下→疲労蓄積</li>\n</ul>",
+            "<strong>握力:</strong> 全身疲労の簡易指標\n                <ul style=\"margin-top: 5px;\">\n<li>左右3回ずつ測定</li>\n<li>10%以上低下→回復不足</li>\n</ul>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculator",
+      "title": "13. 回復度チェックツール",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "以下のツールで、現在の回復度を評価しましょう。\n            結果に基づいて、今日のトレーニング強度を調整できます。"
+        },
+        {
+          "type": "interactive_tool",
+          "id": "",
+          "note": "このツールのHTMLはテンプレート内に残します(JS連携のため)"
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "14. 参考文献",
+      "content": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Burd, N.A., et al. (2011). \"Muscle time under tension during resistance exercise stimulates differential muscle protein sub-fractional synthetic responses in men.\" <em>Journal of Physiology</em>, 590(2), 351-362.",
+            "Schoenfeld, B.J., et al. (2017). \"Resistance training volume enhances muscle hypertrophy but not strength in trained men.\" <em>Medicine &amp; Science in Sports &amp; Exercise</em>, 51(1), 94-103.",
+            "Wernbom, M., et al. (2007). \"The influence of frequency, intensity, volume and mode of strength training on whole muscle cross-sectional area in humans.\" <em>Sports Medicine</em>, 37(3), 225-264.",
+            "Dattilo, M., et al. (2011). \"Sleep and muscle recovery: Endocrinological and molecular basis for a new and promising hypothesis.\" <em>Medical Hypotheses</em>, 77(2), 220-222.",
+            "Kreher, J.B., &amp; Schwartz, J.B. (2012). \"Overtraining syndrome: A practical guide.\" <em>Sports Health</em>, 4(2), 128-138.",
+            "Petersen, A.M., &amp; Pedersen, B.K. (2007). \"The role of IL-6 in mediating the anti-inflammatory effects of exercise.\" <em>Journal of Physiology and Pharmacology</em>, 57 Suppl 10, 43-51.",
+            "Cheung, K., et al. (2003). \"Delayed onset muscle soreness: treatment strategies and performance factors.\" <em>Sports Medicine</em>, 33(2), 145-164.",
+            "Herbert, R.D., et al. (2011). \"Stretching to prevent or reduce muscle soreness after exercise.\" <em>Cochrane Database of Systematic Reviews</em>, (7), CD004577.",
+            "Bieuzen, F., et al. (2013). \"Contrast water therapy and exercise induced muscle damage: a systematic review and meta-analysis.\" <em>PLoS ONE</em>, 8(4), e62356.",
+            "Takagi, R., et al. (2011). \"Influence of icing on muscle regeneration after crush injury to skeletal muscles in rats.\" <em>Journal of Applied Physiology</em>, 110(2), 382-388.",
+            "Crane, J.D., et al. (2012). \"Massage therapy attenuates inflammatory signaling after exercise-induced muscle damage.\" <em>Science Translational Medicine</em>, 4(119), 119ra13.",
+            "Cheatham, S.W., et al. (2015). \"The effects of self-myofascial release using a foam roll or roller massager on joint range of motion, muscle recovery, and performance: a systematic review.\" <em>International Journal of Sports Physical Therapy</em>, 10(6), 827-838.",
+            "Vaile, J., et al. (2008). \"Effect of hydrotherapy on recovery from fatigue.\" <em>International Journal of Sports Medicine</em>, 29(7), 539-544.",
+            "Haghayegh, S., et al. (2019). \"Before-bedtime passive body heating by warm shower or bath to improve sleep: A systematic review and meta-analysis.\" <em>Sleep Medicine Reviews</em>, 46, 124-135.",
+            "Roberts, L.A., et al. (2015). \"Post-exercise cold water immersion attenuates acute anabolic signalling and long-term adaptations in muscle to strength training.\" <em>Journal of Physiology</em>, 593(18), 4285-4301.",
+            "Moore, D.R., et al. (2009). \"Ingested protein dose response of muscle and albumin protein synthesis after resistance exercise in young men.\" <em>American Journal of Clinical Nutrition</em>, 89(1), 161-168.",
+            "Calder, P.C. (2010). \"Omega-3 fatty acids and inflammatory processes.\" <em>Nutrients</em>, 2(3), 355-374.",
+            "Phillips, S.M., et al. (2012). \"The role of milk- and soy-based protein in support of muscle protein synthesis and muscle protein accretion in young and elderly persons.\" <em>Journal of the American College of Nutrition</em>, 28(4), 343-354.",
+            "厚生労働省 (2020). 「日本人の食事摂取基準(2020年版)」<br/>\n<a href=\"https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/syokuji_kijyun.html\" target=\"_blank\">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/syokuji_kijyun.html</a>",
+            "日本スポーツ協会 (2019). 「スポーツ活動中の熱中症予防ガイドブック」<br/>\n<a href=\"https://www.japan-sports.or.jp/\" target=\"_blank\">https://www.japan-sports.or.jp/</a>"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "title": "14. 参考文献",
+    "items": [
+      "Burd, N.A., et al. (2011). \"Muscle time under tension during resistance exercise stimulates differential muscle protein sub-fractional synthetic responses in men.\" <em>Journal of Physiology</em>, 590(2), 351-362.",
+      "Schoenfeld, B.J., et al. (2017). \"Resistance training volume enhances muscle hypertrophy but not strength in trained men.\" <em>Medicine &amp; Science in Sports &amp; Exercise</em>, 51(1), 94-103.",
+      "Wernbom, M., et al. (2007). \"The influence of frequency, intensity, volume and mode of strength training on whole muscle cross-sectional area in humans.\" <em>Sports Medicine</em>, 37(3), 225-264.",
+      "Dattilo, M., et al. (2011). \"Sleep and muscle recovery: Endocrinological and molecular basis for a new and promising hypothesis.\" <em>Medical Hypotheses</em>, 77(2), 220-222.",
+      "Kreher, J.B., &amp; Schwartz, J.B. (2012). \"Overtraining syndrome: A practical guide.\" <em>Sports Health</em>, 4(2), 128-138.",
+      "Petersen, A.M., &amp; Pedersen, B.K. (2007). \"The role of IL-6 in mediating the anti-inflammatory effects of exercise.\" <em>Journal of Physiology and Pharmacology</em>, 57 Suppl 10, 43-51.",
+      "Cheung, K., et al. (2003). \"Delayed onset muscle soreness: treatment strategies and performance factors.\" <em>Sports Medicine</em>, 33(2), 145-164.",
+      "Herbert, R.D., et al. (2011). \"Stretching to prevent or reduce muscle soreness after exercise.\" <em>Cochrane Database of Systematic Reviews</em>, (7), CD004577.",
+      "Bieuzen, F., et al. (2013). \"Contrast water therapy and exercise induced muscle damage: a systematic review and meta-analysis.\" <em>PLoS ONE</em>, 8(4), e62356.",
+      "Takagi, R., et al. (2011). \"Influence of icing on muscle regeneration after crush injury to skeletal muscles in rats.\" <em>Journal of Applied Physiology</em>, 110(2), 382-388.",
+      "Crane, J.D., et al. (2012). \"Massage therapy attenuates inflammatory signaling after exercise-induced muscle damage.\" <em>Science Translational Medicine</em>, 4(119), 119ra13.",
+      "Cheatham, S.W., et al. (2015). \"The effects of self-myofascial release using a foam roll or roller massager on joint range of motion, muscle recovery, and performance: a systematic review.\" <em>International Journal of Sports Physical Therapy</em>, 10(6), 827-838.",
+      "Vaile, J., et al. (2008). \"Effect of hydrotherapy on recovery from fatigue.\" <em>International Journal of Sports Medicine</em>, 29(7), 539-544.",
+      "Haghayegh, S., et al. (2019). \"Before-bedtime passive body heating by warm shower or bath to improve sleep: A systematic review and meta-analysis.\" <em>Sleep Medicine Reviews</em>, 46, 124-135.",
+      "Roberts, L.A., et al. (2015). \"Post-exercise cold water immersion attenuates acute anabolic signalling and long-term adaptations in muscle to strength training.\" <em>Journal of Physiology</em>, 593(18), 4285-4301.",
+      "Moore, D.R., et al. (2009). \"Ingested protein dose response of muscle and albumin protein synthesis after resistance exercise in young men.\" <em>American Journal of Clinical Nutrition</em>, 89(1), 161-168.",
+      "Calder, P.C. (2010). \"Omega-3 fatty acids and inflammatory processes.\" <em>Nutrients</em>, 2(3), 355-374.",
+      "Phillips, S.M., et al. (2012). \"The role of milk- and soy-based protein in support of muscle protein synthesis and muscle protein accretion in young and elderly persons.\" <em>Journal of the American College of Nutrition</em>, 28(4), 343-354.",
+      "厚生労働省 (2020). 「日本人の食事摂取基準(2020年版)」<br/>\n<a href=\"https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/syokuji_kijyun.html\" target=\"_blank\">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/syokuji_kijyun.html</a>",
+      "日本スポーツ協会 (2019). 「スポーツ活動中の熱中症予防ガイドブック」<br/>\n<a href=\"https://www.japan-sports.or.jp/\" target=\"_blank\">https://www.japan-sports.or.jp/</a>"
+    ]
+  },
+  "navigation": {}
+}

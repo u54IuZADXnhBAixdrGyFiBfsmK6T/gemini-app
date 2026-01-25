@@ -1,0 +1,1439 @@
+{
+  "page_id": "smoking",
+  "title": "Smoking Impact - 喫煙と筋肥大の科学",
+  "hero": {
+    "title": "🚬 Smoking Impact",
+    "subtitle": "喫煙が筋肉を破壊する - 禁煙で筋肥大を加速させる"
+  },
+  "toc": {
+    "title": "📑 目次",
+    "items": [
+      {
+        "href": "#reality",
+        "text": "1. 厳しい現実：喫煙と筋肥大の関係"
+      },
+      {
+        "href": "#oxygen",
+        "text": "2. 酸素供給の破壊"
+      },
+      {
+        "href": "#protein-synthesis",
+        "text": "3. 筋タンパク質合成への影響"
+      },
+      {
+        "href": "#hormones",
+        "text": "4. ホルモンバランスの崩壊"
+      },
+      {
+        "href": "#recovery",
+        "text": "5. 回復能力の低下"
+      },
+      {
+        "href": "#performance",
+        "text": "6. トレーニングパフォーマンスへの影響"
+      },
+      {
+        "href": "#body-composition",
+        "text": "7. 体組成への悪影響"
+      },
+      {
+        "href": "#inflammation",
+        "text": "8. 慢性炎症と免疫抑制"
+      },
+      {
+        "href": "#quitting",
+        "text": "9. 禁煙のメリットとタイムライン"
+      },
+      {
+        "href": "#strategies",
+        "text": "10. 禁煙成功戦略"
+      },
+      {
+        "href": "#calculator",
+        "text": "11. 喫煙影響計算ツール"
+      },
+      {
+        "href": "#references",
+        "text": "12. 参考文献"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "reality",
+      "title": "1. 厳しい現実：喫煙と筋肥大の関係",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "アルコールと異なり、喫煙には<strong>「適量」も「安全な摂取法」も存在しません</strong>。\n            喫煙は筋肥大にとって<strong>百害あって一利なし</strong>です。\n            しかし、希望もあります。<strong>禁煙すれば驚くほど速く回復</strong>します。"
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ 衝撃的な事実",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "喫煙者の筋タンパク質合成率は非喫煙者より<strong>18-25%低い</strong> (Petersen et al., 2007)",
+                "1日1箱の喫煙で、筋力増加率が<strong>30-40%低下</strong> (Hollings et al., 2012)",
+                "喫煙は最大酸素摂取量（VO2max）を<strong>10-25%低下</strong>させる (Bernaards et al., 2003)",
+                "筋肉の毛細血管密度が<strong>20-30%減少</strong> (Pärssinen et al., 2000)",
+                "喫煙者の筋肉回復時間は非喫煙者の<strong>1.5-2倍</strong> (Nawrot et al., 2007)",
+                "テストステロンレベルが<strong>10-15%低下</strong> (Halmenschlager et al., 2009)",
+                "喫煙による筋肉への悪影響は<strong>運動では相殺できない</strong>"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "stats_grid",
+          "cards": [
+            {
+              "number": "-25%",
+              "label": "筋タンパク質合成率"
+            },
+            {
+              "number": "-40%",
+              "label": "筋力増加率(1日1箱)"
+            },
+            {
+              "number": "-25%",
+              "label": "最大酸素摂取量"
+            },
+            {
+              "number": "×2",
+              "label": "回復時間(非喫煙者比)"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "喫煙が筋肥大を阻害する7つの主要メカニズム"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "<strong>酸素供給の破壊</strong> - 一酸化炭素によるヘモグロビン結合阻害",
+            "<strong>血流の悪化</strong> - 毛細血管の収縮と血管内皮機能障害",
+            "<strong>タンパク質合成の抑制</strong> - mTOR経路の阻害",
+            "<strong>異化ホルモンの増加</strong> - コルチゾール上昇とテストステロン低下",
+            "<strong>慢性炎症</strong> - 全身性の炎症反応",
+            "<strong>酸化ストレス</strong> - フリーラジカルによる細胞損傷",
+            "<strong>栄養素の吸収阻害</strong> - ビタミンC、E、亜鉛などの枯渇"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "喫煙者 vs 非喫煙者：筋肥大の比較"
+        },
+        {
+          "type": "table",
+          "parent_style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "headers": [],
+          "rows": [
+            [
+              "指標",
+              "非喫煙者",
+              "軽度喫煙者(1日10本)",
+              "重度喫煙者(1日20本+)"
+            ],
+            [
+              "筋肉量増加",
+              "+3.2kg",
+              "+2.1kg (-34%)",
+              "+1.5kg (-53%)"
+            ],
+            [
+              "筋力向上",
+              "+28%",
+              "+19% (-32%)",
+              "+14% (-50%)"
+            ],
+            [
+              "体脂肪減少",
+              "-2.8kg",
+              "-1.9kg",
+              "-1.2kg"
+            ],
+            [
+              "持久力向上",
+              "+35%",
+              "+18%",
+              "+8%"
+            ]
+          ],
+          "table_style": "width: 100%; border-collapse: collapse; margin-top: 15px;"
+        },
+        {
+          "type": "box",
+          "box_type": "success",
+          "title": "✅ しかし、希望はある！",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "喫煙の悪影響は深刻ですが、<strong>禁煙すれば驚くほど速く回復</strong>します："
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>20分後:</strong> 心拍数と血圧が正常化",
+                "<strong>12時間後:</strong> 血中一酸化炭素レベルが正常化",
+                "<strong>2週間-3ヶ月:</strong> 循環機能が改善、肺機能が30%向上",
+                "<strong>1-9ヶ月:</strong> 呼吸器症状（咳、息切れ）が大幅改善",
+                "<strong>1年後:</strong> 心臓病リスクが喫煙者の半分に",
+                "<strong>筋肥大効果:</strong> 禁煙後1ヶ月で筋タンパク質合成率が15-20%向上"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oxygen",
+      "title": "2. 酸素供給の破壊",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "喫煙が筋肥大に与える最も直接的で深刻な影響は、<strong>酸素供給システムの破壊</strong>です。\n            筋肉の成長には十分な酸素が不可欠ですが、喫煙はこれを多方面から阻害します。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "2.1 一酸化炭素の悪影響"
+        },
+        {
+          "type": "paragraph",
+          "text": "タバコの煙に含まれる<strong>一酸化炭素（CO）</strong>は、\n            ヘモグロビンに対して酸素の<strong>200-250倍の親和性</strong>を持ちます。"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "一酸化炭素による酸素輸送阻害"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>カルボキシヘモグロビン（COHb）の形成:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>非喫煙者：COHb 0.5-1.5%</li>\n<li>1日10本喫煙者：COHb 3-6%</li>\n<li>1日20本喫煙者：COHb 6-10%</li>\n<li>1日40本喫煙者：COHb 10-15%</li>\n</ul>",
+                "<strong>酸素運搬能力の低下:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>COHb 5%で酸素運搬能力が<strong>実質10%低下</strong></li>\n<li>COHb 10%で<strong>20%低下</strong></li>\n<li>これは高度2000mにいるのと同等の低酸素状態</li>\n</ul>",
+                "<strong>酸素解離曲線の左方移動:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>筋肉組織への酸素放出が困難に</li>\n<li>筋肉が実際に使える酸素がさらに減少</li>\n</ul>"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "2.2 肺機能の低下"
+        },
+        {
+          "type": "paragraph",
+          "text": "喫煙は<strong>肺胞と気道を損傷</strong>し、酸素取り込み能力を低下させます。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>肺活量の減少:</strong> 年間60-90mlの減少（通常の2-3倍の速度）",
+            "<strong>1秒量（FEV1）の低下:</strong> 慢性的な気道閉塞",
+            "<strong>肺拡散能力の低下:</strong> 酸素が血液に入りにくくなる",
+            "<strong>慢性気管支炎:</strong> 粘液分泌過多で気道が狭窄",
+            "<strong>肺気腫:</strong> 肺胞が破壊され、ガス交換面積が減少"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ 喫煙による最大酸素摂取量（VO2max）の低下",
+          "content": []
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "2.3 毛細血管密度の減少"
+        },
+        {
+          "type": "paragraph",
+          "text": "喫煙は筋肉内の<strong>毛細血管の成長を阻害</strong>し、既存の毛細血管も損傷させます。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>血管新生の抑制:</strong> VEGF（血管内皮増殖因子）の産生が40%低下",
+            "<strong>毛細血管密度:</strong> 喫煙者は非喫煙者より20-30%少ない",
+            "<strong>血管内皮機能障害:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>一酸化窒素（NO）の産生低下</li>\n<li>血管拡張能力の低下</li>\n<li>血流量が30-40%減少</li>\n</ul>",
+            "<strong>結果:</strong> 筋肉への酸素と栄養素の供給が大幅に減少"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "info",
+          "title": "💡 酸素不足が筋肥大に与える影響",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "筋肉の成長には十分な酸素が必要です："
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>ATP産生:</strong> 有酸素代謝は無酸素代謝の19倍効率的",
+                "<strong>タンパク質合成:</strong> 酸素不足でmTOR活性が低下",
+                "<strong>回復プロセス:</strong> 筋損傷の修復には大量の酸素が必要",
+                "<strong>乳酸除去:</strong> 酸素がないと乳酸が蓄積し続ける"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "<strong>つまり:</strong> 喫煙者は常に「高地トレーニング」をしている状態だが、\n                メリットはなく、デメリットのみ。"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "2.4 赤血球と血液の問題"
+        },
+        {
+          "type": "paragraph",
+          "text": "喫煙は血液の性質も変化させます。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>多血症:</strong> 慢性的な低酸素状態に対する代償\n                <ul style=\"margin-top: 5px;\">\n<li>赤血球数が増加</li>\n<li>血液粘度が上昇</li>\n<li>血流が悪化（逆効果）</li>\n</ul>",
+            "<strong>血小板凝集:</strong> 血栓リスク増加",
+            "<strong>フィブリノーゲン増加:</strong> 血液がドロドロに"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "protein-synthesis",
+      "title": "3. 筋タンパク質合成への影響",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "喫煙は筋タンパク質合成（MPS）を<strong>直接的かつ間接的に抑制</strong>します。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "3.1 直接的なMPS抑制"
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ 重要研究：Petersen et al., 2007",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "喫煙者と非喫煙者の筋タンパク質合成率を比較した研究："
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>対象:</strong> 健康な成人男性（喫煙者12名、非喫煙者12名）",
+                "<strong>測定:</strong> 安静時および運動後のMPS",
+                "<strong>結果:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>安静時MPS：喫煙者は非喫煙者より<strong>18%低い</strong></li>\n<li>運動後MPS：喫煙者は非喫煙者より<strong>25%低い</strong></li>\n<li>運動によるMPS上昇：喫煙者は<strong>30%鈍化</strong></li>\n</ul>"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "3.2 mTOR経路の阻害"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>ニコチンの直接作用:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>mTOR活性を20-30%低下させる</li>\n<li>p70S6キナーゼ（mTORの下流）も抑制</li>\n<li>4E-BP1の脱リン酸化阻害</li>\n</ul>",
+            "<strong>AMPK活性化:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>細胞のエネルギーストレス感知</li>\n<li>AMPKがmTORを抑制</li>\n<li>異化（分解）モードに移行</li>\n</ul>",
+            "<strong>インスリンシグナリング阻害:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>インスリン受容体の感受性低下</li>\n<li>Akt/PKB経路の抑制</li>\n<li>結果：栄養素の筋肉への取り込み減少</li>\n</ul>"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "3.3 筋分解（異化）の促進"
+        },
+        {
+          "type": "paragraph",
+          "text": "喫煙は筋タンパク質の<strong>分解も促進</strong>します。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>ユビキチン-プロテアソーム系（UPS）の活性化:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>筋肉の主要な分解経路</li>\n<li>喫煙者では活性が40-50%上昇</li>\n<li>Atrogin-1、MuRF1などの分解遺伝子が上方制御</li>\n</ul>",
+            "<strong>オートファジーの異常:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>細胞内の自食作用が過剰</li>\n<li>筋タンパク質が分解されやすい</li>\n</ul>",
+            "<strong>カスパーゼ活性化:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>アポトーシス（細胞死）経路</li>\n<li>筋繊維の減少</li>\n</ul>"
+          ]
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "MPS vs 筋分解のバランス"
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 15px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "非喫煙者の筋肉バランス"
+                },
+                {
+                  "type": "styled_div",
+                  "style": "display: flex; align-items: center; margin: 10px 0;",
+                  "content": [
+                    {
+                      "type": "styled_div",
+                      "style": "flex: 1; background: #4caf50; height: 30px; border-radius: 5px; position: relative;",
+                      "content": []
+                    }
+                  ]
+                },
+                {
+                  "type": "styled_div",
+                  "style": "display: flex; align-items: center; margin: 10px 0;",
+                  "content": [
+                    {
+                      "type": "styled_div",
+                      "style": "flex: 0.6; background: #f44336; height: 30px; border-radius: 5px; position: relative;",
+                      "content": []
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>正味の筋肥大:</strong> +40% ✅"
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 25px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "喫煙者の筋肉バランス"
+                },
+                {
+                  "type": "styled_div",
+                  "style": "display: flex; align-items: center; margin: 10px 0;",
+                  "content": [
+                    {
+                      "type": "styled_div",
+                      "style": "flex: 0.75; background: #ff9800; height: 30px; border-radius: 5px; position: relative;",
+                      "content": []
+                    }
+                  ]
+                },
+                {
+                  "type": "styled_div",
+                  "style": "display: flex; align-items: center; margin: 10px 0;",
+                  "content": [
+                    {
+                      "type": "styled_div",
+                      "style": "flex: 0.85; background: #c62828; height: 30px; border-radius: 5px; position: relative;",
+                      "content": []
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "<strong>正味の筋肥大:</strong> -10% ❌ （実質的に筋肉が減少）"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "3.4 プロテイン摂取の効果も減少"
+        },
+        {
+          "type": "paragraph",
+          "text": "喫煙者は<strong>同じ量のプロテインを摂取しても効果が低い</strong>です。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "アミノ酸の筋肉への取り込みが30%低下",
+            "ロイシンによるmTOR活性化が鈍化",
+            "プロテイン摂取後のMPS上昇が非喫煙者の70%程度",
+            "実質的に、摂取プロテインの30%が無駄に"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hormones",
+      "title": "4. ホルモンバランスの崩壊",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "喫煙は<strong>内分泌系全体を混乱</strong>させます。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "4.1 テストステロンの低下"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>総テストステロン:</strong> 10-15%低下 (Halmenschlager et al., 2009)",
+            "<strong>遊離テストステロン:</strong> さらに大きく低下（SHBG増加のため）",
+            "<strong>メカニズム:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>ライディッヒ細胞への直接毒性</li>\n<li>酸化ストレスによる精巣損傷</li>\n<li>LH（黄体形成ホルモン）分泌の低下</li>\n</ul>"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "4.2 成長ホルモンとIGF-1"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>GH分泌:</strong> 間接的に低下（睡眠の質悪化）",
+            "<strong>IGF-1:</strong> 15-20%低下",
+            "<strong>肝臓機能:</strong> ニコチンが肝臓のIGF-1産生を阻害",
+            "<strong>結果:</strong> 筋肉成長シグナルの減少"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "4.3 コルチゾール（ストレスホルモン）の上昇"
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ 喫煙とコルチゾール",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>急性効果:</strong> 1本吸うごとにコルチゾールが一時的に上昇",
+                "<strong>慢性効果:</strong> 基礎コルチゾールレベルが恒常的に15-25%高い",
+                "<strong>ニコチン離脱:</strong> さらにコルチゾール上昇（ストレス反応）",
+                "<strong>結果:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>筋肉の異化（分解）が常に進行</li>\n<li>脂肪蓄積（特に内臓脂肪）</li>\n<li>免疫抑制</li>\n<li>インスリン抵抗性</li>\n</ul>"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "4.4 甲状腺ホルモン"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>T3、T4:</strong> 代謝ホルモンが影響を受ける",
+            "<strong>基礎代謝:</strong> わずかに上昇（これが「喫煙で痩せる」誤解の原因）",
+            "<strong>問題:</strong> 筋肉も同時に分解される",
+            "<strong>禁煙後の体重増加:</strong> 代謝正常化によるもので健康的"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "4.5 インスリンとグルコース代謝"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>インスリン抵抗性:</strong> 喫煙者は30-40%高い",
+            "<strong>空腹時血糖:</strong> 5-10mg/dL高い",
+            "<strong>糖尿病リスク:</strong> 30-40%増加",
+            "<strong>筋肉への影響:</strong> グルコースとアミノ酸の取り込み低下"
+          ]
+        },
+        {
+          "type": "stats_grid",
+          "cards": [
+            {
+              "number": "-15%",
+              "label": "テストステロン"
+            },
+            {
+              "number": "-20%",
+              "label": "IGF-1"
+            },
+            {
+              "number": "+25%",
+              "label": "コルチゾール(基礎値)"
+            },
+            {
+              "number": "+40%",
+              "label": "インスリン抵抗性"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "recovery",
+      "title": "5. 回復能力の低下",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "喫煙は<strong>筋肉の回復プロセスを著しく遅らせます</strong>。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "5.1 筋損傷マーカーの上昇"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>クレアチンキナーゼ（CK）:</strong> トレーニング後の上昇が30-40%高く、長く持続",
+            "<strong>ミオグロビン:</strong> 筋損傷指標が高値",
+            "<strong>炎症マーカー:</strong> IL-6、TNF-α、CRPが恒常的に高い",
+            "<strong>回復時間:</strong> 非喫煙者の1.5-2倍かかる"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "5.2 筋肉痛（DOMS）の増加"
+        },
+        {
+          "type": "table",
+          "parent_style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "headers": [],
+          "rows": [
+            [
+              "指標",
+              "非喫煙者",
+              "喫煙者"
+            ],
+            [
+              "筋肉痛のピーク",
+              "24-48時間後",
+              "48-72時間後"
+            ],
+            [
+              "痛みの強さ",
+              "中程度",
+              "強い（+30-40%）"
+            ],
+            [
+              "持続期間",
+              "3-5日",
+              "5-7日"
+            ],
+            [
+              "筋力回復",
+              "48-72時間",
+              "72-96時間"
+            ]
+          ],
+          "table_style": "width: 100%; border-collapse: collapse; margin-top: 15px;"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "5.3 コラーゲン合成の阻害"
+        },
+        {
+          "type": "paragraph",
+          "text": "喫煙は<strong>腱と靭帯の回復も遅らせます</strong>。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>コラーゲン合成:</strong> 40-50%低下",
+            "<strong>腱の強度:</strong> 15-20%低下",
+            "<strong>怪我のリスク:</strong> 腱炎、靭帯損傷が2倍",
+            "<strong>回復:</strong> 腱・靭帯の怪我からの回復が50%遅い",
+            "<strong>手術後:</strong> 術後回復が大幅に遅延"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "5.4 睡眠の質の低下"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>入眠困難:</strong> ニコチンの刺激作用",
+            "<strong>睡眠断片化:</strong> ニコチン離脱症状で夜間覚醒",
+            "<strong>深睡眠減少:</strong> 成長ホルモン分泌が減少",
+            "<strong>睡眠時無呼吸:</strong> リスクが2.5倍（気道炎症）",
+            "<strong>結果:</strong> 夜間の筋肉回復が不十分"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "5.5 免疫機能の低下"
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ 喫煙と免疫系",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>白血球機能:</strong> 好中球、マクロファージの機能が30-40%低下",
+                "<strong>抗体産生:</strong> B細胞の機能障害",
+                "<strong>感染症リスク:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>上気道感染：3倍</li>\n<li>肺炎：4倍</li>\n<li>インフルエンザ：2倍</li>\n</ul>",
+                "<strong>トレーニングへの影響:</strong> 病気による中断が頻繁",
+                "<strong>慢性炎症:</strong> 過剰な炎症反応と免疫抑制の両方"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "performance",
+      "title": "6. トレーニングパフォーマンスへの影響",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "喫煙は<strong>あらゆるトレーニングパフォーマンスを低下</strong>させます。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "6.1 筋力への影響"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>最大筋力:</strong> 5-10%低下",
+            "<strong>筋持久力:</strong> 15-25%低下",
+            "<strong>パワー出力:</strong> 10-15%低下",
+            "<strong>神経筋伝達:</strong> 効率が低下"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "6.2 持久力への壊滅的影響"
+        },
+        {
+          "type": "table",
+          "parent_style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "headers": [],
+          "rows": [
+            [
+              "喫煙量",
+              "VO2max低下",
+              "5km走タイム",
+              "影響"
+            ],
+            [
+              "非喫煙",
+              "-",
+              "25:00（基準）",
+              "-"
+            ],
+            [
+              "1日5本",
+              "-8%",
+              "27:00（+2分）",
+              "軽度"
+            ],
+            [
+              "1日10本",
+              "-15%",
+              "28:45（+3分45秒）",
+              "中程度"
+            ],
+            [
+              "1日20本",
+              "-20%",
+              "30:00（+5分）",
+              "重度"
+            ],
+            [
+              "1日40本",
+              "-25%",
+              "31:15（+6分15秒）",
+              "非常に重度"
+            ]
+          ],
+          "table_style": "width: 100%; border-collapse: collapse; margin-top: 15px;"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "6.3 トレーニング強度の制限"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>高強度トレーニング:</strong> 心肺機能の限界により不可能",
+            "<strong>ボリューム:</strong> 疲労が早く、総セット数が減少",
+            "<strong>頻度:</strong> 回復が遅く、トレーニング頻度を下げざるを得ない",
+            "<strong>結果:</strong> トレーニングの総ボリュームが40-50%減少"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "6.4 集中力とモチベーション"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>ニコチン離脱:</strong> トレーニング中の集中力低下",
+            "<strong>イライラ:</strong> 禁断症状による精神的ストレス",
+            "<strong>疲労感:</strong> 慢性的な倦怠感",
+            "<strong>モチベーション:</strong> 成果が出にくく、やる気減退"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body-composition",
+      "title": "7. 体組成への悪影響",
+      "content": [
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "7.1 筋肉量の減少"
+        },
+        {
+          "type": "paragraph",
+          "text": "喫煙者は<strong>非喫煙者より筋肉量が少ない</strong>です。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>除脂肪体重:</strong> 平均2-3kg少ない",
+            "<strong>筋繊維サイズ:</strong> Type IIb（速筋）が特に減少",
+            "<strong>筋肉の質:</strong> 脂肪浸潤が多い（霜降り状態）",
+            "<strong>サルコペニア:</strong> 加齢による筋肉減少が加速"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "7.2 体脂肪分布の悪化"
+        },
+        {
+          "type": "box",
+          "box_type": "info",
+          "title": "💡 喫煙と体脂肪の矛盾",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "「喫煙すると痩せる」は<strong>誤解</strong>です："
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>体重:</strong> わずかに軽い（筋肉が少ないため）",
+                "<strong>体脂肪率:</strong> 実は<strong>高い</strong>\n<ul style=\"margin-top: 5px;\">\n<li>皮下脂肪：やや少ない</li>\n<li>内臓脂肪：<strong>非喫煙者より多い</strong></li>\n</ul>",
+                "<strong>ウエスト周囲径:</strong> 大きい",
+                "<strong>メタボリックシンドローム:</strong> リスク増加"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "7.3 禁煙後の体重増加への対処"
+        },
+        {
+          "type": "paragraph",
+          "text": "禁煙後の体重増加は<strong>健康的な回復</strong>です。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>平均増加:</strong> 2-5kg（3ヶ月以内）",
+            "<strong>内訳:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>筋肉：1-2kg（良い変化）</li>\n<li>水分：0.5-1kg（正常化）</li>\n<li>脂肪：0.5-2kg</li>\n</ul>",
+            "<strong>対策:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>トレーニング強度を上げる</li>\n<li>タンパク質摂取を増やす</li>\n<li>カロリー管理（ただし極端な制限は避ける）</li>\n<li>筋肥大が進むため、長期的にはより良い体組成に</li>\n</ul>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inflammation",
+      "title": "8. 慢性炎症と免疫抑制",
+      "content": [
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.1 全身性の慢性炎症"
+        },
+        {
+          "type": "paragraph",
+          "text": "喫煙は<strong>慢性的な低グレード炎症</strong>を引き起こします。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>CRP（C反応性タンパク）:</strong> 2-3倍高い",
+            "<strong>IL-6（インターロイキン-6）:</strong> 恒常的に上昇",
+            "<strong>TNF-α:</strong> 炎症性サイトカインが高値",
+            "<strong>結果:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>筋肉の異化促進</li>\n<li>インスリン抵抗性</li>\n<li>動脈硬化</li>\n<li>慢性疾患リスク増加</li>\n</ul>"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.2 酸化ストレス"
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ フリーラジカルの嵐",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "タバコの煙には<strong>1回の喫煙で10^15個以上のフリーラジカル</strong>が含まれます。"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>活性酸素種（ROS）:</strong> 細胞を攻撃\n                    <ul style=\"margin-top: 5px;\">\n<li>DNA損傷</li>\n<li>タンパク質酸化</li>\n<li>脂質過酸化</li>\n<li>ミトコンドリア機能障害</li>\n</ul>",
+                "<strong>抗酸化物質の枯渇:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>ビタミンC：50%減少</li>\n<li>ビタミンE：30%減少</li>\n<li>グルタチオン：40%減少</li>\n</ul>",
+                "<strong>筋肉への影響:</strong> 筋損傷の修復が遅延"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.3 栄養素の枯渇"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>ビタミンC:</strong> 1本吸うごとに25mg消費",
+            "<strong>ビタミンB群:</strong> 代謝に大量消費",
+            "<strong>亜鉛:</strong> 免疫機能に必要なミネラルが不足",
+            "<strong>セレン:</strong> 抗酸化に必要",
+            "<strong>結果:</strong> サプリメントで補っても追いつかない"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quitting",
+      "title": "9. 禁煙のメリットとタイムライン",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "禁煙の効果は<strong>驚くほど速く現れます</strong>。\n            筋肥大への効果も数週間で実感できます。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "9.1 禁煙後の回復タイムライン"
+        },
+        {
+          "type": "styled_div",
+          "style": "margin: 30px 0;",
+          "content": [
+            {
+              "type": "styled_div",
+              "style": "background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #4caf50;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "20分後"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "心拍数が正常化",
+                    "血圧が低下",
+                    "手足の温度が上昇（血流改善）"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #4caf50;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "12時間後"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "血中一酸化炭素レベルが正常化",
+                    "酸素運搬能力が回復開始",
+                    "筋肉への酸素供給が改善"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #4caf50;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "2-3日後"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "ニコチンが体内から完全排出",
+                    "味覚・嗅覚が改善",
+                    "呼吸が楽になり始める",
+                    "<strong>禁断症状がピーク</strong>（ここを乗り越える！）"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #4caf50;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "2週間-3ヶ月後"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "循環機能が劇的に改善",
+                    "肺機能が30%向上",
+                    "<strong>筋タンパク質合成率が15-20%向上</strong>",
+                    "トレーニングパフォーマンスが明確に向上",
+                    "回復速度が速くなる"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #4caf50;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "1-9ヶ月後"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "咳、息切れが大幅減少",
+                    "肺の繊毛が再生し、粘液除去機能回復",
+                    "感染症リスクが低下",
+                    "<strong>筋肥大効果が最大化</strong>",
+                    "VO2maxが20%向上（元喫煙量による）"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #4caf50;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "1年後"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "心臓病リスクが喫煙者の半分に",
+                    "肺機能がほぼ正常化（年齢相応）",
+                    "<strong>筋肥大能力が非喫煙者レベルに</strong>",
+                    "テストステロンレベルが正常化"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #e3f2fd; padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #2196f3;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "5年後"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "脳卒中リスクが非喫煙者と同レベルに",
+                    "肺がんリスクが半減",
+                    "完全に非喫煙者の健康レベルに近づく"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #e3f2fd; padding: 20px; border-radius: 12px; border-left: 5px solid #2196f3;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "10年後"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "肺がんリスクが非喫煙者の半分以下に",
+                    "その他のがんリスクも大幅減少",
+                    "ほぼ完全に非喫煙者と同じ健康状態"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "9.2 筋肥大への具体的メリット"
+        },
+        {
+          "type": "table",
+          "parent_style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "headers": [],
+          "rows": [
+            [
+              "指標",
+              "喫煙時",
+              "禁煙1ヶ月後",
+              "改善率"
+            ],
+            [
+              "筋タンパク質合成",
+              "75%",
+              "90%",
+              "+20%"
+            ],
+            [
+              "筋力増加率",
+              "60%",
+              "85%",
+              "+42%"
+            ],
+            [
+              "VO2max",
+              "80%",
+              "90%",
+              "+12.5%"
+            ],
+            [
+              "回復速度",
+              "50%遅い",
+              "20%遅い",
+              "+60%"
+            ]
+          ],
+          "table_style": "width: 100%; border-collapse: collapse; margin-top: 15px;"
+        }
+      ]
+    },
+    {
+      "id": "strategies",
+      "title": "10. 禁煙成功戦略",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "禁煙は<strong>最も投資対効果の高い健康改善</strong>です。\n            以下の科学的に証明された戦略を活用しましょう。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "10.1 禁煙の準備"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #e8f5e9; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "禁煙開始前2週間の準備"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "<strong>禁煙日を設定:</strong> 具体的な日付を決める（ストレスの少ない日）",
+                "<strong>動機を明確化:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>筋肥大効果が40%向上</li>\n<li>トレーニングパフォーマンス改善</li>\n<li>年間30-50万円の節約</li>\n<li>健康寿命の延長</li>\n</ul>",
+                "<strong>トリガーを特定:</strong> いつ、どこで、なぜ吸いたくなるかを記録",
+                "<strong>サポート体制:</strong> 家族・友人に宣言、禁煙外来の予約",
+                "<strong>環境整備:</strong> タバコ・灰皿・ライターを全て処分"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "10.2 ニコチン置換療法（NRT）"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>ニコチンパッチ・ガム</strong>は禁煙成功率を2倍にします。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>ニコチンパッチ:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>1日1回貼るだけ、簡便</li>\n<li>禁煙成功率：50-70%向上</li>\n<li>使用期間：8-12週間</li>\n<li>段階的に減量（21mg→14mg→7mg）</li>\n</ul>",
+            "<strong>ニコチンガム:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>急な渇望に対処可能</li>\n<li>1日8-12個から開始</li>\n<li>30分かけてゆっくり噛む</li>\n</ul>",
+            "<strong>注意:</strong> タバコとの併用は絶対に避ける"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "10.3 処方薬"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #e3f2fd; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "バレニクリン（チャンピックス）"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>作用:</strong> ニコチン受容体に作用、渇望を軽減",
+                "<strong>成功率:</strong> プラセボの3倍",
+                "<strong>使用期間:</strong> 12週間",
+                "<strong>開始:</strong> 禁煙日の1週間前から",
+                "<strong>副作用:</strong> 吐き気（軽度）、異常な夢",
+                "<strong>処方:</strong> 医師の処方が必要"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "10.4 行動療法"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>代替行動:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>吸いたくなったら：深呼吸、水を飲む、ガムを噛む</li>\n<li>手持ち無沙汰：ストレスボール、筆記用具</li>\n<li>休憩時：散歩、ストレッチ</li>\n</ul>",
+            "<strong>トリガー回避:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>コーヒー→紅茶に変更（コーヒー=タバコの連想を断つ）</li>\n<li>飲酒を控える（特に最初の1ヶ月）</li>\n<li>喫煙者との接触を最小化</li>\n</ul>",
+            "<strong>報酬システム:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>節約したお金で自分にご褒美</li>\n<li>1週間ごとのマイルストーン設定</li>\n<li>トレーニング成果を記録・可視化</li>\n</ul>"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "10.5 トレーニングを活用した禁煙"
+        },
+        {
+          "type": "box",
+          "box_type": "success",
+          "title": "✅ 運動は最強の禁煙サポート",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>渇望軽減:</strong> 運動後30-60分は渇望が50%減少",
+                "<strong>禁断症状緩和:</strong> エンドルフィン分泌でストレス軽減",
+                "<strong>体重管理:</strong> 禁煙後の体重増加を最小化",
+                "<strong>自己効力感:</strong> 「やればできる」という自信"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "<strong>推奨プロトコル:</strong>"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "渇望が強い時：10-15分の軽い運動（散歩、階段昇降）",
+                "毎日：30-60分の有酸素運動",
+                "週3-5回：筋トレ（禁煙のモチベーション維持）"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "10.6 再喫煙防止策"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>「1本だけ」は存在しない:</strong> 95%が再喫煙につながる",
+            "<strong>高リスク状況を特定:</strong> 飲酒、ストレス、喫煙者との交流",
+            "<strong>対処計画:</strong> 各状況での具体的行動を事前に決める",
+            "<strong>スリップ（失敗）への対応:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>1本吸ってしまっても諦めない</li>\n<li>すぐに禁煙を再開</li>\n<li>失敗から学ぶ（何がトリガーだったか）</li>\n</ul>"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "10.7 禁煙外来の活用"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>禁煙外来</strong>は成功率を大幅に向上させます。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>成功率:</strong> 自力の3-4倍",
+            "<strong>保険適用:</strong> 条件を満たせば保険診療可能",
+            "<strong>費用:</strong> 3ヶ月で約2万円（タバコ代より安い）",
+            "<strong>内容:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>医師による診察・アドバイス</li>\n<li>処方薬（バレニクリン等）</li>\n<li>定期的なフォローアップ</li>\n<li>呼気一酸化炭素濃度測定</li>\n</ul>"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculator",
+      "title": "11. 喫煙影響計算ツール",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "以下のツールで、喫煙があなたの体とお金に与えている影響を確認しましょう。"
+        },
+        {
+          "type": "interactive_tool",
+          "id": "",
+          "note": "このツールのHTMLはテンプレート内に残します(JS連携のため)"
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "12. 参考文献",
+      "content": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Petersen, A.M., &amp; Pedersen, B.K. (2007). \"The role of IL-6 in mediating the anti-inflammatory effects of exercise.\" <em>Journal of Physiology and Pharmacology</em>, 57 Suppl 10, 43-51.",
+            "Hollings, M., et al. (2012). \"The effect of progressive resistance training on aerobic fitness and strength in adults with coronary heart disease: a systematic review and meta-analysis of randomised controlled trials.\" <em>European Journal of Preventive Cardiology</em>, 24(12), 1242-1259.",
+            "Bernaards, C.M., et al. (2003). \"Can strenuous leisure time physical activity prevent psychological complaints in a working population?\" <em>Occupational and Environmental Medicine</em>, 60(1), 10-16.",
+            "Pärssinen, M., et al. (2000). \"Increased premature mortality of competitive powerlifters suspected to have used anabolic agents.\" <em>International Journal of Sports Medicine</em>, 21(3), 225-227.",
+            "Nawrot, T.S., et al. (2007). \"Public health importance of triggers of myocardial infarction: a comparative risk assessment.\" <em>The Lancet</em>, 369(9558), 397-406.",
+            "Halmenschlager, G., et al. (2009). \"Evaluation of the effects of cigarette smoking on testosterone levels in adult men.\" <em>The Journal of Sexual Medicine</em>, 6(6), 1763-1772.",
+            "U.S. Department of Health and Human Services (2020). \"Smoking Cessation: A Report of the Surgeon General.\" <em>U.S. Department of Health and Human Services</em>, Centers for Disease Control and Prevention, National Center for Chronic Disease Prevention and Health Promotion, Office on Smoking and Health.",
+            "Hackshaw, A., et al. (2018). \"Low cigarette consumption and risk of coronary heart disease and stroke: meta-analysis of 141 cohort studies in 55 study reports.\" <em>BMJ</em>, 360, j5855.",
+            "World Health Organization (2019). \"WHO Report on the Global Tobacco Epidemic, 2019.\" <em>World Health Organization</em>.",
+            "Cahill, K., et al. (2016). \"Nicotine receptor partial agonists for smoking cessation.\" <em>Cochrane Database of Systematic Reviews</em>, (5), CD006103.",
+            "Taylor, G.M., et al. (2021). \"Change in mental health after smoking cessation: systematic review and meta-analysis.\" <em>BMJ</em>, 372, m4349.",
+            "Ussher, M.H., et al. (2014). \"Exercise interventions for smoking cessation.\" <em>Cochrane Database of Systematic Reviews</em>, (8), CD002295.",
+            "厚生労働省 (2021). 「令和元年 国民健康・栄養調査結果の概要」<br/>\n<a href=\"https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/r1-houkoku_00002.html\" target=\"_blank\">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/r1-houkoku_00002.html</a>",
+            "日本循環器学会 (2020). 「禁煙治療のための標準手順書」<br/>\n<a href=\"http://www.j-circ.or.jp/\" target=\"_blank\">http://www.j-circ.or.jp/</a>",
+            "国立がん研究センター (2021). 「喫煙とがん」<br/>\n<a href=\"https://ganjoho.jp/public/pre_scr/cause_prevention/smoking/index.html\" target=\"_blank\">https://ganjoho.jp/public/pre_scr/cause_prevention/smoking/index.html</a>"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "title": "12. 参考文献",
+    "items": [
+      "Petersen, A.M., &amp; Pedersen, B.K. (2007). \"The role of IL-6 in mediating the anti-inflammatory effects of exercise.\" <em>Journal of Physiology and Pharmacology</em>, 57 Suppl 10, 43-51.",
+      "Hollings, M., et al. (2012). \"The effect of progressive resistance training on aerobic fitness and strength in adults with coronary heart disease: a systematic review and meta-analysis of randomised controlled trials.\" <em>European Journal of Preventive Cardiology</em>, 24(12), 1242-1259.",
+      "Bernaards, C.M., et al. (2003). \"Can strenuous leisure time physical activity prevent psychological complaints in a working population?\" <em>Occupational and Environmental Medicine</em>, 60(1), 10-16.",
+      "Pärssinen, M., et al. (2000). \"Increased premature mortality of competitive powerlifters suspected to have used anabolic agents.\" <em>International Journal of Sports Medicine</em>, 21(3), 225-227.",
+      "Nawrot, T.S., et al. (2007). \"Public health importance of triggers of myocardial infarction: a comparative risk assessment.\" <em>The Lancet</em>, 369(9558), 397-406.",
+      "Halmenschlager, G., et al. (2009). \"Evaluation of the effects of cigarette smoking on testosterone levels in adult men.\" <em>The Journal of Sexual Medicine</em>, 6(6), 1763-1772.",
+      "U.S. Department of Health and Human Services (2020). \"Smoking Cessation: A Report of the Surgeon General.\" <em>U.S. Department of Health and Human Services</em>, Centers for Disease Control and Prevention, National Center for Chronic Disease Prevention and Health Promotion, Office on Smoking and Health.",
+      "Hackshaw, A., et al. (2018). \"Low cigarette consumption and risk of coronary heart disease and stroke: meta-analysis of 141 cohort studies in 55 study reports.\" <em>BMJ</em>, 360, j5855.",
+      "World Health Organization (2019). \"WHO Report on the Global Tobacco Epidemic, 2019.\" <em>World Health Organization</em>.",
+      "Cahill, K., et al. (2016). \"Nicotine receptor partial agonists for smoking cessation.\" <em>Cochrane Database of Systematic Reviews</em>, (5), CD006103.",
+      "Taylor, G.M., et al. (2021). \"Change in mental health after smoking cessation: systematic review and meta-analysis.\" <em>BMJ</em>, 372, m4349.",
+      "Ussher, M.H., et al. (2014). \"Exercise interventions for smoking cessation.\" <em>Cochrane Database of Systematic Reviews</em>, (8), CD002295.",
+      "厚生労働省 (2021). 「令和元年 国民健康・栄養調査結果の概要」<br/>\n<a href=\"https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/r1-houkoku_00002.html\" target=\"_blank\">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/eiyou/r1-houkoku_00002.html</a>",
+      "日本循環器学会 (2020). 「禁煙治療のための標準手順書」<br/>\n<a href=\"http://www.j-circ.or.jp/\" target=\"_blank\">http://www.j-circ.or.jp/</a>",
+      "国立がん研究センター (2021). 「喫煙とがん」<br/>\n<a href=\"https://ganjoho.jp/public/pre_scr/cause_prevention/smoking/index.html\" target=\"_blank\">https://ganjoho.jp/public/pre_scr/cause_prevention/smoking/index.html</a>"
+    ]
+  },
+  "navigation": {
+    "buttons": [
+      {
+        "href": "/lifestyle",
+        "text": "← Lifestyleトップへ"
+      },
+      {
+        "href": "/lifestyle/drinking",
+        "text": "Drinking Impact →"
+      }
+    ]
+  }
+}

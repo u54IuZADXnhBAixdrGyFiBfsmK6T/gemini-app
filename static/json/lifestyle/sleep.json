@@ -1,0 +1,2074 @@
+{
+  "page_id": "sleep",
+  "title": "Sleep Optimization - 睡眠と筋肥大の科学",
+  "hero": {
+    "title": "😴 Sleep Optimization",
+    "subtitle": "睡眠こそ最強の筋肥大サプリメント"
+  },
+  "toc": {
+    "title": "📑 目次",
+    "items": [
+      {
+        "href": "#why-sleep",
+        "text": "1. なぜ睡眠が筋肥大に不可欠なのか"
+      },
+      {
+        "href": "#sleep-stages",
+        "text": "2. 睡眠のステージと筋肉の成長"
+      },
+      {
+        "href": "#hormones",
+        "text": "3. 睡眠中のホルモン分泌"
+      },
+      {
+        "href": "#optimal-duration",
+        "text": "4. 最適な睡眠時間"
+      },
+      {
+        "href": "#sleep-debt",
+        "text": "5. 睡眠負債の恐怖"
+      },
+      {
+        "href": "#sleep-quality",
+        "text": "6. 睡眠の質を高める方法"
+      },
+      {
+        "href": "#environment",
+        "text": "7. 最適な睡眠環境の構築"
+      },
+      {
+        "href": "#supplements",
+        "text": "8. 睡眠サプリメント完全ガイド"
+      },
+      {
+        "href": "#timing",
+        "text": "9. 睡眠タイミングの科学"
+      },
+      {
+        "href": "#calculator",
+        "text": "10. 最適睡眠時刻計算ツール"
+      },
+      {
+        "href": "#references",
+        "text": "11. 参考文献"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "why-sleep",
+      "title": "1. なぜ睡眠が筋肥大に不可欠なのか",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "「筋肉はジムで破壊され、キッチンで栄養を与えられ、<strong>ベッドで成長する</strong>」\n            ― これはボディビルディング界の金言です。睡眠は、トレーニングや栄養と並ぶ\n            <strong>筋肥大の三大要素</strong>の一つであり、実は最も見過ごされがちな要素でもあります。"
+        },
+        {
+          "type": "box",
+          "box_type": "info",
+          "title": "💡 衝撃的な統計データ",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>成長ホルモンの70%</strong>は睡眠中に分泌される (Van Cauter et al., 2000)",
+                "5時間睡眠では、8時間睡眠と比べて<strong>筋タンパク質合成が18%低下</strong> (Dattilo et al., 2011)",
+                "睡眠不足はテストステロンを<strong>10-15%低下</strong>させる (Leproult &amp; Van Cauter, 2011)",
+                "1週間の睡眠制限で<strong>筋力が最大20%低下</strong> (Fullagar et al., 2015)",
+                "睡眠負債がある状態では、<strong>減量時に失われる体重の60%が筋肉</strong>になる (Nedeltcheva et al., 2010)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "睡眠が筋肥大に与える5つの直接的影響"
+        },
+        {
+          "type": "styled_div",
+          "style": "margin: 30px 0;",
+          "content": [
+            {
+              "type": "styled_div",
+              "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid #667eea;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "1. 筋タンパク質合成の促進"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "睡眠中、特に深いノンレム睡眠(ステージ3-4)の間に、筋タンパク質合成率が\n                    覚醒時の<strong>2-3倍に増加</strong>します。これは成長ホルモンとIGF-1(インスリン様成長因子)の\n                    分泌増加によるものです。"
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid #667eea;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "2. 異化作用の抑制"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "睡眠中はコルチゾール(異化ホルモン)が最低レベルに維持されます。\n                    これにより、筋肉の分解が最小化され、トレーニングで刺激された筋繊維が\n                    効率的に修復・成長できます。"
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid #667eea;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "3. グリコーゲン再合成"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "睡眠中に筋肉のグリコーゲン貯蔵が最大化されます。十分な睡眠なしでは、\n                    グリコーゲン再合成が<strong>40-50%低下</strong>し、次のトレーニングで\n                    十分なエネルギーが得られません (Skein et al., 2011)。"
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid #667eea;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "4. 中枢神経系の回復"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "重いウェイトトレーニングは筋肉だけでなく、神経系にも大きな負担をかけます。\n                    睡眠は<strong>神経伝達物質の補充</strong>と神経筋接合部の修復に不可欠で、\n                    これなしでは筋力とパワー出力が低下します。"
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; border-left: 5px solid #667eea;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "5. 免疫機能の維持"
+                },
+                {
+                  "type": "paragraph",
+                  "text": "睡眠不足は免疫システムを弱体化させ、感染症のリスクを<strong>3倍に増加</strong>させます。\n                    病気による訓練の中断は、長期的な筋肥大計画に深刻な影響を与えます\n                    (Prather et al., 2015)。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "睡眠 vs 他の要因：比較分析"
+        },
+        {
+          "type": "paragraph",
+          "text": "ある研究では、トレーニング経験者を3つのグループに分けて8週間のトレーニングを実施しました："
+        },
+        {
+          "type": "stats_grid",
+          "cards": [
+            {
+              "number": "+5.2kg",
+              "label": "最適な睡眠(8-9時間)"
+            },
+            {
+              "number": "+3.1kg",
+              "label": "中程度の睡眠(6-7時間)"
+            },
+            {
+              "number": "+1.8kg",
+              "label": "睡眠不足(5時間以下)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "(Mah et al., 2011を基にした推定値)"
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ プロテインより睡眠が重要？",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "驚くべき事実：1日5時間睡眠の人が高品質なプロテインを追加摂取しても、\n                8時間睡眠でプロテイン摂取量が少ない人よりも筋肥大効果が<strong>低い</strong>という\n                研究結果があります。これは、<strong>睡眠なしでは栄養素の利用効率が著しく低下</strong>するためです。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sleep-stages",
+      "title": "2. 睡眠のステージと筋肉の成長",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "睡眠は単一の状態ではありません。<strong>4つの異なるステージ</strong>が90分周期で繰り返され、\n            各ステージが筋肉の回復と成長に独自の役割を果たします。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "睡眠サイクルの構造"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 30px; border-radius: 15px; margin: 30px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "典型的な睡眠サイクル（90分）"
+            },
+            {
+              "type": "styled_div",
+              "style": "position: relative; background: white; border-radius: 10px; padding: 30px; margin: 20px 0;",
+              "content": []
+            },
+            {
+              "type": "paragraph",
+              "text": "1晩の睡眠で、このサイクルが4-6回繰り返される"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "各ステージの詳細と筋肉への影響"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "ステージ1：入眠期（5-10分）"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>特徴:</strong> 覚醒から睡眠への移行期。筋肉は徐々にリラックス",
+            "<strong>脳波:</strong> アルファ波からシータ波へ",
+            "<strong>筋肉への影響:</strong> 最小限。主に移行期間",
+            "<strong>ホルモン:</strong> コルチゾールが緩やかに低下し始める"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "ステージ2：軽睡眠（20-25分）"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>特徴:</strong> 心拍数と体温が低下。完全な睡眠状態",
+            "<strong>脳波:</strong> 睡眠紡錘波とK複合波が出現",
+            "<strong>筋肉への影響:</strong> 筋肉が完全にリラックスし、エネルギー節約モードに",
+            "<strong>割合:</strong> 総睡眠時間の<strong>45-55%</strong>を占める",
+            "<strong>ホルモン:</strong> 成長ホルモンの分泌準備が始まる"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "ステージ3：深睡眠（徐波睡眠、20-40分）"
+        },
+        {
+          "type": "box",
+          "box_type": "success",
+          "title": "✅ 最も重要なステージ！",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>特徴:</strong> 最も深い睡眠。目覚めにくい状態",
+                "<strong>脳波:</strong> デルタ波（0.5-4Hz）が支配的",
+                "<strong>筋肉への影響:</strong>\n<ul style=\"margin-top: 10px;\">\n<li><strong>成長ホルモンの大量分泌:</strong> 1日の分泌量の70-80%がこのステージで</li>\n<li><strong>筋タンパク質合成率が最大:</strong> 覚醒時の2-3倍</li>\n<li><strong>組織修復:</strong> 損傷した筋繊維の積極的な修復</li>\n<li><strong>免疫機能強化:</strong> サイトカインの産生</li>\n</ul>",
+                "<strong>割合:</strong> 総睡眠時間の<strong>15-25%</strong>（前半の睡眠サイクルに集中）",
+                "<strong>注意:</strong> このステージが不足すると、どれだけ長く寝ても回復が不十分"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "REM睡眠（急速眼球運動睡眠、10-60分）"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>特徴:</strong> 夢を見る段階。眼球が急速に動く",
+            "<strong>脳波:</strong> ベータ波に近い活発な脳活動",
+            "<strong>筋肉への影響:</strong>\n<ul style=\"margin-top: 10px;\">\n<li><strong>神経系の回復:</strong> 運動記憶の定着と神経筋調整の最適化</li>\n<li><strong>ストレス処理:</strong> 感情的記憶の整理とストレスの軽減</li>\n<li><strong>筋緊張の低下:</strong> ほぼ完全な筋肉の弛緩（夢遊病防止）</li>\n</ul>",
+            "<strong>割合:</strong> 総睡眠時間の<strong>20-25%</strong>（後半の睡眠サイクルに集中）",
+            "<strong>重要性:</strong> 技術習得とモーターコントロールの向上に不可欠"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "睡眠時間と各ステージの関係"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "睡眠時間別のステージ分布"
+            },
+            {
+              "type": "styled_div",
+              "style": "margin: 20px 0; padding: 15px; background: #ffebee; border-radius: 8px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "5時間睡眠（不十分）"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "深睡眠: 45-60分（不足）",
+                    "REM睡眠: 60-75分（不足）",
+                    "<strong>問題:</strong> 成長ホルモン分泌が50%以上減少"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin: 20px 0; padding: 15px; background: #fff3e0; border-radius: 8px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "6.5時間睡眠（最低ライン）"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "深睡眠: 60-80分",
+                    "REM睡眠: 80-100分",
+                    "<strong>状態:</strong> 基本的な回復は可能だが、最適ではない"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin: 20px 0; padding: 15px; background: #e8f5e9; border-radius: 8px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "8時間睡眠（推奨）"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "深睡眠: 90-120分",
+                    "REM睡眠: 100-120分",
+                    "<strong>状態:</strong> 完全な回復と成長ホルモン分泌"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin: 20px 0; padding: 15px; background: #e3f2fd; border-radius: 8px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "9時間睡眠（理想的）"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "深睡眠: 100-140分",
+                    "REM睡眠: 120-150分",
+                    "<strong>状態:</strong> 最大限の筋肥大と回復。アスリートレベル"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "info",
+          "title": "💡 重要な洞察：前半 vs 後半",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "睡眠の<strong>前半3時間</strong>に深睡眠が集中し、<strong>後半</strong>にREM睡眠が増加します。\n                これが、「6時間寝れば十分」という誤解が生まれる理由です。"
+            },
+            {
+              "type": "paragraph",
+              "text": "6時間睡眠では深睡眠は確保できますが、<strong>REM睡眠が大幅に不足</strong>し、\n                神経系の回復とストレス処理が不完全になります。結果として、\n                トレーニングの質が低下し、怪我のリスクが増加します。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hormones",
+      "title": "3. 睡眠中のホルモン分泌",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "睡眠は単なる休息ではなく、<strong>アナボリックホルモンの黄金時間</strong>です。\n            適切な睡眠なしでは、どれだけトレーニングしても栄養を摂っても、\n            ホルモン環境が筋肥大をサポートしません。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "3.1 成長ホルモン（GH）"
+        },
+        {
+          "type": "paragraph",
+          "text": "成長ホルモンは筋肥大に最も重要なホルモンの一つで、\n            <strong>1日の分泌量の70-80%が睡眠中</strong>、特に深睡眠時に分泌されます。"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "成長ホルモンの作用"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>筋タンパク質合成:</strong> アミノ酸の筋肉細胞への取り込みを促進",
+            "<strong>脂肪分解:</strong> 脂肪酸をエネルギー源として動員",
+            "<strong>IGF-1産生:</strong> 肝臓でIGF-1を産生させ、筋肉成長を直接刺激",
+            "<strong>骨密度向上:</strong> 骨の強化（重いウェイトトレーニングに必要）",
+            "<strong>コラーゲン合成:</strong> 腱と靭帯の強化"
+          ]
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "睡眠時間と成長ホルモン分泌量"
+            },
+            {
+              "type": "stats_grid",
+              "cards": [
+                {
+                  "number": "100%",
+                  "label": "8-9時間睡眠(基準)"
+                },
+                {
+                  "number": "70%",
+                  "label": "6-7時間睡眠(30%減少)"
+                },
+                {
+                  "number": "40%",
+                  "label": "5時間睡眠(60%減少)"
+                },
+                {
+                  "number": "20%",
+                  "label": "徹夜(80%減少)"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "(Van Cauter et al., 2000; Takahashi et al., 1968)"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "成長ホルモン分泌を最大化する方法"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "<strong>深睡眠を優先:</strong> 前半の睡眠サイクルで深睡眠を確保",
+            "<strong>就寝前の炭水化物制限:</strong> 高血糖はGH分泌を抑制（2時間前まで）",
+            "<strong>空腹状態で就寝:</strong> 軽い空腹感がGH分泌を促進",
+            "<strong>室温を低めに:</strong> 18-20℃が深睡眠とGH分泌に最適",
+            "<strong>アルギニン補給:</strong> 就寝前3-5gでGH分泌が約30%増加"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "3.2 テストステロン"
+        },
+        {
+          "type": "paragraph",
+          "text": "テストステロンは筋肥大の最も重要なホルモンです。\n            睡眠不足は<strong>テストステロンレベルを劇的に低下</strong>させます。"
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ 睡眠不足とテストステロンの関係",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>1週間の5時間睡眠:</strong> テストステロンが10-15%低下 (Leproult &amp; Van Cauter, 2011)",
+                "<strong>慢性的な睡眠不足:</strong> テストステロンが最大30%低下",
+                "<strong>影響:</strong> 10-15%の低下は、<strong>10-15歳の老化</strong>に相当",
+                "<strong>回復:</strong> 正常な睡眠に戻すと、1週間でレベルが回復"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "睡眠とテストステロンのメカニズム"
+        },
+        {
+          "type": "paragraph",
+          "text": "テストステロンは<strong>REM睡眠中に最も活発に分泌</strong>されます。\n            REM睡眠は睡眠後半に集中するため、睡眠時間を短縮すると\n            REM睡眠が真っ先に削られ、テストステロン産生が低下します。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "3.3 コルチゾール（異化ホルモン）"
+        },
+        {
+          "type": "paragraph",
+          "text": "コルチゾールは筋肉を分解する異化ホルモンですが、\n            <strong>適切な睡眠によって低レベルに維持</strong>されます。"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "コルチゾールの日内リズム"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>深夜（23:00-3:00）:</strong> 最低レベル。筋肉分解が最小化",
+            "<strong>早朝（6:00-8:00）:</strong> 覚醒に向けて上昇（コルチゾール覚醒反応）",
+            "<strong>日中:</strong> 緩やかに低下",
+            "<strong>夕方:</strong> 最低レベルに近づく"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "info",
+          "title": "💡 睡眠不足とコルチゾール",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "睡眠不足は、<strong>翌日のコルチゾールレベルを45%上昇</strong>させます (Leproult et al., 1997)。\n                これは以下を意味します："
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "筋肉分解の増加",
+                "脂肪蓄積の促進（特に内臓脂肪）",
+                "インスリン感受性の低下",
+                "免疫機能の抑制"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "3.4 インスリン様成長因子-1（IGF-1）"
+        },
+        {
+          "type": "paragraph",
+          "text": "IGF-1は成長ホルモンによって肝臓で産生され、\n            <strong>筋肉細胞に直接作用</strong>して成長を促進します。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>作用:</strong> mTOR経路を活性化し、筋タンパク質合成を刺激",
+            "<strong>睡眠との関係:</strong> 深睡眠中のGH分泌により、夜間にIGF-1が産生される",
+            "<strong>睡眠不足の影響:</strong> IGF-1レベルが20-30%低下"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "3.5 レプチンとグレリン（食欲ホルモン）"
+        },
+        {
+          "type": "paragraph",
+          "text": "これらのホルモンは直接筋肥大に関与しませんが、\n            <strong>栄養摂取と体重管理</strong>に大きく影響します。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>レプチン（満腹ホルモン）:</strong> 睡眠不足で18%低下 → 満腹感が得られない",
+            "<strong>グレリン（空腹ホルモン）:</strong> 睡眠不足で28%上昇 → 過度な空腹感",
+            "<strong>結果:</strong> 睡眠不足の人は平均で<strong>1日300-500kcal多く摂取</strong> (Spiegel et al., 2004)",
+            "<strong>食の質:</strong> 高脂肪・高炭水化物食への欲求が増加"
+          ]
+        },
+        {
+          "type": "table",
+          "parent_style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "headers": [],
+          "rows": [
+            [
+              "ホルモン",
+              "目標",
+              "睡眠での対策"
+            ],
+            [
+              "成長ホルモン",
+              "最大化",
+              "深睡眠確保、室温低め、空腹で就寝"
+            ],
+            [
+              "テストステロン",
+              "最大化",
+              "7-9時間睡眠、REM睡眠確保"
+            ],
+            [
+              "コルチゾール",
+              "最小化",
+              "一貫した睡眠スケジュール、ストレス管理"
+            ],
+            [
+              "IGF-1",
+              "最大化",
+              "GH分泌の最適化、十分なタンパク質摂取"
+            ],
+            [
+              "レプチン/グレリン",
+              "バランス",
+              "7-8時間睡眠、規則的な睡眠時刻"
+            ]
+          ],
+          "table_style": "width: 100%; border-collapse: collapse;"
+        }
+      ]
+    },
+    {
+      "id": "optimal-duration",
+      "title": "4. 最適な睡眠時間",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "「何時間寝るべきか？」は最もよく聞かれる質問ですが、答えは単純ではありません。\n            <strong>個人差、トレーニング強度、年齢</strong>などによって変わります。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "4.1 一般的な推奨値"
+        },
+        {
+          "type": "styled_div",
+          "style": "margin: 30px 0;",
+          "content": [
+            {
+              "type": "styled_div",
+              "style": "background: #e8f5e9; padding: 25px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #4caf50;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "アスリート・重度トレーニー：8-10時間"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "週5-6回の高強度トレーニング",
+                    "最大限の筋肥大を目指す",
+                    "プロアスリートは平均8.5-9.5時間睡眠",
+                    "<strong>推奨:</strong> 9時間を目標に"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #e3f2fd; padding: 25px; border-radius: 12px; margin-bottom: 15px; border-left: 5px solid #2196f3;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "定期的トレーニー：7-9時間"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "週3-4回のトレーニング",
+                    "バランスの取れた筋肥大",
+                    "日常生活とのバランス",
+                    "<strong>推奨:</strong> 8時間を目標に"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #fff3e0; padding: 25px; border-radius: 12px; border-left: 5px solid #ff9800;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "初心者・軽度トレーニー：7-8時間"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "週2-3回の軽度トレーニング",
+                    "基本的な回復で十分",
+                    "<strong>推奨:</strong> 7-8時間"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "4.2 年齢による違い"
+        },
+        {
+          "type": "paragraph",
+          "text": "年齢とともに睡眠の必要性と質が変化します。特に深睡眠の割合が減少します。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>18-25歳:</strong> 7-9時間（深睡眠が豊富、回復が速い）",
+            "<strong>26-40歳:</strong> 7-9時間（ピークパフォーマンス維持）",
+            "<strong>41-64歳:</strong> 7-9時間（深睡眠が減少、質の確保が重要）",
+            "<strong>65歳以上:</strong> 7-8時間（深睡眠がさらに減少）"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "info",
+          "title": "💡 年齢と深睡眠",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "40歳を過ぎると、深睡眠の割合が<strong>10年ごとに約5%減少</strong>します。\n                これは、同じ8時間寝ても、若い頃ほど回復しない理由です (Ohayon et al., 2004)。"
+            },
+            {
+              "type": "paragraph",
+              "text": "<strong>対策:</strong> 40歳以上のトレーニーは、睡眠時間を30-60分延ばすか、\n                昼寝で補うことを検討すべきです。"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "4.3 トレーニング強度と睡眠需要"
+        },
+        {
+          "type": "table",
+          "parent_style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "headers": [],
+          "rows": [
+            [
+              "トレーニング強度",
+              "週間ボリューム",
+              "推奨睡眠"
+            ],
+            [
+              "軽度",
+              "週10セット未満",
+              "7-8時間"
+            ],
+            [
+              "中程度",
+              "週10-20セット",
+              "8時間"
+            ],
+            [
+              "高強度",
+              "週20-30セット",
+              "8-9時間"
+            ],
+            [
+              "超高強度",
+              "週30セット以上",
+              "9-10時間"
+            ]
+          ],
+          "table_style": "width: 100%; border-collapse: collapse; margin-top: 15px;"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "4.4 個人差の見極め方"
+        },
+        {
+          "type": "paragraph",
+          "text": "自分にとっての最適な睡眠時間を見つける<strong>2週間テスト</strong>："
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "<strong>週1:</strong> 8時間睡眠を厳守。毎朝、覚醒時の気分、日中のエネルギー、トレーニングパフォーマンスを10点満点で記録",
+            "<strong>週2:</strong> 9時間睡眠に延長。同様に記録",
+            "<strong>比較:</strong> どちらの週でスコアが高かったかを確認",
+            "<strong>調整:</strong> より良かった方を基準に、±30分で微調整"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "success",
+          "title": "✅ 最適な睡眠時間の指標",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "以下の条件を満たしていれば、睡眠時間は適切です："
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "アラームなしで自然に目覚める",
+                "起床時に十分な休息感がある",
+                "日中に強い眠気を感じない",
+                "トレーニングパフォーマンスが安定している",
+                "週末に「寝だめ」する必要がない",
+                "気分が安定している"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sleep-debt",
+      "title": "5. 睡眠負債の恐怖",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "<strong>睡眠負債</strong>とは、必要な睡眠時間と実際の睡眠時間の累積的な差です。\n            これは筋肥大にとって、想像以上に深刻な問題です。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "5.1 睡眠負債の蓄積"
+        },
+        {
+          "type": "paragraph",
+          "text": "毎晩1時間の睡眠不足を続けると、<strong>1週間で7時間の睡眠負債</strong>が蓄積します。\n            これは、<strong>徹夜1回分に相当</strong>します。"
+        },
+        {
+          "type": "table",
+          "parent_style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "headers": [],
+          "rows": [
+            [
+              "期間",
+              "毎晩の不足",
+              "累積負債",
+              "影響"
+            ],
+            [
+              "1週間",
+              "1時間",
+              "7時間",
+              "軽度の疲労感"
+            ],
+            [
+              "2週間",
+              "1時間",
+              "14時間",
+              "認知機能10%低下"
+            ],
+            [
+              "1ヶ月",
+              "1時間",
+              "30時間",
+              "筋力15%低下"
+            ],
+            [
+              "3ヶ月",
+              "1時間",
+              "90時間",
+              "慢性疲労症候群様の症状"
+            ]
+          ],
+          "table_style": "width: 100%; border-collapse: collapse; margin-top: 15px;"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "5.2 睡眠負債が筋肥大に与える影響"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "短期的影響（1-2週間）"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>筋タンパク質合成:</strong> 15-20%低下",
+            "<strong>筋力:</strong> 5-10%低下",
+            "<strong>持久力:</strong> 10-15%低下",
+            "<strong>回復速度:</strong> 20-30%遅延",
+            "<strong>食欲:</strong> 高カロリー食への欲求が増加"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "長期的影響（1ヶ月以上）"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>筋肥大率:</strong> 最大40%低下",
+            "<strong>体脂肪増加:</strong> 同じ食事でも体脂肪が蓄積しやすい",
+            "<strong>怪我リスク:</strong> 60%増加 (Milewski et al., 2014)",
+            "<strong>免疫機能:</strong> 風邪をひくリスクが3倍",
+            "<strong>メンタルヘルス:</strong> うつ症状のリスクが2倍"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ 研究例：睡眠負債の深刻な影響",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "スタンフォード大学の研究では、バスケットボール選手に毎晩10時間の睡眠を取らせた結果："
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "スプリント速度が5%向上",
+                "シュート精度が9%向上",
+                "反応時間が改善",
+                "疲労感が大幅に減少"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "逆に言えば、多くのアスリートは<strong>慢性的な睡眠負債によって\n                    本来のポテンシャルを発揮できていない</strong>ということです (Mah et al., 2011)。"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "5.3 睡眠負債の返済"
+        },
+        {
+          "type": "paragraph",
+          "text": "睡眠負債は<strong>完全には返済できません</strong>。週末の寝だめで\n            平日の睡眠不足を完全に補うことは不可能です。"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "睡眠負債返済の現実"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>短期負債（1週間以内）:</strong> 2-3日の十分な睡眠で80-90%回復可能",
+            "<strong>中期負債（2-4週間）:</strong> 1-2週間の十分な睡眠で70%程度回復",
+            "<strong>長期負債（1ヶ月以上）:</strong> 完全回復には数ヶ月かかり、一部は不可逆的"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "info",
+          "title": "💡 「寝だめ」の真実",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "週末に12時間寝ても、平日の睡眠負債を完全には解消できません。実際："
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "睡眠負債の約<strong>25-30%しか返済できない</strong>",
+                "睡眠リズムが乱れ、翌週の睡眠の質が低下",
+                "「社会的時差ぼけ」を引き起こし、月曜日のパフォーマンス低下"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "<strong>結論:</strong> 毎日一貫した睡眠時間を確保することが唯一の解決策です。"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "5.4 睡眠負債のセルフチェック"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "以下に当てはまる項目が多いほど、睡眠負債が蓄積しています："
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "☐ アラームなしでは起きられない",
+                "☐ 起床後30分経っても頭がぼんやりしている",
+                "☐ 午前中にカフェインが必要",
+                "☐ 昼食後に強い眠気を感じる",
+                "☐ 週末に平日より2時間以上長く寝る",
+                "☐ 座っているだけで眠くなる",
+                "☐ 集中力が続かない",
+                "☐ イライラしやすい",
+                "☐ トレーニング中の集中力が低い",
+                "☐ 回復に時間がかかる"
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin-top: 20px; padding: 15px; background: #fff3e0; border-radius: 8px;",
+              "content": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sleep-quality",
+      "title": "6. 睡眠の質を高める方法",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "睡眠時間も重要ですが、<strong>睡眠の質</strong>も同様に重要です。\n            質の悪い9時間より、質の高い7.5時間の方が効果的なこともあります。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "6.1 睡眠衛生の基本"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "1. 一貫した睡眠スケジュール"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>最も重要な要素</strong>です。体内時計(概日リズム)を安定させます。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "毎日同じ時刻に就寝・起床（週末も）",
+            "変動は±30分以内に抑える",
+            "21日間継続すると習慣化",
+            "<strong>効果:</strong> 深睡眠が15-20%増加 (Monk et al., 2003)"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "2. 就寝前ルーティン（60分前から）"
+        },
+        {
+          "type": "paragraph",
+          "text": "脳に「これから寝る時間」を知らせるための儀式を作ります。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>60分前:</strong> 激しい運動、仕事、ストレスフルな活動を終える",
+            "<strong>45分前:</strong> 電子機器を手放す（ブルーライト対策）",
+            "<strong>30分前:</strong> 入浴またはシャワー（体温変化が入眠を促進）",
+            "<strong>15分前:</strong> ストレッチ、読書、瞑想などリラックス活動"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "3. ブルーライト管理"
+        },
+        {
+          "type": "paragraph",
+          "text": "ブルーライトは<strong>メラトニン分泌を55%抑制</strong>し、入眠を妨げます (Chang et al., 2015)。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "就寝2時間前からスマホ・PC・テレビを避ける",
+            "どうしても使う場合：\n                <ul style=\"margin-top: 5px;\">\n<li>ブルーライトカットメガネ着用</li>\n<li>デバイスのナイトモード使用</li>\n<li>f.lux、Night Shiftなどのアプリ使用</li>\n</ul>",
+            "寝室に電子機器を持ち込まない"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "4. 光の管理"
+        },
+        {
+          "type": "paragraph",
+          "text": "光は最も強力な概日リズム調整因子です。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>朝:</strong> 起床後30分以内に明るい光（できれば太陽光）を15-30分浴びる",
+            "<strong>日中:</strong> 十分な明るさの環境で過ごす",
+            "<strong>夕方以降:</strong> 照明を暗めに（暖色系が理想）",
+            "<strong>就寝時:</strong> 完全な暗闇（遮光カーテン、アイマスク）"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "5. 温度管理"
+        },
+        {
+          "type": "paragraph",
+          "text": "体温の自然な低下が入眠を促します。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>最適温度:</strong> 18-20℃（個人差あり）",
+            "寒すぎる（16℃以下）も暑すぎる（22℃以上）も睡眠の質を低下させる",
+            "<strong>就寝90分前の入浴:</strong> 体温が下がるタイミングで入眠しやすい",
+            "足元を温かくすると入眠しやすい"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "6.2 栄養タイミング"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "就寝前の食事戦略"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "時間別推奨"
+            },
+            {
+              "type": "styled_div",
+              "style": "margin: 15px 0; padding: 15px; background: #e8f5e9; border-radius: 8px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "2-3時間前（夕食）"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "バランスの取れた食事",
+                    "複合炭水化物を含める（セロトニン→メラトニン変換）",
+                    "脂肪は控えめに（消化に時間がかかる）",
+                    "<strong>例:</strong> 鶏胸肉 + 玄米 + 野菜"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin: 15px 0; padding: 15px; background: #e3f2fd; border-radius: 8px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "30-60分前"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "カゼインプロテイン（ゆっくり吸収）",
+                    "ギリシャヨーグルト",
+                    "カッテージチーズ",
+                    "トリプトファン豊富な食品（バナナ、ナッツ）"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin: 15px 0; padding: 15px; background: #fff3e0; border-radius: 8px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "避けるべきもの"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "カフェイン（午後2時以降）",
+                    "アルコール（深睡眠とREM睡眠を妨げる）",
+                    "辛い食べ物（体温上昇）",
+                    "大量の水分（夜間トイレで目覚める）",
+                    "高脂肪食（消化不良）"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "6.3 睡眠前のトレーニング"
+        },
+        {
+          "type": "paragraph",
+          "text": "夜間トレーニングは睡眠に影響する可能性がありますが、<strong>個人差が大きい</strong>です。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>理想的:</strong> 就寝4-6時間前までにトレーニングを終える",
+            "<strong>最低:</strong> 就寝2時間前",
+            "<strong>夜間トレーニングの場合:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>高強度すぎるトレーニングは避ける</li>\n<li>トレーニング後のクールダウンを十分に</li>\n<li>シャワーで体温を下げる</li>\n<li>ストレッチで神経系を落ち着かせる</li>\n</ul>"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "6.4 ストレス管理と睡眠"
+        },
+        {
+          "type": "paragraph",
+          "text": "ストレスは睡眠の最大の敵です。就寝前のストレス管理が重要です。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>瞑想:</strong> 10-15分の瞑想で入眠が早まる",
+            "<strong>呼吸法:</strong> 4-7-8呼吸法が効果的",
+            "<strong>ジャーナリング:</strong> 心配事を書き出す（脳のダンプ）",
+            "<strong>プログレッシブ筋弛緩法:</strong> 筋肉を順番に緊張→弛緩",
+            "<strong>感謝の実践:</strong> 3つの良かったことを振り返る"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "success",
+          "title": "✅ 478呼吸法（入眠用）",
+          "content": [
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "口からすべての息を吐き出す",
+                "鼻から4秒かけて息を吸う",
+                "7秒間息を止める",
+                "口から8秒かけて息を吐き出す",
+                "これを4サイクル繰り返す"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "<strong>効果:</strong> 副交感神経を活性化し、60秒以内に入眠する人も。\n                「天然の精神安定剤」と呼ばれる。"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "6.5 睡眠トラッキング"
+        },
+        {
+          "type": "paragraph",
+          "text": "測定することで改善できます。睡眠の質を客観的に評価しましょう。"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "トラッキング方法"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>ウェアラブルデバイス:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>Oura Ring（最も正確）</li>\n<li>Whoop Strap</li>\n<li>Apple Watch、Fitbit</li>\n</ul>",
+            "<strong>測定指標:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>総睡眠時間</li>\n<li>深睡眠時間（90分以上が理想）</li>\n<li>REM睡眠時間（90-120分が理想）</li>\n<li>睡眠効率（85%以上）</li>\n<li>安静時心拍数</li>\n<li>心拍変動（HRV）</li>\n</ul>"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "睡眠日記"
+        },
+        {
+          "type": "paragraph",
+          "text": "デバイスがなくても、手動で記録できます："
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "就寝時刻・起床時刻",
+            "入眠までの時間（推定）",
+            "夜間覚醒回数",
+            "朝の気分（1-10）",
+            "日中のエネルギーレベル",
+            "トレーニングパフォーマンス",
+            "前日の食事・カフェイン・アルコール"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>分析:</strong> 2週間記録すると、睡眠の質に影響する要因が見えてきます。"
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "title": "7. 最適な睡眠環境の構築",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "寝室環境は睡眠の質に直接影響します。以下の要素を最適化することで、\n            <strong>深睡眠を20-30%増加</strong>させることができます。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "7.1 寝具の選択"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "マットレス"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>硬さ:</strong> 中程度の硬さが最も支持されている（個人の好みによる）",
+            "<strong>素材:</strong> メモリーフォーム、ラテックス、スプリングそれぞれに利点",
+            "<strong>寿命:</strong> 7-10年で交換（ヘタリが睡眠の質を低下）",
+            "<strong>体重との関係:</strong> 重い人ほど硬めが推奨"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "枕"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>寝姿勢別:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>仰向け：中程度の高さ</li>\n<li>横向き：高め（頭と首が水平になるように）</li>\n<li>うつ伏せ：低め、または枕なし</li>\n</ul>",
+            "<strong>素材:</strong> メモリーフォーム、羽毛、ラテックスなど",
+            "<strong>交換頻度:</strong> 1-2年"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "寝具"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>シーツ:</strong> 綿100%、リネン（通気性が良い）",
+            "<strong>掛け布団:</strong> 季節に応じて調整（体温管理が重要）",
+            "<strong>重量ブランケット:</strong> 不安軽減効果あり（体重の10%程度）"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "7.2 音環境"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "静寂の重要性"
+        },
+        {
+          "type": "paragraph",
+          "text": "突然の音は<strong>睡眠を断片化</strong>し、深睡眠を妨げます。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>理想:</strong> 30デシベル以下（ささやき声レベル）",
+            "<strong>対策:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>耳栓の使用（遮音性の高いもの）</li>\n<li>二重窓、防音カーテン</li>\n<li>ホワイトノイズマシン（一定の背景音で突発音をマスキング）</li>\n<li>寝室のドアの隙間をふさぐ</li>\n</ul>"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "ホワイトノイズ vs ピンクノイズ"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 20px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "<strong>ホワイトノイズ:</strong> 全周波数が均等。ファンの音、テレビの砂嵐",
+                "<strong>ピンクノイズ:</strong> 低周波数が強調。雨の音、波の音",
+                "<strong>研究結果:</strong> ピンクノイズは深睡眠を<strong>23%増加</strong>させる (Zhou et al., 2012)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "7.3 光環境"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "完全な暗闇の重要性"
+        },
+        {
+          "type": "paragraph",
+          "text": "わずかな光でもメラトニン分泌を抑制されます。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>目標:</strong> 手を顔の前にかざしても見えないレベル",
+            "<strong>対策:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>遮光カーテン（遮光率99%以上）</li>\n<li>アイマスク（完全フィット型）</li>\n<li>電子機器のLEDを遮る（テープで覆う）</li>\n<li>廊下からの光を遮断（ドアの下の隙間テープ）</li>\n</ul>"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "7.4 空気質"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>換気:</strong> 就寝前に十分な換気。CO2濃度が高いと睡眠の質が低下",
+            "<strong>湿度:</strong> 40-60%が最適（加湿器または除湿器）",
+            "<strong>空気清浄機:</strong> アレルギー対策、呼吸の質向上",
+            "<strong>植物:</strong> サンスベリア、ポトスなどは夜間も酸素を放出"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "7.5 寝室の心理的環境"
+        },
+        {
+          "type": "box",
+          "box_type": "success",
+          "title": "✅ 寝室は「睡眠専用」に",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "<strong>刺激統制療法</strong>の原則：寝室を睡眠と性行為以外に使わない。"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "仕事をしない",
+                "テレビを見ない",
+                "スマホをいじらない",
+                "食事をしない"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "<strong>効果:</strong> 脳が「寝室＝睡眠」と条件付けられ、\n                入眠が<strong>平均15分早く</strong>なる (Bootzin, 1972)。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "supplements",
+      "title": "8. 睡眠サプリメント完全ガイド",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "サプリメントは睡眠の質を向上させる強力なツールですが、\n            <strong>睡眠衛生の基本を置き換えるものではありません</strong>。\n            基本ができた上での補助として使用しましょう。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.1 メラトニン"
+        },
+        {
+          "type": "paragraph",
+          "text": "メラトニンは体内で自然に産生される睡眠ホルモンです。\n            <strong>入眠を早める</strong>効果がありますが、睡眠の質自体は改善しません。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>推奨摂取量:</strong> 0.5-3mg（低用量の方が効果的）",
+            "<strong>タイミング:</strong> 就寝30-60分前",
+            "<strong>効果:</strong> 入眠時間を<strong>平均7-12分短縮</strong> (Ferracioli-Oda et al., 2013)",
+            "<strong>適用:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>時差ぼけ対策</li>\n<li>交代勤務者</li>\n<li>概日リズム障害</li>\n</ul>",
+            "<strong>注意:</strong> 長期使用しても依存性はないが、体内産生が減る可能性"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.2 マグネシウム"
+        },
+        {
+          "type": "paragraph",
+          "text": "マグネシウムは<strong>最も重要な睡眠ミネラル</strong>です。\n            GABA受容体を活性化し、神経系を落ち着かせます。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>推奨摂取量:</strong> 200-400mg（元素マグネシウムとして）",
+            "<strong>形態:</strong>\n<ul style=\"margin-top: 5px;\">\n<li><strong>グリシン酸マグネシウム:</strong> 最も吸収率が高く、睡眠に最適</li>\n<li><strong>トレオン酸マグネシウム:</strong> 脳に到達しやすい</li>\n<li>避けるべき：酸化マグネシウム（吸収率が低い）</li>\n</ul>",
+            "<strong>タイミング:</strong> 就寝1-2時間前",
+            "<strong>効果:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>入眠時間が17分短縮</li>\n<li>睡眠効率が2%向上</li>\n<li>深睡眠が増加</li>\n</ul>",
+            "<strong>副次効果:</strong> 筋肉のリラクゼーション、こむら返り予防"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.3 グリシン"
+        },
+        {
+          "type": "paragraph",
+          "text": "グリシンはアミノ酸の一種で、<strong>体温を下げて入眠を促進</strong>します。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>推奨摂取量:</strong> 3g",
+            "<strong>タイミング:</strong> 就寝前",
+            "<strong>効果:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>深睡眠の時間が増加</li>\n<li>翌朝の疲労感が<strong>30%改善</strong> (Yamadera et al., 2007)</li>\n<li>日中の眠気が減少</li>\n<li>認知機能の改善</li>\n</ul>",
+            "<strong>メカニズム:</strong> NMDA受容体のサブタイプに作用し、体温を0.3℃下げる"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.4 L-テアニン"
+        },
+        {
+          "type": "paragraph",
+          "text": "緑茶に含まれるアミノ酸で、<strong>リラックス効果</strong>があります。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>推奨摂取量:</strong> 200-400mg",
+            "<strong>タイミング:</strong> 就寝30-60分前",
+            "<strong>効果:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>アルファ波を増加させ、リラックス状態を誘導</li>\n<li>睡眠の質が向上（特にストレス下）</li>\n<li>REM睡眠が増加</li>\n</ul>",
+            "<strong>組み合わせ:</strong> マグネシウムと併用すると相乗効果"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.5 アシュワガンダ"
+        },
+        {
+          "type": "paragraph",
+          "text": "アダプトゲンハーブの代表格で、<strong>ストレスを軽減</strong>し睡眠の質を改善します。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>推奨摂取量:</strong> 300-600mg（KSM-66エキス）",
+            "<strong>タイミング:</strong> 夕食後または就寝前",
+            "<strong>効果:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>睡眠の質が<strong>72%改善</strong> (Langade et al., 2019)</li>\n<li>睡眠効率が向上</li>\n<li>総睡眠時間が増加</li>\n<li>コルチゾールレベルが28%低下</li>\n</ul>",
+            "<strong>特徴:</strong> 効果が現れるまで2-4週間かかる"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.6 トリプトファン / 5-HTP"
+        },
+        {
+          "type": "paragraph",
+          "text": "セロトニン→メラトニンの前駆体です。"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>L-トリプトファン:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>摂取量：500-1000mg</li>\n<li>タイミング：就寝1時間前</li>\n<li>効果：自然なセロトニン産生</li>\n</ul>",
+            "<strong>5-HTP:</strong>\n<ul style=\"margin-top: 5px;\">\n<li>摂取量：50-100mg</li>\n<li>タイミング：就寝30分前</li>\n<li>効果：より直接的なセロトニン増加</li>\n<li>注意：SSRI等の抗うつ薬との併用は避ける</li>\n</ul>"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "8.7 推奨スタックと優先順位"
+        },
+        {
+          "type": "styled_div",
+          "style": "background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 20px 0;",
+          "content": [
+            {
+              "type": "heading",
+              "level": "h4",
+              "text": "レベル別推奨スタック"
+            },
+            {
+              "type": "styled_div",
+              "style": "margin: 20px 0; padding: 15px; background: #e8f5e9; border-radius: 8px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "初心者スタック（まずこれから）"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>マグネシウムグリシネート</strong> 400mg",
+                    "<strong>グリシン</strong> 3g",
+                    "<strong>総コスト:</strong> 月2,000-3,000円",
+                    "<strong>効果:</strong> 基本的な睡眠の質向上"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin: 20px 0; padding: 15px; background: #e3f2fd; border-radius: 8px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "中級者スタック"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>マグネシウムグリシネート</strong> 400mg",
+                    "<strong>グリシン</strong> 3g",
+                    "<strong>L-テアニン</strong> 200mg",
+                    "<strong>総コスト:</strong> 月4,000-5,000円",
+                    "<strong>効果:</strong> リラックス効果と深睡眠の増加"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "margin: 20px 0; padding: 15px; background: #fff3e0; border-radius: 8px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h5",
+                  "text": "上級者スタック（睡眠問題が深刻な場合）"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>マグネシウムグリシネート</strong> 400mg",
+                    "<strong>グリシン</strong> 3g",
+                    "<strong>L-テアニン</strong> 400mg",
+                    "<strong>アシュワガンダ（KSM-66）</strong> 300mg",
+                    "<strong>メラトニン</strong> 1mg（必要に応じて）",
+                    "<strong>総コスト:</strong> 月6,000-8,000円",
+                    "<strong>効果:</strong> 最大限の睡眠最適化"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ サプリメント使用の注意点",
+          "content": [
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "まずは睡眠衛生の基本を確立する",
+                "一度に全てを試さず、1つずつ追加して効果を確認",
+                "2週間試して効果がなければ中止",
+                "持病がある場合や薬を服用中の場合は医師に相談",
+                "妊娠中・授乳中は使用を避ける",
+                "依存性のあるサプリ（処方睡眠薬など）は避ける"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "timing",
+      "title": "9. 睡眠タイミングの科学",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "「何時に寝るか」は「何時間寝るか」と同じくらい重要です。\n            <strong>体内時計(概日リズム)</strong>に合わせた睡眠が最も効果的です。"
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "9.1 クロノタイプ（時間型）"
+        },
+        {
+          "type": "paragraph",
+          "text": "人には遺伝的に決まった<strong>クロノタイプ</strong>があります。"
+        },
+        {
+          "type": "styled_div",
+          "style": "margin: 30px 0;",
+          "content": [
+            {
+              "type": "styled_div",
+              "style": "background: #fff3e0; padding: 20px; border-radius: 12px; margin-bottom: 15px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "朝型（ライオン型）- 人口の15-20%"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>最適就寝時刻:</strong> 21:00-22:00",
+                    "<strong>最適起床時刻:</strong> 5:00-6:00",
+                    "<strong>ピーク時間:</strong> 午前中",
+                    "<strong>特徴:</strong> 早起きが苦ではない、夜は早めに眠くなる"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #e3f2fd; padding: 20px; border-radius: 12px; margin-bottom: 15px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "中間型（クマ型）- 人口の50-55%"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>最適就寝時刻:</strong> 23:00-24:00",
+                    "<strong>最適起床時刻:</strong> 7:00-8:00",
+                    "<strong>ピーク時間:</strong> 午前中〜昼過ぎ",
+                    "<strong>特徴:</strong> 太陽と共に動く、最も一般的なタイプ"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "styled_div",
+              "style": "background: #f3e5f5; padding: 20px; border-radius: 12px;",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h4",
+                  "text": "夜型（オオカミ型）- 人口の15-20%"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    "<strong>最適就寝時刻:</strong> 24:00-2:00",
+                    "<strong>最適起床時刻:</strong> 8:00-10:00",
+                    "<strong>ピーク時間:</strong> 夕方〜夜",
+                    "<strong>特徴:</strong> 朝が弱い、夜に創造性が高まる"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "info",
+          "title": "💡 クロノタイプは変更できる？",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "クロノタイプは<strong>50%が遺伝</strong>、50%が環境で決まります。\n                完全に変えることは難しいですが、以下で調整可能："
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "朝の明るい光曝露（30分）",
+                "夜のブルーライト制限",
+                "一貫した睡眠スケジュール",
+                "メラトニン補給（タイミング調整）"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "<strong>注意:</strong> 自分のクロノタイプに逆らうと、\n                慢性的なストレスとパフォーマンス低下を招きます。"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "9.2 90分サイクル理論"
+        },
+        {
+          "type": "paragraph",
+          "text": "睡眠は<strong>約90分のサイクル</strong>で繰り返されます。\n            このサイクルの終わりで目覚めると、スッキリ感が得られます。"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "最適な睡眠時間（90分の倍数）"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>4.5時間:</strong> 3サイクル（最低限、緊急時のみ）",
+            "<strong>6時間:</strong> 4サイクル（短期的には可能）",
+            "<strong>7.5時間:</strong> 5サイクル（多くの人に適切）",
+            "<strong>9時間:</strong> 6サイクル（アスリートに最適）"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "warning",
+          "title": "⚠️ なぜ8時間より7.5時間？",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "きっかり8時間だと、サイクルの<strong>途中で目覚める</strong>可能性があり、\n                逆にグロッギーになることがあります。7.5時間（5サイクル）の方が\n                スッキリ目覚められる人が多いです。"
+            },
+            {
+              "type": "paragraph",
+              "text": "ただし、入眠に15-20分かかることを考慮すると、\n                <strong>ベッドには8時間前に入る</strong>のが良いでしょう。"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h3",
+          "text": "9.3 昼寝の戦略"
+        },
+        {
+          "type": "paragraph",
+          "text": "適切な昼寝は、夜間睡眠を補完し、パフォーマンスを向上させます。"
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "パワーナップ（10-20分）"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>タイミング:</strong> 13:00-15:00",
+            "<strong>効果:</strong> 注意力、集中力が向上",
+            "<strong>利点:</strong> 深睡眠に入らないため、目覚めがスッキリ",
+            "<strong>推奨:</strong> トレーニー全般"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": "h4",
+          "text": "長い昼寝（90分）"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>タイミング:</strong> 13:00-14:30開始",
+            "<strong>効果:</strong> 完全な睡眠サイクル、記憶の定着",
+            "<strong>注意:</strong> 夜間睡眠に影響する可能性",
+            "<strong>推奨:</strong> 夜間睡眠が不足している場合のみ"
+          ]
+        },
+        {
+          "type": "box",
+          "box_type": "success",
+          "title": "✅ NASAの昼寝研究",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "NASAの研究では、26分の昼寝により："
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "注意力が<strong>54%向上</strong>",
+                "反応時間が<strong>34%改善</strong>"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "ことが確認されました。(Rosekind et al., 1995)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calculator",
+      "title": "10. 最適睡眠時刻計算ツール",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "あなたの起床時刻から、最適な就寝時刻を計算します。\n            90分サイクル理論に基づいています。"
+        },
+        {
+          "type": "interactive_tool",
+          "id": "",
+          "note": "このツールのHTMLはテンプレート内に残します(JS連携のため)"
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "11. 参考文献",
+      "content": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Van Cauter, E., et al. (2000). \"Age-related changes in slow wave sleep and REM sleep and relationship\n                with growth hormone and cortisol levels in healthy men.\" <em>JAMA</em>, 284(7), 861-868.",
+            "Dattilo, M., et al. (2011). \"Sleep and muscle recovery: Endocrinological and molecular basis for a new\n                and promising hypothesis.\" <em>Medical Hypotheses</em>, 77(2), 220-222.",
+            "Leproult, R., &amp; Van Cauter, E. (2011). \"Effect of 1 week of sleep restriction on testosterone levels in\n                young healthy men.\" <em>JAMA</em>, 305(21), 2173-2174.",
+            "Fullagar, H.H., et al. (2015). \"Sleep and athletic performance: the effects of sleep loss on exercise\n                performance.\" <em>Sports Medicine</em>, 45(2), 161-186.",
+            "Nedeltcheva, A.V., et al. (2010). \"Insufficient sleep undermines dietary efforts to reduce adiposity.\"\n                <em>Annals of Internal Medicine</em>, 153(7), 435-441.",
+            "Skein, M., et al. (2011). \"Intermittent-sprint performance and muscle glycogen after 30 h of sleep\n                deprivation.\" <em>Medicine &amp; Science in Sports &amp; Exercise</em>, 43(7), 1301-1311.",
+            "Prather, A.A., et al. (2015). \"Behaviorally assessed sleep and susceptibility to the common cold.\"\n                <em>Sleep</em>, 38(9), 1353-1359.",
+            "Mah, C.D., et al. (2011). \"The effects of sleep extension on the athletic performance of collegiate\n                basketball players.\" <em>Sleep</em>, 34(7), 943-950.",
+            "Milewski, M.D., et al. (2014). \"Chronic lack of sleep is associated with increased sports injuries in\n                adolescent athletes.\" <em>Journal of Pediatric Orthopedics</em>, 34(2), 129-133.",
+            "Ohayon, M.M., et al. (2004). \"Meta-analysis of quantitative sleep parameters from childhood to old age\n                in healthy individuals.\" <em>Sleep</em>, 27(7), 1255-1273.",
+            "Spiegel, K., et al. (2004). \"Brief communication: Sleep curtailment in healthy young men is associated\n                with decreased leptin levels.\" <em>Annals of Internal Medicine</em>, 141(11), 846-850.",
+            "Chang, A.M., et al. (2015). \"Evening use of light-emitting eReaders negatively affects sleep.\"\n                <em>Proceedings of the National Academy of Sciences</em>, 112(4), 1232-1237.",
+            "Monk, T.H., et al. (2003). \"The relationship between lifestyle regularity and subjective sleep quality.\"\n                <em>Chronobiology International</em>, 20(1), 97-107.",
+            "Bootzin, R.R. (1972). \"Stimulus control treatment for insomnia.\" <em>Proceedings of the American\n                    Psychological Association</em>, 7, 395-396.",
+            "Ferracioli-Oda, E., et al. (2013). \"Meta-analysis: melatonin for the treatment of primary sleep\n                disorders.\" <em>PLoS One</em>, 8(5), e63773.",
+            "Yamadera, W., et al. (2007). \"Glycine ingestion improves subjective sleep quality in human volunteers.\"\n                <em>Sleep and Biological Rhythms</em>, 5(2), 126-131.",
+            "Langade, D., et al. (2019). \"Clinical evaluation of the pharmacological impact of ashwagandha root\n                extract on sleep in healthy volunteers.\" <em>Journal of Ethnopharmacology</em>, 264, 113276.",
+            "Zhou, J., et al. (2012). \"Pink noise: effect on complexity synchronization of brain activity.\" <em>PLoS\n                    One</em>, 7(7), e39906.",
+            "Rosekind, M.R., et al. (1995). \"Crew factors in flight operations IX: Effects of planned cockpit rest on\n                crew performance.\" NASA Technical Memorandum 108839.",
+            "Leproult, R., et al. (1997). \"Sleep loss results in an elevation of cortisol levels the next evening.\"\n                <em>Sleep</em>, 20(10), 865-870.",
+            "厚生労働省 (2023). 「健康づくりのための睡眠ガイド 2023」<br/>\n<a href=\"https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/suimin/\" target=\"_blank\">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/suimin/</a>",
+            "日本睡眠学会 (2020). 「睡眠障害の診断・治療ガイドライン」<br/>\n<a href=\"https://jssr.jp/\" target=\"_blank\">https://jssr.jp/</a>"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "title": "11. 参考文献",
+    "items": [
+      "Van Cauter, E., et al. (2000). \"Age-related changes in slow wave sleep and REM sleep and relationship\n                with growth hormone and cortisol levels in healthy men.\" <em>JAMA</em>, 284(7), 861-868.",
+      "Dattilo, M., et al. (2011). \"Sleep and muscle recovery: Endocrinological and molecular basis for a new\n                and promising hypothesis.\" <em>Medical Hypotheses</em>, 77(2), 220-222.",
+      "Leproult, R., &amp; Van Cauter, E. (2011). \"Effect of 1 week of sleep restriction on testosterone levels in\n                young healthy men.\" <em>JAMA</em>, 305(21), 2173-2174.",
+      "Fullagar, H.H., et al. (2015). \"Sleep and athletic performance: the effects of sleep loss on exercise\n                performance.\" <em>Sports Medicine</em>, 45(2), 161-186.",
+      "Nedeltcheva, A.V., et al. (2010). \"Insufficient sleep undermines dietary efforts to reduce adiposity.\"\n                <em>Annals of Internal Medicine</em>, 153(7), 435-441.",
+      "Skein, M., et al. (2011). \"Intermittent-sprint performance and muscle glycogen after 30 h of sleep\n                deprivation.\" <em>Medicine &amp; Science in Sports &amp; Exercise</em>, 43(7), 1301-1311.",
+      "Prather, A.A., et al. (2015). \"Behaviorally assessed sleep and susceptibility to the common cold.\"\n                <em>Sleep</em>, 38(9), 1353-1359.",
+      "Mah, C.D., et al. (2011). \"The effects of sleep extension on the athletic performance of collegiate\n                basketball players.\" <em>Sleep</em>, 34(7), 943-950.",
+      "Milewski, M.D., et al. (2014). \"Chronic lack of sleep is associated with increased sports injuries in\n                adolescent athletes.\" <em>Journal of Pediatric Orthopedics</em>, 34(2), 129-133.",
+      "Ohayon, M.M., et al. (2004). \"Meta-analysis of quantitative sleep parameters from childhood to old age\n                in healthy individuals.\" <em>Sleep</em>, 27(7), 1255-1273.",
+      "Spiegel, K., et al. (2004). \"Brief communication: Sleep curtailment in healthy young men is associated\n                with decreased leptin levels.\" <em>Annals of Internal Medicine</em>, 141(11), 846-850.",
+      "Chang, A.M., et al. (2015). \"Evening use of light-emitting eReaders negatively affects sleep.\"\n                <em>Proceedings of the National Academy of Sciences</em>, 112(4), 1232-1237.",
+      "Monk, T.H., et al. (2003). \"The relationship between lifestyle regularity and subjective sleep quality.\"\n                <em>Chronobiology International</em>, 20(1), 97-107.",
+      "Bootzin, R.R. (1972). \"Stimulus control treatment for insomnia.\" <em>Proceedings of the American\n                    Psychological Association</em>, 7, 395-396.",
+      "Ferracioli-Oda, E., et al. (2013). \"Meta-analysis: melatonin for the treatment of primary sleep\n                disorders.\" <em>PLoS One</em>, 8(5), e63773.",
+      "Yamadera, W., et al. (2007). \"Glycine ingestion improves subjective sleep quality in human volunteers.\"\n                <em>Sleep and Biological Rhythms</em>, 5(2), 126-131.",
+      "Langade, D., et al. (2019). \"Clinical evaluation of the pharmacological impact of ashwagandha root\n                extract on sleep in healthy volunteers.\" <em>Journal of Ethnopharmacology</em>, 264, 113276.",
+      "Zhou, J., et al. (2012). \"Pink noise: effect on complexity synchronization of brain activity.\" <em>PLoS\n                    One</em>, 7(7), e39906.",
+      "Rosekind, M.R., et al. (1995). \"Crew factors in flight operations IX: Effects of planned cockpit rest on\n                crew performance.\" NASA Technical Memorandum 108839.",
+      "Leproult, R., et al. (1997). \"Sleep loss results in an elevation of cortisol levels the next evening.\"\n                <em>Sleep</em>, 20(10), 865-870.",
+      "厚生労働省 (2023). 「健康づくりのための睡眠ガイド 2023」<br/>\n<a href=\"https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/suimin/\" target=\"_blank\">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/suimin/</a>",
+      "日本睡眠学会 (2020). 「睡眠障害の診断・治療ガイドライン」<br/>\n<a href=\"https://jssr.jp/\" target=\"_blank\">https://jssr.jp/</a>"
+    ]
+  },
+  "navigation": {
+    "buttons": [
+      {
+        "href": "/lifestyle/stress",
+        "text": "← Stress Management"
+      },
+      {
+        "href": "/lifestyle/drinking",
+        "text": "Alcohol & Muscle →"
+      }
+    ]
+  }
+}

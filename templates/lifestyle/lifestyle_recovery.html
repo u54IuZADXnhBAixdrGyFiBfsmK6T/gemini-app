@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Recovery - 筋肥大のための回復戦略{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/lifestyle.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="lifestyle-detail" id="lifestyle-recovery">
+    <!-- コンテンツはJavaScriptで動的に読み込まれます -->
+    <div id="content-loading">
+        <p>Loading...</p>
+    </div>
+</div>
+
+<!-- データURLをdata属性として渡す (VSCodeエラー回避) -->
+<script id="lifestyle-config" type="application/json">
+{
+    "jsonUrl": "{{ url_for('static', filename='json/lifestyle/recovery.json') }}",
+    "rendererUrl": "{{ url_for('static', filename='js/shared/lifestyle_renderer.js') }}"
+}
+</script>
+{% endblock %}
+
+{% block scripts %}
+<script type="module">
+    // 設定を取得
+    const config = JSON.parse(document.getElementById('lifestyle-config').textContent);
+    
+    // レンダラーを動的インポート
+    import(config.rendererUrl).then(module => {
+        const { renderLifestyleContent } = module;
+        
+        // JSONデータを読み込んでレンダリング
+        fetch(config.jsonUrl)
+            .then(response => response.json())
+            .then(data => {
+                renderLifestyleContent(data, 'lifestyle-recovery');
+            })
+            .catch(error => {
+                console.error('コンテンツの読み込みに失敗しました:', error);
+                document.getElementById('content-loading').innerHTML = 
+                    '<p style="color: red;">コンテンツの読み込みに失敗しました。</p>';
+            });
+    });
+</script>
+<script type="module" src="{{ url_for('static', filename='js/pages/lifestyle.js') }}"></script>
+{% endblock %}
