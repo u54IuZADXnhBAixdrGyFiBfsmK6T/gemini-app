@@ -1,10 +1,7 @@
 # models.py
 
-# flask_sqlalchemyからではなく、extensionsからdbをインポートする
 from extensions import db
 from datetime import datetime
-
-# db = SQLAlchemy()  extensions.pyに移動した
 
 # ユーザーテーブル
 class User(db.Model):
@@ -12,7 +9,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), unique=True, nullable=False)
 
-# 部位（胸、背中、脚など）
+# 部位
 class Category(db.Model):
     __tablename__ = 'categories'
     id = db.Column(db.Integer, primary_key=True)
@@ -20,7 +17,7 @@ class Category(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True)
     display_order = db.Column(db.Integer, default=0)
 
-# 種目（ベンチプレスなど）
+# 種目
 class Exercise(db.Model):
     __tablename__ = 'exercises'
     id = db.Column(db.Integer, primary_key=True)
@@ -28,12 +25,12 @@ class Exercise(db.Model):
     category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True)
     is_recommended = db.Column(db.Boolean, default=False) 
-    display_order = db.Column(db.Integer, default=0)  # 表示順
+    display_order = db.Column(db.Integer, default=0) 
     
     # リレーション定義
     category = db.relationship('Category', backref=db.backref('exercises', lazy=True))
 
-# ワークアウトログ（セットごとの記録）
+#セットごとの記録
 class WorkoutLog(db.Model):
     __tablename__ = 'workout_logs'
     id = db.Column(db.Integer, primary_key=True)
