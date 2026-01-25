@@ -73,3 +73,10 @@ def init_db_command():
         
         db.session.commit()
         print('OK: データベースの初期化が完了しました！')
+
+    return app
+
+app = create_app()
+
+if __name__ == "__main__":
+    app.run(debug=True)

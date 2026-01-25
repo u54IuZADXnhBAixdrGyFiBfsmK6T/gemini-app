@@ -42,6 +42,21 @@ python -m venv venv
 pip install -r requirements.txt
 python app.py
 ```
+# dummy-data
+食事記録を50件追加
+python dummy_data.py create_meals 50
+
+トレーニング記録を100件追加
+python dummy_data.py create_workouts 100
+
+4週間分の分割トレーニング記録をスケジュールに沿って追加
+python dummy_data.py create_split --weeks 4
+
+全ての食事記録を削除
+python dummy_data.py delete_meals
+
+全てのトレーニング記録を削除
+python dummy_data.py delete_workouts
 
 # render
 ```
