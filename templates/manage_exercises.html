@@ -8,7 +8,6 @@
 
 {% block content %}
 <div class="app-container">
-    <!-- ヘッダー -->
 <header class="page-header">
     <a href="{{ url_for('main.record_workout') }}" class="back-btn">
         ← 戻る
@@ -18,12 +17,9 @@
     <button class="add-category-btn" id="addCategoryBtn">＋部位</button>
 </header>
 
-    <!-- メインコンテンツ -->
     <main class="main-content" id="categoriesContainer">
-        <!-- ここに部位と種目のリストが動的に生成されます -->
     </main>
 
-    <!-- 種目追加モーダル -->
     <div class="modal" id="addExerciseModal" aria-hidden="true">
         <div class="modal-backdrop"></div>
         <div class="modal-sheet">
@@ -41,7 +37,6 @@
         </div>
     </div>
 
-    <!-- 種目編集モーダル -->
     <div class="modal" id="editExerciseModal" aria-hidden="true">
         <div class="modal-backdrop"></div>
         <div class="modal-sheet">
@@ -60,7 +55,6 @@
         </div>
     </div>
 
-    <!-- トースト -->
     <div id="toastContainer"></div>
 </div>
 {% endblock %}

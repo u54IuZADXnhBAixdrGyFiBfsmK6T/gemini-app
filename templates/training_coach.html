@@ -11,15 +11,15 @@
 
 {% block content %}
 <div class="container">
-    <h1>💪 Training Coach AI</h1>
+    <h1>Training Coach AI</h1>
     <p class="subtitle">あなた専属のパーソナルトレーナー</p>
 
     <div class="tabs">
-        <button class="tab-btn active" data-tab="exercises">💪 メニュー提案</button>
-        <button class="tab-btn" data-tab="form">🔧 フォーム改善</button>
-        <button class="tab-btn" data-tab="injury">🩹 怪我対応</button>
-        <button class="tab-btn" data-tab="program">📅 プログラム設計</button>
-        <button class="tab-btn special" data-tab="analysis">⭐ 記録分析</button>
+        <button class="tab-btn active" data-tab="exercises">メニュー提案</button>
+        <button class="tab-btn" data-tab="form">フォーム改善</button>
+        <button class="tab-btn" data-tab="injury">怪我対応</button>
+        <button class="tab-btn" data-tab="program">プログラム設計</button>
+        <button class="tab-btn special" data-tab="analysis">記録分析</button>
     </div>
 
     <div class="tab-content active" id="exercises-tab">
@@ -56,7 +56,7 @@
             <label for="ex-goals">目標</label>
             <textarea id="ex-goals" rows="3" placeholder="例: 筋肥大、筋力向上、引き締め、筋持久力アップ">筋肥大を目指したい</textarea>
         </div>
-        <button class="submit-btn" id="suggest-exercises-btn">💪 メニューを提案してもらう</button>
+        <button class="submit-btn" id="suggest-exercises-btn">メニューを提案してもらう</button>
     </div>
 
     <div class="tab-content" id="form-tab">
@@ -77,7 +77,7 @@
                 <option value="3年以上">3年以上</option>
             </select>
         </div>
-        <button class="submit-btn" id="improve-form-btn">🔧 フォーム改善アドバイスをもらう</button>
+        <button class="submit-btn" id="improve-form-btn">フォーム改善アドバイスをもらう</button>
     </div>
 
     <div class="tab-content" id="injury-tab">
@@ -110,7 +110,7 @@
             <label for="occurrence">いつ・どのように発生したか</label>
             <textarea id="occurrence" rows="3" placeholder="例: ベンチプレス中に急に痛めた、数週間前から徐々に痛くなった"></textarea>
         </div>
-        <button class="submit-btn" id="injury-recovery-btn">🩹 リハビリ計画を提案してもらう</button>
+        <button class="submit-btn" id="injury-recovery-btn">リハビリ計画を提案してもらう</button>
     </div>
 
     <div class="tab-content" id="program-tab">
@@ -161,12 +161,12 @@
             <label for="limitations">制限事項・考慮事項（任意）</label>
             <textarea id="limitations" rows="3" placeholder="例: 古傷がある、特定の種目ができない、自宅トレーニングのみ など"></textarea>
         </div>
-        <button class="submit-btn" id="design-program-btn">📅 プログラムを作成してもらう</button>
+        <button class="submit-btn" id="design-program-btn">プログラムを作成してもらう</button>
     </div>
 
     <div class="tab-content" id="analysis-tab">
         <div class="info-box">
-            📊 あなたの過去のトレーニング記録をAIが分析し、改善点や強化すべきポイントを提案します
+            あなたの過去のトレーニング記録をAIが分析し、改善点や強化すべきポイントを提案します
         </div>
         <div class="form-group">
             <label for="analysis-period">分析期間</label>
@@ -177,10 +177,10 @@
                 <button class="period-btn" data-days="365">全期間</button>
             </div>
         </div>
-        <button class="submit-btn special-btn" id="analyze-history-btn">📊 記録を分析する</button>
+        <button class="submit-btn special-btn" id="analyze-history-btn">記録を分析する</button>
     </div>
 
-    <div id="output">✨ 情報を入力して、AIに相談してください</div>
+    <div id="output">情報を入力して、AIに相談してください</div>
 </div>
 {% endblock %}
 

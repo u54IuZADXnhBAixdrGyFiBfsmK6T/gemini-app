@@ -11,7 +11,7 @@ class LifestyleContentExtractor:
     def __init__(self, templates_dir: str = "templates/lifestyle", json_dir: str = "static/json/lifestyle"):
         self.templates_dir = Path(templates_dir)
         self.json_dir = Path(json_dir)
-        # 両方のディレクトリを作成
+        # 両方のディレクトリをつくる
         self.templates_dir.mkdir(parents=True, exist_ok=True)
         self.json_dir.mkdir(parents=True, exist_ok=True)
         
@@ -92,7 +92,7 @@ class LifestyleContentExtractor:
             if h2:
                 section_data["title"] = h2.get_text(strip=True)
             
-            # コンテンツ要素を順番に抽出
+            # コンテンツ要素を順番に抜き出す
             for elem in section.find_all(['p', 'h3', 'h4', 'ul', 'ol', 'div'], recursive=False):
                 content_item = self._extract_element(elem)
                 if content_item:
@@ -142,7 +142,7 @@ class LifestyleContentExtractor:
             if 'interactive-tool' in classes:
                 return self._extract_interactive_tool(elem)
             
-            # スタイル付きdivの抽出
+            # スタイル付きdivの抜き出し
             if elem.get('style'):
                 return self._extract_styled_div(elem)
         
@@ -155,7 +155,7 @@ class LifestyleContentExtractor:
         h4 = elem.find('h4')
         title = h4.get_text(strip=True) if h4 else ""
         
-        # h4以外のコンテンツを抽出
+        # h4以外のコンテンツぬきだす
         content_parts = []
         for child in elem.children:
             if child.name and child.name != 'h4':
@@ -282,7 +282,7 @@ class LifestyleContentExtractor:
         # 内部HTMLを取得
         html = str(elem)
         
-        # 外側のタグを除去
+        # 外側のタグをけす
         html = re.sub(r'^<[^>]+>', '', html)
         html = re.sub(r'</[^>]+>$', '', html)
         
@@ -362,7 +362,7 @@ class LifestyleContentExtractor:
         print(f"📄 処理中: {html_filename}")
         print(f"{'='*60}")
         
-        # バックアップ作成
+        # バックアップをつくる
         backup_file = None
         if create_backup:
             backup_file = html_file.with_suffix('.html.backup')
@@ -370,7 +370,7 @@ class LifestyleContentExtractor:
             shutil.copy2(html_file, backup_file)
             print(f"✅ バックアップ作成: {backup_file.name}")
         
-        # JSONに抽出
+        # JSONにする
         try:
             json_data = self.extract_lifestyle_content(html_file)
             page_id = json_data['page_id']
@@ -392,23 +392,22 @@ class LifestyleContentExtractor:
             # 自動置換
             if auto_replace:
                 import os
-                # 元のファイルを削除
                 os.remove(html_file)
-                print(f"🗑️  元のファイル削除: {html_file.name}")
+                print(f"元のファイル削除: {html_file.name}")
                 
                 # .new.htmlを正式なファイル名にリネーム
                 new_html_file.rename(html_file)
-                print(f"✅ ファイル置換完了: {html_file.name}")
-                print(f"📦 バックアップ保存: {backup_file.name if backup_file else 'なし'}")
+                print(f"ファイル置換完了: {html_file.name}")
+                print(f"バックアップ保存: {backup_file.name if backup_file else 'なし'}")
             else:
-                print(f"\n💡 確認後、以下のコマンドで置き換えてください:")
+                print(f"\n確認後、以下のコマンドで置き換えてください:")
                 print(f"   rm {html_file}")
                 print(f"   mv {new_html_file} {html_file}")
             
             return True
             
         except Exception as e:
-            print(f"❌ エラーが発生しました: {str(e)}")
+            print(f"エラーが発生しました: {str(e)}")
             import traceback
             traceback.print_exc()
             return False
@@ -480,7 +479,7 @@ def interactive_mode():
                     
                     if success:
                         print("\n" + "="*60)
-                        print("✅ 変換が完了しました!")
+                        print("変換が完了")
                         print("="*60)
                         
                         if auto_replace:
@@ -495,14 +494,14 @@ def interactive_mode():
                             print("\n終了します。")
                             break
                     else:
-                        print("\n❌ 変換に失敗しました。")
+                        print("\n変換に失敗しました。")
                 else:
                     print("\nキャンセルしました。")
             else:
-                print("\n❌ 無効な番号です。")
+                print("\n無効な番号です。")
                 
         except ValueError:
-            print("\n❌ 数字を入力してください。")
+            print("\n数字を入力してください。")
         except KeyboardInterrupt:
             print("\n\n中断されました。")
             break

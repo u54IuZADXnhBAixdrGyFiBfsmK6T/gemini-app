@@ -10,11 +10,8 @@
 
 {% block content %}
 <div class="app-container">
-    <!-- PC版: 2カラムレイアウト -->
     <div class="layout-wrapper">
-        <!-- 左カラム: カレンダー + 統計 + グラフ -->
         <div class="left-column">
-            <!-- カレンダーセクション -->
             <div class="calendar-section">
                 <div class="calendar-header">
                     <button class="nav-btn" id="prevMonth">&lt;</button>
@@ -37,7 +34,6 @@
                 <div class="calendar-days" id="calendarDays"></div>
             </div>
             
-            <!-- 統計表示 -->
             <div class="stats-section">
                 <div class="stat-item">
                     <span class="stat-label">MONTHLY ARCHIVE</span>
@@ -49,32 +45,26 @@
                 </div>
             </div>
             
-            <!-- 週間グラフ -->
             <div class="graph-section">
                 <div class="graph-header">
                     <span class="graph-label">今週の総負荷量</span>
                     <span class="graph-value" id="currentWeekVolume">0 kg</span>
                 </div>
                 <div class="graph-container" id="weeklyGraphContainer">
-                    <!-- グラフがJSで動的生成される -->
                 </div>
             </div>
         </div>
         
-        <!-- 右カラム: ボタン + 種目リスト -->
         <div class="right-column">
-            <!-- トレーニング追加ボタン -->
             <button class="add-training-btn" id="addTrainingBtn">
                 <div class="add-icon">+</div>
                 <span>本日のトレーニングを追加</span>
             </button>
             
-            <!-- 種目カード表示エリア -->
             <div id="exerciseCardsContainer"></div>
         </div>
     </div>
 
-    <!-- 種目選択モーダル -->
     <div class="modal" id="exerciseModal" aria-hidden="true">
         <div class="modal-backdrop"></div>
         <div class="modal-sheet">
@@ -86,7 +76,6 @@
         </div>
     </div>
 
-    <!-- セット入力モーダル -->
     <div class="modal" id="setInputModal" aria-hidden="true">
         <div class="modal-backdrop"></div>
         <div class="modal-sheet set-input-sheet">
@@ -120,10 +109,8 @@
         </div>
     </div>
 
-    <!-- FAB -->
     <button class="fab" id="fabBtn" title="種目を追加">+</button>
 
-    <!-- トースト -->
     <div id="toastContainer"></div>
 </div>
 {% endblock %}

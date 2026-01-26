@@ -8,13 +8,11 @@
 
 {% block content %}
 <div class="lifestyle-detail" id="lifestyle-hydration">
-    <!-- コンテンツはJavaScriptで動的に読み込まれます -->
     <div id="content-loading">
         <p>Loading...</p>
     </div>
 </div>
 
-<!-- データURLをdata属性として渡す (VSCodeエラー回避) -->
 <script id="lifestyle-config" type="application/json">
 {
     "jsonUrl": "{{ url_for('static', filename='json/lifestyle/hydration.json') }}",
@@ -25,14 +23,11 @@
 
 {% block scripts %}
 <script type="module">
-    // 設定を取得
     const config = JSON.parse(document.getElementById('lifestyle-config').textContent);
     
-    // レンダラーを動的インポート
     import(config.rendererUrl).then(module => {
         const { renderLifestyleContent } = module;
         
-        // JSONデータを読み込んでレンダリング
         fetch(config.jsonUrl)
             .then(response => response.json())
             .then(data => {
