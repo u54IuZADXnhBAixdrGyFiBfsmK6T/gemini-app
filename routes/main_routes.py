@@ -9,11 +9,11 @@ def index():
 
 @main_bp.route("/training")
 def training():
-    return render_template("training.html")
+    return render_template("db_training.html")
 
 @main_bp.route("/gemini_fitness")
 def gemini_fitness():
-    return render_template("gemini_fitness.html")
+    return render_template("coach_fitness.html")
 
 @main_bp.route("/record_workout")
 def record_workout():
@@ -29,7 +29,7 @@ def record_meal():
 
 @main_bp.route('/meals')
 def meals():
-    return render_template('meals.html')
+    return render_template('db_meals.html')
 
 @main_bp.route('/lifestyle')
 def lifestyle():
@@ -63,10 +63,10 @@ def lifestyle_smoking():
 def lifestyle_mental_health():
     return render_template('lifestyle/lifestyle_mental_health.html')
 
-@main_bp.route("/nutrition_coach")
-def nutrition_coach():
-    return render_template("nutrition_coach.html")
+@main_bp.route("/coach_meals")
+def coach_meals():
+    return render_template("coach_meals.html")
 
-@main_bp.route("/training_coach")
-def training_coach():
-    return render_template("training_coach.html")
+@main_bp.route("/coach_training")
+def coach_training():
+    return render_template("coach_training.html")

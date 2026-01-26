@@ -43,6 +43,7 @@ pip install -r requirements.txt
 python app.py
 ```
 # dummy-data
+```
 食事記録を50件追加
 python dummy_data.py create_meals 50
 
@@ -57,6 +58,7 @@ python dummy_data.py delete_meals
 
 全てのトレーニング記録を削除
 python dummy_data.py delete_workouts
+```
 
 # render
 ```

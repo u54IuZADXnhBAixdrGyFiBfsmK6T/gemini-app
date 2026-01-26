@@ -168,7 +168,7 @@
         </div>
         
         <div class="coach-grid">
-            <a href="{{ url_for('main.training_coach') }}" class="coach-card training-card">
+            <a href="{{ url_for('main.coach_training') }}" class="coach-card training-card">
                 <div class="coach-card-header">
                     <div class="coach-icon-wrapper">
                         <div class="coach-icon training-coach-icon"></div>
@@ -199,7 +199,7 @@
                 </div>
             </a>
             
-            <a href="{{ url_for('main.nutrition_coach') }}" class="coach-card nutrition-card">
+            <a href="{{ url_for('main.coach_meals') }}" class="coach-card nutrition-card">
                 <div class="coach-card-header">
                     <div class="coach-icon-wrapper">
                         <div class="coach-icon nutrition-coach-icon"></div>
@@ -568,11 +568,11 @@
             <div class="quick-access-group">
                 <h3>相談する</h3>
                 <div class="quick-links">
-                    <a href="{{ url_for('main.training_coach') }}" class="quick-link">
+                    <a href="{{ url_for('main.coach_training') }}" class="quick-link">
                         <span>Training Coach</span>
                         <div class="quick-arrow">→</div>
                     </a>
-                    <a href="{{ url_for('main.nutrition_coach') }}" class="quick-link">
+                    <a href="{{ url_for('main.coach_meals') }}" class="quick-link">
                         <span>Nutrition Coach</span>
                         <div class="quick-arrow">→</div>
                     </a>
