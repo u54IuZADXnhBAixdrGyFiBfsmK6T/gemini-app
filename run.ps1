@@ -1,5 +1,5 @@
 # Gemini Fitness App - Run Script
-Write-Host "Starting Gemini Fitness App..." -ForegroundColor Cyan
+Write-Host "Starting Gemini Fitness App" -ForegroundColor Cyan
 
 if (-not (Test-Path "venv")) {
     Write-Host "Error: venv not found. Run setup.ps1 first" -ForegroundColor Red

@@ -48,7 +48,7 @@ def get_api_key_input(key_name):
     api_key = getpass.getpass(f"{key_name} (入力は表示されません): ")
     
     if not api_key.strip():
-        print("⚠️  空の値が入力されました")
+        print("空の値が入力されました")
         return None
     
     return api_key
@@ -80,7 +80,7 @@ def main():
     
     # Check if .env already exists
     if os.path.exists('.env'):
-        print("\n⚠️  .env ファイルが既に存在します")
+        print("\n.env ファイルが既に存在します")
         response = input("上書きしますか？ (y/N): ").strip().lower()
         if response != 'y':
             print("処理を中止しました")
@@ -88,14 +88,14 @@ def main():
     
     try:
         # Read .env.example
-        print("\n📄 .env.example を読み込んでいます...")
+        print("\n.env.example を読み込んでいます")
         content = read_env_example()
         
         # Parse content
         parsed_lines, api_keys = parse_env_content(content)
         
         if not api_keys:
-            print("\n⚠️  APIキーのプレースホルダーが見つかりませんでした")
+            print("\nAPIキーのプレースホルダーが見つかりませんでした")
             print("そのまま .env ファイルを作成しますか？ (y/N): ", end='')
             response = input().strip().lower()
             if response != 'y':
@@ -103,7 +103,7 @@ def main():
                 return
             api_key_values = {}
         else:
-            print(f"\n🔑 {len(api_keys)}個のAPIキーが見つかりました: {', '.join(api_keys)}")
+            print(f"\n{len(api_keys)}個のAPIキーが見つかりました: {', '.join(api_keys)}")
             
             # Get API key values from user
             api_key_values = {}
@@ -112,14 +112,14 @@ def main():
                 if value:
                     api_key_values[key] = value
                 else:
-                    print(f"⚠️  {key} はスキップされます（元の値が使用されます）")
+                    print(f"{key} はスキップされます（元の値が使用されます）")
         
         # Create .env file
         print("\n💾 .env ファイルを作成しています...")
         create_env_file(parsed_lines, api_key_values)
         
-        print("\n✅ .env ファイルが正常に作成されました！")
-        print(f"📁 場所: {os.path.abspath('.env')}")
+        print("\n.env ファイルが正常に作成されました！")
+        print(f"場所: {os.path.abspath('.env')}")
         
     except FileNotFoundError as e:
         print(f"\n❌ エラー: {e}")

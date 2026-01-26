@@ -6,7 +6,7 @@ Write-Host "========================================" -ForegroundColor Cyan
 $ErrorActionPreference = "Stop"
 
 # 1. Execution Policy
-Write-Host "`n[1/7] Setting execution policy..." -ForegroundColor Yellow
+Write-Host "`n[1/7] Setting execution policy" -ForegroundColor Yellow
 try {
     Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
     Write-Host "Done" -ForegroundColor Green
@@ -15,7 +15,7 @@ try {
 }
 
 # 2. Check Python
-Write-Host "`n[2/7] Checking Python..." -ForegroundColor Yellow
+Write-Host "`n[2/7] Checking Python" -ForegroundColor Yellow
 try {
     $pythonVersion = python --version 2>&1
     Write-Host $pythonVersion -ForegroundColor Green
@@ -26,12 +26,12 @@ try {
 }
 
 # 3. Upgrade pip
-Write-Host "`n[3/7] Upgrading pip..." -ForegroundColor Yellow
+Write-Host "`n[3/7] Upgrading pip" -ForegroundColor Yellow
 python -m pip install --upgrade pip --quiet
 Write-Host "Done" -ForegroundColor Green
 
 # 4. Create venv
-Write-Host "`n[4/7] Creating virtual environment..." -ForegroundColor Yellow
+Write-Host "`n[4/7] Creating virtual environment" -ForegroundColor Yellow
 if (Test-Path "venv") {
     Write-Host "venv exists. Recreate? (y/N): " -NoNewline -ForegroundColor Cyan
     $recreate = Read-Host
@@ -48,12 +48,12 @@ if (Test-Path "venv") {
 }
 
 # 5. Activate venv
-Write-Host "`n[5/7] Activating virtual environment..." -ForegroundColor Yellow
+Write-Host "`n[5/7] Activating virtual environment" -ForegroundColor Yellow
 & .\venv\Scripts\Activate.ps1
 Write-Host "Done" -ForegroundColor Green
 
 # 6. Install packages
-Write-Host "`n[6/7] Installing packages..." -ForegroundColor Yellow
+Write-Host "`n[6/7] Installing packages" -ForegroundColor Yellow
 if (Test-Path "requirements.txt") {
     pip install -r requirements.txt --quiet
     Write-Host "Done" -ForegroundColor Green
@@ -63,7 +63,7 @@ if (Test-Path "requirements.txt") {
 }
 
 # 7. Check .env
-Write-Host "`n[7/7] Checking .env file..." -ForegroundColor Yellow
+Write-Host "`n[7/7] Checking .env file" -ForegroundColor Yellow
 if (Test-Path ".env") {
     Write-Host "Found .env file" -ForegroundColor Green
 } else {
@@ -75,7 +75,7 @@ if (Test-Path ".env") {
 }
 
 # 8. Database setup
-Write-Host "`n[8/8] Setting up database..." -ForegroundColor Yellow
+Write-Host "`n[8/8] Setting up database" -ForegroundColor Yellow
 try {
     $output = flask db upgrade 2>&1
     if ($LASTEXITCODE -eq 0) {
