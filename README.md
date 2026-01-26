@@ -67,3 +67,5 @@ pip install -r requirements.txt
 GEMINI_API_KEY=""
 ```
 
+$env:FLASK_APP = "app.py"
+flask init-db
