@@ -8,7 +8,7 @@ import os
 from datetime import datetime, timedelta
 from app import create_app
 from extensions import db
-from models import MealLog, WorkoutLog, Exercise, Category, User
+from models import MealLog, WorkoutLog, Exercise, Category, User, UserGoal
 
 def load_config():
     config_path = os.path.join(os.path.dirname(__file__), 'static', 'json', 'dummy.json')
@@ -22,17 +22,98 @@ def generate_random_date(days_back=30):
     random_days = random.randint(0, days_back)
     return today - timedelta(days=random_days)
 
-def generate_meal_data():
-    protein = round(random.uniform(10, 60), 1)
-    fat = round(random.uniform(5, 30), 1)
-    carbs = round(random.uniform(20, 80), 1)
-    calories = (protein * 4) + (fat * 9) + (carbs * 4)
+def generate_meal_data(user_goal=None, meal_type=None):
+    """
+    ユーザーの目標PFC値に基づいて、複数の料理を組み合わせたダミー食事データを生成
+    
+    Args:
+        user_goal: UserGoalオブジェクト。Noneの場合はデフォルト値を使用
+        meal_type: 'breakfast', 'lunch', 'dinner', 'snack'のいずれか。Noneの場合はランダム
+    
+    Returns:
+        食事データの辞書
+    """
+    # デフォルト値の設定（1日の目標値）
+    default_protein = 150
+    default_fat = 60
+    default_carbs = 250
+    
+    # ユーザー目標値の取得（1日の目標値）
+    if user_goal:
+        daily_protein_goal = user_goal.target_protein
+        daily_fat_goal = user_goal.target_fat
+        daily_carbs_goal = user_goal.target_carbs
+    else:
+        daily_protein_goal = default_protein
+        daily_fat_goal = default_fat
+        daily_carbs_goal = default_carbs
+    
+    # 食事タイプをランダムに決定（未指定の場合）
+    if meal_type is None:
+        meal_type = random.choice(['breakfast', 'lunch', 'dinner'])
+    
+    # 食事タイプごとの目標配分率
+    meal_ratios = {
+        'breakfast': {'protein': 0.25, 'fat': 0.30, 'carbs': 0.30},  # 朝食: 25-30%
+        'lunch': {'protein': 0.35, 'fat': 0.35, 'carbs': 0.40},      # 昼食: 35-40%
+        'dinner': {'protein': 0.35, 'fat': 0.30, 'carbs': 0.25},     # 夕食: 25-35%
+        'snack': {'protein': 0.10, 'fat': 0.10, 'carbs': 0.10}       # 間食: 5-10%
+    }
+    
+    ratio = meal_ratios[meal_type]
+    
+    # この食事で目指すPFC値を計算
+    target_protein = daily_protein_goal * ratio['protein']
+    target_fat = daily_fat_goal * ratio['fat']
+    target_carbs = daily_carbs_goal * ratio['carbs']
+    
+    # 食品リストから選択
+    items_key = f'{meal_type}_items'
+    available_items = CONFIG.get(items_key, CONFIG.get('breakfast_items', []))
+    
+    if not available_items:
+        # フォールバック: デフォルトの食事名を使用
+        return {
+            'meal_name': random.choice(CONFIG['meal_names']),
+            'protein': round(target_protein, 1),
+            'fat': round(target_fat, 1),
+            'carbs': round(target_carbs, 1),
+            'calories': round((target_protein * 4) + (target_fat * 9) + (target_carbs * 4), 1),
+            'date': generate_random_date()
+        }
+    
+    # 複数の料理を組み合わせて1食を構成
+    num_items = random.randint(2, 4)  # 2-4品で構成
+    selected_items = random.sample(available_items, min(num_items, len(available_items)))
+    
+    # 料理名を組み合わせる
+    meal_names = [item['name'] for item in selected_items]
+    combined_meal_name = ' / '.join(meal_names)
+    
+    # PFC値を合計
+    total_protein = sum(item['protein'] for item in selected_items)
+    total_fat = sum(item['fat'] for item in selected_items)
+    total_carbs = sum(item['carbs'] for item in selected_items)
+    
+    # 目標値に近づけるための調整係数を計算
+    # ±5%〜15%の範囲でランダムに変動させる
+    protein_adjustment = random.uniform(0.90, 1.10)
+    fat_adjustment = random.uniform(0.90, 1.10)
+    carbs_adjustment = random.uniform(0.90, 1.10)
+    
+    # 調整後のPFC値
+    adjusted_protein = round(total_protein * protein_adjustment, 1)
+    adjusted_fat = round(total_fat * fat_adjustment, 1)
+    adjusted_carbs = round(total_carbs * carbs_adjustment, 1)
+    
+    # カロリー計算
+    calories = (adjusted_protein * 4) + (adjusted_fat * 9) + (adjusted_carbs * 4)
     
     return {
-        'meal_name': random.choice(CONFIG['meal_names']),
-        'protein': protein,
-        'fat': fat,
-        'carbs': carbs,
+        'meal_name': combined_meal_name,
+        'protein': adjusted_protein,
+        'fat': adjusted_fat,
+        'carbs': adjusted_carbs,
         'calories': round(calories, 1),
         'date': generate_random_date()
     }
@@ -78,9 +159,30 @@ def create_meals(count):
             db.session.commit()
             print("デフォルトユーザーを作成しました")
         
-        created_count = 0
+        # ユーザーの目標値を取得
+        user_goal = UserGoal.query.filter_by(user_id=1).first()
+        if not user_goal:
+            print("目標値が設定されていません。デフォルト値を使用します。")
+            print("デフォルト値: P=150g, F=60g, C=250g")
+        else:
+            print(f"目標値: P={user_goal.target_protein}g, F={user_goal.target_fat}g, C={user_goal.target_carbs}g")
+        
+        # 食事タイプをバランスよく配分
+        meal_types = []
         for _ in range(count):
-            meal_data = generate_meal_data()
+            # 朝食:昼食:夕食:間食 = 3:4:3:1 の比率で生成
+            meal_type_choice = random.choices(
+                ['breakfast', 'lunch', 'dinner', 'snack'],
+                weights=[3, 4, 3, 1],
+                k=1
+            )[0]
+            meal_types.append(meal_type_choice)
+        
+        created_count = 0
+        meal_type_counts = {'breakfast': 0, 'lunch': 0, 'dinner': 0, 'snack': 0}
+        
+        for meal_type in meal_types:
+            meal_data = generate_meal_data(user_goal, meal_type)
             meal = MealLog(
                 user_id=1,
                 date=meal_data['date'],
@@ -92,9 +194,92 @@ def create_meals(count):
             )
             db.session.add(meal)
             created_count += 1
+            meal_type_counts[meal_type] += 1
         
         db.session.commit()
-        print(f"✓ {created_count}件の食事記録を生成しました")
+        
+        print(f"\n✓ {created_count}件の食事記録を生成しました")
+        print(f"  朝食: {meal_type_counts['breakfast']}件")
+        print(f"  昼食: {meal_type_counts['lunch']}件")
+        print(f"  夕食: {meal_type_counts['dinner']}件")
+        print(f"  間食: {meal_type_counts['snack']}件")
+
+def create_weekly_meals(weeks=4):
+    """
+    週間単位で食事データを生成
+    1日3食（朝・昼・夕）+ 間食1-2回の構成で、指定週数分のデータを作成
+    
+    Args:
+        weeks: 生成する週数（デフォルト: 4週間）
+    """
+    app = create_app()
+    with app.app_context():
+        user = User.query.filter_by(id=1).first()
+        if not user:
+            user = User(id=1, username='default_user')
+            db.session.add(user)
+            db.session.commit()
+            print("デフォルトユーザーを作成しました")
+        
+        # ユーザーの目標値を取得
+        user_goal = UserGoal.query.filter_by(user_id=1).first()
+        if not user_goal:
+            print("目標値が設定されていません。デフォルト値を使用します。")
+            print("デフォルト値: P=150g, F=60g, C=250g")
+        else:
+            print(f"目標値: P={user_goal.target_protein}g, F={user_goal.target_fat}g, C={user_goal.target_carbs}g")
+        
+        today = datetime.now().date()
+        created_count = 0
+        meal_type_counts = {'breakfast': 0, 'lunch': 0, 'dinner': 0, 'snack': 0}
+        
+        # 週ごとにデータを生成
+        for week in range(weeks):
+            # 1週間（7日間）のデータを生成
+            for day_offset in range(7):
+                target_date = today - timedelta(weeks=week, days=day_offset)
+                
+                # 1日の食事パターン: 朝食 + 昼食 + 夕食 + 間食(50%の確率)
+                daily_meals = ['breakfast', 'lunch', 'dinner']
+                
+                # 50%の確率で間食を追加
+                if random.random() < 0.5:
+                    daily_meals.append('snack')
+                
+                # 時々、間食を2回追加（20%の確率）
+                if random.random() < 0.2:
+                    daily_meals.append('snack')
+                
+                # その日の食事を生成
+                for meal_type in daily_meals:
+                    meal_data = generate_meal_data(user_goal, meal_type)
+                    meal_data['date'] = target_date  # 日付を指定
+                    
+                    meal = MealLog(
+                        user_id=1,
+                        date=meal_data['date'],
+                        meal_name=meal_data['meal_name'],
+                        protein=meal_data['protein'],
+                        fat=meal_data['fat'],
+                        carbs=meal_data['carbs'],
+                        calories=meal_data['calories']
+                    )
+                    db.session.add(meal)
+                    created_count += 1
+                    meal_type_counts[meal_type] += 1
+        
+        db.session.commit()
+        
+        print(f"\n✓ {weeks}週間分の食事記録を生成しました")
+        print(f"  合計: {created_count}件")
+        print(f"  朝食: {meal_type_counts['breakfast']}件")
+        print(f"  昼食: {meal_type_counts['lunch']}件")
+        print(f"  夕食: {meal_type_counts['dinner']}件")
+        print(f"  間食: {meal_type_counts['snack']}件")
+        print(f"\n【期間】")
+        start_date = today - timedelta(weeks=weeks-1, days=6)
+        print(f"  {start_date} 〜 {today}")
+
 
 def create_workouts(count):
     app = create_app()
@@ -235,6 +420,9 @@ def main():
     create_meals_parser = subparsers.add_parser('create_meals', help='指定された数の食事記録を生成')
     create_meals_parser.add_argument('count', type=int, help='生成する食事記録の数')
     
+    create_weekly_meals_parser = subparsers.add_parser('create_weekly_meals', help='週間単位で食事記録を生成（1日3-5食）')
+    create_weekly_meals_parser.add_argument('weeks', type=int, help='生成する週数')
+    
     create_workouts_parser = subparsers.add_parser('create_workouts', help='指定された数のトレーニング記録を生成')
     create_workouts_parser.add_argument('count', type=int, help='生成するトレーニング記録の数')
     
@@ -256,6 +444,12 @@ def main():
             print("エラー: 件数は1以上の整数を指定してください")
             return
         create_meals(args.count)
+    
+    elif args.command == 'create_weekly_meals':
+        if args.weeks <= 0:
+            print("エラー: 週数は1以上の整数を指定してください")
+            return
+        create_weekly_meals(args.weeks)
         
     elif args.command == 'create_workouts':
         if args.count <= 0:

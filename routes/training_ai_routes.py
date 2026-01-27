@@ -4,7 +4,7 @@ import traceback
 
 training_ai_bp = Blueprint('training_ai', __name__)
 
-# TrainingCoach のインポート（エラーハンドリング付き）
+# TrainingCoach のインポート（エラーハンドリングもつけた）
 try:
     from services.ai_training_coach import TrainingCoach
     training_coach = TrainingCoach()
@@ -106,7 +106,7 @@ def analyze_history():
         
         data = request.json
         period_days = int(data.get("period_days", 7))
-        user_id = data.get("user_id", 1)  # でふぉるとゆーざーしかじっそうしていないあ
+        user_id = data.get("user_id", 1)  # まだデフォルトのユーザの異mのため
         
         # 期間の計算
         end_date = datetime.now().date()

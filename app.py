@@ -47,7 +47,7 @@ def init_db_command():
         db.drop_all()
         db.create_all()
         
-        # デフォルトユーザーの作成
+        # デフォルトユーザーの作成(ログイン機能はまだ)
         user = models.User(username='default_user')
         db.session.add(user)
         db.session.flush()

@@ -21,7 +21,7 @@ def parse_env_content(content):
     
     for i, line in enumerate(lines):
         stripped = line.strip()
-        # Skip empty lines and comments
+        # Skip empty lines and comment
         if not stripped or stripped.startswith('#'):
             parsed_lines.append((i, line, None))
             continue

@@ -125,7 +125,7 @@ if (-not $dbExists) {
 
 # Complete
 Write-Host "`n========================================" -ForegroundColor Cyan
-Write-Host "  Setup Complete!" -ForegroundColor Cyan
+Write-Host "  Setup Complete" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host "`nTo start the app:" -ForegroundColor Green
 Write-Host "  python app.py" -ForegroundColor White

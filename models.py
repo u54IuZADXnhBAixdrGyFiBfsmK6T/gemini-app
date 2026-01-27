@@ -58,7 +58,7 @@ class MealLog(db.Model):
     calories = db.Column(db.Float, nullable=False, default=0)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
-# ユーザーの目標設定
+# ユーザーの目標設
 class UserGoal(db.Model):
     __tablename__ = 'user_goals'
     id = db.Column(db.Integer, primary_key=True)

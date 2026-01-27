@@ -200,7 +200,7 @@ class LifestyleContentExtractor:
         if table:
             return self._extract_table(table, elem.get('style', ''))
         
-        # その他のスタイル付きコンテンツ
+        # その他のスタイル付きコンテン
         content_items = []
         for child in elem.children:
             if child.name:

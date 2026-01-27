@@ -1,4 +1,5 @@
 # Gemini Fitness App - Run Script
+
 Write-Host "Starting Gemini Fitness App" -ForegroundColor Cyan
 
 if (-not (Test-Path "venv")) {
@@ -7,6 +8,6 @@ if (-not (Test-Path "venv")) {
 }
 
 & .\venv\Scripts\Activate.ps1
-Write-Host "Server starting at http://localhost:5000" -ForegroundColor Green
+Write-Host "Server starting at http://127.0.0.1:5000" -ForegroundColor Green
 Write-Host "Press Ctrl+C to stop" -ForegroundColor Yellow
 python app.py
