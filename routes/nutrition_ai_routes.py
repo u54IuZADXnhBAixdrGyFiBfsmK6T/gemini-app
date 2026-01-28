@@ -1,10 +1,12 @@
 # routes/nutrition_ai_routes.py
 from flask import Blueprint, request, jsonify
 from services.ai_nutrition_coach import NutritionCoach
+from services.ai_tips_generator import TipsGenerator
+import traceback
 
 nutrition_ai_bp = Blueprint('nutrition_ai', __name__)
 nutrition_coach = NutritionCoach()
-
+tips_generator = TipsGenerator(use_ai=False) 
 @nutrition_ai_bp.route("/api/nutrition/calculate-pfc", methods=["POST"])
 def calculate_pfc():
     """PFC計算API"""
@@ -144,3 +146,37 @@ def consultation():
         return jsonify({"result": result})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+# ========================================
+# 🆕 Tips生成エンドポイント（追加）
+# ========================================
+@nutrition_ai_bp.route('/api/nutrition/generate-tips', methods=['POST'])
+def generate_nutrition_tips():
+    """栄養関連のTipsを動的生成"""
+    try:
+        data = request.get_json()
+        
+        context_data = {
+            'goal': data.get('goal', ''),
+            'activity_level': data.get('activity_level', '')
+        }
+        
+        tips_list = tips_generator.generate_nutrition_tips(context_data=context_data)
+        
+        return jsonify({
+            'success': True,
+            'tips': tips_list
+        })
+    
+    except Exception as e:
+        print(f"Tips生成エラー: {e}")
+        traceback.print_exc()
+        fallback_tips = [
+            '💡 タンパク質は体重×2gを目安に摂取しましょう',
+            '💡 炭水化物はトレーニング前後に集中させると効率的',
+            '💡 良質な脂質は1日50-70gが目安です'
+        ]
+        return jsonify({
+            'success': True,
+            'tips': fallback_tips
+        })

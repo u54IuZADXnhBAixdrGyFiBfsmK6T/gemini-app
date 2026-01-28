@@ -1,8 +1,10 @@
 # routes/training_ai_routes.py
 from flask import Blueprint, request, jsonify
+from services.ai_tips_generator import TipsGenerator
 import traceback
 
 training_ai_bp = Blueprint('training_ai', __name__)
+tips_generator = TipsGenerator(use_ai=False) 
 
 # TrainingCoach のインポート（エラーハンドリングもつけた）
 try:
@@ -92,6 +94,39 @@ def design_program():
         print(f"design_program エラー: {e}")
         traceback.print_exc()
         return jsonify({"error": str(e)}), 500
+
+# 🆕 Tips生成エンドポイント
+@training_ai_bp.route('/api/training/generate-tips', methods=['POST'])
+def generate_training_tips():
+    """トレーニング関連のTipsを動的生成"""
+    try:
+        data = request.get_json()
+        
+        context_data = {
+            'target_muscle': data.get('target_muscle', ''),
+            'training_level': data.get('training_level', ''),
+            'goals': data.get('goals', '')
+        }
+        
+        tips_list = tips_generator.generate_training_tips(context_data=context_data)
+        
+        return jsonify({
+            'success': True,
+            'tips': tips_list
+        })
+    
+    except Exception as e:
+        print(f"Tips生成エラー: {e}")
+        traceback.print_exc()
+        fallback_tips = [
+            '💡 筋肥大には8-12レップが最も効果的です',
+            '💡 トレーニング後48時間は筋合成が活発です',
+            '💡 同じ重量で3セット完遂できたら次回は5%増量'
+        ]
+        return jsonify({
+            'success': True,
+            'tips': fallback_tips
+        })
 
 @training_ai_bp.route("/api/training/analyze-history", methods=["POST"])
 def analyze_history():

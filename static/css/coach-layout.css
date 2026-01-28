@@ -62,3 +62,33 @@ button:hover,.submit-btn:hover{background:var(--coach-theme-hover)}
 #output li{margin-bottom:8px;color:#555}
 #output code{background:#eee;padding:3px 8px;font-family:'Courier New',monospace;font-size:14px}
 .loading{text-align:center;color:#888;font-size:15px}
+
+.ai-loading-container{text-align:center;padding:50px 30px;background:#fff;border-radius:12px;margin-top:30px;border:2px solid #e0e0e0;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+.ai-loading-container{text-align:center;padding:50px 30px;background:linear-gradient(135deg,#fff 0%,#f5f5f5 100%);border-radius:12px;margin-top:30px;box-shadow:0 4px 12px rgba(0,0,0,0.06)}
+.ai-loading-container{text-align:center;padding:50px 30px;background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%);border-radius:12px;margin-top:30px;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+.ai-loading-container{text-align:center;padding:50px 30px;background:linear-gradient(135deg,#fffef9 0%,#faf8f3 100%);border-radius:12px;margin-top:30px;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+.ai-loading-container{text-align:center;padding:50px 30px;background:#fff;border-radius:12px;margin-top:30px;border-left:5px solid var(--coach-theme);box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+.theme-training .ai-loading-container{background:linear-gradient(135deg,#fff5f5 0%,#ffe9e9 100%)}
+.theme-nutrition .ai-loading-container{background:linear-gradient(135deg,#f5fff5 0%,#e9ffe9 100%)}
+.theme-gemini .ai-loading-container{background:linear-gradient(135deg,#f5f9ff 0%,#e9f2ff 100%)}
+.loading-pulse{width:80px;height:80px;margin:0 auto 25px;background:var(--coach-theme);border-radius:50%;animation:pulse 1.5s ease-in-out infinite;box-shadow:0 0 0 0 rgba(198,40,40,0.4)}
+@keyframes pulse {
+0%{transform:scale(0.95);opacity:1;box-shadow:0 0 0 0 rgba(198,40,40,0.7)}
+50%{transform:scale(1);opacity:.8;box-shadow:0 0 0 15px rgba(198,40,40,0)}
+100%{transform:scale(0.95);opacity:1;box-shadow:0 0 0 0 rgba(198,40,40,0)}
+}
+.theme-nutrition .loading-pulse{background:var(--coach-theme)}
+.loading-message{font-size:17px;font-weight:600;color:#222;margin-bottom:20px;transition:all .3s ease;min-height:25px}
+.loading-tips{font-size:15px;line-height:1.6;color:#333;background:#f8f9fa;padding:18px 25px;border-radius:8px;border-left:5px solid var(--coach-theme);margin:25px auto 0;max-width:500px;box-shadow:0 2px 8px rgba(0,0,0,0.06);transition:opacity .3s ease;min-height:60px;display:flex;align-items:center;justify-content:center}
+@keyframes fadeInTips {
+from{opacity:0;transform:translateY(-5px)}
+to{opacity:1;transform:translateY(0)}
+}
+.loading-tips{animation:fadeInTips .5s ease}
+@media (max-width: 768px) {
+.ai-loading-container{padding:40px 20px}
+.loading-pulse{width:60px;height:60px}
+.loading-message{font-size:15px}
+.loading-tips{font-size:14px;padding:15px 20px;max-width:100%}
+}
+.theme-gemini .loading-pulse{background:var(--coach-theme)}

@@ -69,7 +69,7 @@ class AICoach:
 - 追加情報の要求"""
 
         response = self.client.models.generate_content(
-            model="gemini-2.5-flash-lite",
+            model="gemini-2.0-flash-lite",
             contents=prompt
         )
 
