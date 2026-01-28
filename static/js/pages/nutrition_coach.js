@@ -1,40 +1,30 @@
-// タブ切り替え機能
 document.addEventListener('DOMContentLoaded', () => {
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
     const output = document.getElementById('output');
 
-    // タブ切り替え
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const targetTab = btn.dataset.tab;
 
-            // アクティブ状態をリセット
             tabBtns.forEach(b => b.classList.remove('active'));
             tabContents.forEach(c => c.classList.remove('active'));
 
-            // 選択されたタブをアクティブに
             btn.classList.add('active');
             document.getElementById(`${targetTab}-tab`).classList.add('active');
 
-            // 出力をリセット
             output.innerHTML = '✨ 情報を入力して、AIに質問してください';
         });
     });
 
-    // PFC計算ボタン
     document.getElementById('calc-pfc-btn').addEventListener('click', calculatePFC);
 
-    // 食事提案ボタン
     document.getElementById('suggest-meals-btn').addEventListener('click', suggestMeals);
 
-    // 栄養相談ボタン
     document.getElementById('consultation-btn').addEventListener('click', consultation);
 
-    // 記録分析ボタン
     document.getElementById('analyze-meal-history-btn').addEventListener('click', analyzeMealHistory);
 
-    // 期間選択ボタン
     const periodBtns = document.querySelectorAll('.period-btn');
     periodBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -55,13 +45,11 @@ async function calculatePFC() {
     const output = document.getElementById('output');
     const btn = document.getElementById('calc-pfc-btn');
 
-    // バリデーション
     if (!height || !weight || !age) {
         output.innerHTML = '❌ 身長・体重・年齢を入力してください';
         return;
     }
 
-    // ローディング表示
     output.innerHTML = '<p class="loading">🤔 AIがPFCを計算しています...</p>';
     btn.disabled = true;
 
@@ -103,7 +91,6 @@ async function analyzeMealHistory() {
     const output = document.getElementById('output');
     const btn = document.getElementById('analyze-meal-history-btn');
 
-    // ローディング表示
     output.innerHTML = '<p class="loading">📊 AIが食事記録を分析しています...</p>';
     btn.disabled = true;
 
@@ -115,7 +102,7 @@ async function analyzeMealHistory() {
             },
             body: JSON.stringify({
                 period_days: periodDays,
-                user_id: 1  // 固定（将来的にログイン機能で変更可能）
+                user_id: 1  // ほかユーザーはみてい
             })
         });
 
@@ -144,13 +131,11 @@ async function suggestMeals() {
     const output = document.getElementById('output');
     const btn = document.getElementById('suggest-meals-btn');
 
-    // バリデーション
     if (!protein || !fat || !carbs) {
         output.innerHTML = '❌ タンパク質・脂質・炭水化物の目標値を入力してください';
         return;
     }
 
-    // ローディング表示
     output.innerHTML = '<p class="loading">🍽️ AIが献立を作成しています...</p>';
     btn.disabled = true;
 
@@ -191,13 +176,11 @@ async function consultation() {
     const output = document.getElementById('output');
     const btn = document.getElementById('consultation-btn');
 
-    // バリデーション
     if (!concern.trim()) {
         output.innerHTML = '❌ 相談内容を入力してください';
         return;
     }
 
-    // ローディング表示
     output.innerHTML = '<p class="loading">💬 AIが回答を考えています...</p>';
     btn.disabled = true;
 

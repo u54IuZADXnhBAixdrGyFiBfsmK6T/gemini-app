@@ -30,40 +30,72 @@ def analyze_history():
         from models import MealLog, UserGoal
         from extensions import db
         from datetime import datetime, timedelta
+        from collections import defaultdict
         
         period_days = int(data.get("period_days", 7))
-        user_id = data.get("user_id", 1)  # trainingとおなじででふぉるとゆーざーだけ
+        user_id = data.get("user_id", 1)
         
-        # 期間の計算
         end_date = datetime.now().date()
         start_date = end_date - timedelta(days=period_days)
         
-        # 食事ログを取得
         logs = MealLog.query.filter(
             MealLog.user_id == user_id,
             MealLog.date >= start_date,
             MealLog.date <= end_date
         ).order_by(MealLog.date.desc()).all()
         
-        # ユーザーの目標PFCを取得
         user_goal = UserGoal.query.filter_by(user_id=user_id).first()
         
         if not logs:
             return jsonify({
                 "result": f"## 📊 記録なし\n\n過去{period_days}日間の食事記録が見つかりませんでした。\n\nまずは記録をつけてみましょう！"
             })
-        
-        # データを整形
-        meal_summary = []
+            
+        # 日毎の合計値を計算
+        daily_totals = defaultdict(lambda: {'protein': 0, 'fat': 0, 'carbs': 0, 'calories': 0})
         for log in logs:
-            meal_summary.append(
-                f"- {log.date.strftime('%Y/%m/%d')}: {log.meal_name} "
-                f"(P: {log.protein}g / F: {log.fat}g / C: {log.carbs}g / {log.calories}kcal)"
+            date_str = log.date.strftime('%Y/%m/%d')
+            daily_totals[date_str]['protein'] += log.protein
+            daily_totals[date_str]['fat'] += log.fat
+            daily_totals[date_str]['carbs'] += log.carbs
+            daily_totals[date_str]['calories'] += log.calories
+
+        # 期間内の総計を計算
+        total_protein = sum(log.protein for log in logs)
+        total_fat = sum(log.fat for log in logs)
+        total_carbs = sum(log.carbs for log in logs)
+        total_calories = sum(log.calories for log in logs)
+        
+        # 平均を計算するための実際の日数を取得
+        num_days = len(daily_totals)
+        
+        # 1日あたりの平均摂取量を計算
+        avg_protein = total_protein / num_days if num_days > 0 else 0
+        avg_fat = total_fat / num_days if num_days > 0 else 0
+        avg_carbs = total_carbs / num_days if num_days > 0 else 0
+        avg_calories = total_calories / num_days if num_days > 0 else 0
+
+        # AIに渡すためのサマリーを作成
+        # 平均摂取量のサマリー
+        average_intake_summary = (
+            f"- **タンパク質**: {avg_protein:.1f} g/日\n"
+            f"- **脂質**: {avg_fat:.1f} g/日\n"
+            f"- **炭水化物**: {avg_carbs:.1f} g/日\n"
+            f"- **総カロリー**: {avg_calories:.1f} kcal/日"
+        )
+        
+        # 日毎の摂取量サマリー
+        daily_intake_summary = []
+        for date, totals in sorted(daily_totals.items(), key=lambda item: item[0], reverse=True):
+            daily_summary = (
+                f"#### {date}\n"
+                f"- タンパク質: {totals['protein']:.1f}g, "
+                f"脂質: {totals['fat']:.1f}g, "
+                f"炭水化物: {totals['carbs']:.1f}g, "
+                f"カロリー: {totals['calories']:.1f}kcal"
             )
+            daily_intake_summary.append(daily_summary)
         
-        meal_data = "\n".join(meal_summary)
-        
-        # 目標PFCの整形
         if user_goal:
             target_pfc = (
                 f"- タンパク質: {user_goal.target_protein}g\n"
@@ -74,11 +106,11 @@ def analyze_history():
         else:
             target_pfc = "目標設定なし（一般的な推奨値を基準に分析します）"
         
-        # AIに分析させる
         result = nutrition_coach.analyze_meal_history(
-            meal_data=meal_data,
-            period_days=period_days,
-            target_pfc=target_pfc
+            period_days=num_days,
+            target_pfc=target_pfc,
+            average_intake=average_intake_summary,
+            daily_breakdown="\n".join(daily_intake_summary)
         )
         return jsonify({"result": result})
     except Exception as e:
@@ -102,7 +134,7 @@ def suggest_meals():
 
 @nutrition_ai_bp.route("/api/nutrition/consultation", methods=["POST"])
 def consultation():
-    """栄養相談API"""
+    """健康相談API"""
     data = request.json
     try:
         result = nutrition_coach.nutrition_consultation(

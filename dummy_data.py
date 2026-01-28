@@ -82,38 +82,42 @@ def generate_meal_data(user_goal=None, meal_type=None):
             'date': generate_random_date()
         }
     
-    # 複数の料理を組み合わせて1食を構成
-    num_items = random.randint(2, 4)  # 2-4品で構成
-    selected_items = random.sample(available_items, min(num_items, len(available_items)))
+    # ユーザー目標値から±3%〜7%の範囲でランダムに変動
+    # 各栄養素で独立した変動を生成
+    variation_protein = random.uniform(0.03, 0.07)
+    sign_protein = random.choice([-1, 1])
+    final_protein = target_protein * (1 + sign_protein * variation_protein)
     
-    # 料理名を組み合わせる
-    meal_names = [item['name'] for item in selected_items]
-    combined_meal_name = ' / '.join(meal_names)
+    variation_fat = random.uniform(0.03, 0.07)
+    sign_fat = random.choice([-1, 1])
+    final_fat = target_fat * (1 + sign_fat * variation_fat)
     
-    # PFC値を合計
-    total_protein = sum(item['protein'] for item in selected_items)
-    total_fat = sum(item['fat'] for item in selected_items)
-    total_carbs = sum(item['carbs'] for item in selected_items)
+    variation_carbs = random.uniform(0.03, 0.07)
+    sign_carbs = random.choice([-1, 1])
+    final_carbs = target_carbs * (1 + sign_carbs * variation_carbs)
     
-    # 目標値に近づけるための調整係数を計算
-    # ±5%〜15%の範囲でランダムに変動させる
-    protein_adjustment = random.uniform(0.90, 1.10)
-    fat_adjustment = random.uniform(0.90, 1.10)
-    carbs_adjustment = random.uniform(0.90, 1.10)
+    # 食品リストから料理を選んで料理名を生成
+    items_key = f'{meal_type}_items'
+    available_items = CONFIG.get(items_key, CONFIG.get('breakfast_items', []))
     
-    # 調整後のPFC値
-    adjusted_protein = round(total_protein * protein_adjustment, 1)
-    adjusted_fat = round(total_fat * fat_adjustment, 1)
-    adjusted_carbs = round(total_carbs * carbs_adjustment, 1)
+    if available_items:
+        # 2-4品を選んで料理名を組み合わせる
+        num_items = random.randint(2, 4)
+        selected_items = random.sample(available_items, min(num_items, len(available_items)))
+        meal_names = [item['name'] for item in selected_items]
+        combined_meal_name = ' / '.join(meal_names)
+    else:
+        # フォールバック
+        combined_meal_name = f"{meal_type}の食事"
     
     # カロリー計算
-    calories = (adjusted_protein * 4) + (adjusted_fat * 9) + (adjusted_carbs * 4)
+    calories = (final_protein * 4) + (final_fat * 9) + (final_carbs * 4)
     
     return {
         'meal_name': combined_meal_name,
-        'protein': adjusted_protein,
-        'fat': adjusted_fat,
-        'carbs': adjusted_carbs,
+        'protein': round(final_protein, 1),
+        'fat': round(final_fat, 1),
+        'carbs': round(final_carbs, 1),
         'calories': round(calories, 1),
         'date': generate_random_date()
     }
