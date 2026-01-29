@@ -1,5 +1,6 @@
 # ai_coach_improved.py
 from google import genai
+from config import Config
 
 class AICoach:
     def __init__(self):
@@ -69,7 +70,7 @@ class AICoach:
 - 追加情報の要求"""
 
         response = self.client.models.generate_content(
-            model="gemini-2.0-flash-lite",
+            model=Config.get_model(),
             contents=prompt
         )
 

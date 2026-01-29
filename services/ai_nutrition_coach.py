@@ -1,5 +1,6 @@
 # ai_nutrition_coach_compact.py
 from google import genai
+from config import Config
 
 class NutritionCoach:
     def __init__(self):
@@ -53,7 +54,7 @@ class NutritionCoach:
 【禁止】抽象表現、詳細計算過程、複数選択肢、質問"""
 
         response = self.client.models.generate_content(
-            model="gemini-2.0-flash-lite",
+            model=Config.get_model(),
             contents=prompt
         )
         return response.text
@@ -116,7 +117,7 @@ class NutritionCoach:
 【禁止】データ外推測、曖昧表現、一般論、詳細計算"""
 
         response = self.client.models.generate_content(
-            model="gemini-2.0-flash-lite",
+            model=Config.get_model(),
             contents=prompt
         )
         return response.text
@@ -176,7 +177,7 @@ class NutritionCoach:
 【禁止】曖昧表現、PFC未計算、入手困難食材、30分超調理"""
 
         response = self.client.models.generate_content(
-            model="gemini-2.0-flash-lite",
+            model=Config.get_model(),
             contents=prompt
         )
         return response.text
@@ -237,7 +238,7 @@ class NutritionCoach:
 【禁止】命令口調、否定表現、専門用語羅列、一般論のみ、「頑張って」"""
 
         response = self.client.models.generate_content(
-            model="gemini-2.0-flash-lite",
+            model=Config.get_model(),
             contents=prompt
         )
         return response.text

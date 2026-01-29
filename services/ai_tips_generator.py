@@ -1,5 +1,6 @@
 # services/ai_tips_generator.py - JSON/AI切り替え対応版
 from google import genai
+from config import Config
 import json
 import random
 import os
@@ -130,7 +131,7 @@ class TipsGenerator:
 
             try:
                 response = self.client.models.generate_content(
-                    model="gemini-2.0-flash-lite",
+                    model=Config.get_model(),
                     contents=prompt
                 )
                 tips_list = [tip.strip() for tip in response.text.strip().split('\n') if tip.strip()]
@@ -202,7 +203,7 @@ class TipsGenerator:
 
             try:
                 response = self.client.models.generate_content(
-                    model="gemini-1.5-flash",
+                    model=Config.get_model(),
                     contents=prompt
                 )
                 tips_list = [tip.strip() for tip in response.text.strip().split('\n') if tip.strip()]

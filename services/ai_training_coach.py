@@ -1,6 +1,7 @@
 # ai_training_coach_compact.py
 import os
 from google import genai
+from config import Config
 
 class TrainingCoach:
     def __init__(self):
@@ -61,7 +62,7 @@ class TrainingCoach:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-2.0-flash-lite",
+                model=Config.get_model(),
                 contents=prompt
             )
             return response.text
@@ -124,7 +125,7 @@ class TrainingCoach:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-2.0-flash-lite",
+                model=Config.get_model(),
                 contents=prompt
             )
             return response.text
@@ -188,7 +189,7 @@ class TrainingCoach:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-2.0-flash-lite",
+                model=Config.get_model(),
                 contents=prompt
             )
             return response.text
@@ -269,7 +270,7 @@ class TrainingCoach:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-2.0-flash-lite",
+                model=Config.get_model(),
                 contents=prompt
             )
             return response.text
@@ -364,7 +365,7 @@ class TrainingCoach:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-2.0-flash-lite",
+                model=Config.get_model(),
                 contents=prompt
             )
             return response.text
