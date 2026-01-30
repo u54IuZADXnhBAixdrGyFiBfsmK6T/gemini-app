@@ -1,7 +1,3 @@
-/**
- * Lifestyle コンテンツレンダラー
- * JSONデータからHTMLを動的に生成
- */
 
 export function renderLifestyleContent(data, containerId) {
     const container = document.getElementById(containerId);
@@ -10,33 +6,27 @@ export function renderLifestyleContent(data, containerId) {
         return;
     }
 
-    // ローディング表示を削除
     const loading = container.querySelector('#content-loading');
     if (loading) loading.remove();
 
-    // ヒーローセクション
     if (data.hero) {
         container.appendChild(createHero(data.hero));
     }
 
-    // 目次
     if (data.toc && data.toc.items && data.toc.items.length > 0) {
         container.appendChild(createTOC(data.toc));
     }
 
-    // セクション
     if (data.sections) {
         data.sections.forEach(section => {
             container.appendChild(createSection(section));
         });
     }
 
-    // 参考文献
     if (data.references && data.references.items && data.references.items.length > 0) {
         container.appendChild(createReferences(data.references));
     }
 
-    // ナビゲーション
     if (data.navigation && data.navigation.buttons) {
         container.appendChild(createNavigation(data.navigation));
     }
@@ -72,14 +62,12 @@ function createSection(section) {
     sectionElem.className = 'content-section';
     sectionElem.id = section.id;
     
-    // タイトル
     if (section.title) {
         const h2 = document.createElement('h2');
         h2.textContent = section.title;
         sectionElem.appendChild(h2);
     }
     
-    // コンテンツ
     if (section.content) {
         section.content.forEach(item => {
             const elem = createContentElement(item);
@@ -195,7 +183,6 @@ function createTable(item) {
         table.setAttribute('style', item.table_style);
     }
     
-    // ヘッダー
     if (item.headers && item.headers.length > 0) {
         const thead = document.createElement('thead');
         const tr = document.createElement('tr');
@@ -208,7 +195,6 @@ function createTable(item) {
         table.appendChild(thead);
     }
     
-    // 行
     if (item.rows && item.rows.length > 0) {
         const tbody = document.createElement('tbody');
         item.rows.forEach(row => {
@@ -244,7 +230,6 @@ function createStyledDiv(item) {
 }
 
 function createInteractiveTool(item) {
-    // インタラクティブツールは元のHTMLに残すため、ここでは何もしない
     const div = document.createElement('div');
     div.innerHTML = `<p>⚠️ インタラクティブツールは元のHTMLテンプレートに実装してください (ID: ${item.id})</p>`;
     return div;

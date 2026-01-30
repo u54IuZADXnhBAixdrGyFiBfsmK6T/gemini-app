@@ -1,4 +1,3 @@
-// 通知を表示
 export function showToast(message, type = 'success') {
     let container = document.getElementById('toastContainer');
     if (!container) {
@@ -26,7 +25,6 @@ export function showToast(message, type = 'success') {
     }, 2000);
 }
 
-// YYYY-MM-DD形式に変換
 export function formatDate(date) {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -34,7 +32,6 @@ export function formatDate(date) {
     return `${year}-${month}-${day}`;
 }
 
-// 「X日前」を計算
 export function calculateDaysAgo(dateStr) {
     const date = new Date(dateStr);
     const today = new Date();
@@ -45,7 +42,6 @@ export function calculateDaysAgo(dateStr) {
     return `${diff}日前`;
 }
 
-// HTMLエスケープ
 export function escapeHtml(s) {
     return String(s).replace(/[&<>'"`]/g, c => ({ 
         '&': '&amp;', '<': '&lt;', '>': '&gt;', 
@@ -53,7 +49,6 @@ export function escapeHtml(s) {
     }[c]));
 }
 
-// デバウンス（連打防止）
 export function debounce(fn, wait = 200) {
     let t;
     return function (...a) { 
@@ -62,7 +57,6 @@ export function debounce(fn, wait = 200) {
     };
 }
 
-// スムーススクロール（ヘッダー考慮）
 export function initSmoothScrolling(headerOffset = 80) {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -84,7 +78,6 @@ export function initSmoothScrolling(headerOffset = 80) {
     });
 }
 
-// モーダル設定（開閉・背景クリック・ESCキー）
 export function setupModal(modalId, openBtnId = null, closeBtnId = null, onOpen = null) {
     const modal = document.getElementById(modalId);
     if (!modal) return;

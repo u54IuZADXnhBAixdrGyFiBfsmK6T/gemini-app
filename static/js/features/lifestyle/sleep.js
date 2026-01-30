@@ -17,10 +17,9 @@ export function initSleepCalculator() {
         const wakeDate = new Date();
         wakeDate.setHours(hours, minutes, 0);
         
-        // Calculate optimal sleep times (90-minute cycles)
         const cycles = [6, 5, 4]; // 9h, 7.5h, 6h
         const results = cycles.map(cycle => {
-            const sleepTime = new Date(wakeDate.getTime() - (cycle * 90 * 60 * 1000) - (15 * 60 * 1000)); // 15min to fall asleep
+            const sleepTime = new Date(wakeDate.getTime() - (cycle * 90 * 60 * 1000) - (15 * 60 * 1000)); 
             return {
                 cycle: cycle,
                 hours: cycle * 1.5,

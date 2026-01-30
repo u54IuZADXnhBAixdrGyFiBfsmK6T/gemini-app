@@ -19,7 +19,6 @@ export function initHydrationCalculator() {
         };
         baseWater += exerciseAdjustment[exerciseIntensity];
         
-        // Climate adjustment
         const climateAdjustment = {
             cold: -200,
             normal: 0,
@@ -27,7 +26,6 @@ export function initHydrationCalculator() {
         };
         baseWater += climateAdjustment[climate];
         
-        // Calculate for different times
         const perHour = Math.round(baseWater / 16);
         const perMeal = Math.round(baseWater / 3);
         const preWorkout = 500;
