@@ -11,21 +11,38 @@
 
 {% block content %}
 <div class="container">
-    <label for="height">HEIGHT <span>(身長 cm)</span></label>
-    <input type="number" id="height" placeholder="例: 170" value="">
+    <h1>Gemini Fitness AI</h1>
+    <p class="subtitle">高度な生成AIがあなたの理想を実現するプランを設計</p>
 
-    <label for="weight">WEIGHT <span>(体重 kg)</span></label>
-    <input type="number" id="weight" placeholder="例: 65" value="">
+    <div class="form-grid">
+        <div class="form-group">
+            <label for="height">HEIGHT <span>(身長 cm)</span></label>
+            <input type="number" id="height" placeholder="例: 170" value="">
+        </div>
 
-    <label for="activity">LIFESTYLE <span>(生活習慣)</span></label>
-    <textarea id="activity" placeholder="例 : デスクワーク中心で、運動は週末のみ"></textarea>
+        <div class="form-group">
+            <label for="weight">WEIGHT <span>(体重 kg)</span></label>
+            <input type="number" id="weight" placeholder="例: 65" value="">
+        </div>
 
-    <label for="ideal">GOAL <span>(理想の体型)</span></label>
-    <textarea id="ideal" placeholder="例 : 筋肉を残しながら、体脂肪を落としたい"></textarea>
+        <div class="form-group full-width">
+            <label for="activity">LIFESTYLE <span>(生活習慣)</span></label>
+            <textarea id="activity" placeholder="例 : デスクワーク中心で、運動は週末のみ"></textarea>
+        </div>
 
-    <button id="recommendBtn">GENERATE PLAN</button>
+        <div class="form-group full-width">
+            <label for="ideal">GOAL <span>(理想の体型)</span></label>
+            <textarea id="ideal" placeholder="例 : 筋肉を残しながら、体脂肪を落としたい"></textarea>
+        </div>
 
-    <div id="output">データの入力を待っています</div>
+        <button id="recommendBtn" class="full-width">GENERATE PLAN</button>
+    </div>
+
+    <div id="output">
+        <div class="ai-loading-container" style="background:transparent; border:none; padding:0;">
+            データの入力を待っています
+        </div>
+    </div>
 </div>
 {% endblock %}
 
